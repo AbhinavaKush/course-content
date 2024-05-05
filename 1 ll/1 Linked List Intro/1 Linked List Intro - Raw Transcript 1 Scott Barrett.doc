@@ -1,0 +1,50 @@
+Welcome to linked lists.
+
+This is going to be our first data structure that we build which is kind of exciting.
+
+And in order to introduce linked lists, I'm going to compare this to the data structure that it is
+
+most often compared to.
+
+And that is arrays.
+
+So I'm going to take this array and I'm going to turn this into a linked list.
+
+So one of the things that arrays have that linked lists don't are indexes.
+
+So I'm going to remove the indexes.
+
+Also, arrays are in contiguous places in memory.
+
+But linked lists aren't.
+
+They can be all over the place.
+
+So I'm going to spread these out.
+
+And then one of the things I like to do when we move to a new data structure is represented graphically
+
+in a different way.
+
+So instead of green squares I'm going to use purple circles.
+
+Linked lists also have a variable called head that points to the first item, and one called tail,
+
+that points to the last item.
+
+Then each item in the linked list points to the next, to the next to the next, and the last one is
+
+going to point to null.
+
+So you will hear the phrase null terminated list.
+
+So this is an example of that.
+
+So I had mentioned before that arrays are in contiguous places in memory.
+
+Linked lists are not.
+
+They can be all over the place in memory where an array is going to be in a contiguous place in memory.
+
+So that's just a quick overview of linked lists and how they compare to arrays.
+
