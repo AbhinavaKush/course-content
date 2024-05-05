@@ -1,0 +1,123 @@
+So now we're going to do our shift method.
+
+Shift is going to look like this.
+
+We're just going to remove that item from the beginning of the list.
+
+And just like with a regular linked list, we have an edge case of one item.
+
+And then we also have to write code for if we have no items.
+
+So if you want to code this pause it here.
+
+So now I'm going to start with the code.
+
+So as usual when we're going to remove an item we're going to start with the case of when we don't have
+
+any items in that list.
+
+So if this dot length equals zero we're going to return undefined.
+
+So the next situation is for when we have one item.
+
+And it doesn't matter if we have one item or two or more items we are going to need the temp variable.
+
+So I'm going to declare that here and just set that equal to head.
+
+But when we remove the one item, we do have to set head and tail equal to null.
+
+And I'll do that like this.
+
+If the length is equal to one, we're going to set head and tail equal to null.
+
+So now we've written code for zero items and one item.
+
+Otherwise there's two or more items.
+
+So else we'll build this else statement out and we'll bring up our list.
+
+Like this.
+
+So the first thing we're going to do is move head over one and we'll set head equal to head dot next.
+
+Like this and that moves head over.
+
+And then we want to remove this item.
+
+In order to do that, we need to take those two arrows and set them to null.
+
+So head dot previous.
+
+Equals null.
+
+We'll do that.
+
+And then temp dot next.
+
+We'll set that equal to null and then that breaks that connection there.
+
+At the end we will return this temp node.
+
+But for now I'm going to put this code in with the rest of our code.
+
+Like this.
+
+And then we're going to decrement the length and then we will return that item.
+
+So we'll look at this code in DevTools in a moment, and we will build this linked list, because we
+
+want to make sure that this is going to work with two items.
+
+That shift is going to work with one item, and then it's going to work correctly when we don't have
+
+any items.
+
+So let's flip over to DevTools.
+
+Okay.
+
+So there is our shift method.
+
+And this is the two and the one for our linked list here.
+
+So I'm going to zoom out I'm going to run this.
+
+This linked list has head equal to two.
+
+Tail is equal to one.
+
+So I'm going to clear this.
+
+And I'm going to run shift.
+
+So that returns that two node.
+
+And then if we look at our linked list, we should just have one item in there.
+
+With a value of one.
+
+And we open this.
+
+And head and tail are both equal to one, and we have a length of one.
+
+And now we know that this works with two items.
+
+So we'll do this again to make sure this works with one item.
+
+That returns that one node.
+
+And then we can look at the linked list itself.
+
+And we don't have any items in the linked list.
+
+Head and tail is null and length is zero.
+
+So I'm going to clear this.
+
+And now we'll run it one more time and we would expect this to return undefined.
+
+And it does indeed return undefined.
+
+All right.
+
+So that is our method for shift.

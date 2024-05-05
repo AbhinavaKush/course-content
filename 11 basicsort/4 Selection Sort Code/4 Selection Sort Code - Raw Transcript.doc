@@ -1,0 +1,143 @@
+Okay.
+
+So now we're going to code selection sort.
+
+We're going to pick up right where we left off in the last video with this array I'm going to shrink
+
+it down into the corner here.
+
+So we have room for our selection sort function.
+
+So we're going to pass this an array.
+
+And I'm going to create that min variable that we used in the last video.
+
+And then we're going to have our for loop in this six item array.
+
+We only had to go through this five times.
+
+So we're going to have it run the length minus one.
+
+So let's bring this back up here.
+
+I is going to be zero when we first start, it's going to be that first item.
+
+So when we set min equal to zero, when we're walking through the example, we were really setting it
+
+equal to I.
+
+So the first thing that we're going to do is set min equal to I.
+
+And this is the I from the for loop.
+
+And now we're going to do our for loop that is inside of the for loop.
+
+So we're going to let j equal I plus one.
+
+So I'm going to just bring this up.
+
+This was I this is I plus one that's going to be J.
+
+So we're going to set min equal to I, which is in this case zero.
+
+Then we're going to say if the item that's at the index of J, if it is less than the item at the index
+
+of min.
+
+We're going to set min equal to J.
+
+So let's code that and bring our code back like this.
+
+It's going to be this if statement.
+
+If the value at j is less than the value at min, we are going to set min equal to j.
+
+So let's put this back like this.
+
+In this case J is going to be one.
+
+Then as that second for loop runs J is going to move across the array like this until it finds an item
+
+that is less than the value that we have stored at the index of min.
+
+So in this case it is.
+
+So now we're going to make min equal to j again which is equal to four.
+
+And then we go to the end and we're done looping through the array for that first time.
+
+Then we set min equal to four.
+
+And then we need to swap.
+
+I.
+
+And men.
+
+Then that item at the index of zero is sorted.
+
+So I will color that green.
+
+So I'm going to shrink this down and add the code to be able to swap those two items after we run through
+
+the for loop like this.
+
+And this is similar to the swap that we did in the bubble sort.
+
+So I won't walk through this in any detail, but there is something that we need to add to this.
+
+And to illustrate that, I'm going to bring this back up.
+
+And on the second time through this, this is going to be I and this is going to be J.
+
+Now you can just look at this and see that the two is going to be the lowest item there.
+
+So we're going to start out setting min equal to I, which in this case is going to be one.
+
+And then the j is going to loop through the rest of the items.
+
+But nothing is going to be lower.
+
+So when this is done min is one.
+
+An I is equal to one.
+
+So now we know the item at the index of one is in the correct spot.
+
+So I'm going to color that in green here.
+
+But what we don't want to do is run these three lines of code that swap I and min because they're the
+
+same item.
+
+We only want to run these three lines of code when I and min are not equal.
+
+So we'll wrap this in an if statement that says if I and min are not equal, then run these three lines
+
+of code.
+
+So let's bring back the rest of our code here.
+
+The only thing left to do is to return the array.
+
+But of course, once we get down to this line, we will have run through all of this and have a completely
+
+sorted array that looks like this.
+
+So we'll look at this code in a moment in Chrome Dev Tools, and we will look at the six item array
+
+that we started with that looked like this.
+
+So now let's flip over to dev tools.
+
+Okay.
+
+So there is our selection sort function.
+
+And we're going to run selection sort on this array here.
+
+And we'll zoom out and run this.
+
+And there is our sorted array.
+
+And that is our function for selection sort.

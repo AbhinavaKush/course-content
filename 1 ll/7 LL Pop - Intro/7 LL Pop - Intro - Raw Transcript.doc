@@ -1,0 +1,181 @@
+So I'm going to create two different videos for pop.
+
+And this one, we're just going to go through the logic of it, the steps that we would have to go through
+
+to create a pop method.
+
+And the next video we'll actually go through how to code that.
+
+It's a little bit more complicated method than push.
+
+And we'll see why here in a minute.
+
+So with pop.
+
+We're just going to remove the item from the end, move tail over to the previous item and return the
+
+item that we removed.
+
+So we do have a couple of edge cases.
+
+The first edge case being that we might have a linked list that does not have any items in it, and
+
+obviously we can't pop something from this linked list.
+
+But the other edge case is if we have one item and we'll go over this in some more detail in the coding
+
+video.
+
+But if you want to try to code this understanding that these are our three scenarios, we might have
+
+a list with some items in it, one with no items and one with one item.
+
+You have to code for all three of those scenarios.
+
+You can pause the video here and try to code this.
+
+Otherwise, I'm going to go into some more detail about what we have to do to do the pop method.
+
+So I'm going to bring our items back here.
+
+And.
+
+When we move tail over to the previous item.
+
+This is a little bit more complicated than moving it the other direction, because you can see in the
+
+linked list all of the arrows are pointing to the right.
+
+Removing tail to the left.
+
+But once we've done that, it's pretty simple to return this item.
+
+So let's bring this back and look at what we have to do to make the tail move back one.
+
+And in order to do this, I'm going to convert this from the graphical way that we're looking at this
+
+to looking at this as nested objects.
+
+So we are going to have tail point to the previous item.
+
+And then we'll say Taylor next is equal to null which removes that.
+
+For node and then we can return the for node.
+
+So let's bring everything back to the way it was just like this.
+
+And look at what we have to do to make tail move up to the previous item, because we want to have it
+
+point here.
+
+Well, we need to set it equal to something else that points to this node.
+
+And the only thing that points to this node is the next value in the previous node.
+
+The only way to get to this node is by the next value in this node.
+
+And so on and so on.
+
+And this is why we have to start at the head and then iterate through this until we get to this node.
+
+Once we've done this, we can have tail set equal to that.
+
+And that moves tail up.
+
+But we have to iterate through the entire list to make that happen.
+
+And that's why a pop is an O of n operation where push is O of one.
+
+And once we have moved tail up here, we can say tail dot next is equal to null.
+
+And then remove the node.
+
+So now let's put this back in graphical format like this.
+
+So how do we.
+
+Keep track of the node before the end.
+
+So the way we're going to do this is we have two variables.
+
+And I'm going to call them temp and pre.
+
+Temp is going to be the variable that once we iterate through this list is going to be pointing to that
+
+last item that we return in pre is going to point to the item that is next to last.
+
+In other words, pre is going to point to the seven node.
+
+And then we're going to set tail equal to pre.
+
+So for now I'm going to remove head and tail I'm going to move pre underneath here.
+
+So it's a little easier to look at.
+
+And what we're going to do is we're just going to iterate through the list.
+
+And we're going to say temp dot next.
+
+And that's going to be that arrow off of the 11 right here.
+
+If temp dot next is pointing to another node.
+
+In other words if it's true then we're going to say pre is equal to temp.
+
+And in the first iteration already is.
+
+And then we're going to say temp equals temp dot next which moves this over.
+
+And then we're going to do it again is this point to a node.
+
+Then we're going to have pre move up temp move over.
+
+And again until we get to the end of the list.
+
+Now, this is going to be the last time we move these up where we have pre move up temp move over.
+
+Now this is going to be equal to null which equates to false temp.
+
+Dot next is now false.
+
+It stops our loop.
+
+And this is where temp and pre end up.
+
+So for now I'm going to remove temp.
+
+I'll bring this back in a minute.
+
+And then we're going to say that tail is equal to pre.
+
+And the only thing we were using pre for was to be able to set tail equal to it.
+
+So we're done with that.
+
+And then we say tail dot next is null, which removes that last item.
+
+And I had mentioned that we're going to bring the temp variable back.
+
+It was pointing at this node.
+
+And then we return temp.
+
+So that walks us through.
+
+How to do the pop method.
+
+And this is for if we have a bunch of items.
+
+Obviously it's going to be very easy to write the code for if we don't have any items.
+
+If head is equal to null or length equals zero, however, you're going to measure that.
+
+We just say return undefined.
+
+And then the more complicated one is going to be if you only have one item, how is it that you're going
+
+to write the code for if you have one item?
+
+Because that is one of our other edge cases, but that is how we're going to solve the pop method.
+
+And in the next video we're going to pick up from here and we're going to code this.

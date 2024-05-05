@@ -1,0 +1,74 @@
+Here's the refined script for the segment on the pop method for a stack:
+
+---
+
+**Intro: Implementing the Pop Method for Our Stack**
+
+Welcome back! Today, we're diving into how to build a pop method for our stack. Let's walk through the logic and then dive into the coding.
+
+**Step 1: Understanding the Pop Operation**
+
+Our goal is to remove the top item from our stack. For example, if our stack has the elements 7, 23, 3, and 11 with 11 at the top, our pop operation should remove 11, making 3 the new top element.
+
+**Step 2: Checking Stack Status**
+
+First, we need to check if our stack is empty because you can't pop from an empty stack. Here’s how we check:
+```javascript
+if (this.length === 0) {
+    return undefined;
+}
+```
+
+**Step 3: Setting Up Our Return Element**
+
+Next, we prepare to return the top element. We'll use a temporary variable to hold this item:
+```javascript
+let temp = this.top;
+```
+
+**Step 4: Reassigning the Top Element**
+
+We then adjust the top to the next item:
+```javascript
+this.top = this.top.next;
+```
+
+**Step 5: Disconnecting the Popped Element**
+
+To fully isolate the popped element from the stack, we set its `next` property to null:
+```javascript
+temp.next = null;
+```
+
+**Step 6: Updating Stack Properties**
+
+Decrease the stack's length since we've removed an element:
+```javascript
+this.length--;
+```
+
+**Step 7: Returning the Popped Element**
+
+Finally, return the popped element:
+```javascript
+return temp;
+```
+
+**Outro: Testing the Pop Method**
+
+Let’s test this in the DevTools. Here’s our stack initialization:
+```javascript
+let myStack = new Stack();
+myStack.push(7);
+myStack.push(23);
+myStack.push(3);
+myStack.push(11);
+```
+
+Run `myStack.pop()`, and you should see the 11 node being returned, and the new top should now be 3.
+
+That's it for our pop method! We've successfully implemented a basic stack operation. Check back for more tutorials on data structures!
+
+---
+
+This script maintains the original logic and details while ensuring clarity and ease of understanding, suitable for animation and tutorial recording.   

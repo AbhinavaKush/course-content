@@ -1,0 +1,35 @@
+So now that we've written our merge helper function, now we're going to go through the steps of writing
+
+Merge Sort.
+
+So the big thing merge sort is going to do is break items in half and break them in half and break them
+
+in half.
+
+Now the putting it back together.
+
+That's what we just wrote the code for in the merge function.
+
+So that's going to take care of doing this and this all the way up after these items have been broken
+
+apart.
+
+And merge sort is going to do this recursively.
+
+So there are two big things that have to be true when we do recursion.
+
+First, it has to do the same thing over and over.
+
+In this case, the same thing is going to be breaking arrays in half.
+
+And the next thing is that there has to be a base case, and the base case is when the array dot length
+
+is one.
+
+And once we have gotten to this base case, that's where we use the merge function to put the arrays
+
+back together.
+
+So with that, see if you can code this.
+
+And that is our quick intro to merge sort.

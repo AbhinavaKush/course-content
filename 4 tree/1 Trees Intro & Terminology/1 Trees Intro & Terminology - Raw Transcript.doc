@@ -1,0 +1,137 @@
+Welcome to trees.
+
+I think this is a fun data structure.
+
+So what is a tree?
+
+Well, we've already seen a tree and that is a linked list.
+
+A linked list is actually a form of a tree.
+
+It's just a tree that doesn't fork.
+
+So we can use this node here as our starting point for creating a node for a tree.
+
+So remember it looked like this.
+
+We had value.
+
+And next.
+
+So let's put this back and we're going to turn this into a binary tree node.
+
+So I'm going to change the color to blue since we're moving on to a new data structure.
+
+And a binary tree is going to have two arrows.
+
+So this is going to look like this value left and right.
+
+So it's not all that much different than what we created for a linked list we have left and right instead
+
+of next.
+
+So let's turn it back into this.
+
+And bring in a couple of nodes for that to point at.
+
+So from an object perspective it looks something like this.
+
+It's not that much different than what we had with linked lists.
+
+We just have a left and a right instead of just having.
+
+Next, let me put this back.
+
+And there's no rule that a tree has to be binary.
+
+You could have it point to three items or ten items or however many you want.
+
+But for what we're creating here, because we only have left and right, it is by definition a binary
+
+tree.
+
+Then of course, each of these two nodes that we added can point to more nodes.
+
+So let's look at a little terminology here on different kinds of trees.
+
+This is a full tree with a full tree.
+
+Every item either points to two nodes or zero nodes.
+
+So if we add a node here at the bottom this is no longer a full tree.
+
+We remove it.
+
+It is a full tree.
+
+So then I'm going to remove these two nodes.
+
+And now this is still full because everything is pointing at 0 or 2 items.
+
+But it is also perfect.
+
+A perfect tree means every line that has items in it.
+
+Is completely filled all the way across.
+
+So this is perfect.
+
+And this is also perfect.
+
+But if we remove a couple of these items, it still full, but it's not perfect.
+
+Let's bring those back so it's full and perfect.
+
+It's also one more thing, and I explained this one last because it's easier to explain with an example
+
+here it is also complete.
+
+So if we add an item down here at the bottom, this is still complete.
+
+And if we keep adding items across that row, it remains complete.
+
+It's basically as compact as you can make it given the number of nodes that you have.
+
+But it's no longer full because you have something pointing to one item.
+
+That entire line is not filled, so it's not perfect.
+
+If we add an item here, it's now full and complete, but it's not perfect.
+
+And if we fill this all the way across, it's full and perfect and complete.
+
+So a perfect tree will always be full.
+
+It will always be complete.
+
+Okay, so let's move this over.
+
+Now remove some of these nodes and we'll look at a little bit more terminology.
+
+This top item here is a parent.
+
+Of these two, which are children.
+
+These two children because they have the same parent are also called siblings.
+
+Every child node has one and only one parent.
+
+You can't have more than one parent in a tree, so you will never see something like this and have it
+
+be a valid tree, because that four node can't have two parents.
+
+Let's bring that back.
+
+So these two child nodes can also be parents of these nodes.
+
+Now these are children of the three and the 23 nodes.
+
+So with this bottom line of nodes here they don't have any children.
+
+And a node that doesn't have any children is called a leaf.
+
+These are leaf nodes.
+
+And that is our intro.
+
+To trees.

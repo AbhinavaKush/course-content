@@ -1,0 +1,136 @@
+Okay, so now that we're done with set, now we're going to write get.
+
+So I'm going to start by bringing up this address space here I'll bring it up on the bottom this time
+
+with bolts and washers.
+
+And this to represent our hash method.
+
+So if we say get washers, it's going to go into the hash method and it's going to return the number
+
+four just like it did in the set method.
+
+And then we can go to the address of four, search through these key value pairs at that address.
+
+And what we want to do when we look for washers is we want to return the number of washers that we have
+
+and return the number 50.
+
+But if we say something like get lumber and we put it through our hash method, it's going to return
+
+the number six.
+
+We go to the number six.
+
+Lumber isn't there and this will return undefined.
+
+So let's shrink that down here and start writing the code for this.
+
+So we're going to say get a particular key.
+
+And just like we did in the set method we have to get something by the index.
+
+So we're going to have a variable called index.
+
+And we're going to use the hash method to determine what that index is going to be.
+
+So we pass that the key it's going to calculate what the address is.
+
+And then we can go directly to that address and search for our key value pair.
+
+Okay, so the next thing we have to do is determine if there's anything at that address.
+
+So we'll say if this dot data map at that particular index.
+
+So if we're talking about the index of four there is something there.
+
+If we're talking about the index of six like when we looked for lumber, there is not.
+
+If there is not we're going to say return undefined.
+
+But if there is something there, that's where we're going to have to have a loop to loop through the
+
+key value pairs to look for the key.
+
+So for that we're going to use a for loop.
+
+So this part right here, this length is the length of this array here.
+
+So that has a length of two.
+
+It has two key value pairs in there.
+
+So as we're looping through we're going to say if.
+
+And we'll walk through this line.
+
+The index is for.
+
+And I is going to be this first key value pair.
+
+And then zero is going to be Bolt's the first value in that array.
+
+So say we're looking for washers.
+
+We'll have to do this again where we say index is once again four.
+
+But I is going to be this next key value pair zero is going to be washers.
+
+Now it is equal to the key.
+
+And what we want to do is return the value that is associated with washers.
+
+So we just do it like this.
+
+And that is going to return that number 50.
+
+But if we go through this for loop and we don't find what we're looking for, then we are going to end
+
+up returning undefined.
+
+So that is all of the code for this method.
+
+And we are going to build this hash table just as you see it on the bottom here with bolts and washers.
+
+And then we will use the get method to get these items.
+
+But we'll also look for an item that's not in there, just like we did here.
+
+We're going to look for lumber.
+
+Okay, so let's flip over to DevTools.
+
+Okay.
+
+So there is our Get method.
+
+And this is the hash table we just showed a second ago with bolts and washers.
+
+So I'm going to zoom out here.
+
+I'm going to come over here and run this and this hash table here.
+
+I'll just open it.
+
+We have our data map.
+
+And you can see here at the index of four we have two items.
+
+And at the index of four we have two key value pairs bolts and washers.
+
+Okay.
+
+So now I'm going to say get bolts.
+
+And that gives us a quantity of 1400.
+
+Washers is 50.
+
+And then if we do lumber.
+
+We get undefined.
+
+So this works for all of our test cases here for bolts and washers and lumber.
+
+And that is our method for get.
+

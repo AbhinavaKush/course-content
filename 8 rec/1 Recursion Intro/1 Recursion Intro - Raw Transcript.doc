@@ -1,0 +1,189 @@
+So now we're going to do recursion.
+
+And this is a very cool topic.
+
+And we will use this quite a bit in the algorithms section of the course.
+
+So my favorite definition of recursion is that it is a function that calls itself.
+
+Until it doesn't.
+
+So let me show you what I mean.
+
+I'm going to start with a gift box here.
+
+And let's say in order to open the gift box, we have to run the open gift box method.
+
+And there's one of two things that we're going to get when we open this gift box.
+
+We're either going to get a ball, I want to make it an orange ball because that's my son's favorite
+
+color, or we're going to get another gift box.
+
+And if we get a gift box, we need to open it and we open gift boxes.
+
+With the open gift box method.
+
+And when we run this, we are either going to get that orange ball or we're going to get a new smaller
+
+gift box.
+
+And we'll run the open gift box method again to open this one.
+
+And let's say this time we actually get a ball.
+
+So let's walk through what this code might look like.
+
+And I want to emphasize here that this is pseudocode.
+
+This isn't real code that you can run.
+
+This is for example purposes only to simplify this.
+
+So please don't go write this code and expect this to work because it won't.
+
+So this is the function that we're going to use for this.
+
+The open gift box function.
+
+So let's walk through this.
+
+We'll say if it is a ball, then return the ball.
+
+Otherwise it's another gift box.
+
+And we're going to need to run the open gift box function, which means the function is going to call
+
+itself.
+
+So there are two key rules that you have to understand with recursion.
+
+First, the process of opening each new box is the same, or the process of doing whatever you're doing
+
+with recursion has to be the same.
+
+You're doing the same thing.
+
+So in this case, we are constantly opening gift boxes.
+
+The other thing is that each time we open a box, we make the problem smaller, or whatever you're doing
+
+with recursion, each time you have the function call itself, it has to be operating on a smaller and
+
+smaller problem.
+
+So let's walk through this function.
+
+In this case we have a gift box.
+
+So we're going to run the function open gift box.
+
+And they're going to say, is this a ball?
+
+If it is, we're going to return the ball.
+
+Otherwise we know it's a gift box like this, and we're going to have to run the open gift box function.
+
+Which is going to create another instance of this function to open the second gift box.
+
+And we're going to say, is this a ball?
+
+In this case it is not.
+
+It's another gift box.
+
+So we have to open the gift box and we create another instance of the open gift box function.
+
+And this time when we run this if statement, this time it is a ball.
+
+And that causes us to not run this line of code.
+
+So we stop creating new instances of the function open gift box.
+
+And we do that because this was finally true.
+
+So I'm going to remove this.
+
+We'll talk about another concept here.
+
+When we open a box and it has the ball in it.
+
+This is what's called our base case.
+
+This is when our if statement was true.
+
+If it is another gift box.
+
+This is what we call a recursive case.
+
+In this case, we need to have the function call itself again.
+
+And when we have another gift box that's a recursive case.
+
+Then when it is finally the ball that is the base case.
+
+And that is when we stop opening gift boxes.
+
+So let's bring this code back here and let's focus in on this if statement.
+
+You always have to have some conditional that at some point is going to be true and cause you to stop
+
+having the function call itself.
+
+If you don't have this if statement here, you end up with a situation where you call the function.
+
+And then that causes you to call the function again.
+
+Which causes it to call itself again and so on.
+
+And you end up with an infinite loop and you have what is called a stack overflow.
+
+So let's bring that if statement back.
+
+It's very important.
+
+A couple of key mistakes that people will make in a recursive function.
+
+They will have an if statement that is never true.
+
+So like in this case one is never greater than two.
+
+So the if statement is never going to be true.
+
+So you are going to end up in that infinite loop where you end up with a stack overflow.
+
+And this one's obvious.
+
+You can just look at it and figure out that that's never going to be true.
+
+But sometimes we have things in an if statement that are much more complex.
+
+And if you end up with stack overflows, this is one of the places to go troubleshoot.
+
+So let's bring this back.
+
+So one of the other things that you have to have with this if statement is you have to have a return
+
+in there.
+
+So let's say you don't have that and you have something like console log.
+
+Hello.
+
+So you run this until the if statement is finally true.
+
+It console logs out.
+
+Hello.
+
+But because there's no return statement, you go to the next line of code and go back into that infinite
+
+loop of adding new instances of the gift box function, and you end up with a stack overflow.
+
+So it is required that you have a return statement in there.
+
+Okay.
+
+And that is our overview.
+
+Of recursion.

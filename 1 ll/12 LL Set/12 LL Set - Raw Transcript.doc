@@ -1,0 +1,143 @@
+Okay.
+
+So now let's do our set method.
+
+So it's very similar to get.
+
+And I'm just going to bring this up like this.
+
+But instead of just getting something at an index we're going to go to that index and change the value
+
+of the item at that index.
+
+So there's not much more to explain than that.
+
+So I'm going to say if you want to code this, this would be a good place to pause this.
+
+But I would give you one clue before you do that.
+
+You can use other methods inside of a method.
+
+So you can use the Get method here, or you can do the entire set method without doing that either way.
+
+The way we're going to do it is by using the Get method.
+
+So I'm going to bring up a linked list like this.
+
+And one of the things that we know is if we are going to iterate through the list, get to a particular
+
+index and change something in order to iterate through the list, we are going to need a variable.
+
+So let's say we're going to go to the index of one here.
+
+And we're going to change the value of this item from 3 to 4.
+
+It would look something like this.
+
+For now I'm just going to change this back.
+
+So for now I'm just going to say let temp in the get method we set temp equal to this dot head.
+
+I'm not going to do that here.
+
+I'm going to show you why here in a second.
+
+So there's a lot of similarities between the set and the Get method.
+
+As far as all the steps that we need to do.
+
+So just like the Get method, if we have an index of negative one or we could say anything less than
+
+zero.
+
+We want this to be undefined.
+
+Anything that's greater than or equal to this dot length, we want that to be undefined.
+
+Otherwise we want temp to point to the appropriate node.
+
+So we can do that by just saying let temp be equal to this dot, get and pass it the index that we're
+
+looking for in the set method.
+
+And that's going to either take temp and make it where it is undefined.
+
+Temp is going to be equal to undefined in this case, or it's going to be equal to the node that we're
+
+looking for.
+
+So what we have to do at this point is determine is temp undefined or is temp pointing to a node.
+
+So we'll do this with an if statement.
+
+We'll just say if temp.
+
+And this is true if temp is pointing to a node.
+
+And then we say temp dot value equals the value that we pass to the set method.
+
+And in this case we had this equal to four.
+
+And that changes that three.
+
+To a four.
+
+But there's one other thing we have to do inside this if statement.
+
+We need to code to stop running at this point.
+
+So we need to have a return statement and we will return true that we were able to change that value.
+
+Otherwise temp is undefined.
+
+Which is going to cause that if statement to not run and we're just going to return false.
+
+And that is all of our code for the set method.
+
+It's very clean because we are just reusing the code that was in the Get method, and we don't have
+
+to write all that out again.
+
+So we will look at this code in a second in Chrome DevTools.
+
+But first I'm going to bring this up and this is going to be the linked list that we create when we
+
+go over to Chrome DevTools.
+
+And what we'll do is we will run the set method with an index of one and change the value to four at
+
+that index.
+
+Okay, so let's flip over to Chrome DevTools.
+
+There is our set method.
+
+And this is going to create that linked list that I just showed the diagram of.
+
+I'm just going to run this.
+
+And it returns the linked list.
+
+And I'm just going to open this up.
+
+And I really want to look at that second item, since that's the one we're going to change.
+
+So that's this item here has a value of three for now.
+
+I'm going to clear this.
+
+I'm going to say my link list dot set with an index of one and a value of four, and it returns true.
+
+So I'm going to clear this.
+
+And now let's look at our linked list.
+
+And I'm going to open this up.
+
+And look at our second item.
+
+And the value has now been changed to four.
+
+All right.
+
+So it looks like we have a working method for set.

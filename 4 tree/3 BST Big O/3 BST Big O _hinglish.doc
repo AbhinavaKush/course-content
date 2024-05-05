@@ -1,0 +1,31 @@
+Here's the translated script into Hinglish, using simple and urban language:
+
+---
+
+**Intro:**
+Welcome to humare tutorial on binary search trees aur unke Big O notation. Chaliye dekhte hain ki ye trees kaise kaam karte hain aur Big O terms mein unki efficiency kya hai.
+
+**A1: Understanding Nodes**
+Sabse pehle, ek binary search tree ko ek single node se shuru karte hain. Is single node ko \(2^1 - 1\) node bhi kaha jaata hai, kyunki \(2^1 - 1 = 1\). Ye simple representation help karta hai samajhne mein ki tree kaise grow hota hai jab hum aur levels add karte hain.
+
+**A2: Tree Expansion**
+Jab hum second level add karte hain, node count badhkar \(2^2 - 1 = 3\) ho jata hai. Isi pattern ko follow karte hue, count badhta jaata hai as \(2^3\), \(2^4\), aur aise hi aage. Jaise-jaise tree expand hota hai, minus one karna kam relevant ho jata hai, aur formula simplifies ho jata hai approximately \(2^n\) nodes tak har level par.
+
+**A3: Searching in the Tree**
+Ab operations ko explore karte hain jaise ki tree mein searching. Agar specific number search karna ho, to har step down tree ko ek single step maana jata hai. For example, number 27 find karne ke liye teen steps involve hote hain: ek pehle node tak, dusra agle level tak, aur teesra number 27 tak pahunchne ke liye.
+
+**A4: Complexity of Operations**
+Chahe aap searching kar rahe ho, inserting, ya removing, involved steps directly relate hote hain tree ki height se. Ideally balanced tree mein, ye operations \(O(\log n)\) time mein run hote hain, jo ki bahut hi efficient hai. Ye efficiency "divide and conquer" method se aati hai, jahan har decision problem size ko aadha kar deta hai.
+
+**A5: Worst Case Scenario**
+However, worst case mein jab tree unbalanced ho jata hai aur ek straight line jaisa dikhta hai, har operation ki complexity degrade ho kar \(O(n)\) ho jati hai. Ye scenario ek linked list ki tarah hota hai, jahan har operation mein linear traversal hota hai.
+
+**A6: Practical Implications**
+Practically, though, binary search trees itne balanced hote hain ki hum unke most operations ke liye average complexity \(O(\log n)\) consider karte hain. Ye unhe certain applications ke liye preferable banata hai, particularly unmein jo frequent searches involve hote hain.
+
+**Outro:**
+Ye tha humara look at binary search trees aur kaise unka structure operational complexity ko impact karta hai. Ye concepts samajhna crucial hai sahi data structures ko apne projects ke liye select karne ke liye based on unke strengths aur limitations.
+
+---
+
+Is translation mein humne koshish ki hai ki content ko asaan aur samajhne mein simple banaye rakhte hue, viewers ko engage karte hue explain karen.

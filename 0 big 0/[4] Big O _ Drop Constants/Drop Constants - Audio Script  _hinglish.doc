@@ -1,0 +1,22 @@
+Here's the Hinglish version of your transcript on big O notation focusing on the 'drop constants' simplification technique:
+
+---
+
+**Intro:**
+"Aaj hum big O notation mein aur gahrai se utarte hain by exploring simplification techniques, specifically focusing on the 'drop constants' method. Ye technique notation ko streamline karti hai, making it easier to grasp the essential computational complexity bina detail mein uljhe."
+
+**A1:**
+"Chaliye pichhle session ke O(n) code ko revisit karte hain. Main is example ko enhance karunga by adding a second for loop. Ye naya loop pehle jaise hi kaam karega, par 'J' variable ka use karega 'I' ke bajaye, aur pehle ki tarah, ye 'n' baar chalega."
+
+**A2:**
+"Hum is updated script ko Chrome DevTools mein execute karenge, function ko number three ke sath call karte hue. Result kya nikla? Hamara function pehle loop ke liye 'zero, one, two' log karta hai aur doosre ke liye bhi 'zero, one, two' repeat karta hai. Isse hum observe karte hain ki code essentially 'n + n' times, ya '2n' times chalta hai."
+
+**A3:**
+"Bhale hi shuru mein yeh sahi lagta ho ise O(2n) operation ke roop mein label karna, big O notation mein jahan possible ho simplification encourage karta hai. Chahe operation count '2n', '3n', ya '100n' ho, large scales ko consider karte samay constant multiplier ki presence overall growth rate ko change nahi karti. Isliye, hum '2n' ko 'n' mein simplify karte hain."
+
+**Outro:**
+"Ye simplification rule, jo 'drop constants' ke naam se jaana jaata hai, hamari pehli principle hai big O notation ko streamline karne mein. Is rule ko apply karke, hum apna focus un significant factors par rakhte hain jo computational cost ko affect karte hain, irrespective of constants."
+
+---
+
+Is tarah se aapne big O notation ke 'drop constants' simplification technique par Hinglish mein ek clear aur samajhne mein aasan introduction diya hai, jo viewers ko concepts ko achhe se grasp karne mein help karega.

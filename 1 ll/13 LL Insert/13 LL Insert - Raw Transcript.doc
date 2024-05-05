@@ -1,0 +1,198 @@
+Okay.
+
+So now we're going to do insert to describe what this does I'm just going to show this.
+
+We're going to insert a new node with a particular value that we pass this at a particular index.
+
+Pretty self-explanatory.
+
+So if you want to code this, go ahead and pause this.
+
+Otherwise we'll get into this.
+
+All right.
+
+We're going to start out with this linked list.
+
+And we're going to create this node.
+
+So there are a few possibilities for different places where we can put this, and we will handle these
+
+situations differently.
+
+Say we want to put this at the index of zero.
+
+So that's going to go right there.
+
+So we have seen this before.
+
+This is unshift.
+
+When you add something to the beginning of a linked list.
+
+So we can just say if the index is zero return this dot unshift.
+
+And pass it the value that we had passed the insert method.
+
+So a couple things I want to point out here is when we're doing this, we're using the this keyword.
+
+And what we've seen when we call a method before is we would say something like my link list dot unshift
+
+and then pass it a value.
+
+But this has to apply to any linked list that we are going to use.
+
+With the linked list class, we have to use the this keyword.
+
+The other thing is we are using return.
+
+Which makes us stop running code.
+
+It's just going to return whatever Unshift returns, which is going to be the entire linked list with
+
+that new node added.
+
+Another possibility is that we put this at the other end, and we've seen this before.
+
+So we can say if the index is equal to the length, return this dot push and we just use the push method.
+
+Another possibility is that we try to insert this out here at an index that does not work on this end.
+
+Or on this end.
+
+So we can say if the index is less than zero, or if the index is greater than the length, we'll return
+
+false.
+
+So let's go ahead and look at our three if statements here.
+
+And what we've done here is what we would do if we were putting this at the beginning of the linked
+
+list.
+
+This is for if we put it at the end, and this is if it's out of the possible range.
+
+Now let's look at putting this in somewhere in the middle of the list.
+
+Let's say we're going to put this in at the index of two just like that.
+
+How would we make that happen?
+
+So let's back this up and look at the steps to make that happen.
+
+So one of the things we're going to have to do is have a variable that's going to iterate through the
+
+list to where we're going to insert this.
+
+And we're going to bring this to the spot that is one spot before where we're going to insert this.
+
+So let's look at the code to create these two items.
+
+That's our new node there.
+
+And then temp.
+
+We're going to say that temp is This.get.
+
+Of the index where we're going to insert this minus one.
+
+So it's going to be to the previous spot.
+
+So let's look at this code.
+
+So now notice on our first two lines of code we are calling other methods.
+
+And now we just use the get method.
+
+So this is our third time using another method inside of this method.
+
+All right.
+
+So let's bring this back up.
+
+So the first thing that we want to do is we want that new node to point at that 23 node at the index
+
+of two.
+
+So we can set that pointer on the new node equal to temp.
+
+Next.
+
+Just like.
+
+And we'll do that with this line of code.
+
+Newnode.next equals temp dot.
+
+Next.
+
+Then we want to have.
+
+Temp dot next.
+
+Point to the new node like that.
+
+We'll do that with this code here.
+
+Temp dot next equals new node.
+
+And that will insert that node into the linked list.
+
+So now let's look at this code with the rest of our code, just like this.
+
+The only things left to do are to increase the length by one.
+
+And then what we'll do is we will return.
+
+True because we used a return of false in the third line of code up there, and that if statement.
+
+So we'll look at this code in a moment in Chrome dev tools.
+
+But this is going to be the linked list that we create a zero and a two.
+
+Then we're going to insert a node with the value of one.
+
+At the index of one.
+
+So it's going to be insert one comma one.
+
+So now let's flip over to Dev Tools and have a look at this.
+
+Okay.
+
+So there is our insert method that we just created.
+
+And this is our linked list with zero and two.
+
+So let's zoom out here and run this.
+
+And this creates our linked list.
+
+With values of zero and two.
+
+So let's clear this off.
+
+Then we'll run our insert method.
+
+So this is with an index of one and a value of one.
+
+We'll run that.
+
+It returns true.
+
+I will clear this.
+
+And look at my linked list.
+
+So now.
+
+My linked list starts with zero.
+
+And then goes to the value of one.
+
+And then you can see here that tail has a value of two.
+
+And that is our method.
+
+For insert.
+

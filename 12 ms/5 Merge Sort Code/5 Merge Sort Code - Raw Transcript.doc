@@ -1,0 +1,341 @@
+So now we're going to write our code for Merge sort.
+
+So we'll start our function off like this.
+
+It's called merge sort.
+
+And we'll pass it an array.
+
+And the array that we're going to sort is going to be this four item array.
+
+And on the right I'm going to bring in this call stack.
+
+And on the call stack I'll add an instance of merge sort.
+
+So we're going to be calling merge sort recursively which is to say we're going to have multiple instances
+
+of merge sort on the call stack.
+
+And each one of them is going to be called on a different array.
+
+So to help us keep track of this I'm going to do this.
+
+So our next step is we need to cut this array in half.
+
+And in order to do that we need a midpoint.
+
+We'll call that mid index.
+
+And mid index is going to be the length of the array divided by two.
+
+So one of the things we have to account for though is if the length of the array is an odd number.
+
+Let's say for example, the length of the array was three three divided by two would be 1.5, and we
+
+can't have an index of 1.5.
+
+So the way we fix that is with math.floor.
+
+Math.floor would change that 1.5 into a one.
+
+It drops everything to the right of the decimal place, but in this situation the length is four divided
+
+by two is going to be two.
+
+And that'll be this index here.
+
+And I'm just going to store that next to that instance of merge sort.
+
+So the next thing we're going to do is create a new array with these two values.
+
+And we're going to call that array left.
+
+And we're going to create that by calling array dot slice.
+
+So the way this works is this is the beginning index.
+
+And then you go up to but not including this index.
+
+So mid index is this index right here.
+
+And that means we're going to start here and go up to here.
+
+And that's going to create this new array called left.
+
+And we'll do this on the other side.
+
+We'll have an array called right.
+
+And we'll use slice for this as well.
+
+So in this case we only have one number mid index.
+
+So that is the beginning of the range.
+
+And if you don't have anything after that you just go up to the end.
+
+So right is going to be this two item array.
+
+So we have two new arrays called left and right.
+
+So now the next thing we'll do is we'll call merge on left and right.
+
+But we do have a problem here.
+
+Merge only works on sorted arrays.
+
+And both of these arrays are unsorted.
+
+So what we need to do is take both of these arrays and split them in half again.
+
+And we split arrays in half with these three lines up here and specifically with this part here.
+
+So these did exactly what they're supposed to do.
+
+We just need to do it again.
+
+And this is where we call merge sort recursively.
+
+So let's put these back together and start from the top and do this again.
+
+So the first thing we did is we calculated mid index.
+
+That was the index of two.
+
+Then we came down to here.
+
+And this portion of the code here does exactly what it did before.
+
+It creates a new array with these values.
+
+The difference though is that we're calling merge sort on that new array.
+
+So we'll add this instance of merge sort to the call stack.
+
+And we're calling it on that array.
+
+So now this is the active instance of merge sort on the call stack.
+
+So for this instance we start at the top.
+
+We calculate mid index.
+
+The length is two divided by two.
+
+Mid index is this index here.
+
+And when we run this it creates this new one item array.
+
+Except we're calling merge sort on that one item array.
+
+So now this is the top of the call stack.
+
+And because we're calling that on a one item array, we don't want to run these lines of code that cut
+
+arrays in half.
+
+This is our base case.
+
+So we're going to say if array length is equal to one return the array.
+
+So where does it return the array two.
+
+It returns it to the calling function.
+
+And because this is a return statement this instance of merge sort gets popped from the call stack.
+
+So this is the active instance of merge sort on the call stack again.
+
+It just ran this line.
+
+And with this code here we determined that left is equal to this one item array.
+
+So I'll put this back.
+
+And now we'll move to this line.
+
+So this code here is going to create this one item array.
+
+And we're going to call merge sort on that one item array.
+
+Now this is the active instance of merge sort on the call stack.
+
+We run this line the length is equal to one.
+
+And we return the array.
+
+And then this is popped from the call stack.
+
+So now this is the active instance of merge sort on the call stack again.
+
+It is run both of these two lines and determine that left and right are these two one item arrays down
+
+here.
+
+Now this instance of merge sort will move down here.
+
+And it will run merge on left and right.
+
+So we'll add this to the call stack and run merge on these two one item arrays which does this.
+
+So for this line here I'm going to temporarily remove this return.
+
+And merge has a return statement in it.
+
+So where does merge return this two item array.
+
+It's going to return it to here.
+
+And when it does that this gets popped from the call stack.
+
+But this instance of merge sort has this return statement here.
+
+So it's going to take this two item array and pass it down to this instance of merge sort.
+
+And when it does that it gets popped from the call stack.
+
+So now this is the active instance on the call stack.
+
+Again the last line that it ran was this line here.
+
+So this code here has let us know that left for this instance is this two item array.
+
+So I'll put this back and then we'll move to here.
+
+And in this case this code here is being run on the original four item array.
+
+And this gives us that right side.
+
+It's this two item array here.
+
+And then we're going to run merge sort on that two item array.
+
+So now this is the active instance on the call stack.
+
+We start at the top.
+
+The length is not equal to one.
+
+So we come down to here mid index is going to be this index here.
+
+And then we come down to here.
+
+And then this code here is going to give us this one item array.
+
+And then we're going to call merge sort on that one item array.
+
+So now this is the active instance on the call stack.
+
+The length is equal to one.
+
+So we're going to return the array.
+
+And that is popped from the call stack.
+
+So now this is the active instance.
+
+Again we just ran this line and determined that left is this one item array.
+
+Now we move down to here.
+
+And this code here is going to create this one item array.
+
+We'll call merge sort on that array.
+
+Now this is the active instance.
+
+The length is equal to one.
+
+We'll return that one item array.
+
+And this is popped from the call stack.
+
+So now this is the active instance.
+
+Again we have found left and right.
+
+That's these two one item arrays.
+
+Then we move down to here and we call merge on left and right.
+
+So we'll add an instance of merge onto the call stack with these two arrays.
+
+And that does this.
+
+So I'm going to do that same thing that I did before where I remove the return and merge is going to
+
+return this two item array to here.
+
+And once it does that this will be popped from the call stack.
+
+But because this instance of merge sort has this return, it's going to return that to here.
+
+And once it does that this gets popped from the call stack.
+
+So this becomes the active instance on the call stack again.
+
+We have run both of these lines and left and right for this instance are these two sorted arrays.
+
+Now we come down to here and we run merge on left and right.
+
+So we'll add merge to the call stack on these two arrays.
+
+And that does this.
+
+So I'm going to remove that return again merge returns this to here.
+
+And that is popped from the call stack.
+
+But this instance of merge sort needs to return this somewhere.
+
+And the place it returns it is to the original function call.
+
+So that sorted array is returned to here.
+
+And then once it does that this is popped from the call stack.
+
+So that is all of our code for merge sort.
+
+We'll look at this code in a moment in DevTools.
+
+And when we do we'll start out with this array.
+
+And then we'll run Merge Sort and it will return a sorted array.
+
+So now let's flip over and take a look at this.
+
+So there is the merge helper function that we wrote previously.
+
+And I'm going to scroll up.
+
+And this is the merge sort function that we just wrote.
+
+And what I'm going to do is create this array that we just saw.
+
+But I'm going to call it original array.
+
+And then I'm going to call merge sort on that original array.
+
+And the reason I'm going to do this is merge sort is different than the other sorting algorithms that
+
+we've done so far.
+
+The other sorting algorithms will sort the array in place, that is to say, the original array that
+
+you passed to the sorting algorithm gets sorted, but with merge sort, the original array does not
+
+get sorted.
+
+When you run merge sort, it returns a separate array with all of the values in that new array sorted.
+
+So I'll run this and you can see that merge sort has returned this sorted array one through four.
+
+But if I type in original array, you can see that the original array is just the way it was when we
+
+started.
+
+Which is to say that this is not sorted in place, but having it return this separate sorted array is
+
+exactly what we expect it to do.
+
+Which means we have a working function for merge sort.

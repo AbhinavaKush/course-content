@@ -1,0 +1,127 @@
+In this video, we're going to do part three of deleting a node from a binary search tree.
+
+Now previously we had looked at deleting a node in these three situations.
+
+And we did that with this code.
+
+Now we're going to write the code for this situation where we delete a node that has a child on the
+
+left and the right.
+
+And in order to do that we'll say else and we'll build out this else statement.
+
+So at this point when we get to here, we've already run the code to traverse through the tree, going
+
+from the 47 node to the 21 node.
+
+And since that is the value we want to delete and it has a child on both sides, the first step is we
+
+need to find the minimum value in the right subtree.
+
+And we'll do that with this line of code where we set the variable subtree min to be equal to min value
+
+of current node dot right and current node dot right is that 25 node and the minimum value in that subtree
+
+is 24, and that value of 24 will be stored in that variable subtree min.
+
+So I want to emphasize that subtree min is not a pointer to the 24 node.
+
+It is an integer that stores the value of 24.
+
+So now the next step is we need to take that 21 node and set it to be equal to 24.
+
+And we'll do that with this line of code that sets current node dot value to be equal to subtree min.
+
+And that changes that to 24.
+
+So now we have 220 fours in the tree.
+
+So now we need to delete that bottom 24.
+
+And we've already written a bunch of code for deleting nodes.
+
+So we can do a recursive call where we call delete node and we pass this subtree min.
+
+That 24 is what we want to delete.
+
+And then we pass this current node dot right.
+
+In other words that 25 node.
+
+So you can think of this as we are passing it the root of the subtree and having it look for subtree
+
+min.
+
+And then it will traverse through until it finds the 24 and removes it.
+
+So what are the things I wanted to point out here is when you remove that node in this situation in
+
+the subtree, the node that you're removing is always going to be open on the left.
+
+And we talked about this in the last video.
+
+For that to be the minimum value it has to be open on the left.
+
+So I'm going to bring this code back here and then move this down and bring in the rest of our code.
+
+And that's a lot of code.
+
+And that can look a little bit intimidating looking at all of it at once.
+
+But I want to walk through this.
+
+The logic is pretty clear from top to bottom.
+
+So if you look at these lines, what we're doing here is we are traversing to the left and the right
+
+with these lines until one of two things happens.
+
+Either we discover that the number that we're looking for to delete is not in the tree, in which case
+
+we run this line, or we traverse left and right until we find the value that we're looking for.
+
+And we run this line.
+
+And once we find the number that we're looking for, there are one of four situations.
+
+Either that node is a leaf node, it is open on the left and the right, or that node is open on the
+
+left and has a node on the right, or it is open on the right and has a node on the left, or it has
+
+a child on both sides.
+
+So this is all very logical from top to bottom.
+
+So now let's flip over and take a look at this.
+
+So there is the code that we just wrote.
+
+And then I'll scroll up here.
+
+And then with these three lines of code we'll create this tree that has two at the root and then a one
+
+on the left and a three on the right.
+
+And then we'll use these lines to print that out.
+
+And it should print out 213.
+
+And then I'll scroll up again.
+
+And with this line of code we're going to delete the root.
+
+The one with the value of two.
+
+And then our tree should look like this.
+
+And then with these lines we'll print that tree out again.
+
+And we should see three one null.
+
+So I'll run this.
+
+And you can see that to begin with our tree is 213.
+
+And then after deleting the two node it is three one null.
+
+So it looks like we have a working method for delete node.

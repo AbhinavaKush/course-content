@@ -1,0 +1,33 @@
+Sure, here's a simplified and urban Hinglish version of the script for the `set` method in doubly linked lists:
+
+---
+
+### Introduction
+Aaj hum seekhenge kaise `set` method use karte hain doubly linked lists mein, jo ki aapko allow karta hai ki aap specific index pe node ka value change kar sako.
+
+### A1: Set Method ka Explanation
+`Set` method ek specific index pe node ka value update karta hai. Ye singly linked lists ke `set` method ki tarah kaam karta hai, lekin ye doubly linked lists ke liye optimized hai. Matlab agar index list ke second half mein hai to ye tail se start hokar backwards work karta hai, jo ise zyada efficient banaata hai.
+
+### A2: Step-by-Step Implementation
+1. **Node Ko Retrieve Karein**: Sabse pehle `get` method use karke desired index pe node ko fetch karein. 
+    - **Example**: `let temp = this.get(index);`
+    - **Check**: Agar index out of bounds hai, to `temp` `undefined` hoga.
+
+2. **Node Update Karein**: Agar `temp` valid node hai (not `undefined`):
+    - **Set Value**: Node ka value naye value se update karein.
+        - **Example**: `temp.value = newValue;`
+    - **Return True**: Ye indicate karega ki value successfully update ho gayi hai.
+  
+3. **Handle Errors**: Agar `temp` `undefined` hai (i.e., index invalid hai):
+    - **Return False**: Ye indicate karega ki update successful nahi hua.
+
+### A3: Code Ko Run Karein
+- **Index 2 pe Value Set Karein**: Index 2 pe value ko 99 mein change karein aur list check karke confirm karein ki update ho gayi hai.
+- **Invalid Index**: Ek invalid index (e.g., index 10) pe value set karne ki koshish karein aur dekhein ki error handling kaise hoti hai.
+
+### Outro
+Yahi par khatam hota hai hamara tutorial `set` method pe for doubly linked lists. Jab aap samajh jaoge ki kaise efficiently node values ko modify karte hain, to aap programming mein apne data structures ko behtar manage kar paoge.
+
+---
+
+Agar aur kuch specific adjustments ya details chahiye hoto bataiye!

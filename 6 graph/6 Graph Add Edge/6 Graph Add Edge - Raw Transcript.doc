@@ -1,0 +1,85 @@
+Now that we're able to create vertices, let's add edges between them.
+
+So let's say we have these two vertices one and two.
+
+That's going to look like this.
+
+And we connect them with a new edge like this.
+
+It's actually going to look like this.
+
+That would be one and two connected to each other.
+
+So let's remove this edge for now and actually build this with our code.
+
+We'll say add edge.
+
+We're going to need a vertex one and a vertex two that we're connecting to each other.
+
+And in this case vertex one is going to be the value one.
+
+The key is going to be one.
+
+And vertex two is going to have the value of two.
+
+To make things easy.
+
+Then what we'll do is say vertex of one, the array that's attached to it.
+
+We're going to push onto that array the value of vertex two, which in this case is actually two.
+
+And then we'll do it the other way where we say on the vertex two, we're going to push on the value
+
+of vertex one, which in this case is the value of one.
+
+And that adds the edge.
+
+But one of the things you can't do is create an edge between vertices that don't exist.
+
+So if you try to add an edge between 1 and 3, that's not going to work, because we don't have a vertex
+
+with the value of three.
+
+So we'll wrap this in an if statement like this.
+
+And we have to make sure that vertex one and vertex two actually exist.
+
+And then we can do those two other steps to actually push those values into those arrays.
+
+And then inside of the if statement we'll say return true.
+
+Otherwise we're going to return false.
+
+So let's take a look at this code in DevTools.
+
+So there is our add edge method.
+
+And we're going to create a new graph down here and create those two vertices one and two.
+
+So I'm going to run this.
+
+And then I'm going to open this.
+
+And you can see we have our two vertices, one and two, but they are not connected to each other because
+
+those two arrays are empty.
+
+So I'll clear this.
+
+So I'll say my graph dot add edge with the numbers one and two, I'll press enter.
+
+And it returns true.
+
+I'm also going to run this with one and three.
+
+And you can see that this returns false because the three vertex does not exist.
+
+So I'm going to clear this.
+
+And then I'm going to say my graph.
+
+And press enter.
+
+Let's open this up.
+
+And now each of these nodes are connected to each other, and we have been able to add an edge.

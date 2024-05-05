@@ -1,0 +1,196 @@
+So now we are going to remove a vertex.
+
+So if we have this graph and we're going to remove d not only do we have to remove that vertex we have
+
+to remove each one of these edges.
+
+So we remove the edges first.
+
+Then we remove the vertex.
+
+So I'm just going to bring this back, put the edges back the way they were.
+
+So we represent this with.
+
+This.
+
+This is the same thing.
+
+So I'm going to focus in on this because this is what we're really going to be dealing with when we
+
+write our code.
+
+I had mentioned in the big O video that there is an efficiency that we can use in removing a vertex
+
+if everything is bidirectional.
+
+And the information that we need to make this more efficient is all contained in this array right here.
+
+Because what we can do is we can pop this item from this array.
+
+We'll set it equal to a variable.
+
+And we know.
+
+Because it's bidirectional, that C has an edge with D, and then we can go find that and remove it.
+
+And that we can do the same thing for B and come up here.
+
+We know there's a D in here.
+
+We can find it.
+
+And remove it.
+
+Then we do the same thing for a.
+
+Come up here and remove the D here.
+
+In this case, D is connected to everything else in the graph.
+
+But you could have a thousand other vertices.
+
+And you'd only have to go to these three to remove the edges with D, so that's a huge efficiency.
+
+Once this array is empty.
+
+All of the edges have been removed, and now you can remove the vertex itself and you'll be left with
+
+this as your graph, which would also.
+
+Look like this.
+
+So let's get into the code.
+
+We'll say remove vertex and we have to pass it whatever vertex we want to remove.
+
+Like this.
+
+So I'm going to use a while loop here to loop through that array that is associated with the vertex
+
+that we're going to remove.
+
+And we'll say while this adjacency list for that vertex dot length which means while the array still
+
+has length, to put it another way, as long as the length of the array isn't zero, we're going to
+
+run this.
+
+Then we'll have a temp variable here and we'll set it equal to.
+
+Whatever we pop from that array.
+
+And once we have that piece of information.
+
+We can actually use the remove edge method that we just created in the last video, and we can do this.
+
+So you need to have the two vertices that you're going to remove the edge between in order to use the
+
+remove edge method.
+
+So there's the vertex that you're removing.
+
+And then there is the item that you popped off of that array.
+
+That's all the information you need to be able to remove that edge.
+
+Then you can just go through this while loop until you remove all of those from the array.
+
+So it would look like this.
+
+We're going to pop that C.
+
+So temp is going to be equal to c.
+
+And then the vertex that we're removing is d.
+
+So if you have c and d you can remove that item with the remove edge method.
+
+Same thing here.
+
+We run it again when we loop through again.
+
+And same thing here when we loop through it the last time.
+
+And now we have an empty array.
+
+And when we have an empty array that is going to break us out of this loop.
+
+Then the only thing left to do is to delete the vertex.
+
+So that's going to look like this.
+
+And that's going to leave us with this.
+
+Which is going to look like this.
+
+So let's bring our code back here.
+
+So one of the things I haven't done to this point, and I did this on purpose and see if you caught
+
+this.
+
+You cannot remove a vertex that doesn't exist in the graph, and that needs to be the first thing that
+
+we do here.
+
+If this doesn't exist, we're going to return undefined.
+
+We're only going to be able to do this while loop and then delete that vertex if it actually exists.
+
+Assuming that it did exist and we have gone through all of this, we are going to return the graph.
+
+So when we go over to Chrome DevTools we're going to look at this code.
+
+And we are also going to build this graph.
+
+And remove.
+
+The d vertex and all of the edges that go with it.
+
+And we will be left with this graph and we will go check this.
+
+And we would expect to see something that looks like this.
+
+So let's flip over to DevTools.
+
+And there is our remove vertex method.
+
+And this builds out that graph that we just showed in the diagram with a, b, C and d vertices and
+
+the appropriate edges.
+
+So let's zoom out here and I will run this.
+
+And we'll zoom back in.
+
+And open this and we open this adjacency list.
+
+And that's what it looks like before we have removed the d vertex.
+
+And when we're done that'll be gone.
+
+But also all three of these edges where the other three nodes connect to D.
+
+So I'll clear this.
+
+So we'll say my graph dot remove vertex with the value of d.
+
+And we press enter.
+
+Then it returns the graph.
+
+But I also want to make sure this works when we have an invalid vertex.
+
+So we'll try this again with e.
+
+Like that and I'll press enter and that returns undefined, just as we would expect.
+
+And now I'm going to type in my graph.
+
+And I'll press enter and we'll open this.
+
+And we can see that the d vertex has been removed and all references to it.
+
+And it looks like we have successfully removed the vertex.
+

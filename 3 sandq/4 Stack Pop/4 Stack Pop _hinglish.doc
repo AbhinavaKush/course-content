@@ -1,0 +1,70 @@
+**Intro: Stack ke Pop Method ko Implement Karna**
+
+Welcome back! Aaj hum dekhenge ki stack se pop method kaise banate hain. Chaliye logic samajhte hain aur fir coding karte hain.
+
+**Step 1: Pop Operation ko Samajhna**
+
+Hamara goal hai top item ko stack se remove karna. Example ke liye, agar humare stack mein elements hain 7, 23, 3, aur 11, aur 11 top pe hai, toh pop operation 11 ko hata dega aur 3 ko new top bana dega.
+
+**Step 2: Stack Status Check Karna**
+
+Sabse pehle, hume check karna hoga ki hamara stack khali to nahi kyunki empty stack se aap pop nahi kar sakte. Yahaan dekhiye kaise check karte hain:
+```javascript
+if (this.length === 0) {
+    return undefined;
+}
+```
+
+**Step 3: Return Element Set Up Karna**
+
+Next, hum top element ko return karne ke liye prepare karte hain. Hum ek temporary variable ka use karenge is item ko hold karne ke liye:
+```javascript
+let temp = this.top;
+```
+
+**Step 4: Top Element ko Reassign Karna**
+
+Phir hum top ko next item me adjust karte hain:
+```javascript
+this.top = this.top.next;
+```
+
+**Step 5: Popped Element ko Disconnect Karna**
+
+Popped element ko stack se bilkul alag karne ke liye, hum uski `next` property ko null set karte hain:
+```javascript
+temp.next = null;
+```
+
+**Step 6: Stack Properties Update Karna**
+
+Ek element ko hata diya gaya hai, isliye stack ki length ko kam karna padega:
+```javascript
+this.length--;
+```
+
+**Step 7: Popped Element ko Return Karna**
+
+Finally, popped element ko return karte hain:
+```javascript
+return temp;
+```
+
+**Outro: Pop Method ko Test Karna**
+
+Chaliye isko DevTools me test karte hain. Yahaan hamara stack initialization hai:
+```javascript
+let myStack = new Stack();
+myStack.push(7);
+myStack.push(23);
+myStack.push(3);
+myStack.push(11);
+```
+
+Run karein `myStack.pop()`, aur aapko 11 node returned dikhni chahiye, aur new top ab 3 hona chahiye.
+
+Bas itna hi hai hamare pop method ke liye! Humne successfully ek basic stack operation implement kar liya hai. Aur tutorials ke liye wapas check karte rahiye!
+
+---
+
+Is script me original logic aur details ko maintain kiya gaya hai jisse ki samajhne me aasani ho aur animation aur tutorial recording ke liye suitable ho.

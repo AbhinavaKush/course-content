@@ -1,0 +1,69 @@
+So now let's look at a couple of ways that we can handle collisions.
+
+So I'm just going to bring up our address space here and put some items into it.
+
+So a collision is when we have an item that maps to that same spot in memory.
+
+And I want to point out that these two arrays that we're putting in here, these key value pairs, are
+
+actually being stored at this address space like this within another array.
+
+So there's the array.
+
+That's the address space.
+
+Then there is the array that holds the key value pairs at that particular address.
+
+But I'm just going to show them.
+
+Like this.
+
+So this process of putting all of the key value pairs that map to a particular address in the same address
+
+space is what's called separate chaining.
+
+And separate chaining is what we're going to use in this course.
+
+But let's look at another approach.
+
+Let's take that back out.
+
+And another approach would be to say, hey, if there's already an item at this address space, let's
+
+go to the next one and see if it's open.
+
+And if it is, put it there.
+
+Then if you have another item that maps to that address space.
+
+We go to the next spot to see if it's open, and if it's not, we go to the next.
+
+And if it's not, we go to the next and we put it in here.
+
+This is what's called linear probing, and it is a type of open addressing.
+
+And there are multiple ways of doing open addressing.
+
+And there are all kinds of ways of dealing with collisions and a hash table.
+
+The two most common are going to be linear probing and separate chaining.
+
+So let's remove this and put everything back to a separate chaining format like this.
+
+This is what we're going to build.
+
+In our hash table in this course.
+
+So I'm going to show one other way of doing separate chaining I'm going to remove these.
+
+Another way is to have a linked list at every one of these addresses.
+
+And that we just add to the linked list when we have multiple items that map to that address.
+
+So I'm going to change this back to the way we're going to do this in this course, which is going to
+
+be separate chaining with arrays.
+
+And that is a few ways of dealing.
+
+With collisions.

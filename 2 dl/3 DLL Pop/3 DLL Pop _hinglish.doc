@@ -1,0 +1,50 @@
+Sure, here's the script translated into Hinglish, using simple and urban Hindi mixed with English:
+
+---
+
+**Introduction to the Pop Method for Doubly Linked Lists**
+
+Is segment mein, hum doubly linked lists ke pop method ko explore karenge. Agar aapko singly linked lists yaad hain, toh wahan end se item pop karna ek O(n) operation hai kyunki hume puri list traverse karni padti hai tail ko move karne ke liye. Lekin doubly linked lists mein yeh process thoda simple ho jata hai because of two-way linking.
+
+**Step-by-Step Explanation**
+
+1. **Starting Point**: 
+   - Hum ek temporary variable se shuru karte hain jo last item ko point karta hai, jo hum pop karna chahte hain.
+
+2. **Adjusting the Tail**:
+   - Singly linked lists ke opposite, jahan hume head se start karna padta tha, doubly linked lists mein hum simply tail pointer ko previous node pe adjust karte hain: `tail = tail.previous`.
+
+3. **Detachment**:
+   - Set `tail.next` to null, last node ko list se detach kar do.
+   - Similarly, set `temp.previous` to null, node ko fully isolate kar do.
+
+4. **Returning the Node**:
+   - Finally, temporary variable ko return karo, jo popped node ko hold karta hai.
+
+**Edge Cases**:
+   - **Single Item List**: Jab list mein sirf ek item ho toh special handling ki zarurat hoti hai.
+   - **Empty List**: Jab list empty ho toh pop karne ki koshish par undefined return karna, yeh robustness ensure karta hai.
+
+**Code Implementation**:
+```javascript
+if (!this.tail) return undefined;  // Empty list handle karna
+let temp = this.tail;
+if (this.length === 1) {
+    this.head = null;
+    this.tail = null;
+} else {
+    this.tail = this.tail.previous;
+    this.tail.next = null;
+    temp.previous = null;
+}
+this.length--;
+return temp;
+```
+
+**Summary**
+
+Yeh method efficiently last element ko doubly linked list se remove karta hai sirf tail adjustments ke sath, jo bidirectional links ka advantage dikhata hai singly linked lists ke comparison mein.
+
+---
+
+Yeh translated script doubly linked lists ke pop method ke liye clear, step-by-step breakdown provide karta hai, jo video tutorials aur further educational content ke liye suitable hai. Agar aapko kuch aur adjust ya add karna ho toh bataiye!

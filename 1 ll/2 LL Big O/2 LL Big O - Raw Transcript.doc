@@ -1,0 +1,186 @@
+So here we're going to look at link lists.
+
+Big O.
+
+So we're going to look at the big O.
+
+Of all of the things that we do with a linked list.
+
+So I'm going to bring up a linked list.
+
+And we're going to bring a node in from the right.
+
+That four node there.
+
+And if we were going to add that to the end, if we look at the steps that we're going to have to do
+
+in order to do this.
+
+We could just have that last item point to that node.
+
+And now that we have something pointing to it, we can say tail is equal to that pointer like this.
+
+And then it's added into the linked list.
+
+And it doesn't matter if the linked list had four items like it did here before we added this, or if
+
+it had 100 items, the number of steps would be the same, which means this is constant time to push
+
+something onto the end, which means O of one.
+
+Now let's look at removing that item.
+
+It looks like all we're going to have to do is just do those steps in reverse.
+
+And we're going to take that off and move tail over and we're done.
+
+But the problem with that is this in order to have this pointer point to that seven node, we have to
+
+set it equal to something that is pointing to the seven node.
+
+And the only pointer that is pointing there is this one.
+
+And we can't go backwards in the linked list.
+
+So in order to get to that pointer, we have to start at the head and iterate through the entire list.
+
+To finally get to this pointer and set tail.
+
+Equal to that pointer, and because we had to iterate through the entire list.
+
+That is an O of n.
+
+So popping something from the end of a linked list is o of n.
+
+Now let's look at doing this on the other end.
+
+Let's bring that four in over here.
+
+So we have to have the four point to that 11 node.
+
+And we do have something already pointing at the 11 node that is head.
+
+So we set the pointer from the four node equal to the pointer from head.
+
+And that points the four at this node.
+
+Then we just set head equal to the new node.
+
+That's of one.
+
+How about if we take it off?
+
+Well, we need to set head equal to the 11 node.
+
+And we do have an item that is pointing at the 11 which is the four node.
+
+We're going to set head equal to head dot next.
+
+And we'll get into that when we get into the actual code.
+
+But that moves head over and then we can just remove the four.
+
+So removing from the beginning is also a of one.
+
+Now let's look at inserting something into the middle of the array.
+
+So let's bring our four node up down here.
+
+And if we're going to insert this at the index of three we're going to insert it after this node here.
+
+That's at the index of 2012.
+
+In order to do that, we have to start at the head and iterate through the array to get to this point.
+
+Now we want the for to point to the same node the 23 is pointing to.
+
+Right here.
+
+So we set those equal.
+
+Now the four is pointing to the same node as the 23.
+
+Then we have 23 point to the new node and this is inserted.
+
+But because we had to start at the head and iterate through the list to be able to get to the point
+
+where we were going to insert it.
+
+This is O of N.
+
+Let's see if we're going to remove that same item.
+
+We would say let's remove the item at the index of three.
+
+We start at the head.
+
+We go zero, one two, three.
+
+To be able to get there.
+
+Let's drop this out down here.
+
+We want to have the 23 point to the same node that the four is pointing to.
+
+So we set the 23 pointer equal.
+
+To the four pointer, we drop this out.
+
+That is O of N because once again we had to iterate through.
+
+Now let's look at finding an item.
+
+We could find something by its value or its index.
+
+Let's say we're going to find the number 23.
+
+You have to start at the head.
+
+Is this 23?
+
+No.
+
+That one's not 23, but that one is.
+
+And because we had to iterate through obviously that's O of n.
+
+But what about by index.
+
+This is at the index of two.
+
+If we're going to find something at the index of two, once again we have to start at the head and iterate
+
+through.
+
+So whether we are looking for something by value or looking for it by index, it is O of n.
+
+This is a difference between linked lists and arrays.
+
+Because arrays we can go to the index as an o of one.
+
+So now I want to bring up a table.
+
+Let's get that out of the way and bring the table over.
+
+And this just shows all of these operations and how linked lists and arrays compare.
+
+All of the gray items are going to be the same.
+
+But we have a couple here that are better for arrays.
+
+Pop and looking up by index or O of one for arrays, but O of N for linked lists.
+
+And then we also have a couple that are better for linked lists and not as good for arrays, which is
+
+adding and removing items from the beginning shift and unshift.
+
+It just depends what you're going to be using your data structure for.
+
+So I will include this table as a PDF as an attachment, so you can download this if you want to be
+
+able to have this as a reference.
+
+And that is our overview of linked list.
+
+Bingo.
+

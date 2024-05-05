@@ -1,0 +1,173 @@
+So now we're going to do recursive binary search trees.
+
+In the other binary search tree section we did everything iteratively.
+
+And that is to say that we used loops.
+
+And in this section we're going to start out with the contains method and do it recursively.
+
+And we'll start out our recursive contains method like this.
+
+And I'll call this our contains.
+
+So we know that this is the one that's recursive.
+
+And just like the other contains method we're going to pass this a value.
+
+But the thing that is different is we also need to pass this a node.
+
+And we're going to start out by calling it on the root.
+
+But since I made the root default here, that means that an end user of this method just needs to pass
+
+it.
+
+The value.
+
+So we'll start out with a couple of simple situations.
+
+First, if we have an empty tree, we'll say if current node equals null, we'll return false.
+
+Because if the tree is empty, obviously the tree does not have the value that we're looking for.
+
+And now let's look at when the tree has one node.
+
+And let's say we are looking for the value of 47.
+
+We'll say if value, the value that we're looking for is equal to current node dot value, then return
+
+true.
+
+But of course we need to also be able to look for values that are further down in the tree.
+
+So now we're going to look for the number 21.
+
+I'll bring up a call stack and we'll call an instance on the root.
+
+And then I put the 21 on there as well.
+
+That's the value that we're looking for.
+
+And to be able to traverse to the left we'll say if value the value that we're looking for is less than
+
+current node dot value.
+
+And in this case it is.
+
+We will return an instance of our contains.
+
+This is where it's recursive.
+
+We're going to pass this new instance, that same value of 21 that we're looking for.
+
+And we're going to call it on current node dot left.
+
+So that will look like this.
+
+So now that instance called on the 21 node is the active instance.
+
+And the first thing it will do is say if current node is equal to null and it is not null, it is the
+
+21 node.
+
+So then we come down to here and we'll say if the value that we're looking for is equal to current node
+
+dot value.
+
+And that is the case here, we're going to return true.
+
+And the place we return it to is the calling method.
+
+And when it returns that, this gets popped from the call stack.
+
+So now the instance that was called on the 47 node is the active instance.
+
+This is where it left off.
+
+So it called the instance of our containers that we just popped from the call stack.
+
+And when it returned true, it was returning it to here.
+
+So now this instance is going to return true.
+
+And the place that it returns it to is the calling method.
+
+And when it returns that this gets popped from the call stack.
+
+So now let's look at what happens if we're looking for something that is not in the tree.
+
+So we're going to look for the 21 again.
+
+And we'll start it out the same way.
+
+We'll call it on the 47 node.
+
+And we're looking for 21.
+
+And since 21 is less than 47, it is this if statement that applies because value is less than current
+
+node dot value.
+
+And then we're going to call an instance of our contains on current node dot left while current node
+
+dot left is null.
+
+So we're calling an instance on null.
+
+So now that is the active instance on the call stack.
+
+The first thing it is going to do is check to see if the current node is equal to null.
+
+And in this case it is.
+
+So we're going to return false.
+
+And then false gets returned to the calling method.
+
+And this gets popped from the call stack.
+
+So now the instance called on the 47 node is the active instance it left off here.
+
+So that false was actually being returned to here.
+
+So now this instance needs to return false and it will return it to the calling method.
+
+And when it returns that this will be popped from the call stack.
+
+So now we have seen how this works.
+
+If the tree contains the value we're looking for, and we've seen how this works, if it doesn't contain
+
+the value that we're looking for.
+
+Now with this code, all we have done is traverse to the left, and obviously we need to be able to
+
+traverse to the right as well.
+
+And we'll do that with this else statement.
+
+And that is all of the code for our contains.
+
+So we'll run this code in a moment.
+
+And when we do we're going to build this tree.
+
+And then we're going to run contains on the number 27.
+
+That should return true.
+
+And then we'll also run that on the number 17 and that should return false.
+
+Now let's flip over and take a look at this.
+
+So there is the code that we just wrote and I'm going to scroll up.
+
+And with these lines of code that will build the tree that we just looked at.
+
+And then with these lines we're going to run contains on the number 27 and the number 17.
+
+And I'll run this.
+
+And you can see that our tree contains the number 27 and it does not contain 17.
+
+So it looks like we have a working method for recursive contains.

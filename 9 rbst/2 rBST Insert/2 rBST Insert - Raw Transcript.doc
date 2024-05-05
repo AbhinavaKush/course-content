@@ -1,0 +1,174 @@
+So now we're going to write the code for recursive insert.
+
+And we'll start our code off like this.
+
+This is very similar to our contains where we pass it the value and current node.
+
+And we set the default to the root.
+
+But I want to point something out that is different here.
+
+It is this character here.
+
+This makes it where this method is private.
+
+And this didn't exist when I first made this course.
+
+This is something new that has been added to JavaScript.
+
+So users cannot access this method directly and users will access this method.
+
+Through this method, we'll pass this a value.
+
+It will pass the value down to here and then pass it up to here.
+
+And the reason we're going to have to do this is there's a particular edge case that we need to handle
+
+in this second method.
+
+And that is when we're inserting a node into an empty tree.
+
+We'll handle that like this.
+
+We'll say if the root is equal to null.
+
+In other words the tree is empty.
+
+We're going to set root to be equal to a new node with the value that we're inserting.
+
+So now let's bring in this tree and we'll bring in a call stack.
+
+And we're going to walk through inserting the value of 18.
+
+And this gets kicked off with the root.
+
+So we'll kick it off like this.
+
+And because the number we're trying to insert 18 is less than 47, we're going to say if the value of
+
+18 is less than current node value we're going to set current node left to be equal to our insert.
+
+And this is where it is recursive.
+
+And this gets called on current node dot left.
+
+But we're also passing this that value that we want to insert that 18.
+
+Now 18 is less than 21.
+
+So this if statement is going to apply.
+
+If the value of 18 is less than current node dot value, which is 21, we're going to come down to here
+
+and call an instance on current node left, while current node left is null.
+
+So we're calling an instance on null.
+
+And that brings us to our base case.
+
+So we'll say if current node equals null return a new node.
+
+This will be the one that we insert with the value that we're wanting to insert which is the value of
+
+18.
+
+But that is a return statement.
+
+So it's returning that to here.
+
+And when it returns that this gets popped from the call stack.
+
+Now the instance called on the 21 node left off here.
+
+And that instance that we popped off is really returning that 18 node to here.
+
+So we're setting current node left to be equal to this node.
+
+And then we're going to return current node.
+
+So current node is this 21 node.
+
+So we're returning a pointer to that 21 node.
+
+And when we do that this gets popped from the call stack.
+
+Now the instance called on the 47 node is the active instance it left off here.
+
+So we're setting current node left to be equal to the 21 node which is going to do this.
+
+It's just going to continue pointing to the same node.
+
+And if we had a tree that was 100 nodes deep, this process of having each node continue to point to
+
+the same node would happen all the way up the tree.
+
+And then we're going to return current node.
+
+In this case current node is that 47 node.
+
+But because we're at the root the place that it returns it is it returns it to here.
+
+And when it does that this gets popped from the call stack.
+
+Now so far the only direction we have traversed is to the left.
+
+But of course we need to be able to traverse to the right as well.
+
+So I'll bring in this code.
+
+And now let's look at how this code would work if we were trying to insert a value that is already in
+
+the tree.
+
+Because remember binary search trees do not allow duplicates.
+
+So we're going to run insert on the value of 21.
+
+So we'll kick this off with the root like we did before.
+
+And because 21 is less than 47 we'll run this code and call an instance on 21.
+
+So now in this instance of the method we'll start at the top current node is not equal to null.
+
+But because we're trying to insert a 21 and current node value is 21, that means that it is not less
+
+than and it is not greater than.
+
+So that brings us down to here.
+
+And current node is a pointer to the 21 node.
+
+And when this gets returned this gets popped from the call stack.
+
+So now the instance that we called on the 47 node is the active instance it left off here.
+
+And we set current node left to be equal to this 21 node which does this.
+
+And then we return current node.
+
+And current node is going to be returned to here.
+
+And when that happens this gets popped from the call stack.
+
+So now that is all of our code for recursive insert.
+
+And we'll run this code in a moment.
+
+And when we do we'll create a node with a value of two, and then one with a value of one and with a
+
+value of three.
+
+So now let's flip over and take a look at this.
+
+So there is the code that we just wrote.
+
+And I'll scroll up.
+
+And this creates that tree that we just saw.
+
+And with these three lines of code we'll print out the value for root root left and root right.
+
+So I'll run this and you can see that the root is two and root left is one and root right is three.
+
+So it looks like we have a working recursive method for insert.
+

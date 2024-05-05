@@ -1,0 +1,85 @@
+Okay.
+
+So now we're going to build our pop method for our stack.
+
+So it's going to look something like this.
+
+We're going to pop that 11 node off of the top, and then move top down to the next item in the stack,
+
+which is three.
+
+And then three will become the top of the stack.
+
+Okay.
+
+So let's start coding this.
+
+So the first thing we're going to have to determine is does this stack have items in it like this.
+
+Or is it an empty stack like this because you can't pop anything off of an empty stack obviously.
+
+So we're just going to say, if this dot length is equal to zero, then we're going to return undefined.
+
+Then we're going to need a variable to point to the item that we're going to return.
+
+So we'll say let temp equal this dot top that's going to look like this.
+
+We're gonna have the temp variable point to the node that we're going to return.
+
+Let's go back over here.
+
+Then we're going to say.
+
+This dot top equals this dot top dot next, which will look like this.
+
+This dot top equals this dot top.
+
+Like that dot next.
+
+And that moves top down to point at the three node.
+
+We say temp dot next equals null.
+
+Let's take a look at that.
+
+Temp.
+
+Dot next.
+
+Equals null, and that breaks that off from the rest of the stack.
+
+Then we're going to decrement the length by one and we're going to return temp.
+
+And when we return temp we are just returning this node that we popped from the stack.
+
+So there's our code.
+
+And let's look at this and DevTools.
+
+Okay, there's our pop method.
+
+And down here we've created a stack with seven, 23, three and 11.
+
+So if we go back over here that is created this stack.
+
+And I'm going to run pop from the command line, which should return this node.
+
+So let's go back over here.
+
+And I'm going to come down to the command line here, and I'm going to type in my stack dot pop, and
+
+I'm going to press enter.
+
+And there's the 11 node.
+
+Now the next node that was in the stack was the three node.
+
+So if we just type in my stack this will return the remainder of the stack.
+
+So I'll press enter.
+
+And the top item in that stack should be the number three.
+
+And you can see here that the top node has a value of three.
+
+So looks like we have a working method for pop.

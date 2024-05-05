@@ -1,0 +1,54 @@
+Here's the refined script for the segment on the `unshift` method for a linked list, translated into Hinglish:
+
+---
+
+**Introduction to the Unshift Method**
+
+Is segment mein hum `unshift` method ke baare mein jaanenge. Ye method tab bahut zaroori hota hai jab aapko linked list ke shuruat mein ek naya element add karna hota hai.
+
+**Creating a New Node**
+
+Sabse pehle, ek naya node banate hain. Ye naya node shuru mein linked list se alag hota hai. Hamara goal hai is node ko list ke front mein place karna.
+
+**Pointing to the First Node**
+
+Jab hamara naya node ban jaata hai, to hum iske `.next` property ko set karte hain. Ye property current head of the linked list ko point karegi, jo hamare naye node ko existing list se link karega.
+
+**Updating the Head of the List**
+
+Next, linked list ki `head` property ko update karte hain aur ise hamare naye node pe set karte hain. Is action se node list ke beginning mein insert ho jata hai.
+
+**Handling an Empty List**
+
+Agar hamari linked list khali hai, toh? Aise case mein, list ke `head` aur `tail` dono ko is naye node pe set kar dete hain. Ye naya node list ka eklaauta element ban jaata hai, jo list ke shuruat aur ant dono ban jaata hai.
+
+**Visual Example**
+
+Socho agar hamari linked list mein kuch elements hain, ya phir bilkul bhi nahi hain. Hum `unshift` method apply karte hain aur chahe list ka pehle kya haal tha, hamara naya node list ka pehla element ban jata hai. Agar list khali thi, to ye aakhri element bhi ban jata hai.
+
+**Code Implementation**
+
+Ab code ko dekhte hain taaki cheezein aur clear ho jaayein:
+
+```javascript
+function unshift(value) {
+    let newNode = new Node(value);  // Creating the new node with the provided value
+    if (!this.head) {
+        this.head = newNode;        // Setting head to the new node if the list is empty
+        this.tail = newNode;        // Also setting tail to the new node if the list is empty
+    } else {
+        newNode.next = this.head;   // Linking the new node to the previous head
+        this.head = newNode;        // Updating head to the new node
+    }
+    this.length++;                  // Increasing the size of the linked list
+    return this.length;             // Returning the new size of the list
+}
+```
+
+**Conclusion**
+
+`Unshift` method ke saath, linked list ke start mein elements add karna efficient aur straightforward hota hai. Ye ensure karta hai ki hamari list dynamically grow hoti rahe jab naye elements front mein introduce kiye jaate hain.
+
+---
+
+Ye script educational content ko maintain karte hue ise clear aur engaging banane ke liye structured hai, animation format ke liye. Agar aur modifications ki zaroorat ho, toh please mujhe batayein!

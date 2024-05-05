@@ -1,0 +1,33 @@
+Here's the Hinglish version of your script for the linked list video, using simple and urban Hindi mixed with English:
+
+**Intro**
+"Aaj hum deep dive karenge linked list ke structure mein. Chaliye dekhte hain ki nodes is fundamental data structure mein kaise connect hote hain."
+
+**A1**
+"Sabse pehle, humari familiar diagram ko dekhte hain jahan har node sequentially linked hai."
+
+**A2**
+"Ab ek naya node right side se aa raha hai. Jab yeh linked list mein shamil hota hai, toh yeh ek existing node, jaise ki number four wale node se connect hota hai."
+
+**A3**
+"Is naye node ko integrate karne ke liye, hum existing seven node se directly is naye node tak ek pointer establish karte hain. Yeh connection bahut crucial hai kyunki yeh list ki flow dictate karta hai, aur tail ko update karta hai ki yeh naye node ko point kare."
+
+**A4**
+"Lekin asal mein jab hum ek node add karte hain toh kya hota hai? Chaliye linked list ko thoda strip down karte hain for a clearer view."
+
+**A5**
+"Basic mein, ek node do elements se bana hota hai: ek value aur ek pointer. Yeh sirf koi bhi value nahi hai; yeh linked list ke structure ka significant part hai, jo data aur next node tak navigation ko encapsulate karta hai."
+
+**A6**
+"Toh, jab hum ek naya node integrate karte hain, jaise ki seven four ko point karta hai, yeh 'next' pointer of the seven node ko is naye node se align karna hai, effectively unhe link karta hai."
+
+**A7**
+"Similarly, yeh concept list ke across apply hota hai. Jaise, kaise 23 node next se connect hoti hai aur uske baad three node, yeh sab systematic linking pointers ke through hota hai."
+
+**A8**
+"Aur head aur tail ke baare mein kya? Head list ke sabse pehle node ko point karta hai, jabki tail last ko, making the navigation through the list efficient aur manageable."
+
+**Outro**
+"Aaj ka exploration of a linked list ne dikhaya hai ki nodes aur pointers kitne intricate setup mein hote hain, proving how dynamic this data structure is. Thanks for joining, aur bane rahiye humare saath for more insights on data structures!"
+
+Yeh script clarity aur conciseness ko ensure karta hai, aapke reference document mein dekhe gaye style ko adhere karte hue. Agar aapko aur adjustments ya additional sections chahiye toh mujhe zaroor batayein!

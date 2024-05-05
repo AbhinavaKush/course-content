@@ -1,0 +1,223 @@
+All right.
+
+Now we're going to do reverse.
+
+And this is a very common interview question to be able to reverse a linked list.
+
+And this one is complicated.
+
+So it's pretty straightforward what we're going to try to do here.
+
+It's just going to be a method called reverse.
+
+And it's going to reverse the linked list.
+
+So I'm just going to jump into this.
+
+So it's going to look something like this.
+
+We're going to take head and tail and switch it like that.
+
+And then we're going to one by one, take the arrows and point them the other way.
+
+So I want you to notice that there's a gap here.
+
+And this is the hard part of reversing the linked list is making sure that you keep track of where everything
+
+is while you're introducing all of these gaps, all the way down the linked list, and continuing to
+
+reverse this until it's completely reversed.
+
+All right.
+
+So I'm going to move everything back.
+
+And move this down.
+
+So we'll have a little bit more room for code and whatnot.
+
+In order to switch head and tail, we're going to need a variable that we set equal to head.
+
+And then what we can do is just say head.
+
+Is equal to tail.
+
+And now it points to the other end.
+
+But you need that variable to get tail over to the beginning.
+
+So we set tail.
+
+Equal to temp.
+
+Okay, so let's walk through what we just did here.
+
+We created a temp variable.
+
+We set it equal to head.
+
+Then we said head is equal to tail.
+
+And we said tail is equal to temp.
+
+Okay, let's look at this code with the rest of our code here.
+
+This is what we have so far.
+
+And this is really the easy part.
+
+Just taking head and tail and switching them.
+
+Reversing all the nodes is going to be the hard part of reversing the linked list.
+
+All right.
+
+So let's bring this up.
+
+And we're now going to create a couple more variables.
+
+We need to have something after temp.
+
+I'm just going to call it next and it'll point to the next node after temp.
+
+We'll just set it equal to temp dot next so it'll point to the next node.
+
+And then we're going to have one that we call previous, and we'll start that out by being equal to
+
+null.
+
+So we're going to have a loop that is going to move these through the linked list as we're reversing
+
+everything.
+
+So I'm just going to move this back.
+
+And we need to create these variables.
+
+So next equals this dot temp like we just mentioned.
+
+And previous is just going to be set equal to null.
+
+So let's put these back in the diagram like this okay.
+
+Now let's look at the code that we have created so far.
+
+We have reversed head and tail and we have created our variables.
+
+So now we can create our for loop.
+
+So we can say next equals temp dot next.
+
+And that already does equal that in the first iteration of the for loop.
+
+Temp dot next equals previous okay so temp dot next I just highlighted it there.
+
+We're going to set that equal to previous.
+
+So in this case that's just going to point it to null.
+
+Previous equals temp.
+
+That's going to move that up.
+
+And temp equals next.
+
+See, this is why you need that next variable.
+
+There is that's going to enable you to cross this opening.
+
+So you have to have something on the other side of temp to be able to cross the opening.
+
+But look at now the opening is on the other side of temp.
+
+So that's why you need previous.
+
+So let's just walk through this.
+
+We're going to say next equals temp dot next.
+
+And we have to do that first because the next thing we're going to do is we're going to flip that arrow
+
+over on that node.
+
+And next is going to allow us to be able to cross that gap the next time we loop through this previous
+
+equals temp.
+
+And let's just keep running through this.
+
+We'll say temp dot next equals previous.
+
+Previous equals temp.
+
+Temp equals next.
+
+And this will be the last time that we run through this.
+
+We're going to say next equals temp dot.
+
+Next we'll temp dot.
+
+Next is null.
+
+Temp dot next equals previous.
+
+That'll be our last one that we flip over.
+
+Previous equals temp.
+
+Temp equals next.
+
+And that is our for loop.
+
+So let's put this in with the rest of our code.
+
+Like this.
+
+And then we're going to return the entire linked list.
+
+So we'll look at this code in a second.
+
+This is going to be the linked list we create when we go over to Chrome DevTools.
+
+And then we're just going to take it and reverse it.
+
+All right, so let's flip over to DevTools.
+
+There is our code there.
+
+And here's our linked list.
+
+Just one.
+
+Two, three.
+
+And we'll zoom out and run this.
+
+Now let's have a look at this linked list.
+
+Head is pointing to one.
+
+If we open this up, the next value is two.
+
+If we open this up, the next value is three and next points to null, which means we're at the end
+
+of the list.
+
+So that's our 123.
+
+And let's clear this and we can run our reverse method.
+
+All right.
+
+Press enter and let's open up this linked list.
+
+Now head is pointing to three.
+
+We open that up.
+
+The next item is two.
+
+And the next item is one.
+
+And that is our method for reverse.

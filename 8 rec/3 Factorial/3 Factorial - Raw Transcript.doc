@@ -1,0 +1,299 @@
+Just about any course that you're going to see that talks about recursion is going to use factorial
+
+as an example of how to use recursion.
+
+So what is a factorial?
+
+This is four factorial is how this is pronounced, and what it is is four times three times two times
+
+one.
+
+So let's bring this up here and look at why it's such a great problem for recursion.
+
+These last three numbers.
+
+Three times two times one.
+
+Is equal to three factorial.
+
+So you could say that this is four times three factorial.
+
+And three factorial.
+
+That's the same as saying three times two factorial.
+
+And two factorial is the same as saying two times one factorial.
+
+And one factorial.
+
+Well, this is just one.
+
+This one's different.
+
+This is our base case.
+
+Once we get to one, we can stop doing this breakdown that we just did here.
+
+One of the things we've already said about recursion, and we saw this in the gift box example, is
+
+that each gift box has to be getting smaller and smaller until you finally get to what it is that you're
+
+looking for.
+
+So getting to that one would be the equivalent of getting to the ball.
+
+So I'm going to shrink this down here.
+
+So we have some room for some code.
+
+And I'm just going to bring the code in.
+
+It's kind of hard to go through a recursive function line by line.
+
+So I'm just going to bring this in.
+
+And then we can talk through how this is going to work.
+
+So our function is going to be factorial.
+
+We're going to pass it the number four.
+
+That's going to be the n.
+
+If we ever get to the point where n is equal to one, we're just going to return one.
+
+So n equaling one is this right here n equals one we return.
+
+One.
+
+Otherwise we're going to return in, in this case four times factorial of n minus one, which is going
+
+to be three.
+
+So we could look at it like this.
+
+It's four times three factorial.
+
+So I'm just going to put this code up in the corner right here.
+
+And then we will walk through this step by step.
+
+We're going to run the factorial function and we will pass it the number four.
+
+Then we're going to go back up to our function here and look at that if statement.
+
+If n equals one we're going to return one.
+
+That's not the case and is not one it's four.
+
+We're going to return n times factorial of n minus one.
+
+And that is going to look like this.
+
+And we're going to put the four and the three in there like that.
+
+And then we're going to do it again.
+
+Is n equal to one.
+
+Well it's equal to three now.
+
+So we're going to do the same thing.
+
+Like that.
+
+And now we're going to have three and two.
+
+Then we look at our if statement again.
+
+Is it one.
+
+Well we're getting close because it's factorial of two there.
+
+And now we're going to have to do this again.
+
+And we're going to have two and one in there.
+
+Now when we look at this, if statement n is equal to one so we can return one.
+
+So the one is this one here.
+
+So I'm going to remove this.
+
+And we're going to look at these steps here.
+
+So the return one.
+
+That's being returned to this function.
+
+It's been waiting for this to return.
+
+Now, this can calculate two times one and it can return two.
+
+To hear.
+
+And that becomes three times two.
+
+Then we can return six.
+
+To hear.
+
+And then four times six.
+
+Can be returned to the original function call, which is 24.
+
+Now let's just walk through this two times.
+
+One is two and we return that here.
+
+Three times two is six and we return that here.
+
+Four times six is 24.
+
+And we return that here.
+
+And that's our answer for factorial of four.
+
+So let's look at this yet another way.
+
+The gift box method.
+
+This was factorial four.
+
+And that called factorial of three, and the boxes get smaller and smaller.
+
+And instead of having a ball, we have one.
+
+And we returned the one up to here.
+
+Like this.
+
+We return two up to here.
+
+Like this.
+
+And six up to here.
+
+Like this.
+
+And 24.
+
+And I'm going to go over this one more way, because recursion is one of those things that you have
+
+to look at it a few times to be able to get it.
+
+This is with the call stack.
+
+We're calling the call stack with factorial for.
+
+And then we have factorial three.
+
+And then two.
+
+And then it's calling it with one.
+
+So then one is going to return an item to two.
+
+Which means it's done running and two is returning something to three.
+
+And then when it's done, it pops from the stack.
+
+Now three has that value.
+
+It does what it needs to do, passes that to the four that gives you the 24.
+
+And that one gets popped from the stack.
+
+So now let's go over and look at this code and Chrome dev tools.
+
+Okay.
+
+So there is our code there.
+
+We're calling this with the number four.
+
+You can zoom out here.
+
+Run this.
+
+And then down here we get 24.
+
+I'm going to clear this.
+
+And then what I'm going to do here is I'm going to open the debugger and I want to show something.
+
+And that is when I create a breakpoint here.
+
+Now I'm going to run this.
+
+So our call stack as we step through this.
+
+We're going to have factorial put onto the call stack.
+
+That's factorial.
+
+And you can see up here that n equals four up here.
+
+But on the call stack itself, it just says factorial.
+
+And then we run through here and it's going to call another instance of the function.
+
+So I'm going to click this.
+
+And now we have factorial on the call stack a second time.
+
+It will show you that n is equal to three this time.
+
+But the call stack itself is just showing factorial twice.
+
+I'm just going to step through this.
+
+N equals two.
+
+N equals one, and we have factorial on the call stack four times.
+
+So you can't tell by looking at the call stack which one of the factorials it is because they all just
+
+say factorial, because we're calling the same function over and over.
+
+To watch this.
+
+If I click on this, n equals one.
+
+If I click on this one.
+
+And has been changed to two and three and four.
+
+So they do include that on what the argument was that you passed to this.
+
+So we'll just step through this.
+
+Now you can see that it's highlighting that if statement is going to return one.
+
+And we have popped that first item off the call stack.
+
+So the one at the top of the call stack is the one for the number two now.
+
+And three and four.
+
+And then when we pop this one from the call stack, the only thing left.
+
+Is to return the number 24 down here at the bottom.
+
+Okay, so I wanted to do one more thing here and in factorials.
+
+It's amazing how fast they grow.
+
+So factorial four is 24.
+
+But if you go to factorial of eight.
+
+This goes all the way to 40,000.
+
+If you go to factorial 20, you get this really huge number here.
+
+So they grow very, very fast.
+
+So it's a fun function to play around with and see how fast those numbers grow.
+
+And that is our overview of factorial.

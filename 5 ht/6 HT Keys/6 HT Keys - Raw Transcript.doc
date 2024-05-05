@@ -1,0 +1,101 @@
+In the keys method.
+
+What we're going to do here is take all of the keys that are in the hash table and return them in an
+
+array.
+
+So I'm just going to bring up our hash table here.
+
+We're going to have a couple of items in here bolts and washers.
+
+So in order to return all of the keys the first thing that should be obvious is we're going to have
+
+to have a loop that's going to start at the beginning and then start going through looking for items.
+
+And when it gets to an address that has items, we're going to need another for loop to go through this
+
+array to return the keys from these key value pairs.
+
+So I'm going to put that back.
+
+And we can start coding this out.
+
+Okay, so the first thing we have to do, we know we're going to return an array with these items.
+
+We have to create that array.
+
+I'm just going to call it all keys.
+
+Then I also mentioned that we're going to have to have two for loops.
+
+So the first for loop is going to go zero through six through the length of the array that we have called
+
+data map.
+
+Then we're going to have to have a second for loop to go through these items, and that's going to look
+
+like this.
+
+So as we're going through that first for loop, we're going to start at this zero.
+
+And that doesn't have anything at that address space.
+
+So we don't want to run the second for loop at all.
+
+So what we're going to do with the second for loop is we're going to wrap this with an if statement.
+
+We're only going to run that if there is something at that address.
+
+So then we're going to move across until we finally get to that index of four, where we have a couple
+
+of items in this if statement is going to be true.
+
+And then we're going to run that second for loop.
+
+And when we do, we will push those items into that all keys array with this code here.
+
+Then the only thing left to do.
+
+Is to return the array.
+
+So we will look at this code in a moment.
+
+And DevTools we will also build out this hash table just like you see it here.
+
+All right, so let's flip over.
+
+Okay.
+
+So there is our keys method there.
+
+And this is going to build the hash table that we just saw.
+
+So I'm going to zoom out here and I'm going to run this and I'm going to open this hash table.
+
+So you can see here at the address of four we have two items.
+
+I'm going to open this.
+
+And we have bolts and washers.
+
+Okay, so I will close this.
+
+And run our keys.
+
+Method.
+
+And this returns an array with bolts and washers.
+
+So I'm just going to set one more item here.
+
+I'll put lumber in there with a quantity of 70.
+
+And I'll clear this.
+
+And now we'll run our keys method here.
+
+And now we get bolts and washers and lumber.
+
+Perfect.
+
+And that is our method for keys.

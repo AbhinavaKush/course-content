@@ -1,0 +1,60 @@
+It's a now let's look at queues.
+
+So a queue is just like when you get in a line and when you get on the line, this is called in queue
+
+and you can end queue somebody behind them.
+
+And when you remove somebody from the line that is D queue.
+
+It is Fifo.
+
+First in, first out.
+
+And we can enqueue a couple more people here and then we'll dequeue them.
+
+Now let's look at a couple of data structures that we could use for a queue.
+
+Let's start out with an array.
+
+So remember with arrays to pop or to push is O of one to shift or unshift is O of n.
+
+So with the queue you need to add at one end and remove from the other end.
+
+And it doesn't matter which end you use for adding or removing, so long as they are opposite ends for
+
+those two purposes.
+
+So let's look at an array we could say we're going to add from this end.
+
+That's o of n and remove from this end.
+
+That's O of one.
+
+Or we could do it the other way around.
+
+Add from this end or of one remove from this end o of n, so there's no way to get around having one
+
+of those be o of n.
+
+Let's compare this to a linked list.
+
+So with a linked list, when you pop an item from the end like this, it is o of n.
+
+But to push it is O of one.
+
+On the other end shift is O of one and unshift is O of one.
+
+So what you don't want to do with a linked list is dequeue from this end, because that's O of n.
+
+What you want to do is in queue from this end and dequeue from this end.
+
+And they're both O of one.
+
+With a linked list.
+
+We called these head and tail for the queue.
+
+I'm just going to change the names to first and last.
+
+So what we're going to do is we're going to start with a linked list and modify it to build our queues.
+

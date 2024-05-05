@@ -1,0 +1,108 @@
+So now we're going to talk about priority queues.
+
+And to explain what a priority queue is I'm going to bring up a heap.
+
+And a heap is the most common way to implement a priority queue.
+
+And the reason for that just comes down to big O.
+
+So what is a priority queue?
+
+A priority queue will always just return the item with the highest priority.
+
+That's it.
+
+So I'm going to bring this back.
+
+And then I'm going to talk about a few data structures that are not good candidates for priority queues,
+
+because you could implement a priority queue as a linked list.
+
+This is not an efficient way to do it, but you could do it this way.
+
+Now, if you wanted to find the highest value in a linked list, you could just traverse through the
+
+entire linked list, determine which value is the highest value, and return it.
+
+But doing that is O of n.
+
+That's not very efficient.
+
+So you could implement this also with an array.
+
+Now this particular array is not set up as a heap.
+
+This is just random numbers in an array.
+
+If you were going to find the maximum value, you would have to once again iterate through the array,
+
+determine what the maximum value is, and return it.
+
+So you might think, okay, I could implement this as an object or a map, because we could go directly
+
+to that 95 and return it as O of one.
+
+But the problem with that is that we don't know that 95 is the maximum value.
+
+And in order to determine that, we would have to iterate through all of these keys to determine that
+
+95 is the highest value and then return it.
+
+And iterating through all of these would be o of n.
+
+So another way we could do our priority queue is to implement it as a binary search tree in the way
+
+this tree is, because this is a perfect tree.
+
+You could go down to that 95 node in three steps.
+
+That would be log in.
+
+Also, if you were going to add a value, let's say we're going to add the value of 100.
+
+You would iterate down to that 95, add the 100.
+
+That would also be log n.
+
+But the problem with a binary search tree is that it's not always balanced.
+
+You could end up with a tree that looks like this.
+
+Now, in order to get to the maximum value, you have to touch each node all the way down and that is
+
+O of n.
+
+Also, inserting a value, let's say we're going to insert the value of 100.
+
+We would have to touch all n nodes to be able to insert the value of 100.
+
+So now let's look at this.
+
+When the tree is set up as a heap.
+
+And the thing that determines the big O is what is the height of the tree.
+
+And the height is log n.
+
+So this tree has, we could say approximately eight nodes.
+
+And log sub two of eight is three.
+
+And it has three levels.
+
+So the height is log n.
+
+So if we remove this node and move this one up, the maximum number of levels that we could sink this
+
+down would be the height of the tree which is log n.
+
+Also, if we're going to insert a value, the maximum number of levels that this would have to be bubbled
+
+up would be the height of the tree, which is once again log in.
+
+So it doesn't matter if you're inserting or removing with a heap.
+
+This is going to be o of log n and o of log n is incredibly efficient.
+
+And that is why heaps are the data structure of choice when implementing a priority queue.
+

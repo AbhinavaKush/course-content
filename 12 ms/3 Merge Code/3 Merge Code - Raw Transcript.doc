@@ -1,0 +1,92 @@
+So now we're going to code our helper function merge.
+
+Here are the two sorted arrays that we're going to combine into one array.
+
+I'm just going to shrink these down here.
+
+So we have room for our code.
+
+And bring this in.
+
+So we're just going to say merge and pass it the two arrays.
+
+Then we're going to create our new array that we're going to put these arrays into called combined.
+
+And I'm going to create two variables I and I'll bring an arrow in for that at the bottom here.
+
+And J.
+
+And I'll bring another arrow in at the bottom for that.
+
+And what we're going to use here is a while loop.
+
+So this is basically saying while either of these arrays have length.
+
+While either of the arrays have a length that is greater than zero, we will run this while loop.
+
+Then we're going to say, if I is less than J.
+
+And I'm just going to highlight that in the.
+
+Diagram below, and in this case it is less than J.
+
+We're going to push AI into that new array that we're calling combined like that.
+
+Then we want to increase AI by one, which will move it over to the next item.
+
+So when we look at I and j again j this time is less than I.
+
+So for that we're going to say else.
+
+And then we're going to push that item into the new array like that.
+
+And we also need to increase J by one, which will move that arrow over one.
+
+So we can run through this code.
+
+And add that item and the next item from J and that one and that one.
+
+And now one of the arrays is empty, which is going to break us out of this while loop.
+
+Then we just need to finish looping through array one.
+
+So let's remove this code and bring in another while loop to loop through that array.
+
+And we'll push AI into the new combined array.
+
+And then we need to say.
+
+I plus plus, which moves I over to the next item in that array.
+
+And now that one has been pushed into the combined array.
+
+And that breaks us out of this while loop.
+
+So the other possibility is that instead of array one still having items in it, it was array two.
+
+So we'll just do a while loop for that.
+
+That's the opposite of the while loop above it.
+
+Then we're going to return that combined array.
+
+And they will just have this closing curly brace.
+
+I didn't have that on the other page because this was going to get distributed across two pages.
+
+So let's flip over to DevTools.
+
+And there is our function.
+
+And these are the two arrays that we are going to merge.
+
+So let's zoom out here.
+
+I'm just going to move this up here like this.
+
+And hit run.
+
+And there is our combined array one through eight.
+
+And that is our function for merge.
+

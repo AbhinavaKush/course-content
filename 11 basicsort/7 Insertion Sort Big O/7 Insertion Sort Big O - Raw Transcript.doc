@@ -1,0 +1,44 @@
+So I want to touch on the big O of insertion sort, obviously, because it has a for loop inside of
+
+a for loop it is O of n squared.
+
+That's for its worst case.
+
+That is the true big O of this would be O of n squared.
+
+But let's look at a situation where something is almost sorted.
+
+We're going to start here.
+
+And we don't do anything else because the item before it is less than we put that back.
+
+And this one, everything before it is less than.
+
+So we're not going to do anything.
+
+And this one, we're just going to move it over one and drop this in.
+
+And then we go to the next one.
+
+And then we keep going through to the end of the array.
+
+And you can see that we basically just made one pass.
+
+This would be in complexity, not in squared.
+
+And I wanted to point this out because the next couple of sorting algorithms are much more efficient.
+
+They are O of n times log n.
+
+They're more complex to write, but they are faster.
+
+But they're not going to be faster.
+
+If you have almost sorted data, you can use one of these sorting algorithms that are more primitive,
+
+like insertion sort that is O of n squared typically, and have it actually run faster.
+
+So I just want to touch on this aspect of the insertion sort.
+
+Big O.
+

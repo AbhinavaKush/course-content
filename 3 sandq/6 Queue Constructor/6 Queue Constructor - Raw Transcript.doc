@@ -1,0 +1,57 @@
+So now we're going to create our constructor for our queue.
+
+Except our queue is going to look like this.
+
+So the first thing we have to do with our constructor is to be able to create a node.
+
+And our node is going to be identical to a linked list node value.
+
+And next.
+
+So our constructor for nodes in a queue will be identical to what we used in a linked list.
+
+And they're going to be other similarities to a linked list.
+
+Let's start out with a linked list class like this.
+
+We can borrow from this.
+
+But instead of calling this linked list, we'll call it.
+
+Q.
+
+So let's start building out the constructor here.
+
+The first thing we need is to create a node.
+
+And the next thing in the linked list class is, we said set head and tail equal to the new node that
+
+we just created.
+
+But in the queue.
+
+Instead of calling this head and tail, we're going to call it first and last.
+
+And then we just say the length is now one.
+
+So we'll look at this in a moment in DevTools.
+
+And when we do, we'll create a node with a value of four okay.
+
+So let's flip over to DevTools.
+
+Okay.
+
+So there is where we create our node that's identical to when we create a linked list.
+
+And in our constructor right here, instead of having head and tail, we have first and last.
+
+So let's zoom out and run this.
+
+And I'll expand this.
+
+And there is our node with a value of four.
+
+And that is our cue.
+
+Constructor.

@@ -1,0 +1,25 @@
+Here's the Hinglish version of your transcript on big O notation, focusing on O(n²):
+
+---
+
+**Intro:**
+"Is session mein, hum big O notation O(n²) explore karenge, nested operations ke concept par deeper understanding ke liye building kar rahe hain."
+
+**A1:**
+"Apne last discussion se setup ko recall karte huye, hum initially do sequential for loops ka use kar rahe the. Aaj, hum is structure ko adjust kar rahe hain by nesting ek for loop ko dusre ke andar, aur clarity ke liye kisi bhi console log statements ko eliminate kar rahe hain."
+
+**A2:**
+"DevTools ke andar, hum is nested loop configuration ko execute karenge by calling hamara function number ten ke saath. Output ko observing karte hue, operations zero zero se shuru hota hai aur nine nine pe culminate hota hai, effectively one hundred unique outputs generate karte hua."
+
+**A3:**
+"Ye demonstrate karta hai ki total operations n times n hain, jo mathematically n² ke roop mein express kiya jata hai. Isliye, ye execution pattern jahan pe first loop ka har iteration second loop ka complete run trigger karta hai, hamare O(n²) complexity ko define karta hai."
+
+**A4:**
+"Chaliye isko ek graph par visualize karte hain to illustrate the impact. Agar aap O(n) aur O(n²) ko same task ke liye compare karein, to O(n) kafi zyada efficient hai, completion ke liye fewer operations requiring karta hai. Ye visual comparison in complexities ke beech ke efficiency gap ko starkly highlight karta hai."
+
+**Outro:**
+"O(n²) ko samajhna crucial hai kyunki ye dikhata hai ki code ko optimize karke linear complexity, O(n), achieve karna rather than quadratic, performance ko significantly enhance kar sakta hai. Ye hamara exploration conclude karta hai O(n²) ka—a powerful concept in algorithm efficiency."
+
+---
+
+Is tarah se, aapne big O notation, specifically O(n²) par Hinglish mein ek clear aur samajhne mein aasan explanation diya hai, jo viewers ko is complex concept ko achhe se grasp karne mein help karega.

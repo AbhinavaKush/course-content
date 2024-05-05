@@ -1,0 +1,65 @@
+So we're going to set I equal to the length minus one.
+
+So remember the first time we went through it was five times.
+
+Even though we had six items.
+
+And then we're going to decrement each time, because the next time we want to go through four times,
+
+then three times, etc..
+
+And the second for loop.
+
+We're going to go while J is less than I.
+
+So this makes it where the first time through we're only going through five comparisons, and then the
+
+next time four and three because we're doing it while J is less than I.
+
+So for the comparisons, we're going to say if.
+
+The item at j is greater than j plus one.
+
+So this is going to be j the first time through our loop.
+
+And this is j plus one.
+
+And in this case we are going to switch them.
+
+And this is what we'll use to switch them.
+
+Let's walk through this.
+
+We're going to say let temp equal array j.
+
+So that's temp is equal to this value.
+
+J equals j plus one is going to take that two and move it over.
+
+And then j plus one equals temp.
+
+Is going to put that value there.
+
+So that's going to switch those two values.
+
+And then after we get done running through these four loops, the only thing left to do is to return
+
+the array.
+
+So let's go take a look at this code in DevTools.
+
+And for the array that we're going to pass it I'm just going to put this back the way it was.
+
+It's going to be the array in this order.
+
+So let's flip over to DevTools and take a look at this.
+
+So there is our function there.
+
+And that's the array that we're going to sort.
+
+So the only thing we have to do is to hit run.
+
+And then we come down here and this is the array that gets returned one through six.
+
+And that is how we code bubble sort.

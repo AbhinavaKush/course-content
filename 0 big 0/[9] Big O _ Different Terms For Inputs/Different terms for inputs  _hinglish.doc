@@ -1,0 +1,28 @@
+Here's the Hinglish version of your transcript on big O notation focusing on different terms for inputs:
+
+---
+
+**Intro:**
+"Aaj hum ek classic interview puzzle ko tackle karenge big O notation mein—different terms for inputs. Ye topic aksar candidates ko confuse karta hai, lekin isse samajhna aapko ek significant edge de sakta hai."
+
+**A1:**
+"Chaliye ek code ko revisit karte hain jo hum pehle analyze kar chuke hain: do for loops ka sequence, har ek originally 'n' times chalta tha, jo constants ko drop karke O(n) mein simplify kiya gaya tha. Lekin yahan interviews mein tricky part aata hai."
+
+**A2:**
+"Hum apne example ko modify karenge do distinct variables introduce karke hamare loops ke liye—pehle loop ke liye 'a' aur doosre ke liye 'b' kahenge. Typically, har loop ko individually O(n) maana jaata hai. Unhein add karna misleadingly suggest kar sakta hai O(2n), jo wapas O(n) mein simplify hota hai."
+
+**A3:**
+"However, ye simplification maan leta hai ki 'a' aur 'b' essentially same hain, jo hamesha sahi nahi hota. Kya hota agar 'a' significantly chhota hota 'b' se, jaise ek versus a million? Saaf hai ki ye loops same workload ko equate nahi karte."
+
+**A4:**
+"Sahi tareeke se, hume in loops ko independently treat karna chahiye: pehla loop as O(a) aur doosra as O(b). Jab ye sequentially aur independently chalte hain, to unka combined complexity O(a + b) hota hai. Ye express karta hai ki total time distinctly har loop ke workload par depend karta hai."
+
+**A5:**
+"Matters ko aur complicated banate hue, agar ye loops sequential ke bajay nested hote, to complexity multiply hoti, resulting in O(a * b). Ye distinction crucial hai kyunki ye affect karta hai how we analyze aur predict karte hain algorithm performance."
+
+**Outro:**
+"Ye samajhna ki hum universally different input variables ko single 'n' se replace nahi kar sakte, big O notation ko mastering mein key hai. Ye nuanced approach ensure karta hai accurate complexity analysis, particularly vital in scenarios jahan input sizes vary dramatically."
+
+---
+
+This translation brings clarity to the complex subject of big O notation using different terms for inputs in a more conversational and easy-to-understand Hinglish format.

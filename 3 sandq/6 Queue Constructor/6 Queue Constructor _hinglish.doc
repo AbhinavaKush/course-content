@@ -1,0 +1,22 @@
+Here's the refined script translated into Hinglish, using simple and urban Hindi mixed with English:
+
+---
+
+**Intro:**  
+"Welcome to hamari tutorial on queue construction jo linked list ki tarah hai. Chaliye shuru karte hain constructor details ke saath."
+
+**A1:**  
+"Pehla step hamare queue constructor ko build karne ka hai ek node create karna, jo bilkul linked list ke node ki tarah hai, jisme ek value aur ek next pointer hota hai."
+
+**A2:**  
+"Jaise linked lists mein hota hai, hamara queue constructor start hota hai first aur last ko newly created node pe set karke, jo queue ke start aur end ko indicate karta hai. Iske alawa, hum queue ki length ko one set karte hain kyunki new node add hui hai."
+
+**A3:**  
+"Ab, dekhte hain ye practice mein kaise kaam karta hai. Hum DevTools use karenge ek node create karne ke liye jiski value four hogi aur dekhenge kaise ye hamare queue ke first aur last element ke roop mein function karta hai, constructor ko action mein dikhate hue."
+
+**Outro:**  
+"Yeh conclude karta hai hamara look at the queue constructor, jo dikhata hai iski similarities linked lists ke saath aur iski efficiency in managing data."
+
+---
+
+Is version mein maine koshish ki hai ki technical accuracy maintain rahe while making it simpler and more relatable for a broader Hinglish-speaking audience. Agar aapko aur adjustments chahiye ya kisi aur section ko refine karna hai, toh zaroor batayein!

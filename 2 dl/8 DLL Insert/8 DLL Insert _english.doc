@@ -1,0 +1,57 @@
+Here's a refined script based on the detailed transcript you provided about inserting into a linked list:
+
+---
+
+**Intro**  
+Welcome back! Today we're diving into a fundamental operation in data structures: inserting a new node into a linked list at a specific index. If you're coding along, feel free to pause the video as we go.
+
+**A1**  
+Just like in singly linked lists, we'll start with handling special cases. If we're inserting at the beginning, that's just an unshift operation. Here's the code:
+```javascript
+if (index === 0) {
+    return this.unshift(value);
+}
+```
+And if we're adding to the end, we use the push method:
+```javascript
+if (index === this.length) {
+    return this.push(value);
+}
+```
+Remember, both these operations need the `return` keyword to function correctly.
+
+**A2**  
+Now, for the standard insert. We aim to place a new node at a specific middle index, say, index 2. We first set up pointers to help us navigate:
+```javascript
+let newNode = new Node(value);
+let beforeNode = this.get(index - 1);
+let afterNode = beforeNode.next;
+```
+
+**A3**  
+Next, we adjust the pointers to weave the new node into the list:
+```javascript
+newNode.next = afterNode;
+beforeNode.next = newNode;
+```
+
+**A4**  
+For a doubly linked list, it's similar, but we also need to update the previous pointers:
+```javascript
+newNode.prev = beforeNode;
+if (afterNode) {
+    afterNode.prev = newNode;
+}
+```
+
+**Outro**  
+And that’s it! We've successfully inserted a node in both singly and doubly linked lists. Always remember to increase the length of the list and return true to indicate success:
+```javascript
+this.length++;
+return true;
+```
+In our next tutorial, we'll explore how to remove nodes from a linked list. Stay tuned!
+
+---
+
+This script ensures clarity, conciseness, and includes essential coding details to aid in understanding and implementation. If you need further adjustments or additions, let me know!

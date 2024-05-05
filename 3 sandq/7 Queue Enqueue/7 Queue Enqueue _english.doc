@@ -1,0 +1,31 @@
+Here's a refined version of your enqueue method script for the video tutorial:
+
+---
+
+**Introduction to Enqueue Method**
+
+Today, we're going to add an element to our queue using the enqueue method. This method is essential for managing the order in which elements are processed.
+
+**Step 1: Understanding the Queue**
+
+Imagine a queue as a line of nodes. Each node contains data, and they are connected in the order they were added.
+
+**Step 2: Implementing Enqueue**
+
+To implement the enqueue method, we begin by creating a new node. If the queue is empty, both the 'first' and 'last' pointers of the queue will point to this new node, establishing the start of our queue.
+
+**Step 3: Handling Multiple Items**
+
+If the queue already contains items, we adjust the 'next' pointer of the last node to point to the newly created node. Then, we update the 'last' pointer to this new node, effectively adding it to the end of the queue.
+
+**Step 4: Final Touches**
+
+After inserting the node, we increment the queue's length and return the entire queue structure for verification.
+
+**Conclusion: Testing the Method**
+
+Let’s test our enqueue method in the development tools. We'll enqueue a node with a value of seven and check to ensure 'last' is pointing to the new value.
+
+---
+
+This script is designed to align with the structure and style of your original transcript while enhancing clarity and focus for better viewer engagement and understanding. Let me know if you need further adjustments or additional sections!

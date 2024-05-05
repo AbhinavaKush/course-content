@@ -1,0 +1,124 @@
+Okay.
+
+So now let's code quicksort I'm going to bring up our array like this.
+
+So right out of the gate when we run pivot we're going to have our pivot item like this.
+
+And it's going to sort it like this.
+
+And it's going to return this index.
+
+What we have to do with quicksort is to continue doing that on this side.
+
+And this side and keep breaking this down until we have sorted everything.
+
+So I'm going to put our array back the way it was and then shrink it down into the corner like this.
+
+So I'm going to bring the function in like this.
+
+Just like with pivot, you only have to pass it an array to begin with.
+
+It is only when we start calling this recursively that you have to worry about that left and right up
+
+there.
+
+So in our first line of code that I'm going to bring in here, we're going to store that index.
+
+That pivot returns.
+
+Like this and we are passing pivot these three pieces of information and it's doing two things.
+
+It is rearranging our array like that.
+
+But it's also returning that index.
+
+And we are storing it in pivot index.
+
+And with that piece of information.
+
+We can call quicksort recursively like this.
+
+So if you look at our diagram at the bottom, it is these three items that it's being called on in this
+
+situation.
+
+When we have it call it again because left is zero and pivot index minus one is that last index in that
+
+bracket.
+
+And then we also need to call this on the items on the right and that we would do that like this.
+
+And I'll bring up that bracket to represent that.
+
+So let's bring this up and look at this a little bit further.
+
+We're going to start on the left.
+
+And we're going to have our pivot.
+
+And that's going to be less than.
+
+And that's going to be greater than.
+
+And then we switch these two.
+
+And then we're going to call it again.
+
+But in this situation, you don't want to call quicksort again because you already know that these are
+
+in the right spot.
+
+That's going to be our base case.
+
+And let's do this over here as well.
+
+That's going to be our pivot.
+
+That's greater than and that's less than.
+
+We switch these and then we switch these.
+
+And now we know that these two are on the right spot.
+
+So we don't want to call quicksort on these either.
+
+Also.
+
+That is our base case.
+
+So let's shrink this down.
+
+The thing that we need to do here is have some kind of if statement.
+
+So to make this work we're going to need this if statement where we say left has to be less than right.
+
+So when what we just saw here.
+
+What was left and right were the same item because there was only one item left.
+
+And when that happens, we're not going to continue having quicksort call itself.
+
+And now once we get to that point, we can just return the array.
+
+So we'll look at this code in a moment.
+
+Except we'll start with an array that looks like this.
+
+Okay, so let's flip over to DevTools.
+
+So there is our swap function that we wrote in the last section and our pivot helper function.
+
+And I'm going to scroll up here and there is quicksort.
+
+And we'll run it down here with that array.
+
+And I'll zoom out.
+
+And run this.
+
+And there is our sorted array.
+
+And that.
+
+His quicksort.
+

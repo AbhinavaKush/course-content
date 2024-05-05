@@ -1,0 +1,97 @@
+Okay, so now let's write our DQ method.
+
+DQ is just going to be removing that first item in the line.
+
+This is very similar to shift with a linked list.
+
+And remember with shift we had an edge case for if we had one node in our linked list.
+
+Same is going to apply to queues and then we have to return undefined if there aren't any items in the
+
+list at all.
+
+So like I mentioned, it's like the shift method.
+
+And you can copy a lot out of this.
+
+Once again, I'll recommend that you try to write this from scratch.
+
+And the first thing that you would do if you did that.
+
+As you would change the name to DQ.
+
+And as always, when we're going to remove something from a data structure.
+
+If it is empty, we can't remove that item, so we'll return undefined.
+
+Otherwise we will need a variable to point at the item that we're going to return.
+
+So we'll say temp is equal to this dot first.
+
+Like.
+
+This.
+
+Then we'll say if the length is one, we'll have first and last equal to null.
+
+That is this situation where you have one item, we remove it.
+
+We set first and last equal to null.
+
+Then we say else.
+
+First equals first.
+
+Next.
+
+That just moves first over to the next node.
+
+And then temp next equals null.
+
+So that is temp dot next equals null.
+
+There will decrement the length.
+
+And then we'll return temp.
+
+So that's this item here.
+
+We'll return that.
+
+So we'll expect to get the number 11 back.
+
+So we'll look at this code in a moment in DevTools.
+
+And then we'll build out this same queue that we've been using in this video.
+
+And remove this item.
+
+So we should see the number 11 returned.
+
+And then we'll look at our queue.
+
+And first should be pointing to the node with the value of three.
+
+So let's flip over to DevTools.
+
+And there is our DQ method and this creates our queue with the values 11, three, 23 and seven.
+
+So I'm going to zoom out here and run this.
+
+And I'm just going to open this.
+
+And the first node that's the one we're going to dequeue has the value of 11.
+
+So I'm going to clear this.
+
+That I'll run our DQ method.
+
+And A returns the node with the value of 11.
+
+Now let's look at the Q.
+
+And we'll open this.
+
+And now first is pointing to the node with the value of three.
+
+So that is DQ

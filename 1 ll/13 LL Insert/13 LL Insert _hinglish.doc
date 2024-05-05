@@ -1,0 +1,31 @@
+Here's the Hinglish version of your script for the video tutorial on the `set` method in linked lists:
+
+---
+
+**Intro:**
+Welcome back! Aaj hum linked list mein `set` method par kaam karenge. Ye method humein kisi specific index par node ki value update karne ki permission deta hai. Ye `get` method ke similar hai, lekin hum node ko retrieve karne ke bajay modify karte hain. Agar aap sath mein code kar rahe hain, to yah ek achha point hai video ko pause karke khud se implement karne ki koshish karne ka. Ready? Chalo shuru karte hain.
+
+**Body:**
+Sabse pehle, humari linked list ko dekhte hain. Maan lo humare paas index 1 par ek node hai jiski value 3 hai, aur hum use 4 mein update karna chahte hain. Yahaan hum is problem ko kaise solve karenge:
+
+1. **Variable Initialization:**
+   - Ek temporary variable, `temp`, set karein, jaise ki hum `get` method mein karte hain. Lekin is baar, hum head se start karne ke bajay, directly desired index par node tak pahunchne ke liye apna `get` method use karenge. Is se humara code optimize hota hai kyun ki existing method ka reuse hota hai.
+
+2. **Check Conditions:**
+   - Ye sunishchit karein ki index valid bounds mein hai. Agar index negative hai ya list ki length se bada hai, to hum `undefined` return karenge jo ek invalid operation ko indicate karta hai.
+
+3. **Update the Node:**
+   - Agar `temp` `undefined` nahi hai, to iska matlab hai ki humne apna node successfully dhundh liya hai. Ab, bas `temp.value` ko naye value mein set karein, is case mein 4.
+
+4. **Confirmation:**
+   - Update karne ke baad, ek return statement include karein jo function se exit kare aur confirm kare ki update successful raha hai. Hum `true` return karte hain jo indicate karta hai ki value successfully change hui hai.
+
+5. **Error Handling:**
+   - Agar `temp` kisi invalid index ke karan `undefined` hai, to function `false` return karta hai, jo indicate karta hai ki update fail hui hai.
+
+**Outro:**
+Aur yun hum JavaScript mein linked list ke `set` method ko implement karte hain! Humne efficiently apne `get` method ka use kiya node ko locate karne ke liye, ensure karte hue ki hamara `set` method concise aur effective hai. Ab, chaliye is method ko Chrome DevTools mein test karte hain dekhte hain action mein.
+
+---
+
+Is tarah se aapki original content ko refine kiya gaya hai jisse explanations ko streamline kiya gaya hai aur key steps par focus kiya gaya hai, jo video format mein follow karne mein asani hoti hai.

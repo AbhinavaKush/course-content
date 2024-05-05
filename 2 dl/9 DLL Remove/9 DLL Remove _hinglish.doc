@@ -1,0 +1,60 @@
+**Intro: Doubly Linked List mein Nodes Remove Karna**
+
+Hello and welcome back! Aaj hum doubly linked lists ke 'remove' method ke baare mein jaanenge, jisse hum kisi specified index pe node ko hata sakte hain. Ye concept kaafi simple hai, to agar aap saath coding karna chahte hain, to yahan pause kar sakte hain. Nahi to, chaliye shuru karte hain.
+
+**First ya Last Node Remove Karna**
+
+Doubly linked list mein nodes remove karna single linked list jaise hi hota hai, but thoda different hai because dono sides se linkage hoti hai.
+
+1. **First Node Remove Karna:**
+   Agar index zero hai, hum `shift` method ka use karte hain:
+   ```javascript
+   if (index === 0) return this.shift();
+   ```
+
+2. **Last Node Remove Karna:**
+   Last node ke liye, kuch `pop` method jaise:
+   ```javascript
+   if (index === this.length - 1) return this.pop();
+   ```
+
+3. **Invalid Indices Handle Karna:**
+   Koi bhi index jo bounds se bahar ho, uske liye hum `undefined` return karte hain, matlab index zero se kam ya list ke length ke barabar ya usse zyada ho:
+   ```javascript
+   if (index < 0 || index >= this.length) return undefined;
+   ```
+
+**Specific Index Pe Node Remove Karna**
+
+Jo valid indices hain aur first ya last node cover nahi karte:
+
+1. **Node Ko Locate Karna:**
+   `get` method ka use karke us node tak pahunchte hain:
+   ```javascript
+   let nodeToRemove = this.get(index);
+   ```
+
+2. **Links Adjust Karna:**
+   Pointers ko adjust karte hain taaki hatai gayi node ko bypass kar sake:
+   ```javascript
+   nodeToRemove.prev.next = nodeToRemove.next;
+   nodeToRemove.next.prev = nodeToRemove.prev;
+   ```
+
+3. **Cleanup:**
+   Removed node ka list se connection totally tod dete hain:
+   ```javascript
+   nodeToRemove.next = null;
+   nodeToRemove.prev = null;
+   ```
+
+4. **Length Decrement Karke Return Karna:**
+   List ki length ko kam karte hain aur removed node ka value return karte hain:
+   ```javascript
+   this.length--;
+   return nodeToRemove;
+   ```
+
+**Outro: Review aur Demonstration**
+
+Chaliye isko action mein dekhte hain. Hum animations ka use karke dekhenge ki nodes ko doubly linked list se kaise efficiently remove kiya jaata hai. Next video mein join kijiye jahan hum real-time mein is 'remove' method ko implement aur test karenge. Stay tuned aur happy coding!

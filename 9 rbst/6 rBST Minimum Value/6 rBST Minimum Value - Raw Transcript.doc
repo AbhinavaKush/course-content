@@ -1,0 +1,91 @@
+So in this video, we're going to write a helper method that we're going to use in the next video.
+
+And what the method is going to do is find the minimum value in a particular subtree.
+
+So let's bring up a tree.
+
+And by looking at this tree you can see that the minimum value is 18.
+
+But the question is how do we write an algorithm that will determine that it's actually pretty easy.
+
+You start at the root and then you go to the left and you go to the left again.
+
+And when you go to the left again and it is null, that's how you know that 18 is the minimum value.
+
+But we're going to write this where it also works on a particular subtree.
+
+So for example if we passed this the 76 node it would be looking for the minimum value in this subtree.
+
+And to determine that we would go to the left and go to the left again.
+
+And since that is null, we know that 52 is the minimum value in that subtree.
+
+So now let's take this tree and move it down here.
+
+And we'll start our code out like this.
+
+We're going to pass this a node.
+
+And for this first example that node that we're passing it will be the root.
+
+And then we'll say while current node dot left is not equal to null, we're going to set current node
+
+to be equal to current node dot left which does this.
+
+And then once again we're going to say while current node dot left is not equal to null, we'll set
+
+current node to be equal to current node dot left which moves this down.
+
+But this time when we run the while loop current node dot left is equal to null.
+
+And that's going to break us out of this while loop.
+
+And then we'll return current node dot value which returns the value of 18.
+
+So I want to emphasize here that we are not returning current node.
+
+We're not returning a pointer to the node.
+
+We're returning the value that is in the node.
+
+So now let's look at running this on this subtree.
+
+We'll pass it that 76 node which would be root dot right.
+
+And then we'll say while current node dot left is not equal to null, we'll set current node to be equal
+
+to current node dot left like that.
+
+And now when we run the while loop current node dot left is equal to null.
+
+So we'll come down here and return current node dot value which returns that value of 52.
+
+And that is all of the code for this helper method.
+
+So when we go to run this code we're going to say console log my tree dot min value.
+
+And then we're going to pass this the root.
+
+And it's the root of this tree.
+
+And then we're also going to run this on this subtree.
+
+And we'll do that by running this on my tree dot root dot.
+
+Right.
+
+So now let's flip over and take a look at this.
+
+So there is the code that we just wrote.
+
+And then I'll scroll up and these lines here create that tree that we just saw.
+
+And with these lines of code down here we're going to run min value on the root and on root dot.
+
+Right.
+
+And I'll run this and you can see that the minimum value from the root is 18.
+
+And the minimum value from root dot right is 52.
+
+So it looks like we have a working helper method for finding the minimum value.

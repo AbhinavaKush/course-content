@@ -1,0 +1,99 @@
+So now let's look at the big O of quicksort.
+
+So I'm going to bring up an array like this.
+
+And when we run pivot it brings us to a point like this.
+
+So the first thing I want to point out about this is we didn't have to create any new items here.
+
+We just moved things around within the same array.
+
+So this is different than merge sort that creates new items and therefore doubles the amount of space
+
+that it takes up in memory.
+
+With this, you are working only within the original array without duplicating any data.
+
+So from a space complexity perspective this is O of one.
+
+And this is an advantage of quicksort over something like merge sort.
+
+From a time complexity perspective in order to move all of these items around like we just did here.
+
+That was O of N, because we had a for loop that went from the beginning of the array all the way through
+
+to the end.
+
+And if you look at how many times we had to do this, this was one.
+
+Then we did it.
+
+Two.
+
+Three.
+
+That is going to be login.
+
+So what we just did here is o of n times log n.
+
+And we'll look at this on the graph like this.
+
+It's much better than O of n squared.
+
+But the problem with this is what I just showed you is actually the best case for quicksort.
+
+The worst case is not o of n times log n.
+
+So now let's look at the worst case.
+
+The worst case is if you have already sorted data.
+
+So if we take that first item there we make that our pivot point.
+
+We're going to compare that to all the other items in the array.
+
+And that is not going to move.
+
+So I'll color that in green.
+
+But what we normally do with quicksort is we run quicksort on all the items on the left of it, all
+
+the ones that are less than, and then run it also on everything on the right.
+
+It is that splitting of the array that makes it efficient.
+
+But in this case there are no items on the left.
+
+There are only items on the right, so there is no splitting of the array.
+
+And the same is true when we look at two, we compare it with everything else, and there are only items
+
+on the right and for three as well, and so on.
+
+And so on, all the way to the end.
+
+So in this circumstance this is actually O of n squared.
+
+That is our worst possible scenario and that is what Big-O measures.
+
+So our best case or average case would be o of n times log n, but our worst case is O of n squared.
+
+So if you have sorted or almost sorted data this is not a good sorting algorithm.
+
+But if you have random data this is an excellent sorting algorithm.
+
+It's very fast and the space complexity is O of one, which is better than merge sort.
+
+If your data is sorted, it would be better to use something like insertion sort, even though that's
+
+O of n squared as its worst case.
+
+If you're using sorted or almost sorted data, it is very efficient.
+
+It actually runs at O of N.
+
+Okay.
+
+And that is our overview of quicksort.
+
+Big O.

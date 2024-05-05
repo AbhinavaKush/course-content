@@ -1,0 +1,218 @@
+Okay, now we are going to build our constructor for our linked list.
+
+So let's start our linked list class.
+
+Like this.
+
+And before we get into the code of creating the constructor, I'm just going to do this like this with.
+
+Out the code in the curly braces built out, because I want to point something out before we get into
+
+building the constructor.
+
+The constructor has a couple of things in common with a few of the other methods that we're going to
+
+build for the linked list, and they are push.
+
+Unshift.
+
+An insert.
+
+So the first thing they have in common is they each get passed a value, but they have something else
+
+in common.
+
+So let's look at what each of these do quickly.
+
+The constructor creates a new node at the time that you're creating the linked list.
+
+Push creates a new node and then adds that node to the end.
+
+Unshift.
+
+Creates a new node.
+
+Adds the node to the beginning.
+
+Insert creates a new node and inserts it wherever that's supposed to go.
+
+So you can see the thing they also have in common is that they all.
+
+Create a new node.
+
+So we don't want to rewrite this code for different times in each one of these methods.
+
+So we're going to create a separate class for creating nodes.
+
+And we're just going to call that class.
+
+Note.
+
+And then when each of these methods below.
+
+For the linked list needs to create a node.
+
+It's just going to call this class.
+
+In order to create the node.
+
+So just to review here, when we're creating a node that looks like this, which is actually this,
+
+this is what we're creating with the node class.
+
+So let's bring back our node class and build out our constructor to build that node.
+
+So the first thing the node has is a value.
+
+And what I'm going to do here.
+
+So we have a little bit more room is I'm just going to focus in on the constructor portion like this.
+
+So we pass the constructor a value here.
+
+That's what this is equal to like this.
+
+And then we're assigning that to the node.
+
+So let's bring in our note here.
+
+And there is the this keyword again.
+
+So we are specifically saying that this is the value for this node.
+
+So let's convert this to an object so we can see what we're doing here a little bit easier.
+
+So it is this object that we are giving it a value that we pass to the constructor of for.
+
+Then we have to say this dot next equals null because this is not pointing to any nodes yet.
+
+So we just say next is equal to null.
+
+So let's bring in the rest of the code here.
+
+And that is our class for a node.
+
+So when we create a node we would use a line that looks like this.
+
+Const new node.
+
+That's the name of our variable equals new, which calls the constructor for the node and creates a
+
+node with the value of four.
+
+So now we're able to create one of these for our linked list.
+
+And that's step one.
+
+So now let's start building out our constructor for our linked list.
+
+Let's bring back our linked list code.
+
+And we're going to start this with the constructor.
+
+And I'm just going to focus in on this constructor code and take the rest of that off the screen for
+
+now.
+
+So we have more room.
+
+So the first thing that the linked list constructor needs to do is create a new node.
+
+So we're going to do that here.
+
+And the value that we passed to the linked list constructor is passed to the new node constructor.
+
+And then we have a new node.
+
+Then we're going to have head point to that new node.
+
+We do that like this.
+
+This dot head equals new node.
+
+So this is specifically the head for this linked list.
+
+So head equals the new node that we just created in the line above.
+
+Right.
+
+Like that.
+
+And the equals remember is a pointer to that node.
+
+Then we're going to bring in tail.
+
+And we're going to say this dot tail equals this dot head.
+
+In other words, have tail point to the same thing that the head is pointing to.
+
+You could also write this line of code as this dot tail equals new node, just like we did with head
+
+in the line above.
+
+But if we do it this way, we're saying that it's going to point to the same thing that head is pointing
+
+to.
+
+Like this.
+
+And then with the linked list, we are also going to keep track of the length.
+
+So we'll say this dot length equals one.
+
+So let's bring back in the rest of that code for the class, and you would create a new link list by
+
+doing something like this.
+
+And when you do this you say new link list.
+
+We're going to pass in a number for what we're doing is creating a link list with one node with a value
+
+of four, with head and tail pointing to it.
+
+So let's bring back in all of the code here and go over to DevTools and look at this code in DevTools.
+
+So let's zoom in here.
+
+And this is the line of code where we create our linked list.
+
+This keyword here linked list is going to call the class linked list.
+
+The new keyword is specifically calling the constructor in the class linked list.
+
+Then if we look at this constructor.
+
+Here it is creating the new node.
+
+So this calls the node class here.
+
+And the new keyword is specifically calling the constructor.
+
+So let's run this.
+
+And it comes up with undefined because none of this code returns anything.
+
+So I'm just going to clear that off.
+
+And I'm going to type in my linked list and I press enter.
+
+And you can see that we have a linked list with a head that points to a node, and a tail that points
+
+to a node with a length of one.
+
+But if we open this up, we get a little bit more detail.
+
+You can see that node that had points to.
+
+Is an object with a value of four and next is null.
+
+The same thing with tail, where node is an object with value of four and next is null.
+
+So they're pointing to the same object.
+
+And then the linked list has a length of one.
+
+So looks like we have a working linked list.
+
+Constructor.
+

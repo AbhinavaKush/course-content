@@ -1,0 +1,135 @@
+So now I'm going to talk about call stacks.
+
+This is an important subject to understand if you want to wrap your head around recursion.
+
+So we had a data structure called a stack.
+
+And we used the analogy of a can of tennis balls.
+
+It's only the top tennis ball that you have access to at any one time.
+
+So you remove that one.
+
+Now the second tennis ball, we can remove that one now.
+
+And it's only when those have been removed that you can get to the one on the bottom.
+
+So I'm going to keep this structure of a stack here.
+
+And I'm going to move it over to the right.
+
+And we're going to use it as a call stack.
+
+So I'm going to explain the call stack with code that is not recursive just to explain the call stack.
+
+Then we will get into some recursive code that uses the call stack in the next video.
+
+So I have some code here.
+
+I'm going to call this function function one.
+
+And it's just going to console log out the string one.
+
+So when you run this function it goes on to the call stack.
+
+That function does.
+
+And when it runs, it's going to console log out one.
+
+Once it's done doing that function, one is done running and will be removed from the call stack.
+
+So I'm going to bring this back and I'm going to change this function.
+
+Where before it console logs out the number one, it is going to run a different function called function
+
+two.
+
+And function two is going to look like this.
+
+It is just going to console log out two.
+
+But before it does we're going to have it run another function.
+
+We'll call it function three.
+
+And when function three runs that gets pushed onto the call stack.
+
+And it looks like this.
+
+Now function three we're just going to have it console log out.
+
+Three.
+
+We're not going to have it call another function.
+
+But when it gets done writing the three to the console, this function is done running.
+
+And once it's done running, we can pop that from the call stack.
+
+Now you can see that function two is the top of the call stack.
+
+You can look at it like this.
+
+We were waiting for this line of code to complete function three.
+
+Before we move to this line of code.
+
+Now we can console log out that two.
+
+And now function two is done and we can remove that from the call stack.
+
+Likewise function one was waiting for function two to be done.
+
+And it can now console log out the one.
+
+And now we can remove function one from the call stack.
+
+So notice we called function one first and function three last.
+
+But the three printed to the screen first and the one printed to the screen last.
+
+There in reverse order of which they were called.
+
+And that is due to the order that these were put on the call stack.
+
+That's going to determine the order that these are going to be console logged out.
+
+So let's bring our code back up here.
+
+We'll look at this in DevTools.
+
+There is our code here, our three functions.
+
+And this is where we call function one.
+
+So I'm just going to zoom out here real quick.
+
+Come over here and run this.
+
+And you can see that we have three, two, one, just like we would expect.
+
+And I'm going to clear this.
+
+So the real thing that I want to show here is this up here in the upper right hand corner, this button
+
+right here, it says Show Debugger I'm going to click on this.
+
+And we get this screen here.
+
+The thing I really care about.
+
+I'm going to close some of these is callstack and breakpoints at this point.
+
+Then I'm going to come over here to where it says function one.
+
+See, it highlights that number next to it.
+
+I'm just going to click on it and it creates a breakpoint.
+
+And we can see that because it's highlighted.
+
+But we can also see it here.
+
+I'm just going to close this.
+
+And when I hit run snippet, that breakpoint is going to make it where that line at 15 is now highlighted.

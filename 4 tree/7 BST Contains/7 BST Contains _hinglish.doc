@@ -1,0 +1,60 @@
+Here's the translation of the transcript into simple and urban Hinglish:
+
+---
+
+**Intro**
+Toh ab hum dekhenge ki humara binary search tree mein 'contains' method kaise kaam karta hai. Hum example ke taur par number 27 ko use karenge.
+
+**A1: Initial Check**
+Sabse pehle, agar tree khali hai (matlab root null hai), toh hum directly false return kar denge. Kyunki empty tree mein toh kuch hoga hi nahi.
+
+**Code Implementation:**
+```javascript
+if (this.root === null) return false;
+```
+
+**A2: Tree Search Start**
+Agar tree mein elements hai, toh hum ek temporary variable, `temp`, ko root se start karenge.
+
+**Code Implementation:**
+```javascript
+let temp = this.root;
+```
+
+**A3: Tree Traversal**
+Ab hum while loop use karenge. Jab tak `temp` null nahi hota, tab tak loop chalega. Har node ke value ko target value se compare karenge:
+- Agar value kam hai `temp.value` se, toh left child ki taraf move karenge.
+- Agar value zyada hai, toh right child ki taraf move karenge.
+- Agar dono equal hai, toh matlab element mil gaya, aur hum true return kar denge.
+
+**Code Implementation:**
+```javascript
+while (temp !== null) {
+    if (value < temp.value) {
+        temp = temp.left;
+    } else if (value > temp.value) {
+        temp = temp.right;
+    } else {
+        return true; // Element found
+    }
+}
+```
+
+**A4: Element Not Found**
+Agar while loop se bahar aaye, matlab `temp` null ho gaya, toh iska matlab hai ki tree mein wo value nahi hai. Is case mein hum false return kar denge.
+
+**Code Implementation:**
+```javascript
+return false;
+```
+
+**Outro**
+Is implementation ko verify karne ke liye, hum Chrome DevTools ka use karenge. Do numbers, 27 aur 17 ke liye, contains method ko test karenge. Ek case mein true return hoga aur ek mein false, jo ki humare method ki correctness ko prove karta hai.
+
+---
+
+**Next Steps:**
+1. Is refined script ko hum apne project documentation mein add karenge.
+2. Codebase mein is method ko implement karenge aur additional values ke saath test karenge for comprehensive validation.
+
+Ye script original explanation aur details ko maintain karte hue clarity aur understanding ensure karti hai, specially reading aur animation purposes ke liye.

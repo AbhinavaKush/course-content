@@ -1,0 +1,36 @@
+Now we're going to look at our first depth first search algorithm.
+
+This one is going to be preorder later.
+
+We're also going to look at post order and in order but this one will be preorder.
+
+So let's walk through what preorder looks like I'm going to bring up a tree here.
+
+And remember we're just going to take these and write them to an array.
+
+It's just a matter of what order we do it in.
+
+So preorder is going to start at the top and write that to the array.
+
+And then it's going to go to the left.
+
+It's always going to go to the left first if it can.
+
+It's going to write that 21 to the array and then the 18.
+
+And once we've done everything we can to the left, we're going to come back up to the 21 and we're
+
+going to go to the right.
+
+So now 47, that top node has done everything it can to the left.
+
+Now it's going to start going to the right.
+
+It's going to go to that 76 node.
+
+And the 76 node is going to go to the left because we're going to go left first.
+
+Now that we have everything on the left that the 76 can do, we're going to come back up to the 76 and
+
+go to the right and add the 82 to the array, and that is preorder for depth first search.
+

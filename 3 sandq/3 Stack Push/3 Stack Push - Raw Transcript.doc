@@ -1,0 +1,117 @@
+Now we're going to create our push method for our stack.
+
+So it's going to look like this.
+
+We have that new node up there with the 11, and we're going to push that on.
+
+We're going to move top up to point at that.
+
+And remember that this looks an awful lot like an unshift from a linked list.
+
+So we can borrow from that.
+
+So we had Unshift.
+
+We'll replace this with push.
+
+So not to be confused with the push method for the linked list that happens at the other end of the
+
+linked list, we are renaming Unshift to push because this is a stack just like Unshift with a linked
+
+list.
+
+Our first step with push.
+
+Is going to be to create a new node.
+
+Once we create that new node, we need to figure out what kind of stack are we pushing this on to?
+
+Is it a stack that has any items in it, or is it an empty stack?
+
+Because those are going to be two different situations that we're going to have to code for.
+
+So then we're going to say if this dot length equals zero, in other words, we have an empty stack.
+
+In the linked list.
+
+We said this head and tail was equal to new node.
+
+Here we're going to say that this dot top equals new node, which does this and would give us our first
+
+item in the stack.
+
+So the other scenario is that we are pushing this onto a stack that already has items in it.
+
+So we're going to say else.
+
+Newnode.next equals this dot top newnode.next.
+
+Okay.
+
+So let's look at that.
+
+Newnode.next.
+
+Equals this dot top.
+
+And that adds that in there.
+
+Then we say.
+
+This dot top equals new node.
+
+Which moves this up here.
+
+And now we've added that into the stack.
+
+Couple steps left though.
+
+We're going to increase the length by one.
+
+And then we're going to return this with this being the entire stack, because the push method is part
+
+of that stack class.
+
+So now let's go over to DevTools and look at this code.
+
+So there is our push method there.
+
+Let me scroll up a little bit.
+
+It is part of our stack class that we've created.
+
+We have a constructor there.
+
+Let me scroll back now.
+
+So what we've done down here is where we said, let my stack equal new stack with the number seven and
+
+then pushed on the 23.
+
+The three and the 11 is we've created this stack here.
+
+So we started with the seven at the bottom and pushed on the 23 the three and the 11.
+
+Let's flip back over here and we will run this.
+
+That will come down to the console down here, and I'm going to type in my stack and press enter.
+
+And you can see that we have a stack with a top that is pointing to a node length is equal to four.
+
+And we'll open this up.
+
+And top is pointing to a node with the value of 11.
+
+And next for that node is pointing to another node.
+
+So if we open this up.
+
+We can see that the next item has a value of three, which is exactly what we had in our stack over
+
+here.
+
+The 11 points to the three and we go back.
+
+And you can of course, keep expanding this out and look at all the rest of them.
+
+And that is our method for push.

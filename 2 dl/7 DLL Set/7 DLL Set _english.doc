@@ -1,0 +1,33 @@
+Based on your request to refine the transcript into a structured script for recording and animation, here's a streamlined version of the `set` method discussion for a doubly linked list:
+
+---
+
+### Introduction
+Welcome to our tutorial on the `set` method for doubly linked lists. This method allows you to modify the value at a specific index in your doubly linked list.
+
+### A1: Explanation of the Set Method
+The `set` method updates the value of a node at a given index. It works similarly to the `set` method in singly linked lists, but it's optimized for doubly linked lists. This means if the index is in the second half of the list, the method starts from the tail and works backwards, enhancing efficiency.
+
+### A2: Step-by-Step Implementation
+1. **Retrieve the Node**: Start by using the `get` method to fetch the node at the desired index. 
+    - **Example**: `let temp = this.get(index);`
+    - **Check**: If the index is out of bounds, `temp` will be `undefined`.
+
+2. **Update the Node**: If `temp` is a valid node (not `undefined`):
+    - **Set Value**: Update the node's value to the new value.
+        - **Example**: `temp.value = newValue;`
+    - **Return True**: Indicate the value was successfully updated.
+  
+3. **Handle Errors**: If `temp` is `undefined` (i.e., the index was invalid):
+    - **Return False**: Indicate the update was unsuccessful.
+
+### A3: Running the Code
+- **Set Value at Index 2**: Change the value at index 2 to 99 and confirm the update by checking the list.
+- **Invalid Index**: Attempt to set a value at an invalid index (e.g., index 10) to demonstrate error handling.
+
+### Outro
+This concludes our tutorial on the `set` method for doubly linked lists. By understanding how to modify node values efficiently, you can better manage your data structures in programming.
+
+---
+
+Let me know if there are any specific adjustments you would like or additional details you need!

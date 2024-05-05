@@ -1,0 +1,92 @@
+Now let's walk through the steps of depth.
+
+First search post order I'm going to bring up our tree here.
+
+And we're going to start at the root.
+
+But we're not going to write that number to the array.
+
+We're going to visit that one.
+
+We will come back to it and we're going to go left to the 21.
+
+Visit that node.
+
+Go left to the 18, visit that node.
+
+Now the 18 is going to try to go left and there's not an item there.
+
+Then it's going to try to go right and there's not an item there.
+
+And finally the 18 will write its value to the array.
+
+That will be the first item in the array.
+
+Then we come back up to the 21.
+
+The 21 has gone left when it went to the 18.
+
+Now it's going to go right to the 27.
+
+The 27 is going to try to go left.
+
+It's going to try to go right.
+
+There are no items there.
+
+So it will write its value to the array.
+
+Now we come back up to the 21.
+
+It has gone left.
+
+When it went to the 18, it went right to the 27.
+
+And now it can write its value to the array.
+
+Now we come back up to the 47.
+
+It's gone.
+
+Left.
+
+But it hasn't gone right yet.
+
+So we're going to go to the 76 and we always go left first.
+
+And it's going to go down to the 52.
+
+It's going to try to go left and right.
+
+It doesn't have any items there.
+
+So it will write its value to the array.
+
+We come back up to the 76.
+
+We will come down to the 82.
+
+It will try to go left and right and write its value.
+
+Now when we come back up to the 76, it has already gone left and right.
+
+So I can write its value.
+
+And now we come back up to the 47.
+
+It has gone left and right, and it can write its value to the array.
+
+So when you compare post order, which is what this is to preorder the one that we did previously.
+
+In pre-order.
+
+We wrote the 47 to the array first and post order.
+
+We write the 47 to the array last.
+
+Okay.
+
+So that is our quick overview of depth.
+
+First search post order.
+

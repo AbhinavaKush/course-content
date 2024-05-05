@@ -1,0 +1,55 @@
+Now let's look at the big O of hash tables.
+
+So I'm going to bring up a hash table here.
+
+And each address has a linked list instead of the arrays that we've been using.
+
+Just because this is easier to look at and present graphically.
+
+And I'm going to bring up this box which represents our hash method.
+
+So when we run a hash on one of these keys, that equation is going to be the same number of operations,
+
+which means it's constant time.
+
+So the hash itself the hash method is O of one.
+
+So if we're going to set a new item a key and a value, and we run that key through the hash method
+
+and we get a particular address say two in this case.
+
+And we push that item on.
+
+That's an O of one operation.
+
+Also if we do a get like get screws in this case we put that into our hash method.
+
+It's at the index of six.
+
+And we can find that in one operation.
+
+But what if screws is not down there where we can find it in one operation.
+
+Say we have a situation like this.
+
+Now when we say get screws, it's very quick to get the index of two.
+
+But then we have to go through the entire linked list to get to what it is that we're looking for.
+
+So you might say that this is O of N as our worst possible scenario.
+
+But when we're dealing with a hash table.
+
+Especially the built in hash table, which is objects in JavaScript.
+
+There's going to be a much larger address space.
+
+The hash function is going to be very efficient at randomizing the addresses where things get assigned.
+
+So it's going to look something more like this.
+
+You might have some collisions, but it's going to be rare.
+
+And because of that, finding something by the key of the key value pair is O of one.
+
+And that is the important thing to understand for hash table big O.

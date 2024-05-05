@@ -1,0 +1,37 @@
+
+---
+
+**Intro:**
+Aaj hum linked list mein "push" method ke baare mein jaanenge. Hum dekhenge ki linked list ke end mein ek naya node kaise add karte hain, aur ek special case handle karenge jab list shuru mein khali ho.
+
+**A1: Push Method Samjhana:**
+Pehle apni linked list ko visualize karte hain. Socho hum ek naya node add kar rahe hain. Yeh process kuch is tarah se kaam karta hai:
+1. **Naya Node Banana**: Ek naya node right side se laayenge.
+2. **Last Node Ko Link Karna**: Hamari list ka last node is naye node ko point karega.
+3. **Tail Update Karna**: List ka tail, jo last node ko track karta hai, bhi is naye node ko point karega.
+4. **Node Add Hona**: Bas, itna karne se naya node hamari linked list ka hissa ban jata hai.
+
+**A2: Edge Case Handle Karna:**
+Par agar hamari list shuru mein khali ho to? Is case mein:
+- Last item se linking ki bajaye, list ke head aur tail dono seedhe naye node ko point karenge.
+
+**A3: Code Ke Saath Dikhana:**
+Ab isko code mein dekhte hain:
+```javascript
+function push(value) {
+    let newNode = { value: value, next: null };
+    if (!this.head) {
+        this.head = newNode;
+        this.tail = newNode;
+    } else {
+        this.tail.next = newNode;
+        this.tail = newNode;
+    }
+}
+```
+Yahaan hum check karte hain ki list khali to nahi (`!this.head`). Agar khali hai, to head aur tail dono naye node ko point karenge. Agar nahi, to current tail ko naye node se link karte hain aur tail reference ko update karte hain.
+
+**Outro:**
+Toh bas, aapne successfully apni linked list mein naya node "push" method se add kar liya hai. Try kariye isko apne projects mein implement karna aur dekhiye kaise yeh aapki data handling capabilities ko enhance karta hai.
+
+---

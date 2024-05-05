@@ -1,0 +1,64 @@
+So now we're going to do depth first search in order.
+
+So we'll bring up our tree here.
+
+And what we're going to do is we're going to start at the top as always.
+
+And we are going to visit that first node.
+
+And we're going to always go to the left first.
+
+So we're going to do the 21.
+
+It's going to go to the left and we go to the 18.
+
+18 is going to try to go to the left.
+
+There's nothing there.
+
+And the next step is that we're going to write the value 18 to our array.
+
+So I'm going to color that orange.
+
+Then the 18 is going to try to go to the right.
+
+And of course there's nothing there.
+
+And we come back up to the 21.
+
+It has already gone left.
+
+Now we're going to write that value and then go right.
+
+It's going to go left, write the value, try to go right, and then we come all the way back up to
+
+the 47.
+
+It's gone left.
+
+Now it can write its value and it goes right.
+
+And the first thing we always try to do if we can is go left.
+
+So we go down to the 52 and then it tries to go left.
+
+We write the value, tries to go right.
+
+We come back up to the 76 and down to the 82.
+
+It goes left, writes the value, tries to go right and we're done.
+
+So I'm going to reset this all back and let's walk through the order.
+
+That these were written to the array.
+
+We started with the 18 that is the lowest number in that tree.
+
+And then it was 21, the second lowest, and it goes from lowest.
+
+To highest.
+
+And that's why this is called depth first search.
+
+In order.
+

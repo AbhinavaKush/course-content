@@ -1,0 +1,175 @@
+So now we're going to do the push method.
+
+And to explain this what I'm going to do is I'm just going to walk through the steps first.
+
+So there's our linked list.
+
+Step one is we need to create a new node.
+
+So I'm going to bring one in from the right hand side there like that.
+
+Then we're going to have the last node in the list point to it.
+
+And then we're going to have tail point to it as well.
+
+And that adds it into the list.
+
+That's all simple enough.
+
+We do have an edge case that we have to account for.
+
+And that is what if we're inserting this into a linked list that does not have any nodes yet?
+
+In this case, instead of having the last item and tail point to it, there is no last item and we're
+
+going to have head and tail point to it.
+
+As always, after we walk through these steps, I encourage you to pause this and give this a shot coating
+
+it.
+
+Now we're going to get into the code itself.
+
+So we're going to start out with push.
+
+We're going to be passing it a value.
+
+And as I just said our first step is to create a node.
+
+And we do that with this line here.
+
+And that creates our node.
+
+And I'm going to start out with our edge case first, our situation where we have head and tail pointing
+
+to null.
+
+We want those to point to the new node like that.
+
+So I'm going to change this back to these pointing to null like this and bring up our if statement.
+
+So we can see if head is equal to null.
+
+Now this.
+
+If this is true, that means head is pointing to something.
+
+So we need to do the opposite of this.
+
+So we're going to use that knot.
+
+Operator.
+
+That exclamation point there, and that makes it the opposite.
+
+This is the equivalent of saying if this dot head is false, or if this dot head is equal to null because
+
+null is false.
+
+So that's this situation here.
+
+So then we say this dot head equals new node.
+
+Like that.
+
+And this dot tail equals new node.
+
+And now they both point to the new node.
+
+Now let's take this code and put it in with the rest of our code so far.
+
+Like this.
+
+The next thing we need to do is say, well, what if we're putting this into a linked list where it
+
+does have nodes?
+
+So we're going to say else.
+
+And now let's focus in on the else.
+
+So we're going to say else.
+
+This dot tail dot next equals new node.
+
+So if you haven't seen this before tail up here at the top is equal to this node.
+
+So when you say tail you are saying this node but the next.
+
+Let's turn this into an object and look at what this means.
+
+So this is tale.
+
+Dot next, which is the next pointer.
+
+In that last node the tail was pointing to.
+
+So you're saying have next point to the new node and we point it to the new node by setting it equal.
+
+To the node like this.
+
+Okay, so let's switch back to looking at this graphically like this.
+
+That is just going to point that arrow to that new node.
+
+Then we say this dot tail equals new node.
+
+We'll move that over there.
+
+And that inserts this in to the list.
+
+Now let's take this code and put it back in with the rest of our code.
+
+So so far we have created a node.
+
+We have this if statement to check to see if the linked list is empty.
+
+And then we have the else to insert the node if the length list is not empty.
+
+The only things left to do are to.
+
+Increase the length by one.
+
+And then we're going to say return this.
+
+And when we say return this, we are returning the entire linked list.
+
+And we'll talk more about that here in a second.
+
+So let's flip over to DevTools.
+
+So just scrolling through this, we have our node class up here at the top.
+
+The linked list class has a constructor and now has our push method that we just created.
+
+Down here, we're going to say, let my link list equal a new link list with a value of seven.
+
+And then we're going to push an item on with a value of four.
+
+And this is going to return the entire linked list because of this line of code here.
+
+When we say return this, what we are saying is return this linked list.
+
+Because the push method is part of that linked list class.
+
+Now, it's not just returning any linked list, it is returning the particular instance of linked list
+
+that we named my linked list.
+
+Okay, let's go over here and run this.
+
+And it has returned the linked list.
+
+So let's open this up.
+
+And we can see that head points to the seven node up here.
+
+That is what we created the linked list with.
+
+And then we pushed on the value four.
+
+And that is what tail is pointing to.
+
+And we have a length of two.
+
+So it looks like we have a working method for push.

@@ -1,0 +1,50 @@
+**Intro:**
+"Agar ap Technical interview mein ja rahe ho to Big 0 ko samajhna jarrori hai, kyunki ye mostly pucha jata hai. Big O apko ek behtar coder banata hai, 
+stah mai technical rounds mein efficiently perform karne ke liye bhi help karta hai."
+
+**A1:**
+"Big O kya hai, exactly? 
+Do sets of code imagine karo, unhe hum code one aur code two keh lete hain, 
+dono same outcome achieve karne ke liye banaye gaye hain 
+par alag tarah se likhe gaye hain. 
+Sawal yeh hai ki kaun sa behtar hai? 
+Shayad code one padhne mein aasan hai, 
+ya fir code two ke kuch tarike ise zyada acha banate hain?"
+eska sahi answer sirf hume **Big O** de sakta hai
+
+**A2:**
+"Big O woh mathematical tareeka hai jisse hum determine karte hain ki kaun sa code zyada acha hai efficient hai,
+by focus on how they run. 
+kyuki hum code efficiency ko kisi scale par measure nahi kar sakte, 
+ek stopwatch ka imagine karo. 
+Agar code one 15 seconds mein run hota hai 
+aur code two us see jyada time leta hai, 
+to clearly code one **time** ke terms mein zyada efficient hai."
+Code 1 ki TimeComplexity kam hai.
+
+**A3:**
+"
+ Hum time complexity ko seconds mein nahi measur karte hai, 
+ balki operations ka number mein measure karte hain. Why ?
+kyunki wahi code ek zyada powerful machine par faster run ho sakta hai,
+ lekin operations ke number same rahenge. ek code me humesha operations ka count same rehta hai
+ so jitne kam operations utni kam Time Complexity and jyada efficient code
+ 
+
+**A4:**
+"Big O se hum space complexity ko bhi measure karta hai,
+ space complexity apke used memory ki amount hai. 
+ same above eg, agar code one uski  Time Complexity kam hai, faster hai, 
+ lekin woh kafi jyada memory use karta hai, 
+ aur code two kam memory use karta hai 
+aapki priority or need  memory hai ,
+ to  clearly code two **space** ke terms mein zyada efficient hai."
+
+**Outro:**
+"Is pure course mein, hum mainly time complexity par focus karenge,
+kuch interviews mein space complexity bhi pucha ja saktia hai. 
+They might ask you to optimize for space instead of time, so dono ko samajhna technical interviews mein jaroori."
+Es section ke end me ek cheet sheet share karenge 
+jis se space complexity bilkul clear ho jayegi
+
+---

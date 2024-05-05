@@ -1,0 +1,143 @@
+Okay.
+
+So now we're going to build our constructor for our hash table.
+
+And in this video in addition to the constructor we're also going to build out our hash function.
+
+So I'm just going to bring up an address space like this.
+
+And I'm going to make a change to this because this is zero through seven.
+
+There are eight address spaces.
+
+And you get a more randomized distribution of the items you add to your hash table, which is optimal.
+
+If you have a prime number.
+
+So I'm going to remove that last item and just make this zero through six.
+
+So it's going to have seven items in it.
+
+And then we can start building out our class for the hash table beginning with the constructor.
+
+And if you haven't seen this before.
+
+This where you have an argument equal to a particular value.
+
+This is the default if you don't pass it a value.
+
+So you could pass this the number 11.
+
+And it will give you an array with 11 items in it.
+
+But if you don't pass it anything at all, it's going to give you an array with seven items in it.
+
+So that next line there, this dot data map equals new array of that particular size.
+
+And that is all there is to the constructor.
+
+So now let's build out our hash function.
+
+And I'm just going to bring in the whole function and then we'll walk through this.
+
+So here is the function.
+
+So let's take a look at the name here.
+
+It has an underscore.
+
+So this tells other developers that might be using your code that this is a method that should only
+
+be called by other methods.
+
+You should not be calling this directly.
+
+And then you pass it a key.
+
+So that's in our key value pair.
+
+Let's say you have paint.
+
+You have 50 gallons.
+
+Paint is the key 50 is the value.
+
+So you're going to pass it the string paint.
+
+So in the next line here we're going to declare a variable hash, set it to zero.
+
+And then we're going to have a for loop.
+
+So the way this for loop works with the key dot length remember key was paint dot length.
+
+It is five characters long.
+
+So this for loop is going to run five times.
+
+We're going to set hash equal to hash plus this.
+
+And what this is, is every letter has a particular numerical value.
+
+So we're going to be iterating through the word paint.
+
+In this case the first letter p has a numerical value.
+
+And then the next letter has a numerical value.
+
+And every time we loop through this we're going to multiply this by 23.
+
+And the reason I picked 23 is it is a prime number and it makes this more random.
+
+And you can just put any prime number there you want.
+
+And the modulo operator, what this is, is it gives you the remainder when you divide.
+
+So you're going to divide whatever this is going to come up with by data map dot length.
+
+And remember the data map is our address space.
+
+And the remainder, because this is going to be seven, the remainder will always be zero through six.
+
+And that is what's going to determine what address space a particular string is going to go into.
+
+And then we're going to return hash.
+
+And this number is always going to be zero through six.
+
+If you have an address space that is seven.
+
+And that is how that hash function works.
+
+And you can do this math however you want, so long as in this case there are seven address spaces,
+
+zero through six.
+
+It just has to always return something that is going to be zero through six.
+
+So there is our code.
+
+So let's go over and look at this in DevTools.
+
+So there is our constructor there that's just going to create our empty array.
+
+And there is our hash function there.
+
+We're not going to use that here.
+
+We're only going to use that when we create other methods that put things into the hash table or remove
+
+things from the hash table.
+
+And this is where we create our hash table.
+
+And I'm going to zoom out.
+
+And run this.
+
+Okay, let's zoom in on this and I will open this.
+
+And open this, and you can see that data map is just an array with a length of seven.
+
+All right.
+
+So that is our hash table constructor.

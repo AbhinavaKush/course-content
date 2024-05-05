@@ -1,0 +1,115 @@
+Okay.
+
+So the next thing we need to do is build this empty array that we will push the key value pairs into.
+
+And we'll just do it like this.
+
+So this line here, this dot data map at the index of four, we want to create this empty array like
+
+this.
+
+And this is a step that we only want to do if there isn't already an empty array in there.
+
+So if we were going to insert something else at the index of four, we wouldn't want to do this step.
+
+So we'll wrap this in an if statement like this.
+
+So this is basically saying if this is completely empty, only then will we do this.
+
+Now we can push in our key value pair and we'll do it like this.
+
+We'll walk through this, this data map.
+
+Index.
+
+And this is the index of four.
+
+We're going to push the key value pair.
+
+The array with these two items.
+
+So that gets pushed into there.
+
+Now let's look at adding another key value pair to the same address.
+
+We'll run the set method pass it a key and a value.
+
+In this case it's going to be washers.
+
+First thing we have to do is run the hash to see what address that it's going to be.
+
+And the index for washers with the hash method that we're using is also going to return four.
+
+So index is going to be set to four.
+
+Then we move to this if statement.
+
+Is there already something at the address before there is, which means we are not going to do this
+
+step.
+
+And we're going to move to this step and it's going to push this key value pair.
+
+Into their.
+
+And then I'm just going to add one more key value pair.
+
+This will go at the index of six.
+
+There is one more line of code that we need to add and that is to return.
+
+The hash table.
+
+When we move over to Chrome DevTools, we're going to use this code and we're going to build an empty
+
+hash table with seven items in it, just like this.
+
+And then we're going to use the set method to put all three of these key value pairs into the hash table.
+
+And then we'll take a look at the hash table.
+
+So let's flip over to DevTools.
+
+Okay.
+
+There's our set method that we just created.
+
+And then the hash table that we're going to create here is just going to be an empty hash table.
+
+So let's zoom out here.
+
+I'll go over here and run this.
+
+And I'm just going to open this and show that this.
+
+Is an empty hash table with a length of seven, and I'll clear this.
+
+And I'll just use the up arrow.
+
+I've got these saved here.
+
+We have lumber that's going to go at the index of six washers.
+
+And bolts.
+
+Okay.
+
+So I'm going to clear this.
+
+Then I'm just going to say my hash table.
+
+And I'll press enter.
+
+Now, when we open this up.
+
+You can see that we have two items at the index of four there.
+
+I'll open this up.
+
+And those are our washers and our bolts.
+
+And down here at the index of six.
+
+We have lumber.
+
+And that is our method for set.

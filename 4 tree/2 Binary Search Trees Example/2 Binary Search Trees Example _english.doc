@@ -1,0 +1,28 @@
+Here's a refined version of the binary search tree (BST) tutorial script based on the provided transcript and following the guidelines in the `output.doc`:
+
+---
+
+**Intro**
+Welcome to our tutorial on binary search trees! In our last session, we explored the basic structure of binary trees. Today, we're taking a step further to understand a special kind of binary tree—the binary search tree, or BST for short. Let's dive into how these trees are constructed and their unique properties.
+
+**A1**
+Imagine a simple tree with just a single node, labeled as "47", sitting right at the top. Now, let's expand this tree by adding a new node. We're introducing "76" to our tree. In a BST, where this new node is placed depends on its value compared to existing nodes.
+
+**A2**
+Here's the rule: if the new node's value is greater than the current node's, it goes on the right; if less, it goes on the left. Since 76 is greater than 47, it will find its place to the right of 47.
+
+**A3**
+Next up, let's add "52" to the mix. Starting again from the top, 52 is greater than 47, so we move right. But here comes the interesting part—since 52 is less than 76, it's placed on the left side of 76. This step-by-step positioning is crucial for maintaining the BST properties.
+
+**A4**
+Let's speed up and add a few more nodes. Adding "21" starts at the top, moves left of 47 as it's smaller, and finds its spot as there are no further nodes to compare. For "82", we traverse right twice from 47 and 76 as it's greater than both, placing it on the right of 76.
+
+**A5**
+Adding "18" and "27" introduces more layers. 18 goes left from 47 and again left from 21. Meanwhile, 27, starting from 47, goes left but then right from 21 as it's greater, perfectly slotting next to 21.
+
+**Outro**
+By now, you might notice a pattern. Every node to the right of a parent node is greater, and every node to the left is lesser. This holds true at every level of the tree, ensuring efficient searches. That’s the beauty and efficiency of binary search trees!
+
+---
+
+This script adheres to the structure and content from the original transcript, optimizing it for clarity and teaching effectiveness while maintaining the integrity needed for synchronization with planned animations. If you need further refinements or additional sections, feel free to let me know!

@@ -1,0 +1,104 @@
+So in this video we're going to remove an item from a heap.
+
+So I'll go ahead and bring up this heap.
+
+And with heaps there is only one item we'll ever remove.
+
+And that is the item at the top.
+
+So we'll take that and remove it and return it.
+
+But now we need to take all of these numbers and rearrange them where this is once again a valid heap.
+
+And step one with a heap is that we always need to keep this tree complete.
+
+If you were to change this into a complete tree in one step, how would you do it?
+
+There's only one thing that you could do to make this complete in one step, and that would be to move
+
+this node to the top.
+
+Now the tree is complete, but now we need to sink that 65 down into the tree to the appropriate spot.
+
+So the question is, do we move this to the left or to the right.
+
+And the answer is it depends.
+
+What we need to do is check these two children and see which one has the greatest value.
+
+Because we always want the maximum value in the heap to be at the top.
+
+And in this case that is on the right.
+
+So we'll do this swap.
+
+Now we'll take the 65 and compare it to its children again.
+
+But in this case it doesn't have any children that are greater than 65.
+
+So we're going to stop right here.
+
+So there are three situations we need to code for.
+
+One of those is when we have two or more values in the heap.
+
+And we also have to code for when we have one value in the heap.
+
+And then also for when we have an empty heap.
+
+So we'll start a remove method out like this.
+
+And the first thing we'll code for is when we have an empty heap.
+
+So we'll say if the length of the heap is zero we're just going to return null.
+
+So the next situation we'll code for is when we have one item in the heap.
+
+So we'll say if the length of the heap is one we're going to return heap dot pop.
+
+So when you run pop that does this it removes that from the array.
+
+But because we have the return statement there it's going to return that value of 80.
+
+And then the final situation is writing code for when we have two or more values in the heap.
+
+So we'll start this out by creating a variable I'll call this max value.
+
+And we're going to set it to be equal to the value that's at the index of zero.
+
+So that will hold that value of 80.
+
+And since that's going to be overwritten in a moment I'm going to take that 80 and gray it out in the
+
+array.
+
+And then we need to move that value of 60 up here like this in the array.
+
+What we'll do is take the 60, pop it from the end and then store it at the index of zero.
+
+We'll do that with this line of code where we say heap at the index of zero is equal to heap dot pop.
+
+Then we need to take that 60 and move it down in the tree to the appropriate spot.
+
+And that process of sinking that down is going to be done with a helper method that we write in the
+
+next video.
+
+And we'll call that helper method with this line.
+
+We'll pass it the index of zero, which is where that 60 is.
+
+And that will sink that down into the tree to the appropriate spot, and that will update the array
+
+to look like this.
+
+And then the final thing we need to do is return max value.
+
+Remember that's where we stored that value of 80.
+
+And that is all of the code for remove.
+
+So in the next video we'll write the code for the sink down method.
+
+But for now that is remove.
+

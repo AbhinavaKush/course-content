@@ -1,0 +1,225 @@
+In this video, we're going to use dynamic programming to solve for a Fibonacci sequence.
+
+And the way a Fibonacci sequence works is you take those two numbers and you add them together, and
+
+it gives you the next number in the sequence.
+
+Now you take the last two numbers in the sequence.
+
+You add those together, and that gives you the next number in the sequence.
+
+And now the next number will be five, and then eight and 13 and so on.
+
+And this is actually going to grow very fast.
+
+So there are two common ways you'll see a Fibonacci sequence.
+
+One is like this.
+
+And the other way is to start this with a zero.
+
+And that still works because zero plus one equals one.
+
+I'm going to take this zero back out for a moment.
+
+So a lot of times in mathematics, you'll see the Fibonacci sequence start with one.
+
+So if you think about 100 years ago before computers, if you were going to create a Fibonacci sequence,
+
+you would say add the position of one is the value of one at the position of two is the value of one
+
+at the position of three is the value of two, etc..
+
+But with computers, if you're going to put this in an array, you have that position of zero.
+
+So it makes sense to put a zero there.
+
+So now to create more room on the screen, I'm going to shrink this down a little bit and move this
+
+to the bottom and remove the values.
+
+And I'm going to bring up a call stack.
+
+And we'll start our function out like this.
+
+I'm going to call it fib since Fibonacci is a long name.
+
+And now let's say we want to find fib of two.
+
+We'll put this on the call stack.
+
+So in order to find fib of two, we need to find fib of zero plus fib of one.
+
+Or we could say fib of n minus one plus fib of n minus two.
+
+So one of the things I want to point out here is this array that I have at the bottom of the screen.
+
+We're not actually using the array in this code.
+
+I'm just using that as a visual so it's easier to keep track of what we're doing.
+
+So now in the function, the first thing we're going to do is call fib of n minus one which is a recursive
+
+call.
+
+So that would be fib of one.
+
+And this is one of the conditionals for our base case.
+
+We're going to say, if n equals zero or n equals one, we're going to return n.
+
+So when this case, that means we will return one.
+
+And because that's a return statement, this gets popped from the call stack.
+
+So I want to emphasize again that this is not actually going into the array.
+
+We're just returning that value.
+
+But this helps us to keep track of what was returned.
+
+So now fib of two is the active instance on the call stack again.
+
+It called fib of n minus one.
+
+Now it's going to call fib of n minus two, which is fib of zero.
+
+And now that instance, the first thing it's going to do is look at this if statement.
+
+And because n is equal to zero we're going to return n.
+
+And after returns that this is popped from the call stack.
+
+So now we have run fib of n minus one and fib of n minus two.
+
+So we can add those together and return the value of one.
+
+And with that return statement, this is popped from the call stack.
+
+So I wanted to walk through this with the call stack to show how this works.
+
+But now I'm going to represent those functions like this.
+
+And that we can use this to visualize how we would find fib of three.
+
+We would take fib of two and add fib of one to find fib of three.
+
+So in this pyramid of function calls here, notice that we're doing fib of one twice.
+
+That means we have an overlapping subproblem.
+
+And that's one of the requirements for dynamic programming.
+
+But this also has an optimized substructure, which is to say, if you get the optimal solution for
+
+each of the subproblems, you'll get the optimal solution to the overall problem.
+
+And that is the other requirement for dynamic programming.
+
+And then when we add fib of two and fib of one, that's going to give us two.
+
+So now I'm going to move this to the middle and we're going to build this out.
+
+This is what it would look like to find fib of four.
+
+So this is going to grow very fast and we're going to need a little bit more room on the screen.
+
+So every time you see fib of two.
+
+It calls fib of one and fib of zero.
+
+But in the diagram I'm going to take these out.
+
+And this is not to say that those aren't going to run when we run fib of two.
+
+Those will be running.
+
+I'm just doing that to make more room.
+
+And because of that, we can take that and tighten that up like that.
+
+And now we can look at fib of five.
+
+And this is what it would look like to do fib of six.
+
+And then this is fib of seven.
+
+So you can see that this is growing very fast.
+
+And you can also see that we have repeating subproblems, which is to say overlapping subproblems.
+
+So for example fib of five.
+
+Notice that they have the same pyramid of function calls underneath them.
+
+These are completely redundant.
+
+Same is true of fib of four.
+
+These each have the same pyramid of function calls under them.
+
+So on the screen here we have 25 function calls just to find fib of seven.
+
+But remember, every time we had a fib of two, each of those was calling fib of one and fib of zero,
+
+and that's 16 more function calls for a total of 41 function calls just to find fib of seven.
+
+So the big O of doing it this way is O of two to the N, and that is incredibly inefficient.
+
+Now, in the next video we're going to add memoization to this.
+
+And that will take us all the way from O of two to the n to O of n.
+
+So now let's bring our code up here.
+
+And I'm going to make a couple of changes to this.
+
+I'm going to create a variable called counter and I'll set it to zero.
+
+Then I'll say counter plus plus inside of the function, and then we can count the number of function
+
+calls.
+
+So now let's flip over and take a look at this.
+
+So there is the code that we just wrote.
+
+And then I'll scroll up.
+
+And then what we're going to do here is set n to be equal to seven.
+
+And then we'll run fib of n fib of seven.
+
+And then in that last line there, we're going to look at the counter to see how many function calls
+
+there were.
+
+So I'll run this.
+
+And you can see that fib of seven is 13 and the counter is 41.
+
+But now I'm going to come up here.
+
+And I'm going to change that seven to a 20 and run this again.
+
+And now you can see the counter just taking in from 7 to 20.
+
+It's over 21,000 function calls.
+
+But watch what happens when we change that 20.
+
+To 40.
+
+And I'll run this.
+
+And defined fib of 40 is over 300 million.
+
+Function calls.
+
+So you can see that oh of two to the N is incredibly inefficient.
+
+And that is why in the next video we're going to implement this with memoization.
+
+But for now, that is our introduction.
+
+To a Fibonacci sequence.

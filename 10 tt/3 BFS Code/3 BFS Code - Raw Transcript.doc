@@ -1,0 +1,163 @@
+Now let's code our breadth first search method.
+
+So I'm going to bring up our tree like this.
+
+And I'm going to put this down in the corner there.
+
+And we'll start writing our methods.
+
+So we'll say breadth first search.
+
+And we will need a variable for whatever the current node is that we're popping off of that array that
+
+we talked about in the last video.
+
+We are going to set that equal to the root to begin with.
+
+And we're going to need our cue array like that and our results array like that.
+
+So one of the things we have to do before we even get into that loop where we're looping through and
+
+putting things in the queue.
+
+Is we need to push the current node, which is the root, into the queue.
+
+And remember we're pushing the entire node with the value and left and right into that queue.
+
+I'm just going to represent it like this as a blue number.
+
+So we can remember that that's actually the entire node.
+
+Now we'll start our while loop and we'll say while queue dot length.
+
+In other words while the queue has length.
+
+Or you could say while the queue has a length that is greater than zero.
+
+Because once this is zero, that'll equate to false.
+
+And I'm just going to focus in on this while loop like this as we build it out.
+
+We'll say current node equals q dot shift.
+
+So when we shift this out of the q like this, I'm going to make this green to match the 47in the diagram
+
+there.
+
+That makes that the current node.
+
+And we're going to do a couple of things.
+
+First we're going to take the value from that current node.
+
+And we're going to push it into the results array.
+
+And then we're going to go left.
+
+And we're going to go right.
+
+But we have to say if there is something to the left.
+
+Then we will push that node that is on the left current node dot left into the queue.
+
+And then we'll say if there is something on the right, we'll do the same thing there where we say push
+
+the current node that is on the right, which in this case is the 76.
+
+And that's everything for our while loop.
+
+So let's run through this while loop a few more times here.
+
+So let's look at these two steps here.
+
+We will shift off the 21.
+
+And then we're going to take that value and move it into there.
+
+From this point forward I'll just take these two lines and combine these into one step.
+
+And just move that value from Q straight down to results.
+
+Then we'll say if there is something on the left and there is something to the left of the 21, that's
+
+the 18, we push that into the Q.
+
+If there is something to the right and there is, we'll push that into the Q.
+
+And the next one we remove from the queue is going to be the 76.
+
+I'm just going to put that value straight into results.
+
+That is those first two lines there and the while loop.
+
+Is there something to the left of the 76?
+
+There is.
+
+That's the 52.
+
+And to the right we have the 82.
+
+And then it gets really quick from here because when we do the 18 and remove that from the queue.
+
+Push that onto the results array.
+
+There is nothing on the left.
+
+There is nothing on the right.
+
+So then we do the same thing for the 27.
+
+Same thing there nothing on the left or the right, and then the 52 and then the 82.
+
+So now that queue is empty and we stop running the while loop, because it only runs as long as the
+
+queue has length.
+
+So we'll remove that.
+
+And the only step that's left is to return that results array.
+
+So let's bring the rest of our code back here.
+
+This is the entire breadth first search method.
+
+And we'll look at this code in a second in DevTools.
+
+And when we do we will build this binary search tree.
+
+And we will expect to see this array returned.
+
+So let's flip over to DevTools.
+
+So this breadth first search method is going to be part of the binary search tree class.
+
+So let's scroll down to the breadth first search method.
+
+So there is that code there.
+
+This is the tree that we will build.
+
+I'm going to scroll up a little bit further here.
+
+So this array here that I have commented out is the order that we will expect to see from the breadth
+
+first search.
+
+I just want to point out here that the order of this array and the order here is exactly the same.
+
+So I'm going to zoom out here.
+
+And run this and zoom in down here.
+
+And our binary search tree has 47 at the root, it has 21 and 76 at the next level.
+
+And I won't open it up further than here.
+
+So I'm going to clear this.
+
+So I'm going to run my tree dot BFS and press enter.
+
+And that is our array, which exactly matches this array.
+
+So that is our method for breadth first search.

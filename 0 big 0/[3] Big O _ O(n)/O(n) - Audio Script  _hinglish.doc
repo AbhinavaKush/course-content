@@ -1,0 +1,28 @@
+Here's the Hinglish version of your transcript on big O notation, focusing on O(n):
+
+---
+
+**Intro:**
+"Aaj hum big O notation ki exploration shuru karte hain, starting with O(n). Maine O(n) choose kiya hai na ki iski efficiency ke liye, par kyunki ye samajhne mein sabse simple hai."
+
+**A1:**
+"Is concept ko samajhne ke liye ek practical example lete hain: ek function jo kehlati hai logItems. Ye function ek for loop chalayegi aur har iteration ke index ko console log karegi."
+
+**A2:**
+"Maan lo ki logItems function ko 'n' baar loop execute karna hai. Agar hum is function ko number 10 pass karte hain, to ye das baar chalega, har baar loop ka current index zero se nine tak log karte hue."
+
+**A3:**
+"Ye seedha demonstration humein O(n) operation ko visualize karne mein madad karta hai, jahan operations ki sankhya, ya is case mein console logs, seedhe 'n' ke anupaat mein hai."
+
+**A4:**
+"Ab, chaliye Chrome DevTools mein switch karte hain is function ko action mein dekhne ke liye. Hum logItems ko number ten ke saath call karenge aur outputs ko observe karenge, jo zero se nine tak honge."
+
+**A5:**
+"Is example ko graphically reflect karte hue, O(n) ko ek graph par sidhi line ke roop mein represent kiya ja sakta hai. Horizontal axis 'n' ko represent karti hai aur vertical axis operations ki sankhya ko, jo direct proportionality ko darshata hai."
+
+**Outro:**
+"Is tarah se hamara O(n) notation pe introduction conclude hota hai. Aage badhte huye, hum apne graph mein aur complexities add karenge, alag-alag big O notations ko compare karte hue, lekin filhaal, O(n) ki ye understanding ek solid foundation set karta hai."
+
+---
+
+Is tarah se aapne big O notation, specifically O(n) ke upar Hinglish mein ek clear aur samajhne mein aasan introduction diya hai, jo viewers ko concepts ko achhe se grasp karne mein help karega.

@@ -1,0 +1,57 @@
+Here's a Hinglish version of your script, with simple and urban language for easy understanding:
+
+---
+
+**Intro**  
+Welcome back, dosto! Aaj hum dekhenge ki kaise ek specific index par linked list mein naya node insert karte hain. Agar aap code kar rahe hain, toh video ko pause kar sakte hain.
+
+**A1**  
+Jaise ki singly linked lists mein hota hai, hum special cases se shuru karenge. Agar hum list ke beginning mein insert kar rahe hain, toh woh unshift operation hoga. Yahaan code hai:
+```javascript
+if (index === 0) {
+    return this.unshift(value);
+}
+```
+Aur agar hum end mein add kar rahe hain, toh push method use karenge:
+```javascript
+if (index === this.length) {
+    return this.push(value);
+}
+```
+Yaad rakhein, in operations ko sahi se function karne ke liye `return` keyword ki zaroorat hoti hai.
+
+**A2**  
+Ab, standard insert ke liye. Maan lijiye hum specific middle index, jaise ki index 2, par naya node dalna chahte hain. Hum pointers setup karenge taki navigate kar sakein:
+```javascript
+let newNode = new Node(value);
+let beforeNode = this.get(index - 1);
+let afterNode = beforeNode.next;
+```
+
+**A3**  
+Agla step hai pointers adjust karna taki naye node ko list mein fit kar sakein:
+```javascript
+newNode.next = afterNode;
+beforeNode.next = newNode;
+```
+
+**A4**  
+Doubly linked list ke liye, process similar hai, par hume previous pointers bhi update karne padenge:
+```javascript
+newNode.prev = beforeNode;
+if (afterNode) {
+    afterNode.prev = newNode;
+}
+```
+
+**Outro**  
+Aur ho gaya! Humne successfully singly aur doubly linked lists mein node insert kar diya hai. Hamesha yaad rakhein ki list ki length badhayein aur true return karein taki success indicate ho:
+```javascript
+this.length++;
+return true;
+```
+Apne next tutorial mein, hum explore karenge ki kaise linked list se nodes ko remove karte hain. Bane rahiye!
+
+---
+
+Is script mein clarity aur simplicity ko dhyan mein rakha gaya hai, coding details ke saath, taki samajhne aur implement karne mein aasani ho. Agar aur kuch adjustments ya additions chahiye, toh zaroor batayein!

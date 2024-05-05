@@ -1,0 +1,31 @@
+Yahaan aapka refined script hai Hinglish mein, jahaan humne tough Hindi words ko avoid kiya hai aur script ko simple aur urban Hindi mein likha hai:
+
+---
+
+**Introduction**
+Aaj hum linked list operations pe focus karenge, specifically `unshift` method pe. Ye method tab kaam aata hai jab aapko apni linked list ke starting mein ek naya node add karna hota hai.
+
+**A1: Understanding `unshift`**
+Chaliye dekhte hain ki `unshift` operation ke dauraan kya hota hai:
+1. **Creating a New Node**: Sabse pehle, ek naya node initialize kiya jata hai given value ke saath.
+2. **Linking Nodes**: Naye node ka next pointer currently list ke pehle node ko point karega, effectively use list ke beginning mein insert kar dega.
+
+**A2: Handling an Empty List**
+Agar hamari list shuru mein khali hai to kya hoga? Bas:
+- List ke head aur tail dono ko is naye node pe set kar do.
+- Ab, list mein sirf ek hi node hai, jo ki head bhi hai aur tail bhi.
+
+**A3: Writing the Code**
+Ab isko code mein convert karte hain:
+- Agar list khali hai (`length == 0`), to `head` aur `tail` ko naye node pe set karo.
+- Nahi to, links update karo:
+  - `newNode.next = head` se pehle wale first node ko point karo.
+  - `head.prev = newNode` se two-way link establish karo.
+  - Finally, `head` ko update karo aur use `newNode` bana do.
+
+**Outro**
+Summary mein, `unshift` aapko efficiently apni list ke start mein new elements add karne ki permission deta hai. Chahe aapki list khali ho ya nahi, ye operation ensure karta hai ki naya node sahi se linked rahe, aur linked list ka integrity maintain rahe.
+
+---
+
+Agar aapko is script mein koi aur modifications chahiye ya kisi aur section pe kaam karna hai, toh bas mujhe batayein!

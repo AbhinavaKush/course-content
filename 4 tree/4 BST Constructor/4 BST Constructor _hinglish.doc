@@ -1,0 +1,28 @@
+Sure, here’s a simpler and urban Hinglish version of the Binary Search Tree constructor segment:
+
+---
+
+**Binary Search Tree Tutorial mein aapka swagat hai!**
+
+Aaj hum Binary Search Tree ke constructor ko build karenge, shuru kar rahe hain ek simple node structure se. Linked list ke nodes mein `value` aur `next` hota hai, par binary tree node mein `value`, `left`, aur `right` hota hai.
+
+Chaliye shuru karte hain apne binary search tree class ke constructor se:
+
+```javascript
+class BinarySearchTree {
+    constructor() {
+        // Shuru mein, root null set hota hai, jo empty tree ko indicate karta hai.
+        this.root = null;
+    }
+}
+```
+
+Initially, hamara tree empty hota hai, jo `this.root` set to `null` se dikhaya jata hai. Arrays ya linked lists ki tarah jahan elements linear hota hain, binary search tree data ko hierarchically organize karta hai. Root node, jo hum pehle element add karte samay create karenge, humare tree structure mein entry point ke roop mein kaam karta hai.
+
+Aane wale segments mein, hum `insert` aur `find` jaise methods ko explore karenge, jo hamein apne tree ko effectively populate aur interact karne mein madad karenge.
+
+Bane rahiye humare saath kyunki hum binary search trees ke dynamic duniya ko explore karte hain, jo hamaare data ko efficient retrieval ke liye organized rakhta hai.
+
+---
+
+Is version mein maine script ko Hinglish mein translate kiya hai jisme simple aur urban Hindi ka use kiya gaya hai. Agar aapko aur adjustments chahiye ya additional content chahiye, toh zaroor batayein!

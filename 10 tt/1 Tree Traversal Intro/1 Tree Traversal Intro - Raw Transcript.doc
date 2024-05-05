@@ -1,0 +1,51 @@
+So welcome to tree traversal.
+
+We're going to look at a couple of different ways of doing that.
+
+And first we have to talk about what tree traversal is.
+
+So traversing if you had something simpler like a linked list would just be going through each item
+
+from beginning to end.
+
+And you might take all of these values and add them to an array, and then return that array.
+
+But if you have something like a tree, it's more complex.
+
+There's different ways that we can approach this.
+
+So one of the common ways of doing this is we just start at the top node.
+
+Then we go to the next line and we do the 21 and the 76.
+
+And then we go to the next line and we go across here.
+
+This is what's called breadth first search.
+
+Another approach that we could have is instead of starting at the top, we go all the way to the bottom.
+
+And in this case, we're going to go all the way to the bottom, to the left and do that 18 node first.
+
+And we've gone as far left as we can.
+
+So we'll go up.
+
+And then we will go down to the right, and we've done everything on that side of the tree, and we
+
+come back up to the 47.
+
+And because we're doing left first on that other subtree that we haven't visited, the deepest node
+
+that we can get to, that's to the left is the 52 node.
+
+And we'll do that one next and then come up and then finally come down and do the 82 node.
+
+This is what is called depth.
+
+First search.
+
+And we're actually going to write three different depth first search functions.
+
+Each one is going to return these and a little bit different order.
+
+But breadth first search and depth first search are going to be the two broad categories of tree traversal.

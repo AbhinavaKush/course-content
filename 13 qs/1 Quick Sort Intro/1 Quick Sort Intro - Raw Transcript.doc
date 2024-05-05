@@ -1,0 +1,83 @@
+Okay.
+
+This is going to be our introduction to quicksort.
+
+So I'm going to bring up an array here like this.
+
+Except I'm going to show it like this.
+
+And the way quicksort works is we're going to have a pivot point.
+
+And we're going to make that first item that for the pivot point.
+
+And we're just going to compare every item in the array to that number.
+
+So we'll start at the six.
+
+That one's greater I'm going to color that gray because it's greater than.
+
+And the one is less than.
+
+So if we find an item that is less than, we're going to exchange it with the first item that is greater.
+
+Like this.
+
+Then we move to the next one.
+
+That's greater.
+
+This one is less than we exchange it with that first greater than item.
+
+And we do this again and exchange that.
+
+And then the five is greater than four, so we'll color that one in gray.
+
+And we have one step left.
+
+We're going to swap that for with that last item that is less than like this.
+
+And now the four is sorted.
+
+So I'll color it green because that's going to be where it is.
+
+After we sort everything and everything that's less than the four is on the left, everything that's
+
+greater than the four is on the right.
+
+So now what we're going to do is run quicksort again on just this section of the array.
+
+And we're going to do it on the other side as well.
+
+So let's focus on the left side first.
+
+The two is going to be our pivot point now.
+
+We'll compare the one to the two.
+
+It's less.
+
+And the three is greater than.
+
+And now we're going to exchange the one and the two.
+
+And now the two is sorted.
+
+And then we'll run this recursively on these two.
+
+And because there's only one item in each of these, we know that those are in the correct spot.
+
+And I'll mark those as sorted on the other side.
+
+We're going to have the six be the pivot point.
+
+Seven is greater.
+
+Five is less.
+
+So we'll exchange these two.
+
+And then we'll exchange the six with the five.
+
+So the six is sorted, and now the five and seven are sorted as well.
+
+And that's our overview of the workings of quicksort.

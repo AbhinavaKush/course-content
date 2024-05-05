@@ -1,0 +1,84 @@
+So Bubble Sort is going to be our first sorting algorithm.
+
+It's probably the easiest one that we're going to do.
+
+So I'm going to bring up an array like this.
+
+Except I'm going to show it like this.
+
+And I had previously shown arrays as being green.
+
+And what I'm going to do with the sorting algorithms is I'm not going to show them as green until they
+
+are sorted.
+
+So anything that's unsorted, we will make blue.
+
+So I'm going to go ahead and put this back to explain bubble sort.
+
+So it works like this.
+
+We're going to start with the first item.
+
+I'll highlight that in orange.
+
+And we're going to compare the first item with the second item.
+
+And if the first item is bigger than the second item.
+
+We're going to switch them.
+
+Now we're going to compare the second item with the third item.
+
+And if it's bigger we switch them.
+
+But in this case it's not.
+
+So now we move to the third item.
+
+We compare it to the fourth item and it's bigger.
+
+And we compare it to the next one and the next one.
+
+And now the six is sorted.
+
+That is the correct spot for the six.
+
+Whatever the largest item is, we're going to bubble that all the way up to the top.
+
+So that took five steps to get that all the way to the end and a six item array.
+
+Then we start over and we compare 2 to 4, 4 to 5, 5 to 1, 5 to 3.
+
+And now the five is in the correct spot.
+
+So now the second biggest item.
+
+Has been bubbled up to the top, but that only took four steps.
+
+So each time we go through this, it will take fewer steps, but it is still pretty inefficient.
+
+So we'll do this again.
+
+2 to 4, 4 to 1.
+
+Compare four with three.
+
+The four is in the correct spot.
+
+The next round will only take two steps, so we'll compare two with one, and then we'll compare two
+
+with three.
+
+And now three is in the right spot.
+
+And on the last one we just compare these two.
+
+And if they need to be switched we switch them.
+
+If not these two are now in the correct spot.
+
+So I'm going to go ahead and mix these back up like this.
+
+We will pick up here in the next video where we code Bubblesort.
+

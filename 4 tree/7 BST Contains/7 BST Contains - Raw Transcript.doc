@@ -1,0 +1,267 @@
+So now let's build out our contains method.
+
+So I'm going to bring up a tree here.
+
+And I'm going to do the same thing I did with insert where I write out all the steps and then we code
+
+it.
+
+So let's say that we're trying to find out if this tree contains the number 27.
+
+Well, if we're looking for the number 27, we're going to start at the root.
+
+And either we're going to have a tree like this that we iterate through and see if it's there or not,
+
+or root is equal to null.
+
+So the first thing we'll do is we'll just say if root is equal to null, we're going to return false
+
+because that is not in the tree.
+
+So that'll be our first step there.
+
+If root equals null return false.
+
+Otherwise.
+
+We have a tree that we can go looking for the node.
+
+If the tree does have items, we're going to need a temp variable and say we're looking for the number
+
+27.
+
+We're going to compare the number 27 to each node until we find one that is equal.
+
+We'll move this back up to the top.
+
+And we can say let temp equal this dot root.
+
+So the other possibility.
+
+Is that we're looking for a number that is not in the tree.
+
+So let's say we're looking for the number 17.
+
+We're going to go to the left.
+
+And that's not equal to 17.
+
+And we go to the left again.
+
+And that's not equal to 17.
+
+And we go to the left again.
+
+And now temp is equal to null.
+
+So binary search trees are null terminated lists.
+
+And as we're moving through this we already know that we're going to need a while loop.
+
+But now we're going to say while temp.
+
+So basically, while temp is not equal to null, we're going to keep going.
+
+But if we hit null, we know that that number is not in our tree.
+
+So inside the while loop we can say.
+
+If it's less than, we're going to move temp to the left.
+
+If it's greater than, we're going to go to the right.
+
+And then there's a third option.
+
+It could be equal to, in which case we would return true that that item is in the tree.
+
+And if temp ever becomes equal to null, it'll break us out of this while loop.
+
+And will return false.
+
+Okay.
+
+So let's take these steps and build out our code.
+
+I'm going to move these to the bottom like this.
+
+And we'll start building our contains method.
+
+We're going to pass it a value.
+
+The value that we're looking for.
+
+And step one if root equals null, return false.
+
+That's this situation where root is just pointing to null.
+
+It's an empty tree.
+
+And we'll say if this dot root equals null, return false, we'll take that off of our list.
+
+Then we'll say let temp equal this root.
+
+We can actually just move that up because that's as the code would be written.
+
+Likewise while temp.
+
+We can just move that up because that's how you would write your while statement.
+
+We will need the curly braces here, so I'll bring those in.
+
+If it's less than, we're going to go left.
+
+So we'll write an if statement.
+
+If the value is less than temp dot value we're going to say temp equals temp left.
+
+So the value there is the value that you passed the contains method.
+
+If it's less than temp dot value the item that temp is pointing to, then we move it to the left.
+
+So to put this another way, we are comparing the value that we pass the contains method to the value
+
+of the node that temp is pointed to, and if it's less than.
+
+We're going to say temp.
+
+Temp dot left.
+
+Which moves temp to the left.
+
+And we can remove that from our list and say elseif if it's greater than go right.
+
+So that is to say that the value that we pass the contains method if it is greater than temp dot value.
+
+We're going to say temp.
+
+Temp dot.
+
+Right.
+
+And that moves temp to the right.
+
+And we can remove that item from our list.
+
+Then we say, else if it's equal, we're going to return true.
+
+And that code looks like that.
+
+We can remove that from our list.
+
+Otherwise, if temp is ever equal to null, it'll break us out of our while loop and we will return
+
+false.
+
+And we can just move that up.
+
+Okay.
+
+So that is all of our code for that method.
+
+Okay, so I want to walk through this code to make sure that it's clear what all this means.
+
+Obviously, if we have an empty tree, we're going to return false.
+
+And let temp equal this root that just is going to start temp at the top.
+
+And I want to focus in on the rest of the code here.
+
+The while loop on down and just walk through a couple of examples of how we would loop through this.
+
+So I'm going to bring up a tree and we're going to look for in this case the number 27.
+
+So temp is starting up there at the top.
+
+And we would say while temp and temp is pointing to a node.
+
+So our while loop will run.
+
+And this if statement.
+
+The value is less than temp dot value.
+
+So we're going to say temp equals temp left which moves that down.
+
+Then that's going to cause us to run our while loop again.
+
+This time the number we're looking for is greater than so else.
+
+If the value is greater than.
+
+We're going to say temp equals temprite, which moves that down to there.
+
+That's going to cause us to run the while loop again.
+
+In this case, it's equal and we're going to return true.
+
+So let's look at another scenario.
+
+Let's move this back up to the top like this and look for the number 17.
+
+We'll say while temp.
+
+This is less and we're going to move it to the left like this.
+
+That causes us to run our while loop again.
+
+It's less than again.
+
+Here, and that's going to move us to the left.
+
+And now we're going to run the while loop again, gets less than again, and we're going to go to the
+
+left again.
+
+But now it's going to make temp equal to null.
+
+And when we go to run our while loop this equates to false.
+
+So it breaks this out of this while loop.
+
+And then we return false.
+
+Okay, so let's bring the rest of our code back in here.
+
+We'll look at this in a moment in Chrome DevTools.
+
+And then we will build out this tree and we will look for the number 27, just like we did here.
+
+That should return true.
+
+And then we will look for the number 17 just like we did here as well.
+
+And that should return false.
+
+Okay, so let's flip over to DevTools.
+
+And this is our contains method here.
+
+And then I'll just scroll up a little bit.
+
+And this is where we build the binary search tree.
+
+That was in the diagram that I just showed.
+
+Okay.
+
+So I'm going to zoom out here.
+
+And I'm going to run this.
+
+And this is our binary search tree.
+
+And you can see 47 is at the root here.
+
+I'm not going to go through opening all of these.
+
+I'm just going to clear this.
+
+So the first one I'm going to bring up here is my tree contains with the number 27.
+
+Press enter and you can see that that's true.
+
+And that I'm going to do it with the number 17 and it returns false.
+
+All right.
+
+So that is our method for contains.

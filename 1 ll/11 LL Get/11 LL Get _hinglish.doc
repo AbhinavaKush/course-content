@@ -1,0 +1,33 @@
+Here's the refined script in simple Hinglish, avoiding tough Hindi words and keeping the language accessible and urban:
+
+---
+
+**Intro:**
+Linked list mein `get` method implement karna seekhenge aaj ke tutorial mein. Chaliye dekhte hain kaise linked list mein kisi node ko uske index se retrieve karte hain.
+
+**A1:**
+Sabse pehle, hum apni starting point define karenge:
+```javascript
+let temp = this.head;
+```
+
+**A2:**
+Ab, list mein desired index tak pohochne ke liye hum ek simple for loop ka istemal karenge:
+```javascript
+for (let i = 0; i < index; i++) {
+    temp = temp.next;
+}
+```
+
+**A3:**
+Jab hum correct node tak pohoch jaate hain, tab humari `temp` variable us node ko reference karegi, aur hum uska value return kar sakte hain:
+```javascript
+return temp;
+```
+
+**Outro:**
+Bas, `get` method itna hi hai. Simple hai na? Yaad rahe, hamesha apne index bounds ko check karein, taaki out of range requests ka sahi se handling ho sake. Agle video mein, hum nodes ko modify karna seekhenge `set` method ke saath. Bane rahiye!
+
+---
+
+Is tarah ki simple aur samajhne mein aasan language ka istemal karke viewers ko aur bhi behtar samajh aayegi. Kuch aur badlav ya additions hain toh zaroor batayein!

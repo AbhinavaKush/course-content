@@ -1,0 +1,105 @@
+So in this video, we're going to write some helper methods that we'll use in our remove and insert
+
+methods.
+
+And this will just make it where our code is a little bit cleaner.
+
+So I'm going to pick up where we left off in the last video.
+
+Except I'm going to make this a perfect tree.
+
+And then we'll need to add this.
+
+Except for one of the changes we're going to make here is that instead of leaving that index of zero
+
+open, we're going to move everything over.
+
+So we'll start our code out like this.
+
+And before we get into the helper methods, there is one thing we need to create here.
+
+We need to create that array.
+
+And we're going to call that array heap.
+
+And we're going to make that private.
+
+And since that's private we'll create another method called get heap.
+
+And this is going to return this dot heap.
+
+But I want you to notice the three dots there.
+
+When you have the three dots there it returns a copy of the heap instead of the heap.
+
+So you don't want to give people access to the array because you want to make sure that they can't change
+
+it.
+
+So that's why you give them a copy.
+
+So now we'll create a method that calculates the left child.
+
+So when we left that index of zero open, the equation for calculating the left child was two times
+
+the index.
+
+This formula is very easy and intuitive, and that's why a lot of people will leave that index of zero
+
+open.
+
+But we're going to use that index.
+
+And because of that we have to change the formula.
+
+Now it's two times the index plus one.
+
+So let's bring in a tree and look at this.
+
+So we'll start with the root of the tree which is being stored at the index of zero.
+
+And if we take two times zero plus one that equals one.
+
+And you can see at the index of one we have the value of 99.
+
+And in the tree that is the left child of the root node.
+
+So now in the tree let's look at the node that contains the value of 75.
+
+That's stored down here at the index of two.
+
+Two times two is four plus one is five.
+
+And you can see that at the index of five we have the value of 61.
+
+And the 61 node is the left child of the 75 node.
+
+And just like we saw before, the right child will be one greater than the left child.
+
+So the equation for that is going to be two times the index plus two.
+
+So now we'll create a method for calculating the parent.
+
+And before the parent was the index divided by two.
+
+And then you floored that this is going to be the index minus one divided by two.
+
+And then we floor that.
+
+So now one of the other things that we have seen a lot is that we take values at two different indexes
+
+and we swap them.
+
+So we'll create a helper method called swap.
+
+And we pass it to indexes.
+
+And it will swap the values at those two indexes.
+
+So those are all of our helper methods.
+
+So in the next video we'll start using these helper methods to create the insert method.
+
+So we'll pick up right here in the next video when we create the insert method.
+
+But for now those are the helper methods.

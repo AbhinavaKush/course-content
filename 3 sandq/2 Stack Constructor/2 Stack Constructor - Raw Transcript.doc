@@ -1,0 +1,89 @@
+So now we're going to build our constructor for our stack.
+
+So just like with linked lists, our first step is that we need to create a node.
+
+And the node looks like this for the stack which is identical to what the node looked like for a linked
+
+list.
+
+And that means that our node class and the constructor in that class doesn't need any changes to it.
+
+This is identical to the node class that we used in a linked list, because that's essentially what
+
+we're using here is just a modified linked list.
+
+Now we're going to see what else we can take from the linked list class.
+
+So I'm going to start this out by saying class linked list.
+
+Because we can just take that out of the linked list class.
+
+But we would want to rename this.
+
+To stack.
+
+Now let's see what we can take from the constructor, from the linked list and what we can leave the
+
+same and what needs to be changed.
+
+So here's our constructor.
+
+And the first thing that we had to do in our linked list constructor is the same thing that we need
+
+to do here.
+
+We need to create a node.
+
+So up to this point, the only change that we've made is changing the name of the class from link List
+
+to stack.
+
+So just like with the linked list up to this point, we have created a node in the linked list.
+
+The next thing we had was head and tail equal to the new node like that.
+
+But we don't call them head and tail in a stack.
+
+So I'm going to remove these.
+
+And these would be called top and bottom.
+
+And I'm not going to use bottom.
+
+So I'm just going to go ahead and remove this and we'll just use top.
+
+And then I'm going to say the length is equal to one.
+
+And you could say height, but I'm just going to leave it at length.
+
+One other change that I will make is that that icon for the 11 that we have on the lower right should
+
+point down instead of across.
+
+And there we have our code for a constructor for stack.
+
+And there was a lot that we were able to reuse from the linked list constructor.
+
+Now let's go over to DevTools and run this code.
+
+This is where we create our new stack called My Stack.
+
+And then the stack class of course, is calling the node class to create that first node.
+
+Now let's go over here and run this.
+
+And then I'm just going to type in my stack and press enter.
+
+And there is our stack.
+
+We have a stack where the top points to a node.
+
+Length is equal to one.
+
+Let's open this up.
+
+And top is pointing to a node with a value of 11.
+
+Where next is null.
+
+So it looks like we have created a working constructor.

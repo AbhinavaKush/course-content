@@ -1,0 +1,85 @@
+So now we're going to talk about a specific type of binary tree called a binary search tree.
+
+So what we saw in the last video, we created a binary tree, but it was not a binary search tree.
+
+So the best way to explain them is to just build one out and show how we build this.
+
+So let's say we have a tree that only has one item in it at the top.
+
+And then we're going to add an item to the tree.
+
+We're going to add this node down here.
+
+So with a binary search tree if this new node at the bottom the 76 node, if it is greater than the
+
+47 it's going to go on the right.
+
+If it's less than it's going to go on the left.
+
+And of course 76 is greater than.
+
+So we're going to put it on the right.
+
+Now let's add another node.
+
+So when we add the next node, we are also going to compare it against that top node.
+
+The 52 is greater than 47.
+
+So we are going to go to the right.
+
+But because there's an item there to the right the 76 node, we now have to compare that to the 76 node.
+
+And when the node is less than we go left and we place it there.
+
+Let's just add a few more 21.
+
+We always are going to start at the top.
+
+It is less than the 47.
+
+The spot to the left of the 47 is open, so we're going to place it there.
+
+82.
+
+We're going to compare it to the 47 go right compared to the 76.
+
+We're going to go right again in that spot is open.
+
+So we place it.
+
+18 is less than 47, we go left.
+
+It is also less than 21.
+
+We go left again.
+
+That spot is open.
+
+We place it.
+
+And 27.
+
+We start at the top with the 47.
+
+We go left.
+
+Compared to the 21, it's greater than the 21.
+
+And to the right of the 21 is open.
+
+So we place it there.
+
+So one of the things I want to point out here is that all of the items to the right of the 47 are greater
+
+than 47.
+
+All of the items to the left are less than.
+
+And then also if you look at the 21.
+
+Everything to the left of the 21 is going to be less than, and everything to the right is going to
+
+be greater than, no matter how big this tree gets.
+
+And that is the structure of binary search trees.

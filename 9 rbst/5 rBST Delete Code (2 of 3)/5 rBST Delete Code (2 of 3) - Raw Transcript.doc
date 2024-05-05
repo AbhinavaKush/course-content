@@ -1,0 +1,149 @@
+So now in this video we're going to do part two of deleting a node from a binary search tree.
+
+So we'll start out by deleting a leaf node.
+
+And then we'll delete a node that has an opening on the left and a node on the right.
+
+Then we'll delete a node that has a node on the left and an opening on the right.
+
+We'll do all three of these in this video.
+
+So we'll start out by bringing up the code that we wrote in the last video.
+
+But I'm going to remove some of this code to make more room.
+
+So first this code only applies if we're looking for a value that is not in the binary search tree.
+
+And we're not going to see that scenario in this video.
+
+So I'll remove this.
+
+And then also for the examples we'll see here we will only traverse to the left.
+
+So I'm going to remove this code that traverses to the right.
+
+So I'll remove that.
+
+And then we'll look at removing the 21 node.
+
+And we'll start out by calling an instance on the root.
+
+And 21 is less than 47.
+
+So we'll call an instance on the 21 node.
+
+And that is the value that we're looking for.
+
+So we'll come down to where it says else.
+
+And because that is a leaf node we'll say if current node left equals null and current node right equals
+
+null.
+
+In other words it looks like this will just return null and that gets returned to the calling method.
+
+And then this gets popped from the call stack.
+
+Now the instance that we called on the 47 node is the active instance.
+
+This is the last line that it ran which means null gets returned to here.
+
+So we're setting current node left to be equal to null like that.
+
+And then of course this gets popped from the call stack.
+
+So that's what it looks like when we delete a leaf node.
+
+But it's a little bit different when we delete a leaf node that is also the root.
+
+And this is where I'll show you why you have to have this dot root equals as part of this method.
+
+And to help illustrate this I will bring this in as well.
+
+And now we'll call an instance on the root.
+
+And because 47 is the value that we're looking for, we'll come down to this else statement.
+
+And it is a leaf node.
+
+So this if statement will apply.
+
+And we're going to return null.
+
+And it's going to get returned to the calling method.
+
+And when it returns that this gets popped from the call stack.
+
+But if we didn't have this dot root being set equal to null root would continue pointing to the 47 node.
+
+So we specifically have to set the root to be equal to null.
+
+So now let's look at deleting the 21 node when it's open on the left and has a node on the right.
+
+So we'll call an instance on the root 21 is less than 47.
+
+So we're also going to call an instance on the 21 node.
+
+And because this is the value that we're looking for we'll say else.
+
+And to make room I'm going to take this if statement and remove it.
+
+The code that I'm going to bring in will be an else if that goes underneath this if statement.
+
+So I'll remove this and bring in the else if so, we'll say if current node left is equal to null.
+
+And that is the case here.
+
+We'll set current node to be equal to current node dot right.
+
+So the current instance on the call stack was called on the 21 node.
+
+So this is current node.
+
+And we're setting it to be equal to current node.
+
+Right.
+
+Then we'll return one current node and it gets returned to here.
+
+And this gets popped from the call stack.
+
+Now the instance called on the 47 node is the active instance it left off here.
+
+Which means that pointer to the 22 node was actually returned to here.
+
+So we're setting current node dot left to be equal to this.
+
+And then that 21 node is garbage collected.
+
+And our tree looks like this.
+
+And then this gets popped from the call stack.
+
+So we'll have one more situation that we look at in this video.
+
+And that is if we delete a node that has a node on the left and is open on the right.
+
+And I'll bring in the code for that, and it's almost identical to the one above it, except we just
+
+switch right and left.
+
+And then I'll also bring back in the code for when we deleted a leaf node.
+
+So those are the three scenarios that we're.
+
+Going to cover in this video, but we still need to write code for this situation for when we're deleting
+
+a node and it has a child on the left and the right.
+
+So for this situation, we're going to say else.
+
+And we're going to spend the next two videos building out this else statement.
+
+In the next video we'll write a helper method.
+
+And then in the following video we'll write the rest of the code for this else statement that uses that
+
+helper method.
+
+And that concludes delete node part two.

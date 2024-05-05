@@ -1,0 +1,192 @@
+So in this video, we're going to write the code to insert a value into the heap.
+
+And we're going to pick up where we left off in the last video with the helper methods.
+
+And we're going to use these to help us write the insert and remove methods.
+
+So of course the insert method is going to go in below these.
+
+But to make room I'm going to remove these.
+
+And then I'll bring in the insert method.
+
+So then I'll focus just in on this.
+
+And I'm going to bring in this heap.
+
+And that will be represented by this array.
+
+So the first value we're going to insert is the value of 100.
+
+And when we insert a value to keep this tree complete we put it into the next open spot in the array
+
+that is going to look like this.
+
+And we'll do that with this line of code.
+
+We'll just say heap push and then push the value into the array.
+
+And then we're going to create a variable called current.
+
+And it will point to this index.
+
+So I want to emphasize that current is not a pointer to a node like it was with binary search trees.
+
+Because we're not using a node class, we are setting current to be equal to the index of four.
+
+So current is storing that integer of four.
+
+But because it is pointing to that index, it is effectively pointing to this node.
+
+And we'll do that with this line of code where we set current to be equal to the length minus one.
+
+So in this case the length of the array is five and the last index is four.
+
+So now we're going to create our while loop.
+
+And the while loop is going to contain two conditionals when we're done.
+
+But I'm going to start this out by saying while true now we will be replacing true with two different
+
+conditionals.
+
+But I'm going to add those as we get to them.
+
+So I'm using true there as a temporary placeholder.
+
+So now let's focus in on this while loop.
+
+Now the first thing we're going to do is compare current, the one with the value of 100 to its parent.
+
+And because it is greater than we're going to do this swap.
+
+Now, the way we're actually going to do that is in the array.
+
+We're going to take those two values and swap them like that.
+
+And we'll do that with this line of code.
+
+And this is going to use two of our helper methods.
+
+We're going to say swap.
+
+And we're going to pass it the index of current.
+
+And then we're going to calculate the parent of current.
+
+And that is how we swap those two values.
+
+Now the next thing we need to do is take current.
+
+And move it up here, which is to say that we need to set it to be equal to the index of one.
+
+Now, before we write the code for this, that is still pointing here at the index of four, but we'll
+
+update that index like this.
+
+We'll set current to be equal to the parent of current which is going to do this.
+
+Now we'll run the while loop again.
+
+And because 100 is greater than 99 we're going to swap those two values with this line that does this
+
+in the tree and in the array.
+
+What we're actually doing is this.
+
+Then we come down to this line and we set current to be equal to the parent of current which does this.
+
+And now because this has gone all the way to the top of the heap, we want to break out of this while
+
+loop.
+
+And this brings us to our first conditional.
+
+We only want to do this while current is greater than zero.
+
+And right now current is equal to zero.
+
+So that'll break us out of our while loop.
+
+And now we have a valid heap.
+
+So let's bring back the rest of our code.
+
+And now we're going to insert 75.
+
+We're going to start out with this line which pushes 75 onto the heap.
+
+And then with this line we'll set current to be equal to the length of the heap minus one which does
+
+this.
+
+So now let's focus in just on this while loop.
+
+And because 75 is greater than 61 we'll run this line which swaps those in the tree.
+
+But what it's actually doing is in the array.
+
+It's taking these two and swapping them.
+
+And then we'll come down to here and set current to be equal to the parent of current like this.
+
+But now 75 is less than its parent.
+
+So we don't want to bubble this up any further.
+
+And that brings us to the second conditional and our while loop.
+
+So we're going to say and heap dot the value at current which is 75 needs to be greater than the value
+
+at the parent of current.
+
+And because that is not the case here, that breaks us out of our while loop.
+
+And now we have a valid heap.
+
+So now let's bring in the rest of our code.
+
+That is all of the code for insert.
+
+So we'll run this code in a moment.
+
+And when we do we're going to create a heap that looks like this.
+
+And we'll print out the four values in the array.
+
+Then we're going to insert the value of 100.
+
+When we do our tree looks like this.
+
+And the array will end up looking like this.
+
+And then we'll print out the array again.
+
+And then we'll insert the value of 75 which is going to make our array look like this.
+
+And then we'll print the array out for a third time.
+
+So now let's flip over and take a look at this.
+
+So there is the heap class with all of the helper methods I'm going to scroll up.
+
+And that's the code that we just wrote in this video for the insert method.
+
+And then I'll scroll up again.
+
+So with these lines we'll create that for item heap.
+
+And then with this line we'll print that out.
+
+And then with these next two lines we'll insert 100 and print out the heap again.
+
+And then we'll insert the number 75 and print out the heap a third time.
+
+So I'll run this.
+
+And you can see that we have printed the heap out.
+
+And you can see that our insert method is working correctly.
+
+And that is our method for insert.
+

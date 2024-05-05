@@ -1,0 +1,47 @@
+Here's a refined version of the script for your DQ method, adjusted for clarity and minimal changes, suitable for animation:
+
+---
+
+**Introduction to DQ Method**
+
+Welcome back! Today, we're going to dive into the DQ method for queues, which is very similar to the shift method used in linked lists. Just like shift, DQ focuses on removing the first item from the queue.
+
+**Step-by-Step Breakdown**
+
+1. **Check for Empty Queue**:  
+   The first thing to consider is whether the queue is empty. If it is, we simply return `undefined` because there's nothing to remove.
+
+2. **Handling a Single Item**:  
+   If the queue has only one item, removing this item will empty the queue. Therefore, we'll set both the first and the last pointers to `null`.
+
+3. **Removing the Item**:  
+   Let's define a temporary variable, `temp`, which will point to the item we are about to remove:
+   ```javascript
+   let temp = this.first;
+   ```
+   If the queue length is greater than one, we update the first pointer to the next item:
+   ```javascript
+   this.first = this.first.next;
+   ```
+   And don't forget to disconnect the removed node from the queue:
+   ```javascript
+   temp.next = null;
+   ```
+
+4. **Decrementing the Length**:  
+   After removing the item, we decrement the length of the queue by one.
+
+5. **Returning the Removed Item**:  
+   Finally, we return the removed item. If it was the number 11, you would see it returned by the DQ method.
+
+**Visual Demonstration**
+
+Imagine a queue with values 11, 3, 23, and 7. After applying the DQ method, the first item, 11, is removed, leaving the first pointer at the node with the value of 3.
+
+**Conclusion**
+
+That's how the DQ method simplifies removing the first item from our queue, mirroring the functionality of the shift method in linked lists but tailored for the queue's structure. Next, let's test this method in our development tools and see it in action!
+
+---
+
+This script is streamlined to ensure smooth narration and clear visualization for your tutorial video.

@@ -1,0 +1,149 @@
+Okay.
+
+So now let's do the get method.
+
+And with this one we're just going to get a node at a particular index.
+
+So if you want to code this pause it here.
+
+Otherwise, we'll start building this out.
+
+So I'm going to start with a singly linked list.
+
+And we'll walk through this.
+
+And then we'll look at the differences.
+
+So with a singly linked list, you could have something at the index of zero one, two three, but you
+
+can't have an index over here.
+
+We could say an index less than zero.
+
+Or over here, we could say an index that is greater than or equal to the length.
+
+And this is going to be the case whether you have a singly linked list or a doubly linked list.
+
+You have to say, if either of these are true, then we're going to return undefined.
+
+Let's bring our list back up here and we're going to set temp equal to head.
+
+We'll do that like this.
+
+And I'm going to remove head and tail from the diagram here.
+
+And just keep temp there.
+
+Then if we were going to iterate through the list, we were going to do that with a for loop like this
+
+and say temp dot next.
+
+So let's say we're going to find something at the index of two.
+
+We're going to go one.
+
+Two times through the for loop.
+
+And then we're going to return that item.
+
+So let's put this in with the rest of our code.
+
+This was the entire method for get for a singly linked list, but we're going to make some changes to
+
+this for a doubly linked list.
+
+So let's bring this up.
+
+Let's turn this into a doubly linked list like that.
+
+And let's see.
+
+We're going to get this three node here.
+
+The one at the index of one.
+
+We would start at head and we would get to this node.
+
+Then we would return that node.
+
+But what if we wanted to get this note?
+
+The quickest way to get there wouldn't be to start at the head.
+
+It would be to start at the tail and go this way.
+
+And that's going to be the difference when we use a doubly linked list is we can use this efficiency.
+
+So let's bring back our code here.
+
+And we're going to optimize this.
+
+So this for loop we only want to use this if we're in the first half of the list because this just moves
+
+forward.
+
+By going temp.
+
+Next.
+
+So we're going to wrap this with an if statement that says if the index is less than the length divided
+
+by two.
+
+In other words it's in the first half of the list.
+
+Then we will use that for loop.
+
+Else.
+
+We want to create a different for loop that goes the other way.
+
+The first thing we have to do is say temp equals this dot tail.
+
+And that's going to do this and move temp to the other end of our length list.
+
+Then we're going to have a for loop.
+
+That is just the opposite of the one above.
+
+So we're going to start this with I being equal to the index of the last item in the list.
+
+And we're going to say while I is greater than index instead of less than.
+
+And then we're going to decrement I.
+
+And then we're going to go the other way and use the previous arrows instead of the next arrows.
+
+All right.
+
+So that is all of our code for get.
+
+So we'll look at this in a moment and we will create this linked list.
+
+And we're going to run git on the index of one, which should return the node with the value of one.
+
+And then we'll run it on the index of two which will return the node with the value of two.
+
+That way we can see if our method works.
+
+If our node is in the first half, and then see if it works when our node is in the second half of the
+
+list.
+
+So let's flip over to DevTools.
+
+There is our Get method and this is where we create our linked list that goes zero through three.
+
+I'm going to run this.
+
+Then I'm going to say my doubly linked list dot get with a value of two.
+
+And that works.
+
+It returns the two node.
+
+And then let's try this with the value of one.
+
+And it returns the one node.
+
+And that is our method for get.

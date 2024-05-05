@@ -1,0 +1,167 @@
+So now we're going to write the code for depth.
+
+First search Postorder.
+
+We'll bring up our tree like this and our call stack and start writing our method DFS Postorder.
+
+The first thing we're going to do here is have our results array, just like we had in preorder.
+
+And we'll bring that up like that.
+
+And I'm going to bring in the function that we had in preorder.
+
+This is the one for pre-order.
+
+To change this to post order, all we're going to do is this.
+
+We're just going to rearrange the order that these get called.
+
+And just like we did with pre-order, we're going to call the function starting with the root.
+
+And we'll walk through this using that call stack.
+
+So at the root we're going to put 47 on there.
+
+The first thing we're going to do is say is there a node on the left.
+
+And there is.
+
+And we're going to go to the 21 node and push that onto the stack.
+
+And then the 21 is going to say, is there something on the left.
+
+And there is the 18.
+
+And it's going to go left and add that onto the stack.
+
+So the 18 is going to look left and there isn't anything there.
+
+And then it's going to look right.
+
+And then it's going to push its value into the array.
+
+And the process of pushing that into the array is the last line of the function, which means we can
+
+pop that 18 from the call stack.
+
+So then 21 is the top of the call stack.
+
+It has already gone left, so now it's going to go right to the 27.
+
+That adds that to the call stack.
+
+The 27 is going to look to the left.
+
+It's going to look to the right.
+
+There are no nodes there.
+
+So it's going to push its value into the array.
+
+And we can pop that from the stack.
+
+The 21 is at the top of the stack again.
+
+It's already gone left.
+
+It's gone right, and now it can push its value.
+
+Into the array.
+
+And now we pop that from the stack.
+
+Now the 47 is the top of the call stack.
+
+It's gone left.
+
+Now it needs to go right.
+
+And that's going to be the 76 node.
+
+We'll put that on the call stack.
+
+The 76 is going to look left and there is an item on the left, and that's the 52 that gets pushed onto
+
+the call stack.
+
+The 52 is going to look left.
+
+It's going to look right.
+
+There are no items there and it's going to push its value.
+
+Into the results array.
+
+Now we can pop the 52 from the call stack.
+
+76 is at the top of the call stack.
+
+Now.
+
+The 76 is already gone.
+
+Left.
+
+Now it can go right, which pushes the 82 onto the call stack.
+
+The 82 was going to look left and right.
+
+There's nothing there.
+
+It's going to push its value into the results array.
+
+We pop that from the stack.
+
+And now 76, is at the top of the call stack.
+
+It's already gone.
+
+Left.
+
+It's already gone, right.
+
+And now it can push its value into the array.
+
+We pop that from the call stack.
+
+47 is now the top of the call stack.
+
+It's already gone left and right, and now it can push its value into the array like that.
+
+And the 47 will pop that from the call stack.
+
+It was the node that we had called with the original function call here, which means we are done running
+
+those functions.
+
+The only thing left to do is to return the results array.
+
+So that is our code there.
+
+And we'll build our same tree that we've been building all along, and we will expect to see this array
+
+when we run the depth first search post order method.
+
+So let's flip over to DevTools.
+
+There is our depth first search post order method.
+
+Let's scroll up here.
+
+This is creating that same tree, and this is the array that we would expect that method to return.
+
+So let's zoom out here and I'll come up here and run this.
+
+And this is our tree here.
+
+I'm not going to open that up this time.
+
+I'm just going to clear this and I'll just do the up arrow here.
+
+And DFS post order.
+
+Returns this array which does match this array.
+
+And that is our method for depth.
+
+First search post order.

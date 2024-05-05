@@ -1,0 +1,25 @@
+Here's the Hinglish version of your transcript on big O notation focusing on O(1):
+
+---
+
+**Intro:**
+"Aaj hum ek aur fundamental big O notation explore karenge: O(1), jo ki constant time complexity ke naam se bhi jaana jaata hai. Ye concept operations ki efficiency ko illustrate karta hai jo input ke size ke saath scale nahi hote."
+
+**A1:**
+"Hum ek simple function se shuru karenge jiska naam hai addItems. Ye function ek straightforward task perform karta hai: ye n aur n ka sum return karta hai. Is case mein, sirf ek operation involved hai—addition."
+
+**A2:**
+"Chahe n ek ho, sau ho, ya ek million, operations ki number constant rehti hai ek par. Ye O(1) complexity ki essence hai."
+
+**A3:**
+"Agar hum addItems mein ek aur addition include karte hain, making it two operations? Shuruaat mein, ye O(2) ki tarah lag sakta hai, lekin big O notation mein, hum ise simplify karte hain O(1) ke roop mein. Rationale kya hai? Operation count n ke saath scale nahi hota; ye constant rehta hai."
+
+**A4:**
+"Isi wajah se O(1) ko aksar big O notation ka sabse efficient form describe kiya jata hai. Chahe input kitna bhi bada ho, computation time wahi rehta hai."
+
+**Outro:**
+"Graph par, O(1) ek flat line ke roop mein represent kiya jata hai, indicating ki operation count input size ke bavajood change nahi hota. Yaad rakhiye, jab aap term 'constant time' sunte hain, to ye O(1) ko refer karta hai. Ye algorithm design mein efficiency ka pinnacle hai, ensuring the fastest possible execution time."
+
+---
+
+Is tarah se, aapne big O notation, specifically O(1) par Hinglish mein ek clear aur samajhne mein aasan explanation diya hai, jo viewers ko is efficient concept ko achhe se grasp karne mein help karega.

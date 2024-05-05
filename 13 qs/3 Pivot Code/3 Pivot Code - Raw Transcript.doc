@@ -1,0 +1,117 @@
+Now we're going to write our pivot code.
+
+So we're going to use this same array like this.
+
+And I'm going to shrink it down.
+
+So we have room for our code.
+
+Now, one of the things that we're having to do in a couple of different places in pivot is swap two
+
+items.
+
+So you can do that with three lines of code like this.
+
+But since we're going to use this twice, I am going to make it its own function.
+
+We're going to pass it an array and the first index, and the second index of the items that we're going
+
+to swap.
+
+And this is going to take care of that.
+
+So this is going to make our pivot code a little bit cleaner.
+
+So let's start the pivot code itself.
+
+Now we have three arguments here.
+
+The only one that you have to pass it is the array.
+
+Because these two are going to default to what they're going to need to be when you pass it the array.
+
+Anyway, the index of the first item in the array is going to be zero, and the index of the last item
+
+in the array is going to be the length minus one.
+
+So you don't have to worry about these when you are passing the array to the pivot function.
+
+But the reason we have this is we saw that we're going to run quicksort after the first time through
+
+on a subsection of the array, and we have to know the first and last index of that section of the array
+
+that we are working on then.
+
+And that's why we have to have this here.
+
+So I'm going to bring in our first variable pivot.
+
+That's going to be this.
+
+So the variable is pivot index to emphasize that this is an index.
+
+But on the arrow I'm just putting pivot to make that easier.
+
+Then we're going to start out with the swap index being equal to the pivot index.
+
+Like this.
+
+Then we'll have our for loop.
+
+And here is I from the for loop it's going to be the pivot index plus one.
+
+And we're going to run this loop until we get to the end index.
+
+So then we start doing comparisons.
+
+If the value at the index of I is less than the value at the pivot index, we're going to do something.
+
+So in this case that's not true.
+
+I'm just going to color this in gray and move the I over.
+
+In this case it is less than.
+
+And when that is the case we're going to do two things inside of this if statement.
+
+We're going to move swap over like this.
+
+And then we're going to use that swap function.
+
+Like this where we pass it the array, the swap index and I and it will swap those two items.
+
+And then we're going to keep going through this for loop until the array is going to look like this.
+
+And the next thing is we're going to call that swap function and switch these two items.
+
+And now there's one thing left to do and that is to return that swap index.
+
+Which means this function, in addition to rearranging all of the numbers to be like we have at the
+
+bottom of the screen, it is also going to return the value of three.
+
+So that is our code for pivot.
+
+And this is going to be the result that it returns.
+
+But we're going to start like this.
+
+Now let's go over and look at all of this in DevTools.
+
+So there is our swap function, and our pivot function is here.
+
+And we're going to run pivot with my array, which is the array that we had just looked at.
+
+And I'm going to zoom out here and run this.
+
+And it's going to return the number three.
+
+That's that index.
+
+But let's also look at my array.
+
+And there is the array with the four in the middle, and everything on the left is less than four and
+
+everything on the right is greater than four.
+
+And that is our function for pivot.

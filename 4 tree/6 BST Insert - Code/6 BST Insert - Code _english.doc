@@ -1,0 +1,63 @@
+Here's a refined version of your script on the `insert` method for a binary search tree, maintaining the same structure and minimal changes to preserve the clarity and flow for animation purposes:
+
+---
+
+**Introduction**
+Welcome back! In this video, we'll continue building our binary search tree by adding an `insert` method.
+
+**Creating a New Node**
+First, let's create a new node. Here's how we do it:
+```javascript
+function Node(val) {
+    this.value = val;
+    this.left = null;
+    this.right = null;
+}
+```
+
+**Insert Method**
+Now, let's define our `insert` method. It starts by accepting a value:
+```javascript
+BST.prototype.insert = function(value) {
+    let newNode = new Node(value);
+```
+
+**Handling an Empty Tree**
+If the tree is empty (root is null), the new node becomes the root:
+```javascript
+    if (this.root === null) {
+        this.root = newNode;
+        return this;
+    }
+```
+
+**Traversal to Find Insertion Point**
+Next, we traverse the tree to find the correct spot for our new node:
+```javascript
+    let current = this.root;
+    while(true) {
+        if (value === current.value) return undefined; // Ignore duplicate values
+
+        if (value < current.value) { // Go left
+            if (current.left === null) {
+                current.left = newNode;
+                return this;
+            }
+            current = current.left;
+        } else { // Go right
+            if (current.right === null) {
+                current.right = newNode;
+                return this;
+            }
+            current = current.right;
+        }
+    }
+}
+```
+
+**Conclusion**
+And that's how you insert a new node into a binary search tree! Next, we'll test our `insert` method by adding several nodes and observing the tree's structure.
+
+---
+
+This script is now ready to be used for your tutorial video, ensuring viewers can follow along easily and understand each step involved in the insert operation.

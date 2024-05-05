@@ -1,0 +1,75 @@
+We'll just set it equal to head.
+
+We have to start at the beginning of the list.
+
+Then we can iterate through the list, however many items we need to to get to the item at the index
+
+that we're looking for.
+
+So we do that by saying let temp equal this dot head.
+
+And then I'm going to remove head and tail here and just leave temp here.
+
+And then we have a for loop to iterate through this list, and all the for loop does is move the temp
+
+variable forward.
+
+So say we're looking for the item at the index of two.
+
+It would run the for loop one two times and then return the item.
+
+That is pointing to it would return temp.
+
+So that is all of our code for get.
+
+The only tricky part of this method is to remember to write this if statement for anything that's out
+
+of the acceptable range.
+
+But other than that, it's a pretty straightforward method.
+
+So when we flip over to Chrome DevTools, we're going to build out a linked list that just looks like
+
+this, where the index and the value is going to be the same for every node.
+
+So let's flip over to Chrome DevTools.
+
+So there's our Get method.
+
+And this is where we build our linked list.
+
+0323.
+
+So let's run this.
+
+And let's open this up.
+
+Make sure our link list looks the way we expect it to.
+
+Head is pointing to a node with a value of zero.
+
+Tail is pointing to a value of three and we have a length of four.
+
+So that is perfect.
+
+So we'll say my link list dot get.
+
+And I'm going to pass it a value of negative one.
+
+And it returns undefined, just like we would expect.
+
+And then I'm also going to try a value here that is greater than our range.
+
+So let's try the index of ten.
+
+And that also returns undefined.
+
+So that's perfect.
+
+And then let's have a valid index.
+
+So the node at the index of two is going to have a value of two.
+
+And that is exactly what we expect.
+
+So that is our method for get.

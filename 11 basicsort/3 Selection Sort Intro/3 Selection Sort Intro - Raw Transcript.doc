@@ -1,0 +1,110 @@
+So now we're going to look at selection sort.
+
+And once again we'll start with an array that looks like this.
+
+But with selection sort there's something different we have to do here.
+
+We have to keep track of the indexes.
+
+So I'm going to bring up indexes for each of these.
+
+So this is what we're going to do.
+
+We're going to start with this first item.
+
+And we're going to have a variable called min for minimum.
+
+And we're going to store the index of that first item.
+
+Then we're going to start comparing that item to everything else in the array.
+
+So we'll go to the next item here.
+
+Two is smaller than four.
+
+So we want to store the index of one in min.
+
+Then we move to the six.
+
+That one's not lower.
+
+So we'll skip that and that.
+
+And then we move to the one.
+
+And now that one is lower than the.
+
+Item that is stored in min.
+
+So we'll store the index of four in there and we move to the end.
+
+And that one's not lower.
+
+So once we've moved to the end of that loop.
+
+We're going to take that minimum and that first item, and we're going to switch them.
+
+And when we do the item at the index of zero after the switch is sorted.
+
+So I'll color that green.
+
+Then we start with the next item in the array, set min equal to that, and do the same thing and compare
+
+it to everything else.
+
+And you can see that two is the lowest number remaining.
+
+So we'll loop through this.
+
+And we're not going to change that min item at all.
+
+And now that item at the index of one we know that is in the correct place.
+
+So I will color that green because it is sorted.
+
+Then we're going to start with the six and store that index in min.
+
+And I'm going to move that variable over to the left like this.
+
+Since all of the large items are going to start being moved over to the right.
+
+So we compare it to the five that's lower.
+
+So we'll store three in there and the four is lower.
+
+So we'll store the index of four in there.
+
+And now the three is lower.
+
+And we'll store the index of five in there.
+
+So the smallest number was at the index of five.
+
+We switch these.
+
+And now we have the third one in there.
+
+And these last few will go pretty quick here.
+
+So the next item is that the index of three we compare it to the four.
+
+That one's lower.
+
+That last one isn't.
+
+So we take these two and switch them.
+
+And now we look at the five store that in min.
+
+The next item is not smaller.
+
+So we know that these last two are sorted and I'll color those green.
+
+And we have a completely sorted array.
+
+So I'm going to mix these up back like this.
+
+And this is where we'll start in the next video when we'll code.
+
+Selection sort.
+

@@ -1,0 +1,77 @@
+So now we're going to look under the hood of a linked list.
+
+What is this thing really made of?
+
+So I'm going to start by bringing up our diagram that we've seen.
+
+And we're going to bring in a node from the right.
+
+And when we add this, when we say the seven node points to the four node and that tail is going to
+
+be set equal to that pointer and point at that four node.
+
+And we add this into the linked list.
+
+What's really going on there.
+
+In order to answer that question, let's pop this four off and take a closer look at it.
+
+In order to understand this, we have to know what is a node made up of.
+
+It is this entire thing.
+
+It is both the value and the pointer.
+
+It's not just the value, it's the whole thing.
+
+So this node is actually an object.
+
+That looks something like this, that has value.
+
+And next.
+
+So this is what we're adding into the linked list.
+
+We represent it graphically like this because this is easier to look at.
+
+But this is what's really going on.
+
+So when we say the seven is going to point to that new node, the seven looks like this.
+
+So how do we have the seven point to this other object.
+
+We do it by just having it be equal to this object, that the next value in the seven node is equal
+
+to the other node.
+
+That is how the seven node will point to the four node.
+
+And the same is true, of course, of the 23 node.
+
+And the three node.
+
+Let's just build this out and the 11 node and the 11 node.
+
+Since this is the first node, that is what head points to.
+
+Like this.
+
+And then we have tail pointing over here.
+
+A little harder to put that into the diagram of nested objects, but it's going to point to the last
+
+item.
+
+And we made it point to the last item by saying we're going to set it equal to.
+
+The next value of the seven node.
+
+And that points it here.
+
+So this set of nested objects is.
+
+What this diagram is made up of.
+
+So let's move back over here.
+
+And this is what a linked list looks like under the hood.

@@ -1,0 +1,43 @@
+So in this video we're going to do a merge intro.
+
+So merge is going to be a helper function that we're going to use in merge Sort.
+
+So merge is going to look like this.
+
+We have two sorted arrays and then we're going to put them into one big sorted array.
+
+But let's look at the steps we have to do to make that happen.
+
+One of them, we're going to use AI and the other we're going to use J.
+
+And we're going to compare I with J.
+
+And whichever one's lowest, we push that into the new array.
+
+We're going to call that array.
+
+Combined the combined array.
+
+And then we do it again.
+
+We compare I and J.
+
+In this case J is going to be lower and we just keep doing that process.
+
+So Jay is going to be the lowest here all the way to the end.
+
+And we're done running through that array.
+
+So this is going to break us out of that loop.
+
+If either one of these get to zero items we're going to break out of that loop.
+
+And then we're going to have a different loop that says while just this one array has items in it.
+
+We're going to just push all of the items on until that array is empty.
+
+And then, of course, we'll have another one that says if the other one has items in it, we will do
+
+the same thing with the other array.
+
+And that is our quick merge intro.

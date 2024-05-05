@@ -1,0 +1,28 @@
+Sure, here’s the script translated into Hinglish, using simple and more conversational language for an urban Hindi audience:
+
+---
+
+**Intro:**
+"Aaj hum dekhenge ki doubly linked lists mein 'push' method kaise kaam karta hai aur ise singly linked lists se kaise compare karte hain. Chaliye step-by-step samjhte hain."
+
+**A1: Samajhna Push in Singly Linked Lists:**
+"Ek singly linked list mein, ek naya element add karna—jise 'pushing' kehte hain—mein ek new node create karna hota hai aur current last node ka next pointer is new node ko point karta hai. Phir hum 'tail' ko is new node pe update karte hain, jo ise list mein add karta hai."
+
+**A2: Transition to Doubly Linked Lists:**
+"Ab doubly linked lists ki taraf switch karte hain, yahan process kuch similar shuru hoti hai jahan hum last node ko new node ki taraf point karte hain. Lekin, yahan ek extra step hai."
+
+**A3: Key Difference in Doubly Linked Lists:**
+"Doubly linked list mein ek main difference yeh hai ki new node mein ek 'previous' pointer hota hai. Hum is 'previous' pointer ko current last node ko set karte hain. Yeh bi-directional linking hi doubly linked list ko singly linked list se alag karti hai."
+
+**A4: Finalizing the Push Operation:**
+"'Previous' pointer set karne ke baad, hum 'tail' ko new node pe move karte hain, ise puri tarah list mein integrate karte hue. Chahe list shuru mein khali ho ya nahi, yeh steps push operation ko complete karte hain."
+
+**A5: Code Demonstration:**
+"Chaliye kuch code dekh kar apni understanding ko aur mazboot karte hain. Jab hum doubly linked list implement karte hain, toh pehle check karte hain ki list khali toh nahi hai. Agar khali hai, toh 'head' aur 'tail' dono new node ko point karenge. Agar nahi, toh hum last node ko new node se link karte hain aur 'tail' update karte hain. Singly linked list se alag sirf yeh line of code hoti hai jahan hum new node ke 'previous' pointer ko last node se set karte hain."
+
+**Outro:**
+"Toh yeh tha push method ka implementation doubly linked lists mein, jo aapko aur bhi complex operations ke liye strong base provide karta hai. Apne development environment mein is code ko try kijiye aur in concepts ko action mein dekhiye!"
+
+---
+
+Is format mein, explanation clear hai aur coding demonstration ke saath diya gaya hai, jo typically video tutorials mein diya jata hai. Isse audience ko concepts ko better samajhne aur visualize karne mein madad milegi.

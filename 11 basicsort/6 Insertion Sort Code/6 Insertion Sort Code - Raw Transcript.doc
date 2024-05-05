@@ -1,0 +1,134 @@
+Okay.
+
+Now we're going to code insertion sort.
+
+So we're going to pick up where we left off in the last video with this array with only these two items
+
+out of order.
+
+I'm going to shrink this down like this.
+
+And we will start our function.
+
+And of course we're going to have a for loop.
+
+So we're going to set I equal to one like we talked about in the last video.
+
+You start with the second item and then we're going to move through to the end of the array with this
+
+for loop and this item.
+
+We're going to set temp equal to it.
+
+We're going to declare it outside of the for loop, but set temp equal to array at the index of I that
+
+value.
+
+So whatever item that we're working with that we have up above the array in the display below is going
+
+to be what is set equal to temp.
+
+We'll put that back and then we're going to have our second for loop.
+
+This is the one that we're going to compare everything before that item with.
+
+And I want you to notice that I use var instead of let.
+
+If we use let to declare the variable, we can only use the variable inside the for loop.
+
+We are going to need to use this outside of the for loop.
+
+So I'm going to use var.
+
+And this is I, the item I just popped up there.
+
+So Jay is going to be I minus one.
+
+So Jay is going to point to the item before that.
+
+Now let's say we're working with this three, since it's the only one that's out of order, we know
+
+how this is going to go until we get to one where we need to actually move it.
+
+So we'll start with this one for our example.
+
+This is going to be Jay here.
+
+So what we're going to say in the for loop is while Jay the value at Jay the for if it's greater than
+
+temp and this is the jay and this is temp in this case it is greater.
+
+What we're going to do is we're going to move that for over one.
+
+So we're going to set the next index equal to what was stored at J.
+
+Then we're going to say J minus minus, which is going to move that arrow over one.
+
+Now we'll run through the for loop again.
+
+And now the item that's at the index of J is not greater than temp.
+
+That breaks us out of the for loop.
+
+Then we say the at the index of J plus one.
+
+That's going to be that open spot.
+
+We're going to set it equal to temp which drops that item in there.
+
+So there is one other thing that we do have to account for.
+
+And to explain that I'm going to switch the one and the two in our array like this.
+
+So let's say we're starting with this number.
+
+We're going to compare it to the two.
+
+We're going to set J equal to the two.
+
+Then we're going to look to see if the value at j is greater than ten.
+
+And in this case it is.
+
+So we're going to move that two over like this.
+
+And then we're going to run through the loop again.
+
+And when we do, we're going to get this J minus minus, which is going to move J over to the index
+
+of negative one.
+
+And obviously this is as far as we want to go with this loop.
+
+So we have to add something to this for loop.
+
+And that is this we have to say also J has to be greater than negative one.
+
+If we ever get to the point where j is equal to negative one, we stop running the loop.
+
+And that brings us down to this line which says.
+
+At the index of J plus one.
+
+And now j is negative one.
+
+So j plus one is the index of zero.
+
+Set that equal to temp, and now that puts that in the correct spot.
+
+The only thing left to do now is to return this sorted array.
+
+So we'll look at this code in a moment in DevTools.
+
+And we are going to use an array that looks like this okay.
+
+So let's flip over to DevTools.
+
+So there is our function and we're going to run insertion sort on that array.
+
+So let's zoom out here and we'll run this.
+
+And there is our sorted array.
+
+Okay, so it looks like we have a working function for insertion sort.
+

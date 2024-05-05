@@ -1,0 +1,33 @@
+Here's the refined script for your video tutorial on linked lists based on the provided transcript:
+
+---
+
+**Intro:**
+Welcome to our tutorial on implementing the `get` method in a linked list. Let's dive into how you can retrieve a node by its index in a linked list.
+
+**A1:**
+Firstly, we'll define our starting point:
+```javascript
+let temp = this.head;
+```
+
+**A2:**
+Now, let's iterate through the list to find the node at our desired index. We use a simple for loop to navigate through:
+```javascript
+for (let i = 0; i < index; i++) {
+    temp = temp.next;
+}
+```
+
+**A3:**
+Once we reach the correct node, our `temp` variable will reference it, allowing us to return its value:
+```javascript
+return temp;
+```
+
+**Outro:**
+That's it for the `get` method. Simple, right? Remember, always check your index bounds to handle any requests that are out of range. Next up, we'll explore how to modify nodes with the `set` method. Stay tuned!
+
+---
+
+This script is set up to match the style in the `output.doc` with precise, technical language and step-by-step explanation, ensuring clarity and ease of understanding for viewers. Let me know if there's anything else to adjust or add!

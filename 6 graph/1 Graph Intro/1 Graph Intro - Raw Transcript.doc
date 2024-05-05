@@ -1,0 +1,99 @@
+Welcome to graphs.
+
+So we're going to go over a little terminology here before we get into this this and a graph.
+
+You'll hear this referred to as a vertex or a node.
+
+Vertex is actually the proper terminology, but you will hear people refer to this as a node sometimes.
+
+And I'm going to bring up another one of these.
+
+So now let's connect these two.
+
+And this is called an edge or a connection.
+
+Edge is actually the proper turn.
+
+But you will hear people say connection.
+
+But this should be called an edge.
+
+I'm going to bring in another vertex here.
+
+And one of the things about graphs is this new vertex can connect to this vertex.
+
+It can connect to this vertex or it can connect to both.
+
+There's no limitation to how many other vertices a particular vertex can connect to or have edges with.
+
+So what do we use these graphs for?
+
+Let's say that we want to go from here to here.
+
+This would be like a maps app, like a GPS on your phone.
+
+Well, obviously the wrong way to go would be to go this way and then up this way, because there's
+
+a much faster way to just go one hop like that.
+
+But one of the things about graphs is we can weight these edges like this.
+
+Now the most efficient way to go because you want to go the least cost path would be to go this way.
+
+You don't want to go this way because there's probably traffic on that road.
+
+This is something we also use in routing protocols on a network.
+
+You might have two very fast links and one very slow link.
+
+It would be better to have that extra router hop to be able to send your data.
+
+That's another example of a graph.
+
+So there's another aspect of edges that we're going to look at here.
+
+Let's say this is Facebook and you have you and a friend.
+
+The friend is friends with you and you are friends with them in Facebook with normal accounts, not
+
+like celebrity accounts or things like that, but just a normal friend.
+
+You are friends with each other.
+
+So that is a bidirectional relationship.
+
+And if you have all bidirectional edges, it is generally represented with a line without arrows.
+
+It's assumed that if there aren't arrows that it's bidirectional.
+
+So now let's change this.
+
+Instead of you and a friend, let's say it's you and a celebrity on, say, Twitter or Instagram.
+
+This is a one way relationship on those platforms, you can follow someone without them following you
+
+back.
+
+In fact, in this situation it is most likely that they are not following you back.
+
+So that is a one way relationship.
+
+Now in this course, the way we are going to build our graphs is that all of the edges are going to
+
+be bidirectional and they are not going to be weighted.
+
+But I wanted to show you that those are possibilities, and those are things that we do with graphs.
+
+I also wanted to point out that we have seen a couple of graphs in this course.
+
+A binary tree is a type of graph that just has the limitation that it can only point to two other items,
+
+and each of the connections are directional.
+
+And in the tree section we mentioned that we had seen another tree and that was a linked list.
+
+So linked lists are trees and trees are graphs.
+
+Therefore a linked list is also a graph.
+
+But typically what we think of is something that looks like this when we think of graphs.

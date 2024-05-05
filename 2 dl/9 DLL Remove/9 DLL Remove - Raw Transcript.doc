@@ -1,0 +1,146 @@
+And for our last method for doubly linked lists, we're going to do remove.
+
+So for this we're just going to remove a node at a particular index and return it.
+
+So that's a pretty simple concept.
+
+If you want to code this, go ahead and pause it.
+
+Otherwise, let's get into it.
+
+So just like with a regular linked list, we saw that if we remove the first item.
+
+We could say if the index is zero, we'll just return this shift.
+
+If we're going to return the last item.
+
+We could just say, return this dot, pop.
+
+And then of course, we can't have anything that is not a valid index.
+
+So anything that's less than zero.
+
+And anything that is greater than or equal to this dot length.
+
+Like that, we return undefined.
+
+So let's look at all of these so far.
+
+And if it's not one of these and say, we're going to return the one at the index of two.
+
+We would set a variable equal to that node.
+
+And what we saw before is we had a before variable, before the item we were actually going to remove,
+
+and that was because all of our arrows were pointing forwards.
+
+But because we have arrows going the other way, we don't need that variable.
+
+And I want to show you something a little bit different here with what we can do with these variables.
+
+First we need to.
+
+Declare the variable like this.
+
+And we're going to get that variable to the appropriate node using.
+
+The get method.
+
+Let's look at this with the rest of our code like that.
+
+Okay.
+
+Now we'll bring back our list like that.
+
+And since this is the one we're going to remove, I'm just going to push it up here like this.
+
+So what we need to do is we need to have the arrow that goes from the three to the 23.
+
+Highlighted in green there and point that to the seven node.
+
+Then we need the one that's going from the seven to the 23 that I have highlighted there, and have
+
+that point over here.
+
+In order to do that.
+
+Watch what we're going to do.
+
+We'll say temp dot previous dot.
+
+Next.
+
+Is equal to temp.
+
+Next.
+
+Like that.
+
+And that will point that to that node.
+
+Similarly we can say temp dot next dot previous.
+
+Is equal to temp.
+
+Dot previous.
+
+Like that and that will move that arrow down.
+
+The only thing we need to do now.
+
+Is to say temp and temp dot previous are both equal to null and that will break that off the list like
+
+that.
+
+So let's put this in with the rest of our code like that.
+
+The only things left to do are to decrement the length.
+
+And return that item that we removed.
+
+So we'll look at this code in a second.
+
+And DevTools.
+
+This is the linked list that we'll create with a length of three.
+
+And we will remove the item at the index of one, which also has the value of one.
+
+So it will return the node with the value of one like that.
+
+Then we'll be left with a list where head points to zero, tail points to two, and has a length of
+
+two.
+
+So let's flip over to DevTools.
+
+So there is our remove method.
+
+And I'm going to scroll up a little bit.
+
+And this is where we create our list with zero, one, two.
+
+Zoom out here and run this.
+
+I'm going to open this.
+
+And you can see that head points to zero, tail points to two.
+
+And the length is three.
+
+So I'm going to clear this.
+
+And run the remove method.
+
+Okay, so it returned the node with the value of one.
+
+Now let's look at the linked list.
+
+And I'll open this up.
+
+And head points to zero, tail points to two.
+
+And it has a length of two.
+
+And that's our method for remove.
+

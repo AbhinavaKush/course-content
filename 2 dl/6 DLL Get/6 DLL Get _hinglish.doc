@@ -1,0 +1,56 @@
+Here's the simplified and urban Hinglish version of the script about implementing the "get" method in linked lists:
+
+---
+
+**Intro: Nodes Ko Access Karna in Linked Lists**
+
+Aaj hum dekhenge ki kaise specific positions pe nodes ko access karte hain linked lists mein. Hum compare karenge implementations ko between singly aur doubly linked lists ke beech.
+
+**A1: Singly Linked Lists**
+
+Ek singly linked list mein, shuru karte hain by checking agar desired index valid hai. Agar index zero se kam hai ya list ki length se zyada hai, toh hum return karenge `undefined`. Yeh out-of-bound values ko handle karta hai right away.
+
+Element ko retrieve karne ke liye, hum ek temporary pointer ko head par initialize karte hain. Yahan hum list ko traverse karenge tak pahunchne ke liye desired node tak:
+
+```javascript
+let temp = head;
+for (let i = 0; i < index; i++) {
+    temp = temp.next;
+}
+return temp;
+```
+
+Yeh loop `temp` pointer ko ek node at a time move karta hai jab tak yeh node ko specified index par pahunch na jaye.
+
+**A2: Transitioning to Doubly Linked Lists**
+
+Ab, enhance karte hain humara method for doubly linked lists, jahan har node forwards aur backwards dono taraf point karta hai. Yeh structure allow karta hai more efficient traversal.
+
+**A3: Optimizing with Doubly Linked Lists**
+
+Agar target index list ke start ke closer hai, toh hum traverse karenge from the head as before. However, agar index end ke nearer hai, toh zyada efficient hai start karna from the tail and work backwards. Yahan hum apne approach ko adjust karte hain:
+
+```javascript
+if (index < length / 2) {
+    let temp = head;
+    for (let i = 0; i < index; i++) {
+        temp = temp.next;
+    }
+} else {
+    let temp = tail;
+    for (let i = length - 1; i > index; i--) {
+        temp = temp.prev;
+    }
+}
+return temp;
+```
+
+Yeh method ensure karta hai ki hum hamesha shortest path ko apna target node tak pahunchne ke liye use karein, significantly optimizing access time in long lists.
+
+**Outro: Recap and Experiment**
+
+Toh recap karte hain, jabki singly linked lists provide karte hain ek straightforward method to access nodes, doubly linked lists offer karte hain a more efficient way by allowing us to start the search from either end. Try karo inhe implement karna apne projects mein and observe karo performance differences!
+
+---
+
+Yeh script har part ko clear aur concise sections mein divide karta hai, suitable for animation aur voice-over in an educational video.

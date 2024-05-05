@@ -1,0 +1,268 @@
+So now we're going to code our pop method.
+
+So we'll start it out like this.
+
+And remember we had three scenarios where we had zero items one item or two or more items.
+
+So I'm going to start with the easiest one, which is an empty linked list.
+
+And the way we deal with this is just to test to see if the list is empty.
+
+Uh, we can do it like this.
+
+Or this dot head equals null or or this dot length equals zero.
+
+We'll return undefined.
+
+So we'll drop this out of here.
+
+And now let's look at if we have two or more items.
+
+So we showed in the last video where we're going to create two different variables temp and pre.
+
+We'll create them like this.
+
+Let temp equal this dot head and let pre equal this dot head as well.
+
+And then we're going to loop through this.
+
+I'm going to use a while loop here.
+
+You could use a for loop here because you're just going through the entire length of the length list.
+
+So you could use the number that you have stored in this dot length.
+
+But I like using the while loop here because we're just doing this while temp dot.
+
+Next is true.
+
+And since this is a null terminated list, we are going to go and tell the pointer is going to be null.
+
+So temp.
+
+Next, if you look at the diagram the 11 node there, that's that arrow there that I just highlighted.
+
+And then we're going to say pre temp.
+
+And for the first iteration through the loop pre is already set equal to temp.
+
+So this doesn't change anything.
+
+And they will say that temp equals temp.
+
+Next.
+
+Which is going to move temp over.
+
+So let's move this down like this.
+
+And we'll walk through this all the way to the end of the list.
+
+So we'll say while temp dot next is true, which means there is a node that that arrow is pointing to.
+
+We'll set free equal to temp.
+
+It's already equal to temp.
+
+So in this iteration it's not going to do anything.
+
+And then temp.
+
+Temp dot next which moves temp over.
+
+And let's just walk through this all the way to the end highlighting the line of code that is being
+
+used as things are moving on the diagram.
+
+So.
+
+While temp.
+
+Up next we're going to move pre up.
+
+And temp over.
+
+And then check to see if there's a node there and we'll do it again.
+
+And then this will be the last time that this is going to come up.
+
+True.
+
+And we're going to move pre and temp.
+
+And this time this is going to be false.
+
+And this is where pre and temp are left after we run the while loop.
+
+So for now I'm going to remove temp I'll bring this back.
+
+But that's going to be pointing at that for node.
+
+And we want to set tale equal to pre.
+
+We do that with this line of code.
+
+This dot tail equals pre.
+
+That was the only thing we were using pre for.
+
+So I'm going to just drop this out of the diagram.
+
+Will say Taylor next is equal to null.
+
+And that breaks that four off of the list there.
+
+So let's take a look at this code.
+
+Remember we created these two variables.
+
+And now let's look at this with the rest of the code that we have so far.
+
+And next thing is to decrement the length.
+
+And remember, we do have one edge case that we haven't addressed, and that is if we have one item
+
+in the list, and if we do have one item in the list, head and tail, both are going to point to it.
+
+And we had said that temp and pre were going to be equal to head.
+
+So those are both going to point to that one node.
+
+So let's just walk through the rest of the code here just from the while loop down.
+
+Okay.
+
+So I'm going to back up here.
+
+So what those first three lines we've already run those.
+
+So these are the ones that are left.
+
+And let's run through these and see what happens when you only have one item.
+
+And it'll become obvious what we have to do when we have one item in the list.
+
+So we're going to run while temp dot next.
+
+Well temp dot next is null.
+
+So the while loop is not going to run at all.
+
+So we can remove that.
+
+And that's all that we're going to use the temp variable for.
+
+So I'm just going to drop that out of the diagram there.
+
+So this dot tail equals pre while they're already pointing at the same item.
+
+So that doesn't really change anything.
+
+So we can remove that line.
+
+Okay.
+
+Then we have this dot tail dot next equals null.
+
+So tail dot next is already equal to null.
+
+That's not going to change anything.
+
+So we're done with that line of code.
+
+And the only thing left is this dot length minus minus which decrements the length.
+
+It was one.
+
+And it decrements the length to zero.
+
+But notice that head and tail.
+
+Are still pointing.
+
+To that one note, and obviously if we've popped that off, head and tail should be pointing to null.
+
+So let's go back to our code here.
+
+And the thing that we have to change here is to say, if this dot length equals zero and remember,
+
+this is zero after we've decremented it here.
+
+Then what we need to do is we need to set head and tail equal to null, which gives us this, which
+
+is exactly what we want.
+
+The only thing left to do is to return temp.
+
+Which is the item that we popped off and we return that.
+
+So let's go back and look at our code.
+
+And let's flip over to DevTools and look at this code over there.
+
+Okay so here is our pop method.
+
+This if statement here at the top is for when we have zero items in our linked list.
+
+The code from here to here works.
+
+If we have two or more items and then we have this if statement here.
+
+For our edge case of only having one item.
+
+So what I've done here is I have a linked list that is just going to have two items, and the nodes
+
+are just going to be one and two.
+
+And I'm going to run this.
+
+So let's take a look at this link list real quick.
+
+I'm going to make this a little larger here.
+
+Let's open this up.
+
+So the head is pointing to the node with a value of one and tail is pointing to two.
+
+We have a length of two.
+
+So this is going to make it easy for us to test having two or more items.
+
+Pop that off, then having one item, then zero items so we can run the pop method three different times
+
+and test all three of our different scenarios.
+
+Okay, I'm going to clear this off.
+
+So I'm going to say my link list dot pop.
+
+I press enter.
+
+And as we would expect, this returned the two node.
+
+Now let's type in my linked list.
+
+And what we have remaining in the linked list is.
+
+The one node has both head and tail pointing to it and a length of one, so that works for having two
+
+or more nodes.
+
+So let's clear this off and we will run pop again.
+
+And we press enter and it returns that one node.
+
+If we look at my linked list.
+
+Now we have an empty list.
+
+Head and tail both point to null.
+
+The length is zero.
+
+So let's run pop one more time to see if this works correctly.
+
+When we have zero items in here and it is indeed returning undefined.
+
+So all three of our scenarios are working, which means we have a working method for pop.
+

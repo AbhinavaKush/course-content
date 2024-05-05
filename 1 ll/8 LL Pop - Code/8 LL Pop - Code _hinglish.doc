@@ -1,0 +1,21 @@
+Sure, here's the refined script in Hinglish, keeping it simple and urban:
+
+### Intro
+"Aaj hum linked list ke `pop` method ko dekhenge, jisme hum different scenarios handle karenge: jab list khali ho, ek hi item ho, aur jab multiple items hon."
+
+### A1: Handling an Empty List
+"Sabse pehle, sabse aasan scenario se start karte hain—jab list khali ho. List ko check karne ke liye, hum dekhte hain ki kya `head` `null` hai ya `length` zero hai. Agar haan, to `pop` method `undefined` return karega, jo dikhayega ki list mein koi node nahi hai remove karne ke liye."
+
+### A2: Multiple Items in the List
+"Jab hamari linked list mein multiple nodes hain, to humein last node ko hatane ke liye ek systematic approach ki zarurat hoti hai. Hum do pointers introduce karenge, `temp` aur `pre`, jo dono initially `head` pe set hote hain. Ek while loop ke zariye, `temp` list ko traverse karta hai last node tak pahunchne ke liye, aur `pre` uske piche thoda peechhe rehta hai, second last node pe rukne tak. Ye setup hamein efficiently last node ko list se disconnect karne me madad karta hai."
+
+### A3: Adjusting the Tail
+"Last node ko isolate karne ke baad, humara next step hai `tail` pointer ko adjust karna. Hum `tail` ko `pre` pe set karte hain aur fir last node ke connection ko tod dete hain `pre.next` ko `null` set karke. Isse effectively last node list se remove ho jati hai."
+
+### A4: Edge Case with One Item
+"Sirf ek node hone ka scenario thoda alag hota hai. Agar popping ke baad list length zero ho jati hai, to `head` aur `tail` dono ko `null` point karna padega, kyunki ab list khali hai. Ye ensure karta hai ki hamari linked list har situation me consistent rahe, chahe kitne bhi nodes kyun na ho."
+
+### Outro
+"To summarize karte hue, humne dekha kaise alag-alag scenarios ko `pop` method se handle karte hain linked lists mein, yeh sunishchit karte hue ki hamari list nodes ki sankhya ke bavjood consistent rahe. Next tutorial mein hum aur linked list operations explore karenge."
+
+Is script mein maine koshish ki hai ki zyada Hindi shabdon ka istemal na karte hue ek simple aur urban approach rakhi jaaye, jo aapke video adaptation ke liye ready hai. Agar aapko aur kuch specific segments ya details chahiye hote hain, toh mujhe zaroor batayein!

@@ -1,0 +1,165 @@
+So that's pretty straightforward.
+
+If you want to code this go ahead and pause this here.
+
+Otherwise I'm going to get into how to create this method.
+
+So I'm just going to bring up a linked list here.
+
+So one of the things that we can do is we can remove the first item.
+
+And we've seen this before.
+
+This is a shift.
+
+So if the index equals zero we can just return this dot shift.
+
+Also, we can remove the item from the other end, and we've created code for this one as well.
+
+So if the index is the length minus one we can just return this dot pop.
+
+Also, we can't return an item at an index of negative one.
+
+Or we could say an index of less than zero.
+
+And we can't have an index that is greater than or equal to the length.
+
+So we can create an if statement that says if it's less than zero or greater than or equal to the length,
+
+we're going to return undefined.
+
+So here are those three if statements that we just created.
+
+And we'll remove those.
+
+Now let's try removing something at an index that is somewhere in the middle of the linked list.
+
+We'll do the index of two.
+
+So we know that if we're going to return that item, we're going to have to have a variable pointing
+
+to it.
+
+And we're going to have to have another variable that points to the previous node to the one we're removing.
+
+I'm going to call this before.
+
+Now let's just create these variables.
+
+And we can use this with the get method.
+
+So we can say before equals this dot get.
+
+Of the index minus one the index that we're removing.
+
+So the temp variable, we could use the get method again and just say get the item at the index that
+
+we're looking for.
+
+But that is an O of n operation.
+
+And there's a more efficient way to do this.
+
+We just say temp is equal to before, not next.
+
+All right.
+
+So let's take a look at this code.
+
+So we have our if statements.
+
+And we have our two variables.
+
+Let's bring our linked list back up here.
+
+And this is the item we're going to remove.
+
+I'm just going to move this up here.
+
+So we want to have the item at the index of one, the one that before is pointing to point to that seven
+
+node over there.
+
+So we're going to say before dot next we're going to set it equal to temp.
+
+Next, since that arrow is pointing at that node.
+
+We'll do that like this before next equals temp dot next.
+
+And that moves that arrow down to there.
+
+And that's all we're going to need the before variable for.
+
+So I'm going to remove that.
+
+And then we'll say temp dot next equals null.
+
+To break that off of that list like that.
+
+We'll do that with that line of code there.
+
+Temp dot next equals null.
+
+Now that it's out of the list we'll go ahead and decrement the list by one.
+
+So we're done with the list.
+
+So I'm going to remove those.
+
+And then we can say return temp.
+
+Which returns that item that we removed from the list.
+
+So now let's look at this code with the rest of our code here.
+
+And that's all of our code for our remove method.
+
+And we'll look at this in a second in DevTools.
+
+Also, we're going to create this linked list, since this is the one we've been looking at for this
+
+example.
+
+And we're going to remove the item at the index of two.
+
+So now let's flip over to Chrome DevTools.
+
+Okay.
+
+There is our remove method there.
+
+And here's our linked list.
+
+11 323 seven.
+
+Okay, let's run this.
+
+Let's just open this up.
+
+And we have head pointing to 11 and tail pointing to seven.
+
+Okay, let's clear this.
+
+Okay.
+
+And let's run our remove method.
+
+And we're going to pass it the index of two.
+
+And that returns the 23 node.
+
+Just as we expected.
+
+So I'm going to clear this and we're just going to have a look at our linked list.
+
+Make sure that it all looks the way that it should.
+
+And.
+
+It has a length of three and then it's 11.
+
+Three.
+
+And seven.
+
+So it looks like we have a working method for remove.

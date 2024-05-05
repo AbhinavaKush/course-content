@@ -1,0 +1,192 @@
+All right.
+
+So now let's write our insert method.
+
+We're just going to insert a new node of a particular value at a particular index.
+
+So if you want to code this go ahead and pause it.
+
+Otherwise we'll get into this.
+
+So a lot of the concepts are going to be the same as with a singly linked list.
+
+So I'm going to bring up the new node here.
+
+And remember, if we were going to put this in at the index of zero, we were going to use the Unshift
+
+method like this.
+
+The index equals zero.
+
+Return this dot unshift.
+
+And remember you have to use that return keyword.
+
+Or we could add this to the other end of the linked list like this.
+
+That's the equivalent of just doing a push.
+
+Also need to use return.
+
+And it's also possible for there to be an index that is out of the range of possible indexes.
+
+So let's look at all three of those lines of code there.
+
+These are going to be the same with a singly linked list or a doubly linked list, the difference being
+
+that the Unshift method here is going to be a different Unshift method.
+
+This will be a different push method.
+
+And of course this line will run the same either way.
+
+Let's bring back up our link list here.
+
+Let's say we want to insert this somewhere in the middle.
+
+We're going to insert this at the index of two like that.
+
+In order to do that, we're going to have a couple of variables.
+
+We'll call these before and after.
+
+So let's go ahead and write the code for creating this new node and these two variables.
+
+So there's our code for the new node and for the two variables for before.
+
+We'll say before equals this dot get of the index where we're inserting it minus one.
+
+And then for after instead of using the get method.
+
+Because remember, get is going to be an O of N because it's going to have to iterate through the list
+
+to get to the particular index.
+
+With this we'll set after equal to before dot next.
+
+And that'll be an O of one.
+
+So let's put everything back like that.
+
+And then we're going to move a couple of arrows here.
+
+We're going to take that arrow from the three node instead of having it pointed to 23.
+
+We're going to have it point down here.
+
+And we'll do that with this line of code, and then we'll have the arrow from the new node point up
+
+to that 23 node with this line of code right here.
+
+Newnode.next equals after.
+
+And that adds that end of the linked list.
+
+And this is going to be very similar when we do a doubly linked list.
+
+But let's look at our code so far.
+
+We've created those variables and then redirected those two arrows.
+
+Now we just need to increase the length by one.
+
+And return.
+
+True that we were able to insert that.
+
+So this is for a singly linked list.
+
+There's just going to be a couple of changes for a doubly linked list.
+
+So let's bring this up and turn this into a doubly linked list.
+
+So one of the things that we did before is we pointed this arrow down here with this line of code.
+
+We've already written this, and this arrow here pointed up to the 23 node, and we've already written
+
+this line of code.
+
+The only difference is we have these two arrows that I just highlighted in green there, and we need
+
+to redirect those arrows.
+
+So new node dot previous.
+
+Equals before.
+
+And after dot previous equals new node.
+
+And I'm going to leave these previous pointers as green.
+
+Like this.
+
+But first, let's look at all of this code.
+
+And with the rest of our code.
+
+So I'm going to bring a couple of orange arrows in here.
+
+These are the ones that we already wrote the code for.
+
+And those are represented with the orange arrows in the diagram as well.
+
+These two are the only two new lines of code.
+
+Otherwise, this is completely the same as the insert method for a singly linked list.
+
+We'll look at this code in DevTools in a second.
+
+But we're going to start out by creating this linked list with one and three.
+
+And then we're going to insert a node at the index of one with the value of two just like that.
+
+So the new linked list will be 123.
+
+So now let's flip over to DevTools.
+
+Okay.
+
+So there is our insert method.
+
+I'm going to scroll here a little bit.
+
+And we're going to create this linked list here with the value of one and three.
+
+So let's just zoom out.
+
+I'll run this.
+
+And I'm just going to open this up.
+
+And you can see we have a linked list with head equal to one.
+
+Tail is equal to three with a length of two.
+
+I'm going to clear this.
+
+And then I'm going to run my doubly linked list dot insert.
+
+And this is an index of one and a value of two.
+
+And it returns true.
+
+So I'm just going to type my doubly linked list.
+
+And here is our new linked list.
+
+Has a length of three, and head is pointed to one that is pointed to two and that node.
+
+When we open this up, you can see that the one in front of it next has a value of three, and previous
+
+has a value of one.
+
+So I'm going to clear this.
+
+And the other thing I'm going to do is I'm going to try to insert this at the index of ten, which is
+
+not a valid index, just to make sure that it returns false.
+
+All right.
+
+That is our method for insert.
+

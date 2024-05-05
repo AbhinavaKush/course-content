@@ -1,0 +1,37 @@
+
+---
+
+**Intro:**
+Welcome to our tutorial on the "push" method in linked lists. Today, we'll explore how to add a new node to the end of a linked list, including handling an edge case where the list is initially empty.
+
+**A1: Explaining the Push Method:**
+Let's start by visualizing our linked list. Imagine we're adding a new node. Here's how it works:
+1. **Create a New Node**: We'll bring in a new node from the right.
+2. **Link the Last Node**: The last node in our list will now point to this new node.
+3. **Update the Tail**: The tail of the list, which keeps track of the last node, will also point to this new node.
+4. **Node Added**: Just like that, the new node is now part of our linked list.
+
+**A2: Handling the Edge Case:**
+But what if our list is empty to begin with? In that case:
+- Instead of linking from the last item, both the head and the tail of the list will point directly to the new node.
+
+**A3: Demonstrating with Code:**
+Let's put this into code:
+```javascript
+function push(value) {
+    let newNode = { value: value, next: null };
+    if (!this.head) {
+        this.head = newNode;
+        this.tail = newNode;
+    } else {
+        this.tail.next = newNode;
+        this.tail = newNode;
+    }
+}
+```
+Here, we start by checking if the list is empty (`!this.head`). If it is, both head and tail will point to the new node. Otherwise, we link the current tail to the new node and update the tail reference.
+
+**Outro:**
+And there you have it! You've successfully added a new node to your linked list with the push method. Try implementing this in your projects and see how it enhances your data handling capabilities.
+
+---

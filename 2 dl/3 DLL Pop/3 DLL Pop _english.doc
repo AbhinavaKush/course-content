@@ -1,0 +1,50 @@
+Here's the refined version of your script for the pop method of a doubly linked list:
+
+---
+
+**Introduction to the Pop Method for Doubly Linked Lists**
+
+In this segment, we're exploring the pop method in the context of doubly linked lists. If you remember from our discussions on singly linked lists, popping an item off the end is an O(n) operation because we need to iterate through the entire list to move the tail pointer. However, doubly linked lists simplify this process due to their two-way linking.
+
+**Step-by-Step Explanation**
+
+1. **Starting Point**: 
+   - We begin with a temporary variable pointing to the last item, which we plan to pop off.
+
+2. **Adjusting the Tail**:
+   - Unlike singly linked lists where we must traverse from the head, in doubly linked lists, we simply adjust the tail pointer to the previous node: `tail = tail.previous`.
+
+3. **Detachment**:
+   - Set `tail.next` to null, detaching the last node from the list.
+   - Similarly, set `temp.previous` to null, fully isolating the node from the list.
+
+4. **Returning the Node**:
+   - Finally, return the temporary variable, which holds the popped node.
+
+**Edge Cases**:
+   - **Single Item List**: Special handling is required when the list contains only one item.
+   - **Empty List**: Attempting to pop from an empty list returns undefined, ensuring robustness.
+
+**Code Implementation**:
+```javascript
+if (!this.tail) return undefined;  // Handling empty list
+let temp = this.tail;
+if (this.length === 1) {
+    this.head = null;
+    this.tail = null;
+} else {
+    this.tail = this.tail.previous;
+    this.tail.next = null;
+    temp.previous = null;
+}
+this.length--;
+return temp;
+```
+
+**Summary**
+
+This method efficiently removes the last element from a doubly linked list with adjustments only to the tail, demonstrating the advantage of bidirectional links in doubly linked lists compared to their singly linked counterparts.
+
+---
+
+This refined script provides a clear, step-by-step breakdown of the pop method for doubly linked lists, suitable for video tutorials and further educational content. Let me know if there's anything else you'd like to adjust or add!

@@ -1,0 +1,40 @@
+Here's the Hinglish version of the tutorial on reversing a linked list, using simple and urban Hindi mixed with English for clarity:
+
+---
+
+**Intro:**
+Hello everyone! Aaj hum ek classic interview question tackle karenge: linked list ko reverse karna. Ye operation linked list manipulations ko samajhne mein bahut fundamental hai. Chalo shuru karte hain aur dekhte hain ki linked list ko kaise pura reverse karte hain.
+
+**Body:**
+1. **Initial Setup:**
+   - Sabse pehle, hum apni linked list ki structure ko samjhte hain. Hamara goal hai head ko tail ke saath switch karna aur phir sab nodes ke pointers ko reverse karna.
+   
+2. **Swapping Head and Tail:**
+   - Hum ek temporary variable `temp` banate hain aur ise current head ke barabar set karte hain.
+   - Phir head ko tail ki position par set karte hain aur tail ko `temp` ke zariye jo pehle head tha uspe set karte hain.
+   - Ye to bas shuruaati step hai. Asli challenge hai har node ke pointers ko reverse karna.
+
+3. **Reversing Node Pointers:**
+   - Pointers ko reverse karne ke liye, hum do aur variables introduce karte hain: `next` aur `previous`.
+   - `next` ka kaam hai `temp` ke baad wale node ko track karna, aur `previous` initially null pe set hota hai.
+   - Phir hum ek loop me enter karte hain jisme pointers adjust hote hain:
+     ```javascript
+     while (temp != null) {
+       next = temp.next;       // Agla node track karo
+       temp.next = previous;   // Pointer ko reverse karo
+       previous = temp;        // Previous ko current node pe move karo
+       temp = next;            // Next node pe proceed karo
+     }
+     ```
+   - Ye loop tab tak chalta hai jab tak saare nodes process na ho jayein aur unke pointers reverse na ho jayein.
+
+4. **Final Adjustments:**
+   - Jab saare nodes reverse ho jayein, `previous` naye head ki tarah point karega.
+   - Hum ensure karte hain ki linked list ke head pointer ko `previous` pe update kar diya jaye, jo ki reversal process ko mark karta hai.
+
+**Outro:**
+Aur bas, itna hi tha—aapka linked list start se leke end tak reverse ho gaya! Ye method dynamic data structures aur pointer manipulation ko samajhne ke liye ek great exercise hai. Agle step mein, hum Chrome DevTools me jaake apne reversed linked list ko test karenge. Stay tuned!
+
+---
+
+Is Hinglish script mein tutorial ko engaging banaya gaya hai by breaking down the reversal process into easy steps, focusing on both the conceptual understanding and the technical execution necessary for effectively reversing a linked list.

@@ -1,0 +1,34 @@
+Sure, here's the refined script for your video tutorial on linked lists and doubly linked lists, translated into Hinglish using simple and urban Hindi language:
+
+---
+
+**Intro:**
+"Welcome back! Aaj hum linked lists aur doubly linked lists ke constructors ke baare mein baat karenge. In dono ke differences aur applications ko samajhna programming mein kaafi helpful hoga."
+
+**A1: Constructor Overview:**
+"Toh shuru karte hain apne standard linked list se. Constructor basically list ko initialize karta hai. Doubly linked list mein sirf ek difference hota hai—har node do directions mein point karta hai, aage aur peeche, jisse aap list ko dono taraf traverse kar sakte ho."
+
+**A2: Building the Constructor:**
+"Hamara constructor kuch aise dikhega. Doubly linked list constructor ka main difference yeh hai ki har node mein ab ek 'previous' pointer bhi hota hai, sirf 'next' ke saath."
+
+**A3: Code Explanation:**
+"Yahaan wo line of code hai jo singly aur doubly linked list ke beech badalti hai. Doubly linked list ke liye, hum add karte hain:
+```
+newNode.previous = null;
+```
+Isse yeh ensure hota hai ki naya node sahi tareeke se set up ho jaye taki peeche ke node se link ho sake, jo ki list ko backward traverse karne ke liye zaroori hai."
+
+**A4: Visualization with Code:**
+"Hum isse jaldi hi Chrome Dev Tools mein demonstrate karenge. Yeh rahi actual code snippet jo ek doubly linked list ko initialize karti hai jisme starting node mein value seven hai:
+```
+let doublyLinkedList = new DoublyLinkedList();
+doublyLinkedList.add(7);
+```
+Aur bas! Hamari doubly linked list ab ek single node ke saath start hoti hai."
+
+**Outro:**
+"Toh bas yahi tha! Aapne dekha kaise constructors singly aur doubly linked lists mein vary karte hain aur kaise har ek node doubly linked list mein backward traversal ko accommodate karta hai. Next video mein aur insights ke liye tuned rahiye jahan hum list operations mein deeper delve karenge. Happy coding!"
+
+---
+
+Is Hinglish script se presentation smooth aur clear hogi jo planned animations ke saath align karti hai, aur ye specifically linked lists aur doubly linked lists ke beech ke differences ko discussion aur code examples ke through highlight karti hai.

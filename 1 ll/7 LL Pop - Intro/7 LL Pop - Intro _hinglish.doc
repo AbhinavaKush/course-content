@@ -1,0 +1,26 @@
+Sure, here’s the script translated into simple Hinglish, using a mix of Hindi and English for easy understanding:
+
+### Intro
+Is tutorial mein hum dekhenge ki linked list mein `pop` method ko kaise implement karte hain. Hum zaroori steps discuss karenge aur key edge cases identify karenge jo tab hoti hain jab list ke end se koi item remove karte hain.
+
+### A1: Pop Method ko Samajhna
+`Pop` method basically last item ko linked list se remove karne ke liye hai aur `tail` pointer ko adjust karna padta hai. Simple methods jaise ki `push` ke mukable, `pop` mein zyada steps involved hote hain:
+1. List ke end se item identify karo aur remove karo.
+2. `Tail` pointer ko previous node pe move karo.
+3. Jo item remove kiya gaya hai usko return karo.
+
+### A2: Edge Cases ko Handle Karna
+Kuch scenarios hain jo special attention mangte hain:
+- **Empty List**: Agar list khali hai (matlab head `null` hai), toh pop karne ke liye kuch nahi hai, aur method ko `undefined` return karna chahiye.
+- **Single Item List**: Jab list mein sirf ek item ho, toh special care ki zaroorat hoti hai. Pop karne ke baad, dono `head` aur `tail` ko `null` set karna padega.
+
+### A3: Implementation Details
+Pop method ko effectively implement karne ke liye, hume list ko shuru se traverse karna padega taaki last se pehle wale item ko find kiya ja sake:
+- `Tail.next` ko `null` set karo taaki last node ko detach kiya ja sake.
+- `Tail` pointer ko new last node pe adjust karo.
+- Method ko puri list ko iterate karna padta hai taaki `tail` ko adjust kiya ja sake, isliye ye O(n) operation hota hai due to its linear time complexity.
+
+### Outro
+Next video mein, hum is method ko code karne ki taraf dive karenge, jahan hum yahaan discuss kiye gaye logic ko apply karenge taaki hamari linked list ke liye ek robust `pop` function bana sake.
+
+Agar kisi specific section ko adjust ya expand karna chahte ho toh batao!

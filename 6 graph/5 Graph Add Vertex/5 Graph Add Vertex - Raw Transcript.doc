@@ -1,0 +1,90 @@
+Now we're going to add a vertex to our graph.
+
+Vertex is going to look like this.
+
+And eventually we're going to have something that looks like this.
+
+But in order to be able to have this, we're going to have to have edges.
+
+And that will be a different method for creating edges between the vertices.
+
+So we'll start with this which is actually going to look like this.
+
+So I'm going to bring this down to the bottom and we can start writing our code.
+
+We got to start with the class graph.
+
+And I'm going to write out the constructor here as well.
+
+The constructor is simple enough that it doesn't make sense to do a separate video for it, so I just
+
+included it in this one.
+
+This is the entire constructor.
+
+We're just creating an empty object.
+
+I'm calling it Adjacency List.
+
+And that's it.
+
+So the constructor is just going to create this.
+
+The add vertex method is going to do this and put it into that empty object.
+
+So I'll remove that and let's build the add vertex method.
+
+So we'll pass it in this case the letter A.
+
+Then we add it to our adjacency list object like this.
+
+We set it equal to that empty array and that creates that vertex.
+
+But we're not allowed to have duplicate vertices.
+
+So we do have to wrap this in an if statement that says if there isn't already a vertex with this value,
+
+then we can add that.
+
+Also within the if statement, we will say return true that we were able to add that, otherwise we
+
+will return false.
+
+We'll take a look at this in DevTools in a moment, and we will create that vertex with a value of a.
+
+So let's flip over to DevTools.
+
+Okay.
+
+And there is our constructor that creates that empty object and our add vertex method.
+
+Then down here we're just going to create a new graph and it will be empty.
+
+So let me run this.
+
+And then let's come down here and open this.
+
+And you can see that this adjacency list is empty.
+
+So let's clear this.
+
+And that we will add a vertex with the value of a.
+
+It returns true that we were able to add that.
+
+I'm just going to try to add this again.
+
+To show that it is going to return false the second time, because second time around this is a duplicate.
+
+So I'm going to clear this.
+
+I'm going to say my graph.
+
+And press enter.
+
+And now let's open up the graph.
+
+And now we have that new vertex with a value of a.
+
+And that is our method for add vertex.
+

@@ -1,0 +1,27 @@
+Here's a Hinglish version of your script for explaining the steps to insert a node in a Binary Search Tree, keeping it simple and using basic Hindi phrases:
+
+---
+
+**Binary Search Tree Tutorial mein aapka welcome hai!**
+
+Aaj hum Binary Search Tree mein ek new node ko insert karne ke steps dekhenge. Hum start karenge ek example se jisme hum value 27 wale node ko insert karenge.
+
+Sabse pehle toh, hum ek new node create karenge. Main yaha pe left side pe likhta hoon - "Create new node". 
+
+Ab, hume ye check karna hai ki 27 ka value existing node se bada hai ya chota. Agar chota hai toh left jaenge, agar bada hai toh right. Simple, hai na? Toh, yeh note down karte hain. 
+
+Agar jagah khali hai, toh direct insert kar denge. Agar nahi hai, toh next node pe move karke phir se compare karenge. Yeh process ek loop mein chalega kyunki hume nahi pata kitni baar compare karna padega. Isliye, yeh ek 'while' loop mein hoga.
+
+Aur haan, ek pointer variable ki zaroorat padegi jo humare current node ko track karega. Hum ise 'temp' keh sakte hain, jo sabse pehle 'root' se start hoga.
+
+Ek special case bhi hai. Agar tree bilkul khali hai, matlab root hi null hai, toh hum simply root ko new node ke equal set kar denge. Yeh check sabse pehle hoga.
+
+Last mein, ek aur edge case handle karna hai. Maan lo new node ka value already tree mein hai, toh hume duplicate values ko handle karna padega. Is case mein, hum value ko insert nahi karenge.
+
+Toh bas, itne steps ko follow karke hum next video mein insert method ko code karenge. 
+
+Stay tuned, aur haan, practice karte rahiye! Happy coding!
+
+---
+
+Is version mein maine explain kiya hai kaise aap ek new node ko Binary Search Tree mein insert kar sakte hain, wo bhi simple Hinglish mein. Agar aapko kuch aur chahiye toh zaroor batayein!

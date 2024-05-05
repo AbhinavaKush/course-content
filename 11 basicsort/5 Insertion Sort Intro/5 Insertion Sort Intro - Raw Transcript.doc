@@ -1,0 +1,49 @@
+So now let's take a look at insertion sort.
+
+So I'm going to bring up an array here.
+
+And insertion sort always starts with the second item.
+
+And then we compare it to the item before it.
+
+In this case the four.
+
+If it is less than the item that is before it we switch them like this.
+
+And drop that in there.
+
+Then we move to the next item.
+
+In this case, the six is not less than four.
+
+So that's going to stay put.
+
+And now the five is less than the six.
+
+We will move that over and then we'll compare the five to the four.
+
+It's not less than the four.
+
+So that's the spot where that goes.
+
+And now the one is less than the six and the five and the four, and finally the two.
+
+And we drop that in there.
+
+And then one more item.
+
+This is less than the six and the five and the four.
+
+And we drop that in there.
+
+And now they are all sorted.
+
+So I will color them green.
+
+So in the next video, we're just going to start with an array that looks like this.
+
+I'm only going to have two that are out of place.
+
+So we can go through this a lot faster.
+
+And we will pick up here in the next video when we code insertion sort.

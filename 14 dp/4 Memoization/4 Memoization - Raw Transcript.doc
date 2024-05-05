@@ -1,0 +1,275 @@
+In this video we're going to do memoization, and we're going to apply it to the code that we wrote
+
+in the last video.
+
+And we're going to memoize this with an array that we call memo.
+
+And that will give us an array that looks something like this.
+
+So before we initialize any of the indexes in the array, they will be undefined.
+
+But let's start out by assuming that these indexes are already populated.
+
+And let's say we're going to find fib of seven.
+
+What we want to do is just return that number of 13 from the array.
+
+So we'll add this to our code.
+
+We'll say if memo at the index of n in this case seven is not equal to undefined.
+
+In other words, there's a number there.
+
+We're going to return the number at that index.
+
+So now let's look at how this would work if that 13 was not in the array.
+
+Well when you run fib of seven in this case.
+
+The conditional in that first if statement is going to be false.
+
+Because memo at the index of seven is undefined.
+
+And the conditional in the next if statement will be false as well.
+
+And that brings us down to this line.
+
+And this is what adds fib of n minus one and fib of n minus two.
+
+But there's a problem with this line of code.
+
+This is just going to return that value and not store it in the array.
+
+So we need to remove this return statement and replace that with this.
+
+So memo at the index of n.
+
+In this case seven will set that to be equal to 13.
+
+And of course we want to return that value.
+
+So we'll return the value at that index.
+
+Now, one of the things I want to point out here is in this array.
+
+At the index of zero and the index of one.
+
+These will always be undefined, and the reason for that is in this if statement.
+
+Where n is equal to zero or n is equal to one.
+
+We return n, and because that's a return statement, we're never going to get down to this line.
+
+And this is the line that puts values into the array.
+
+And I wanted to point that out.
+
+In case you do a console log on memo that you will understand why these don't have numbers.
+
+But I think it makes it easier to follow this visually if we put these in here.
+
+So now I'm going to take all of these values and turn them back to undefined.
+
+And I'm going to walk through step by step how we would find fib of seven.
+
+And to start this out, I'm going to bring in a call stack.
+
+And we'll push fib of seven onto the call stack.
+
+So let's walk through this function how this would work in this situation.
+
+This first if statement would not apply because memo at the index of seven is undefined.
+
+And the next if statement doesn't apply.
+
+And that brings us down to this line.
+
+And the first thing we'll do in this line of code is run fib of n minus one, which is fib of six.
+
+And now fib of six is going to run those two if statements.
+
+Neither of those are going to apply to fib of six, and fib of six is going to come down to fib of n
+
+minus one and run fib of five.
+
+And then fib of five is going to run fib of four, and fib of four will run fib of three, and so on.
+
+So I wanted to show this order of function calls and then bring this in.
+
+So we start out by calling fib of seven.
+
+So fib of seven is going to call fib of six, which calls fib of five, and so on until we get to fib
+
+of one.
+
+Now let's go back and look at our code here.
+
+FIB of one is going to be our base case and is going to return in.
+
+So that's going to return one.
+
+So let's go back over here.
+
+When that return statement happens, fib of one will be popped from the call stack.
+
+And I'm not going to remove that from the diagram.
+
+Anything that is popped from the call stack, I'm going to color it in purple.
+
+Because I want to keep track of how many function calls that we have.
+
+Now fib of two is the active instance on the call stack again, and it is going to call fib of zero
+
+which will return zero.
+
+And now fib of zero will be popped from the call stack.
+
+So now let's go back and look at our code.
+
+In order to get these two values down here, we ran fib of n minus one and fib of n minus two.
+
+And we can add those together and add that to the array at the index of n.
+
+And in this case the index of n is the index of two.
+
+And we'll add that to the array.
+
+So remember, as we discussed earlier, the numbers at the index of zero and one are not actually in
+
+the array.
+
+So this is the first time we have memoized something, and this is going to make it where things go
+
+a lot faster moving forward.
+
+Now fib of two is going to return that value of one and be popped from the call stack.
+
+I'll color that in purple.
+
+Now fib of three is going to call fib of one.
+
+That's going to return one and be popped from the call stack.
+
+Now fib of three can add this two to the array.
+
+And it will return that value and be popped from the call stack.
+
+Now fib of four will call fib of two.
+
+And remember, fib of two is the first one that we memoized, and normally fib of two calls fib of one
+
+and fib of zero.
+
+But because we're going to pull that number straight out of the array, fib of one and fib of zero never
+
+get run.
+
+Now fib of four can calculate its value, add it to the array and it will be popped from the call stack.
+
+FIB of five, we'll call fib of three.
+
+And normally fib of three would call fib of two and fib of one.
+
+And this time I'm going to show it in the code.
+
+We'll say if memo at the index of n in this case three is not undefined.
+
+And you can see at the index of three we have that two there.
+
+We're going to return that value.
+
+And we're never going to get down to this line of code.
+
+Which means we're not going to call fib of n minus one or fib of n minus two.
+
+So let's go back over here.
+
+That means that these will not be run.
+
+FIB of three will return that value of two straight out of the array and be popped from the call stack.
+
+Now fib of five can calculate its value.
+
+And fib of five will be popped from the call stack.
+
+Now fib of six, we'll call fib of four.
+
+That is already memoized.
+
+So we're not going to run any of these functions.
+
+We can drop these out and fib of four will return its value and be popped from the call stack.
+
+Now fib of six can calculate its value and it will return that eight and be popped from the call stack.
+
+FIB of seven will now call fib of five.
+
+And fib of five has been memoized.
+
+Which means we're not going to run any of these functions.
+
+I'll drop these out.
+
+FIB of five will return that value of five and be popped from the call stack.
+
+Now fib of seven can calculate its value.
+
+He will add that value to the array and return that 13 and fib of seven will be popped from the call
+
+stack.
+
+So if you count up all of the function calls, which are all of the purple boxes.
+
+The equation to represent that is two n minus one.
+
+So in this case in is seven two.
+
+In is 14 minus one is 13.
+
+Function calls.
+
+And there are 13 purple boxes here.
+
+So of course we'll take this equation and drop the non-dominant.
+
+But I'm going to leave this two here for a moment to explain where we get the two.
+
+If we were going to do fib of eight, it would require exactly two more function calls.
+
+And if you did fib of nine, it would be two more again.
+
+But of course we're going to drop the constant and this becomes O of n.
+
+So we've gone all the way from O of two to the N, which was incredibly inefficient to O of N by adding
+
+memoization.
+
+So let's bring our code back up here again, and we'll do the same thing we did in the last video where
+
+we created a counter variable.
+
+And will increment this inside of the function to keep track of how many function calls we have.
+
+So now let's flip over and take a look at this.
+
+So there is the code that we just wrote.
+
+And I'm going to scroll up.
+
+And just like we did in the last video, we'll start out with n being equal to seven.
+
+And that will print out fib of seven and that will print out the counter.
+
+And I'll run this.
+
+And you can see that fib of seven is 13 and the counter is 13.
+
+And then I'm going to come up here and change that 7 to 40.
+
+And remember in the last video when we did in of 40, we had over 300 million function calls.
+
+So now I'll run this.
+
+And you can see now the counter is 79.
+
+So we're able to take our time complexity all the way from O of two to the n to O of n by using memoization.

@@ -1,0 +1,58 @@
+
+---
+
+**Introduction: Linked List Constructor Banana Sikhte Hai**
+
+Aaj hum shuru karenge linked list class se.
+
+```javascript
+class LinkedList {
+  constructor(value) {
+    // Code initialization
+  }
+}
+```
+
+Constructor ka code likhne se pehle, main aapko thoda samjhana chahta hoon ki ye constructor aur dusre methods jaise ki `push`, `unshift`, aur `insert` mein kya common hai. Har ek method mein ek naya node create hota hai aur sabko ek value input ke roop mein milti hai. Bar-bar code na likhne ke liye, hum ek alag class banayenge sirf nodes banane ke liye.
+
+**Node Class Create Karna**
+
+```javascript
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+```
+
+Node creation ko apni ek class mein wrap karke, hum different list methods ke liye node generation ko simplify karte hain. Chalo, ab wapas apni main class mein jaate hain aur constructor ko build karte hain apne `Node` class ka use karke.
+
+**Linked List Constructor Implement Karna**
+
+```javascript
+constructor(value) {
+  const newNode = new Node(value);
+  this.head = newNode;
+  this.tail = this.head;  // Shuruaat mein, tail bhi head ke barabar hota hai
+  this.length = 1;  // Ek node ke saath shuru karte hain
+}
+```
+
+Ye setup ek naye linked list instance ko initialize karta hai jab bhi naya linked list banata hai, jisme ek naya node hota hai jiska value 4 hota hai, jahan dono head aur tail is naye node ko reference karte hain, aur length 1 set hoti hai.
+
+**Developer Tools Mein Demonstration**
+
+Chalo Developer Tools mein dekhte hain kaise aap ek linked list instance create karte hain:
+
+```javascript
+let myLinkedList = new LinkedList(4);
+```
+
+Ye line ek linked list initialize karti hai jisme ek single node hota hai jiska value 4 hai, jahan head aur tail dono is node ko reference karte hain, aur length 1 hai. Console mein ye check karna confirm karta hai ki hamara setup correct hai, jo linked list structure ko clearly display karta hai.
+
+**Conclusion**
+
+Linked list constructor aur node class effectively set up ke saath, humara data structure aur bhi complex operations handle karne ke liye ready hai jaise ki elements ko add karna aur remove karna, jo hum explore karenge aane wale tutorials mein.
+
+---

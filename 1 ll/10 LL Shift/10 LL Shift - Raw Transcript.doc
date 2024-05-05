@@ -1,0 +1,179 @@
+Now let's do our shift method.
+
+Shift.
+
+We are going to move.
+
+Head over to the next item.
+
+We're going to remove the first item and we're going to return it.
+
+So same terminology as we used with an array when we are removing the first item.
+
+So we have a couple of other scenarios that we have to code for.
+
+The first one being if we only have one item in the linked list and the other one being if we don't
+
+have any items in the linked list.
+
+So if you want to code this, go ahead and pause the video here and give it a shot.
+
+Okay, so we'll start our code out like this.
+
+This is going to be our first scenario that we code for is if we have an empty linked list.
+
+And we'll just do this like this.
+
+If head is null, we're going to return undefined.
+
+And our next scenario is going to be if we have two or more items in the linked list.
+
+And we'll code this.
+
+So remember we're not only removing this item, we're going to return it.
+
+And if we're going to return it, we have to have a variable set equal to it.
+
+And we have head equal to it now.
+
+So we'll have this variable be set equal to head.
+
+We'll do that like this.
+
+Let temp equal this dot head.
+
+Then we want to move head over to the next item.
+
+So we're going to set head equal to head dot next like.
+
+That we do that with this line of code.
+
+This dot head equals this dot head dot.
+
+Next.
+
+Then we need to remove this item.
+
+It's not good enough just to return temp as it is because if you do you're not going to just get that
+
+11 node.
+
+But the 11 node has the three node connected to it and so on and so on.
+
+You'll get the entire linked list.
+
+So you have to set temp equal to null to actually break that connection.
+
+So temp dot next equals null.
+
+We'll do that for us and we will be returning temp at the end of this.
+
+But for now I'm just going to go ahead and remove it like that.
+
+Then we just need to decrement the length by one.
+
+Now we're going to code for when we have one item in the linked list.
+
+So what I'm going to do is I'm just going to keep those last four lines of code, because that's all
+
+that's going to be relevant here.
+
+That if statement is not going to be relevant and show what happens when we run this code when we have
+
+one item.
+
+So let temp equal this dot head that's going to have temp point to that same node that head is pointing
+
+to.
+
+Let's remove that line of code.
+
+Then we're going to say this dot head equals this dot head dot next.
+
+So head dot next is null.
+
+So this sets head equal to null.
+
+Then we say temp dot next equals null.
+
+Well temp dot next is already null.
+
+So that doesn't do anything.
+
+And then the only thing left to do is to decrement the length.
+
+Well the length was one.
+
+And this changes it to zero.
+
+So we've run all this code.
+
+We've gotten the length to zero and tail is still pointing at that node.
+
+So what we need to do is say if the length is zero.
+
+Have tail equal null.
+
+And that fixes that problem.
+
+Let's put this code in with the rest of our code and have a look at this.
+
+And then I want to emphasize that this if statement for the length being zero is after we have decremented
+
+the length here it was one, we decremented it and then it's zero.
+
+And now the only thing left to do is return temp, which is the item that we shifted off.
+
+So we'll look at this code in a moment in Chrome DevTools.
+
+And when we do we're going to create this linked list.
+
+And the reason for that is we have three different scenarios.
+
+So we can test shifting one off with two or more.
+
+Then we can test with one item.
+
+And then we can test running this with no items which should return undefined.
+
+So let's flip over to DevTools and we'll start out by creating this linked list here.
+
+Okay.
+
+So let's zoom in here.
+
+Here's our method.
+
+And this is where we create our linked list with our two items in it.
+
+We'll zoom back out and run this.
+
+And that has created this linked list here where head is pointing to two.
+
+And tail is pointing to one.
+
+So let's clear this off and then we'll say my linked list dot shift like that.
+
+And now we've removed that two node.
+
+So if we type in my linked list.
+
+Now the linked list.
+
+Only has one item in there with a value of one.
+
+Let's clear this off and try this out with only one item in the linked list.
+
+Make sure that works.
+
+And now that's returned that one note.
+
+And let's clear this and try this with our empty link list to make sure that this is working correctly
+
+as well.
+
+And that is indeed returning undefined.
+
+All right.
+
+That is our method for shift.

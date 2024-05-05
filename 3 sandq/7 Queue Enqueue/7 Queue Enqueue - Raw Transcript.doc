@@ -1,0 +1,108 @@
+Now let's build out our enqueue method.
+
+Enqueue is when we add someone to the line.
+
+Except our line is going to look like this.
+
+And we're going to add that seven node.
+
+Into our queue.
+
+That's what it's going to look like if we have one or more items in our queue.
+
+If we don't have any items in our queue, we're going to set first and last equal to that new node.
+
+And as we have discussed, we're going to be able to borrow heavily from the push method from the linked
+
+list.
+
+So if you want to code this, you could start by looking at the push method to get an idea of what you're
+
+going to do here.
+
+The best thing to do is try to code this from scratch.
+
+So I'm going to go ahead and get into the code here.
+
+First thing I'm going to do is I'm going to change this from being push.
+
+To win.
+
+Q.
+
+And the first thing we'll do in this method.
+
+Is to create a node like that.
+
+And if the length equals zero, in other words, we have an empty queue.
+
+We're going to set first and last equal to the new node.
+
+So that would be a queue that looks like this.
+
+And we'll have first and last point to that node.
+
+Then we'll say else.
+
+And this is for if we have one or more items.
+
+Then we'll have these two lines of code.
+
+I'm going to focus in on these two like this.
+
+That first one last dot next equals new node.
+
+We'll do that.
+
+And then last equals new node.
+
+We'll point that last pointer over to the new node.
+
+And that adds that into the queue.
+
+Now let's put this code back in with the rest of our code.
+
+We will increase the length by one.
+
+And then we'll return the entire queue.
+
+So that's all of our code for this.
+
+We'll look at this in a moment in dev tools.
+
+And when we do we're going to create this queue.
+
+Then we're going to enqueue a node with the value of seven.
+
+Then we'll look at our queue to make sure that last is pointing to the value of seven.
+
+Okay.
+
+So let's flip over to DevTools.
+
+And there is our enqueue method.
+
+And there's the cue that we're going to build.
+
+11 323.
+
+I'm going to run this.
+
+And it returns our cue.
+
+I'll just open this up.
+
+Take a quick look.
+
+First is pointing to 11 and last is pointing to 23.
+
+Then I'll clear this.
+
+Then I'll say my q dot nq with the number seven.
+
+Now let's open this up.
+
+And last is pointing to the value of seven.
+
+Okay, so it looks like we have a working method for enqueue.
+

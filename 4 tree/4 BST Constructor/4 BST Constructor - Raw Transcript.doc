@@ -1,0 +1,108 @@
+Okay, so now let's build our constructor for our binary search tree.
+
+So we have a node that is going to look like this which looks like this.
+
+So this is going to be the constructor for the node.
+
+So instead of having value and next, like we did in the linked list, we have value left and right.
+
+So now let's start with our binary search tree class and the constructor.
+
+Now let's just focus in on the constructor code here.
+
+Like this.
+
+And as we have seen before, the first step is to create a new node.
+
+And then we're going to pass the node class this value.
+
+Just like that.
+
+So I'm going to show this in a tree like this.
+
+And so far we just have the one node.
+
+We don't have the rest of them.
+
+Because these are objects.
+
+They all need to have something pointing to them or they get garbage collected.
+
+And everything does have something pointing to it except that top node.
+
+This is why in a linked list like this, we had to have head pointing to that first node.
+
+Similarly, in the binary search tree, we have to have something pointing to that top node, and we're
+
+going to call that root.
+
+So we need it to look like this route pointing to that first item.
+
+So this dot root equals new node.
+
+And since we don't keep track of the length in a binary search tree, this is all we need to do.
+
+So this is a working constructor.
+
+But I'm going to completely rewrite this.
+
+Let's take a look at what we've done.
+
+Here we have route, but we've also created the first node at the time that we created the binary search
+
+tree.
+
+You don't have to do that.
+
+You don't have to create this with a node.
+
+You could just start out by saying root.
+
+Is null.
+
+You just create the framework for a binary search tree and the first node that you insert into it,
+
+you do it with the insert method.
+
+And I'm going to bring the code back and change it to make it where we don't add a new node at the time
+
+that we create the tree.
+
+So line by line will go through and change this.
+
+First, we're not going to need to pass this a value because we're not creating a node at the time that
+
+we create the tree.
+
+So we can remove this.
+
+This entire line here is just to create the node.
+
+We can remove that.
+
+And this line, this dot root equals new node.
+
+While we're not going to create that node.
+
+So we can remove that and just say this dot root equals null.
+
+And that becomes the entire constructor.
+
+So let's bring back the rest of our code here.
+
+And now let's look at this code in DevTools.
+
+Okay.
+
+So there is our node constructor and our binary search tree constructor.
+
+And then we'll just create a new tree.
+
+And I'll run this.
+
+And now when we open this.
+
+All we have is root equal to null.
+
+So that is our binary search tree constructor.
+

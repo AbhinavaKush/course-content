@@ -1,0 +1,198 @@
+So now let's code out our depth first search preorder method.
+
+So I'm going to start out with a tree down here.
+
+And this time I'm going to have a call stack.
+
+Since we are using recursion it's going to make this a lot easier to understand if we can track how
+
+this works with the call stack.
+
+So we'll start building this out.
+
+DFS preorder is what we'll call this.
+
+And the first thing is we have to have a results array and we'll just bring this up down here.
+
+So next I'm going to bring in our entire recursive function and then just walk through it.
+
+So our function is going to be called traverse.
+
+And we're going to pass it a node.
+
+And we're going to kick this off by passing it the root node.
+
+And when we pass it the root node the first thing we're going to do is we're going to say results dot
+
+push.
+
+So into that results array we are going to push current node dot value.
+
+So the current node is going to be the root to begin with.
+
+Next we have this if statement.
+
+And this is where we have the recursion.
+
+And it says if there is a node on the left of the current node to begin with, that's going to be the
+
+root.
+
+If there's a node on the left, then call traverse on that node that is on the left and there is one
+
+on the left.
+
+That's that 21 node.
+
+And then we're going to also say if there is a node on the right, we will call traverse on that node
+
+on the right.
+
+So to kick this off we actually have to call the function like this.
+
+And we will call it with the route which pushes this function onto the call stack.
+
+Now remember this function is going to be called traverse.
+
+If you actually go look at the call stack in Chrome DevTools.
+
+But I'll say that this is the instance of the function traverse that has been called on the node 47.
+
+And that's how we will keep track of these on the call stack.
+
+So that's going to run our function.
+
+And the first line of that function is going to be results dot push the value of that current node and
+
+the value is 47.
+
+We push that into the array.
+
+Then we come down to this if statement.
+
+If there is a node on the left and there is that 21 node, we will call traverse on that node on the
+
+left, and that goes onto the call stack.
+
+So the first line that we're going to run in that instance of the traverse function.
+
+Is going to be results push and we push the 21 into the results array.
+
+So every time we push the value of a node into the array, I'm going to take that node and I'm going
+
+to color it orange.
+
+So the instance of traverse that is at the top of the call stack right now is still 21.
+
+And we go to the next line of code for the 21.
+
+And that is this if statement.
+
+Is there something to the left of the 21 and that's that 18 and we push that onto the call stack.
+
+So for the 18 the first thing we do is we take that value and we push it into that array.
+
+And then we say is there something on the left of the 18.
+
+There's not.
+
+Is there something on the right.
+
+Now we're done with the function for 18 and we can pop that from the call stack.
+
+Now 21 is once again the top item on that call stack.
+
+The 21 is already gone left when it went to the 18.
+
+Now it's going to go right, which is going to add 27 to the call stack.
+
+And it is going to push its value into the array like this.
+
+And it doesn't have anything on the left or the right.
+
+So now we can pop 27 from the call stack.
+
+21 is now the top item.
+
+The 21 has already gone left and it has already gone right.
+
+So it is done.
+
+So we can pop this.
+
+Now the 47 is the top item on the call stack.
+
+It still needs to go right, which is going to call traverse on the 76 node.
+
+The 76 is going to push its value into the array like that.
+
+And then it's going to look left.
+
+There is an item on the left.
+
+That's that 52.
+
+We push that onto the call stack.
+
+It's going to push its value into the array.
+
+It doesn't have anything on the left or the right of the 52.
+
+So now that one's done the 76 is now the top of the call stack.
+
+It still needs to go right.
+
+So it will call the traverse function on that 82 node that's on the top of the call stack.
+
+Now we will push that into the array.
+
+The 82 doesn't have anything on the left or the right.
+
+So we can pop that off the 76.
+
+We've already gone left.
+
+We've already gone right.
+
+We can pop that off.
+
+And the 47 has already gone left and right.
+
+And now that gets popped off when we pop off that 47.
+
+That is the original time that we called this function.
+
+We are finally done with this function call.
+
+The only thing left to do at this point is to return that results array.
+
+And that is our code for pre-order.
+
+We'll look at this in a moment and we're going to build this tree and DevTools.
+
+We will run this method and we would expect to get this array back.
+
+So let's flip over to DevTools.
+
+There is our depth first search preorder method.
+
+I'm going to scroll up here.
+
+There is our tree that we're going to build, and we would expect to get back this array.
+
+So I'm going to zoom out here and I'm going to run this.
+
+And this is going to give us our binary search tree here.
+
+I'm not going to open it up but I will run my tree dot depth.
+
+First search preorder press enter.
+
+And we get this array which does match this array up here.
+
+And that is our method for depth.
+
+First search.
+
+Preorder.
+

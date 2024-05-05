@@ -1,0 +1,63 @@
+The only difference being the previous value.
+
+So our constructor is going to look like this.
+
+And the only difference in the constructor is going to be this line.
+
+Now let's look at the linked list class and how it is that we built the constructor.
+
+I'm going to focus in on the constructor like this.
+
+And we built a new node.
+
+And this is going to be the same for a doubly linked list.
+
+This line of code doesn't change, it's just that the node class changed.
+
+So when we create this node it's going to have next and previous.
+
+And there's our node.
+
+Except it's going to have another arrow.
+
+Then we had head point the new node with this line of code.
+
+And then we had tail.
+
+Set to this dot head, so it's just pointing to the same thing head was pointing to.
+
+And we made the length equal to one.
+
+There is nothing that changes in the constructor.
+
+The only thing that changes is in the node itself.
+
+And that first line of code.
+
+When we create the new node it is calling a different node class.
+
+So let's bring back in these lines of code.
+
+The only change that we would make here is to name this doubly linked list instead of linked list.
+
+So we'll look at this code in a second in Chrome dev tools, and that we will also create a new doubly
+
+linked list, starting with the node with the value of seven.
+
+Okay, so there is our code.
+
+And like I mentioned, the only difference is, is that the node has previous and that we change the
+
+name from linked list to doubly linked list.
+
+So we'll create our new linked list down here.
+
+And I'm going to run this.
+
+And has returned our linked list.
+
+With a value of seven.
+
+The difference here being that each of these nodes has next and previous.
+
+Okay, so it looks like we have a working constructor.

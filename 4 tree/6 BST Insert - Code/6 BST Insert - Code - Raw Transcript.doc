@@ -1,0 +1,286 @@
+Okay.
+
+So now we're going to code our insert method.
+
+And like I said we're going to pick up right where we left off in the last video.
+
+So I'm just going to take these notes and move them to the bottom and put the code in at the top.
+
+So we're going to start out with insert.
+
+And we're going to pass this a value.
+
+And then we're going to start working through our list.
+
+So first thing is to create a node.
+
+We do that like this.
+
+And now we can remove this from the list.
+
+The next thing, if root is equal to null, then root equals new node.
+
+That is this situation where root is null.
+
+In other words, we have an empty tree and we set root equal to the new node.
+
+And we do it like this.
+
+Now remember, we have to have a return in there.
+
+Because if this is the case, we don't want to run any more code in here.
+
+So now that is done and we can remove that item from the list.
+
+So then we set our variable temp.
+
+We don't need to make any changes to this.
+
+We can just put this right in like that.
+
+And then we go into our while loop.
+
+So for our while loop we're going to say while.
+
+True.
+
+So this is always going to be true and keep running unless it hits a return statement.
+
+That's how we'll break out of this while loop.
+
+So we'll remove this.
+
+Then we can say if the new node equals temp.
+
+Return undefined.
+
+That is this situation where we're trying to insert a node that is the same value as a node that we
+
+already have in the tree.
+
+So we'll do that like this.
+
+And we'd have to say dot value in this case because we are comparing the values new node dot value if
+
+it equals temp dot value.
+
+At any time.
+
+As we're iterating through this tree, we're going to return undefined and we'll remove that.
+
+And then we have this part.
+
+This is where it gets interesting.
+
+If it's less than, we'll go left.
+
+Else if it's greater than we go right.
+
+So we have to have an if statement that's going to start with one or the other.
+
+I'm going to start with left.
+
+If newnode dot value is less than temp dot value.
+
+And what I'm going to do is this is where we're going to have to build out quite a bit of code here,
+
+and I'm going to focus in on this if statement and remove the rest of the code for now.
+
+So I'll move this up here so we have more room.
+
+And this other if statement here is really nested inside of this if statement, we're going to say if
+
+it's less than we go left.
+
+And then then we have to look to see if that spot is open or not.
+
+So it's really a nested if statement.
+
+And so now that we understand that, I'm going to remove this and then we'll just build out the code.
+
+So since we are starting out with the less than, in other words, we're going to go to the left.
+
+I want to start with a tree where everything is open to the left, and I'm going to bring in a new node.
+
+I'm going to point temp to that 47 node.
+
+So now if you look at the if statement.
+
+We have new node dot value.
+
+And we're comparing this against temp dot value which is 47.
+
+Which means that we're going to go left.
+
+So there's two options.
+
+Either that spot is open like that and we're done.
+
+Or it's not open.
+
+So we're going to assume to begin with.
+
+That this is open.
+
+And we'll say if temp dot left equals null.
+
+Which means that it's open.
+
+We're going to set temp dot left equal to the new node like that.
+
+And then we'll return this which returns the entire tree.
+
+And we have to have a return statement here because once we insert this.
+
+We have to be done running code.
+
+Now, if that is not open and it's like that.
+
+We're going to set temp equal to temp.
+
+Dot left.
+
+Which moves temp down to there and we do the whole process again.
+
+So in this case temp dot left does equal null.
+
+And we would put that right there.
+
+Okay.
+
+So now I'm going to move temp back up to the top and we'll write the code for doing something on the
+
+right.
+
+And I'm also going to just move that tree over a little bit.
+
+So we have a little room to work over there.
+
+And we're going to say else.
+
+And this else would be.
+
+It's not on the left, so it's on the right.
+
+And I'm just going to remove that 82 node from the tree over there.
+
+And we can see what it's like to insert something where all of the decisions are going to go to the
+
+right, and it's going to be just the reverse of what we did above.
+
+So just like we had above, either there's a node there to the right of the 47 or there isn't.
+
+So the code is going to be very similar.
+
+We're just going to say if temp dot right is null, in this case it is null.
+
+We're going to make temp dot right equal.
+
+To the new node and then will return this because we have placed that.
+
+Otherwise we have items there and we need to say.
+
+Temp equals temp dot.
+
+Write and move temp down.
+
+So in this case we will run the while loop again.
+
+And then we'll say temprite equals null, and then finally place that there.
+
+Okay, so that is all of the hard code for this method.
+
+Okay, so let's remove our tree like this.
+
+So now let's walk through what we're doing.
+
+When we run through this code.
+
+We're going to say, is the new node less than the node that we're comparing it to?
+
+If it is less than we are either going to insert this because the next spot is open or we're going to
+
+have to move the left.
+
+Which is going to cause us to run through the entire while loop again.
+
+Else it's greater than.
+
+And we're either going to insert this on the right, or we're going to have to move to the next node
+
+on the right and go through the entire while loop again.
+
+So let's take a look at this code with the rest of the code in the while loop.
+
+And remember there was an if statement that we already put in there.
+
+I'm going to bring all this back in here.
+
+That top if statement was for the situation where the new node was equal to something we already had
+
+in the tree.
+
+So now let's take this while loop and look at it with the rest of the code for the method.
+
+And that is our entire Insert method.
+
+So we'll look at this code in a moment.
+
+In DevTools.
+
+And we will build this tree.
+
+Then we're going to insert a node with the value of 27 right there.
+
+So when we insert this, we'll be able to start at the head at 47, go to the left, go to the 21,
+
+go to the right and that node should be there.
+
+Okay, so let's flip over to DevTools.
+
+And there is our insert method.
+
+And then I'll just scroll up a little bit like this.
+
+This will build our tree.
+
+And in this spot right here is where the 27 would have gone.
+
+But we'll insert that separately here in a moment.
+
+I'm just going to run this.
+
+And then I'm going to open.
+
+This binary search tree.
+
+So we start at the root with the value of 47 there.
+
+Let's open this.
+
+And left is 21 and right is 76, just like we had in the diagram.
+
+And you can see that when we open up the 21.
+
+The left node points to the value of 18, but right is pointing to null.
+
+That is that open spot.
+
+So I'm going to clear this.
+
+And I will say my treat.
+
+Insert with the number 27 like that and that returns our entire tree.
+
+So let's open this up.
+
+The route is 47.
+
+You can see to the left is that 21 node?
+
+We'll open up this 21 node.
+
+And now the 21 points to 18 on the left and 27 on the right.
+
+So that is our method for insert.
+

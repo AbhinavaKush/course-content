@@ -1,0 +1,34 @@
+Now that we've looked at the adjacency matrix, this build out and adjacency list, I'm going to bring
+
+up the same graph that we used before.
+
+I'm just going to represent this in an adjacency list instead of an adjacency matrix.
+
+And this is going to be very simple.
+
+So we're going to store this in an object.
+
+So we're going to start at the top there with a it is connected to B and e.
+
+And in the object we will represent the vertex a and its edges like this.
+
+So a is the key.
+
+The edges will be b and e.
+
+Now let's just move around this graph.
+
+Let's look at b.
+
+It is connected to a and c.
+
+C is connected to b and d d is connected to Cnae.
+
+And E is connected to a ND.
+
+It's as simple as that.
+
+And because this is so simple, this is what we're going to use in this course to represent our graph.
+
+And that is our very quick overview of an adjacency list.
+

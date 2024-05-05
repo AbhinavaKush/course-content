@@ -1,0 +1,124 @@
+So in this video, we'll walk through the steps of doing breadth first search.
+
+And then in the next video we will code it.
+
+So I'll bring up our tree.
+
+And in breadth first search we're going to start at the top.
+
+And then we're going to fill these in across each row like this.
+
+And push all of these into an array and return that array with those items returned in that order.
+
+So I'm just going to move this over here and I'm going to bring in a couple of arrays.
+
+One that we're going to call queue.
+
+And one that we're going to call results.
+
+And the results array is going to be the one that we return at the end of this.
+
+So in order to get these in the right order, we're going to need to use both of these.
+
+And we're going to push that top node first into the queue.
+
+And I want to emphasize that this is the entire node.
+
+This is not just the value from the node.
+
+I'm not going to store it like that.
+
+I'm going to store it like this.
+
+I'm going to keep it blue.
+
+So we emphasize that it is the node.
+
+Since that's the color of the nodes.
+
+Then we're going to shift that item out of the queue.
+
+And we're going to take the value and push it to the results array.
+
+When we put this in the results array, we're not putting the entire node in there.
+
+We're just putting the value.
+
+But because we put the entire node into the queue, we have the value and we have right and we have
+
+left.
+
+So we can say for the 47 node what is to the left.
+
+Well that's going to be the 21.
+
+And we can add that to the queue.
+
+To the right is the 76.
+
+And we add that to the queue.
+
+So we're going to have a loop that removes items from this queue until this queue is empty.
+
+When the queue is empty we will have visited every node in the tree.
+
+So the next step here is we are going to remove that 21 node from the queue.
+
+We're going to shift that off.
+
+And we're going to do three things.
+
+We are going to take the value and put it in the results array.
+
+And then we're going to look to the left of the 21, which is the 18.
+
+We will push that into the array.
+
+We will look to the right.
+
+That's the 27.
+
+We will push that into the array.
+
+Once we're done going left and right the next step is we are going to shift off that 76.
+
+The value goes into the results array.
+
+And then we're going to go to the left of the 76 which is the 52.
+
+Push that onto the array.
+
+And go to the right.
+
+That's the 82.
+
+So now when we remove the next item from the queue, we shift off that 18.
+
+The value goes there, but left and right is null.
+
+There isn't anything below that 18 node.
+
+So then we go to the 27.
+
+There's nothing to the left or the right.
+
+And the same thing for the 52 and the 82.
+
+Now the queue is empty.
+
+We can remove the queue array from the picture here.
+
+And what we're going to return is that results array.
+
+So let's look at the order that these numbers came up.
+
+The first one is the 47 the next two.
+
+Are the 21 and the 76.
+
+And you can see that this tree exactly matches.
+
+The other tree.
+
+And that is breadth first search.
+

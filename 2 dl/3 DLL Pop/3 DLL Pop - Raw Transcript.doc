@@ -1,0 +1,239 @@
+Now let's build out our pop method.
+
+I'm going to bring up a singly linked list here.
+
+And if you'll recall, with a singly linked list.
+
+To pop an item off the end.
+
+It was an O of N operation because in order to move tail over to here, we had to start at head.
+
+And iterate through the entire list until we got to this point, and that we could set tail equal to
+
+this node.
+
+But because all the arrows pointed forward, we had to do that entire process of iterating through the
+
+list, but with a doubly linked list.
+
+This is different because we do have arrows pointing backwards.
+
+So what we can do is this we know that since we're going to pop that off, we're going to have a temp
+
+variable pointing to that last item and return that.
+
+So I'm just going to bring that up here.
+
+Now instead of having to iterate through the list to have tail go back one item, we can just say tail
+
+is equal to tail dot previous and move that right over.
+
+Once that's moved over, we can say tail dot.
+
+Next we'll set that equal to null and then temp dot previous.
+
+We can set that equal to null and that pops that off the end of the list.
+
+And then we just return temp.
+
+Like that.
+
+But one of the things that is similar between a doubly linked list and a singly linked list is that
+
+we have an edge case.
+
+If there is only one item, we're going to have to write some code for that.
+
+And then of course, if there are no items, you cannot pop an item off the end of the list.
+
+If you want to give this a shot, go ahead and pause the video here.
+
+Otherwise I'm going to get into the code.
+
+So the first thing we're going to code for is if we have an empty linked list.
+
+So we can do that.
+
+Like this.
+
+And this is the way we've done it before.
+
+But we could also say if tail is null.
+
+We could also say that the length equals zero.
+
+This is the one I'm going to use here.
+
+And we're going to return undefined.
+
+So let's bring up our doubly linked list here.
+
+We need to create our variable.
+
+So we'll say let temp equal this dot tail like that.
+
+And in order to move the tail over.
+
+We can say this dot tail equals this dot tail dot previous and that moves that over.
+
+Taylor.
+
+Next equals null tail dot.
+
+Next equals null and that breaks that off from there.
+
+And temp dot previous equals null so temp dot previous.
+
+Equals null.
+
+Then we just need to decrement the length by one.
+
+Okay.
+
+So let's look at this in with the rest of our code.
+
+Looks good so far.
+
+We need to also write the code for when we have only one item.
+
+So if you'll recall, it looked like this.
+
+In a singly linked list.
+
+It would be the same here.
+
+And if this looks unfamiliar to you, we went over this in detail in the pop method of the linked list.
+
+And remember that this is zero after we have decremented the length.
+
+So this applies to when we had one, we decremented the length and the length became zero.
+
+Then we just need to return temp.
+
+So I'm going to do something different with this code.
+
+And the reason is this could be a little confusing when you're reading it because you have if this dot
+
+length equals zero here, and then we have if this length equals zero here.
+
+Now granted this one happens after we decrement the length, but it still may not be easy to read.
+
+So what I'm going to do is I'm going to take this whole if statement here, and I'm going to move it
+
+up above where we decrement the length.
+
+Now I'm going to remove some lines of code here.
+
+I'm going to remove five lines.
+
+And I'm going to bring them all back here in a second.
+
+I'm just going to rearrange the code.
+
+So I'm going to take these five lines out.
+
+They're all coming back in a second.
+
+So this if statement is for when we have one item in the list.
+
+So I'm going to change that zero to a one when I move it up here.
+
+So we have if statements for when there are zero items or one item.
+
+Or we could say else there's two or more items.
+
+We can bring these lines of code back in for when there are two or more items.
+
+And then decrement the length and return temp.
+
+So all I've done here is rearrange the code to make it easier to read.
+
+When we wrote this the first time in the linked list section, I did that in a particular order so I
+
+could explain the concepts in the order that I wanted to explain them.
+
+But a lot of times as you are figuring out how to code something, you will get to the end of it like
+
+we did here and go, you know, that's not that readable.
+
+Maybe this could be done in a different way.
+
+So I just wanted to show that here that we can move this stuff around and still have this work the same
+
+way.
+
+Now it's much easier to read from top to bottom.
+
+We could say if there's zero items, do this.
+
+If there's one item, do this, else two or more items do this.
+
+So now I'm going to put the code back to the way it was and just watch how everything moves here.
+
+It's the same code.
+
+And then I'm going to move it back.
+
+The only thing that I've added here is an else.
+
+Other than that, it's all the same code.
+
+So we'll look at this code in a moment.
+
+And DevTools.
+
+And when we do.
+
+We're going to start with a linked list that looks like this.
+
+We want to make sure our pop method works with two or more items.
+
+And then we'll pop an item off and we'll see if it works with one item.
+
+Pop that off and then we'll see if it works with no items.
+
+And this is where we would expect this to return undefined okay, so let's flip over to DevTools.
+
+Okay.
+
+So there is our pop method.
+
+And this is where we build the link list with.
+
+One and two.
+
+So let's zoom out here.
+
+We'll run this.
+
+And just have a look at this linked list.
+
+We have a value of one and two.
+
+I'm going to clear this.
+
+And I'm going to run.
+
+Pop.
+
+That returns the value of two.
+
+And if we say my doubly linked list.
+
+You can see the length is now one.
+
+I'm going to clear this.
+
+Will run pop again and it returns the node with a value of one.
+
+If we look at my doubly linked list, you can see the length is zero.
+
+I'm going to clear this and run pop one more time.
+
+And it returns.
+
+Undefined.
+
+Okay.
+
+So that is our method for pop.

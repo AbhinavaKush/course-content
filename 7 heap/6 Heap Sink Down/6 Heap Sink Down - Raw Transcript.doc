@@ -1,0 +1,265 @@
+In this video, we're going to create the sink down helper method that we used in the remove method
+
+in the last video.
+
+So I'm going to bring up this tree.
+
+And in the remove method we were able to take that top value, remove it return it and then move this
+
+value to the top.
+
+But what we were not able to do was take that value and sink it down to the appropriate place in the
+
+tree.
+
+And that's what we're going to do here.
+
+And the way we'll do that is we'll take that value of 65.
+
+We'll compare it to each of its children, determine which child has the highest value, then we'll
+
+exchange it with that node, and then we'll take that 65 node and compare it to its children again.
+
+But in this case it does not have a child that is greater than 65.
+
+So we're going to stop right here.
+
+And we have a valid heap.
+
+So I'm going to bring the code back from the last video the remove method.
+
+And this is where it called sink down.
+
+But because we haven't written sink Down yet I'm going to take the tree and move it back like this.
+
+And then we'll update the tree as we're writing the sink down method.
+
+So we'll start sink down out like this.
+
+And you can see here we pass it an index and remove is always going to pass this the index of zero.
+
+Now one of the things you could do is write sink down where it doesn't take an argument.
+
+Because we know that it's always going to start with the index of zero.
+
+But the reason I'm doing it this way is there are other methods for heaps that will use a sink down
+
+method, and those methods require that sink down.
+
+Take an index.
+
+So that's why I'm going to write it like this.
+
+And since index is going to be the index of zero, I'll do this.
+
+And we're going to have another variable called max index.
+
+We'll set that equal to index to begin with.
+
+And I'll create a few variables here to make it where our code is a little bit cleaner.
+
+The first one is I'm going to have a variable size that's equal to heap dot length.
+
+And I'll create a couple more here in a second.
+
+But first we need to create the while loop.
+
+Now for insert we started out with while true.
+
+And then I added a couple of conditionals in Sink Down.
+
+We're going to keep this as while true.
+
+And now here are a couple more of those variables that'll make our code a little bit cleaner.
+
+Left index and right index.
+
+And these are calling the helper methods for left child and right child and left index and right index
+
+will be those green nodes.
+
+So if you look at the three colored in nodes, the 65, the 75 and the 80 in the next couple of steps
+
+here, what we're going to do is have that variable max index pointing to the one that has the highest
+
+value.
+
+So first we're going to say if the heap at left index that's 75.
+
+If it is greater than max index.
+
+And in this case it is we're going to set max index to be equal to left index like this.
+
+So to make more room I'm going to move this up.
+
+So to begin with index and max index was pointed at the root.
+
+And then because the 75 is greater than the 65 we set max index to equal left index which did this.
+
+So let's put this back.
+
+So we started out looking to the left.
+
+Now we need to look to the right.
+
+But in this case we're going to see if the value at right index is greater than the value at max index.
+
+And in this case it is because 80 is greater than 75.
+
+So we'll set max index to be equal to right index.
+
+And that does this.
+
+So now we'll say if max index is not equal to index.
+
+And you can see that max index is pointing to a different node than index.
+
+What we'll do is swap index and max index which does this.
+
+So in the array what we're actually doing is this.
+
+And then we'll add one more thing to this if statement.
+
+We'll set index to be equal to max index which does this.
+
+Remember, this is all inside of a while loop.
+
+I'll bring this code back here.
+
+And now we'll run the loop again.
+
+So I'm going to remove some of this code.
+
+And I want to focus in on these two lines.
+
+So these helper methods that calculate left child and right child.
+
+These are just doing a math equation.
+
+But they're not determining if those are valid indexes in the heap.
+
+So when you calculate the left index there is actually a number there which is that number of 50.
+
+But when you calculate the right index that is not a valid index.
+
+We don't have a value there.
+
+So to look at this from the perspective of the array 65 is at the index of two.
+
+And when we calculate the left index it is two times two plus one equals five.
+
+It's just going to calculate the value of five.
+
+But when you calculate the right index it's going to calculate the index of six whether or not there's
+
+a value there.
+
+So now let's focus in on all three of these if statements.
+
+And we're going to be making changes to each of these.
+
+So let's start out with the top one here.
+
+This is a valid if statement.
+
+The way it is written right now the conditional will be false because the value at left index is not
+
+greater than the value at max index.
+
+But this is a valid if statement.
+
+However, when we come down to here, we can't compare the value at right index with the value at max
+
+index because we don't have a value at right index.
+
+So this is where we need to add something to this if statement.
+
+We need to also check to make sure that the right index is less than the size of the array.
+
+So I'll bring the array up like this.
+
+The size of this array is six.
+
+It goes from index of zero to index of five five.
+
+So if we have an index that is equal to the size it is not valid.
+
+And we could have a situation where that happens on the left as well.
+
+So I'm going to remove that 50 node and make that spot open.
+
+So for this situation we need to check to make sure that left index is less than the size.
+
+And now both of those first two if statements are complete.
+
+So now that moves us down to the third if statement.
+
+We'll only run the two lines in this if statement.
+
+If max index is not equal to index.
+
+And you can see looking at the diagram there that they're both equal, they're both pointing to the
+
+same place.
+
+And when this happens we want to break out of the while loop.
+
+So we'll say else.
+
+And then we'll say return.
+
+And now this third if statement is complete.
+
+Let's add this in with the rest of our code.
+
+And that is the entire sink down method.
+
+And remember this sink down method is being called by the remove method right here.
+
+So we'll look at both of these methods in a moment.
+
+And when we do we'll create this heap.
+
+And that will be represented by this array.
+
+And we'll print that array out.
+
+And then we'll remove the 95 node.
+
+And the heap will update like this.
+
+And the array will update like this.
+
+And we'll print that out again.
+
+And then we'll remove that value of 80.
+
+And the tree will rearrange like this.
+
+And the array will rearrange like this.
+
+And then we'll print that out.
+
+So now let's flip over and take a look at this.
+
+So there's the sink down helper method that we just wrote.
+
+And then I'll scroll up here.
+
+This is the remove method that will be calling the sink down method.
+
+And I'll scroll up again.
+
+And with these lines we'll create that heap that we just saw.
+
+And then we'll print that out.
+
+And then we'll call remove and then print out the heap again.
+
+And then call remove again and then print out the heap a third time.
+
+And I'll run this.
+
+And you can see up here that those heaps look exactly the way we expected.
+
+So it looks like we have working methods for remove and also for sink down.

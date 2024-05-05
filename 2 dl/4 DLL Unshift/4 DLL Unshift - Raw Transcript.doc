@@ -1,0 +1,81 @@
+Okay.
+
+So now we're going to do unshift.
+
+So it's going to look like this.
+
+We're going to have a new node that we create.
+
+And then we'll have the next arrow on that one point to the first node in the list.
+
+And we'll have the first node point back to it.
+
+Move head over and that adds it into the list.
+
+We can also have an empty list, in which case we just set head and tail equal to the new node.
+
+So if you want to code this, pause it here.
+
+Otherwise I'm going to get into the code.
+
+So we start it with Unshift.
+
+We're going to pass it a value.
+
+And then we will create a new node with that value like this.
+
+Then we will start with adding this into an empty linked list, where we just set head and tail equal
+
+to that node.
+
+So with this dot length equals zero we're going to set head and tail equal to the new node.
+
+Else there is one or more items and we'll expand this else out and we'll bring up this list.
+
+So we'll have the arrow from the new node point to that first node.
+
+We'll do that with this line of code Newnode.next equals this dot head.
+
+And then we'll have the other arrow reach back over to the new node with this line of code.
+
+This dot head dot previous equals new node.
+
+Then we'll move the head over with.
+
+This dot head equals new node, and that adds that into the list.
+
+So let's put this code in with the rest of our code so far.
+
+Now we just need to increase the length by one.
+
+And then return the entire linked list.
+
+So we'll look at this code in a moment and DevTools and we will create this linked list.
+
+With two and three.
+
+Then we will unshift on a node with the value of one.
+
+So let's flip over to DevTools.
+
+So there is our Unshift method there.
+
+And we're going to start out with a list with the items two and three.
+
+Let's zoom out here and run this.
+
+I'll just open this up.
+
+I see we have values of two and three and a length of two.
+
+So I'm going to clear this.
+
+And I'm going to unshift on a node with the value of one.
+
+So now let's open this.
+
+Now.
+
+Now you can see that head points to the value of one and our length is three.
+
+So that is Unshift.

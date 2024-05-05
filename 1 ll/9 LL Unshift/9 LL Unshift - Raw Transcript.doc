@@ -1,0 +1,113 @@
+Okay.
+
+So now we're going to write our method for Unshift.
+
+And this is what Unshift is going to look like.
+
+We're going to create a new node.
+
+We're going to want to have that new node point to the first node in the linked list.
+
+In other words, we're going to set it equal to head.
+
+We have head set equal to the new node.
+
+And that adds it into the list.
+
+So you could have a linked list with some items in it like this.
+
+Or the linked list could be empty, in which case you're just going to set head and tail equal to the
+
+new node.
+
+So if you're going to code this go ahead and pause this here.
+
+Otherwise I'm going to jump into the code.
+
+So we're going to start it out like this.
+
+It's unshift.
+
+We're going to pass it a value.
+
+And the first step with Unshift.
+
+Is that we need to create that node.
+
+So let's do this.
+
+And that will create that new node that we're going to use.
+
+And as always when we're going to add a node to anything, we want to start with this situation where
+
+we have whatever data structure is empty.
+
+So we're going to say if head is null with that exclamation point.
+
+We're going to have this dot head equal new node.
+
+And now head is pointing to the new node.
+
+And then this dot tail equals new node.
+
+Now they both point to the new node.
+
+So let's put this if statement in with the rest of our code and have a look at that.
+
+This is what we have so far.
+
+So our other option is that we are putting this into a linked list that already has items.
+
+So we're going to say else.
+
+And let's build out this else statement like this.
+
+Else.
+
+Newnode.next equals this dot head.
+
+And that does this points that at that first item in the linked list.
+
+We'll say this dot head equals new node that moves that over and adds that into the list.
+
+So that's everything for our else statement.
+
+And let's put this in with the rest of our code like this.
+
+Only things left to do are to increase the length by one and then return the entire length list.
+
+So we'll look at this code in just a second and Chrome dev tools.
+
+And when we go over to dev tools.
+
+We're going to create this linked list.
+
+Then I'm going to do an unshift with the number four and add that into the list.
+
+So let's flip over to DevTools and have a look at that.
+
+Okay, so there is our Unshift method.
+
+And this is going to create the link list that I just showed in the diagram.
+
+Let's run this.
+
+And that's going to create the linked list with a length of four.
+
+Okay.
+
+So let's open this up.
+
+And we have a linked list with head pointing to 11 and a length of four.
+
+So I'm going to clear this.
+
+And then I'm going to run Unshift with the number four like that and we press enter.
+
+And now our linked list.
+
+Has a head with the value of four.
+
+That's the item that we just unshifted on to the linked list and the length has been increased to five.
+
+And that is our method for unshift.

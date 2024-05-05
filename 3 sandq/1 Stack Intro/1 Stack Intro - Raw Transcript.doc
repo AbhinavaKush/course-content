@@ -1,0 +1,119 @@
+This is called LIFO.
+
+Last in, first out.
+
+So let's remove that top one.
+
+And we would say that we're going to pop that from the stack.
+
+Now we can remove the second one.
+
+And because we have removed that one now we can remove the last one.
+
+So now let me give you an example that we would use in computing.
+
+Let's say you're surfing the web and you go to Facebook.
+
+And then you go to YouTube.
+
+And then you go to Instagram and then you check your email.
+
+What we've created over there on the right is a stack.
+
+And when you hit the back button, you're popping that top item from the stack to go back to Instagram.
+
+To YouTube and to Facebook.
+
+There are all kinds of examples of where we use stacks in computing, and one of the ones that we're
+
+going to look at in some detail later in this course is going to be a call stack.
+
+So a very common way of implementing a stack is to use an array.
+
+And remember with a stack we just are going to add and remove from the same end.
+
+Doesn't matter which end that is, as long as it's the same end.
+
+So we're not going to use an array in this course because it's already included in JavaScript.
+
+And that would just be too easy.
+
+So we want to do something where we're going to write some code.
+
+But I do want to talk about this a little bit because if this comes up in an interview.
+
+And they ask you, how would you implement a stack with an array?
+
+It does matter which end you use.
+
+So when you add something to the end of the array or you remove it, remember this is O of one, whereas
+
+if you do it on the other end, remember you have to re-index everything to take that off and then re-index
+
+everything again to bring that item back.
+
+That's O of n.
+
+So if you're going to do a stack with an array, always do it on the end, not the beginning.
+
+And then you can just think about the stack like this.
+
+Also an easy way to remember this is with a stack.
+
+You pop something from the stack or you push something onto the stack.
+
+And that's exactly what those two things are called with an array.
+
+And like I said, we're not going to use an array.
+
+We're going to use.
+
+A linked list.
+
+Now we're going to alter this a little bit to turn this into a stack.
+
+But unlike an array, when you create a stack with a linked list, you're always going to use the left
+
+side of the linked list as the top.
+
+In other words, the null terminated end is going to be at the bottom.
+
+You never want to do it like this, where the null terminated end is at the top.
+
+Now let's turn this back into a regular linked list and look at why.
+
+When you remove an item from a linked list on the end, it's O of N to add it back in.
+
+This is O of one.
+
+So we have one o of N1O of one, whereas on the other end it's o of one to remove and o of one to add.
+
+And like I mentioned before, it doesn't matter which end you use as long as it's the same end.
+
+So for a linked list, this is the better end for adding and removing because they're both O of one.
+
+So that's why our stack, if we use a linked list, is always going to look like this.
+
+When we created our linked list, we had a method that we created to remove the first item called Unshift,
+
+or to add something in as the first item called shift, so we can use those for creating methods for
+
+pop.
+
+And push with some alteration.
+
+Also with the linked list, we had a head and tail.
+
+We'll rename these for the stack as top and bottom.
+
+And we actually don't even need bottom.
+
+So I'm going to remove that.
+
+So our stack is going to look like this.
+
+All right.
+
+That is our overview.
+
+For Stax.

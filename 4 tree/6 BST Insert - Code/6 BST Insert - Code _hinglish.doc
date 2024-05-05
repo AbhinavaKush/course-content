@@ -1,0 +1,63 @@
+Here's the translated version of your script into simple Hinglish, using a mix of Hindi and English for easy understanding and an urban touch:
+
+---
+
+**Introduction**
+Welcome back! Aaj hum apne binary search tree mein `insert` method add karenge.
+
+**Creating a New Node**
+Sabse pehle, ek naya node create karte hain. Yeh raha tarika:
+```javascript
+function Node(val) {
+    this.value = val;
+    this.left = null;
+    this.right = null;
+}
+```
+
+**Insert Method**
+Ab, `insert` method define karte hain. Ye method ek value leta hai:
+```javascript
+BST.prototype.insert = function(value) {
+    let newNode = new Node(value);
+```
+
+**Handling an Empty Tree**
+Agar tree khali hai (root null hai), to new node root ban jata hai:
+```javascript
+    if (this.root === null) {
+        this.root = newNode;
+        return this;
+    }
+```
+
+**Traversal to Find Insertion Point**
+Agle step mein, hum tree me sahi jagah dhundne ke liye traverse karte hain jahan hum new node ko add karenge:
+```javascript
+    let current = this.root;
+    while(true) {
+        if (value === current.value) return undefined; // Duplicate values ignore kar dijiye
+
+        if (value < current.value) { // Left jaaye
+            if (current.left === null) {
+                current.left = newNode;
+                return this;
+            }
+            current = current.left;
+        } else { // Right jaaye
+            if (current.right === null) {
+                current.right = newNode;
+                return this;
+            }
+            current = current.right;
+        }
+    }
+}
+```
+
+**Conclusion**
+Aur yun humne ek naya node binary search tree me insert kar diya! Agle video mein, hum `insert` method ko test karenge kuch nodes add karke aur tree structure ko dekhenge.
+
+---
+
+Is tarah se aapka script ready hai video tutorial ke liye, jo viewers ko asani se har step samajhne mein madad karega.

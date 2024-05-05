@@ -1,0 +1,25 @@
+Here's the Hinglish version of your transcript on computational complexity and notation in algorithms:
+
+---
+
+**Intro:**
+"Jab computational complexity aur algorithms mein notation ki baat aati hai, teen Greek letters aksar aate hain: omega, theta, aur Omicron, jo aksar sirf 'O' ke roop mein jaane jaate hain context mein big O notation ke. Big O typically woh hai jo aap zyadatar encounter karte hain."
+
+**A1:**
+"Isko illustrate karne ke liye, maan lijiye ek array hai aur ek for loop hai jo usme se ek specific number dhoondh raha hai. Maan lijiye hum number one dhoondh rahe hain."
+
+**A2:**
+"Is scenario mein, agar number one array ke shuruat mein hai, to hum jo kuch bhi best case scenario kehte hain uska samna karte hain—sabse kam iterations ki zaroorat hoti hai. Isko symbolically Greek letter omega ke dwara represent kiya jata hai."
+
+**A3:**
+"Ulta, agar number one ke end ki taraf hai, to hum worst case scenario ka samna karte hain, jisme zyada iterations ki zaroorat parti hai through the array. Isko hum big O ya Omicron kehte hain, jo hamesha algorithm analysis mein worst case scenario ko indicate karta hai."
+
+**A4:**
+"Aur agar number one kahin beech mein located hai, jo ek typical situation ko reflect karta hai, toh ye average case ko represent karta hai, jo Greek letter theta se denoted hai."
+
+**Outro:**
+"Ye samajhna zaroori hai ki jab hum big O ki baat karte hain, hum specifically worst case scenario ke baare mein baat kar rahe hain. Halanki aam taur par 'best case' ya 'average case' big O ke references sune jaate hain, technically, inhe omega ke liye best case aur theta ke liye average case ke roop mein refer karna chahiye, na ki big O."
+
+---
+
+Is tarah se, aapne computational complexity aur algorithms ke notation par aasan Hinglish mein prakash dala hai, jo viewers ko samajhne mein madad karega.

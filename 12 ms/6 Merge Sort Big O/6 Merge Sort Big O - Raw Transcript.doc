@@ -1,0 +1,74 @@
+Now let's talk about the big O of merge sort.
+
+I'm going to bring up an array here.
+
+The first thing I want to talk about here is space complexity.
+
+Because with merge sort you have this original array like this.
+
+But when you break this down into two arrays like this, you've actually created two new arrays left
+
+and right.
+
+You still have the original array and now you have these two arrays.
+
+So you've just doubled the size in memory that this is taking up.
+
+And as you break this down, you still have these eight items in addition to the original array.
+
+So the space complexity is O of N.
+
+You originally had eight items in an array, then you had to create eight new items and that is O of
+
+n.
+
+Now let's look at the time complexity.
+
+When you break these down like this, you have one, two, three steps to break this down.
+
+So we've seen this before.
+
+If you have eight items and it takes you three steps, that is a log in operation.
+
+But when you put them back together, if you think back to our merge function, you're having to iterate
+
+through each array to put these back together.
+
+So like if you have this you have to loop through both of these.
+
+To put them back together as a sorted array.
+
+So breaking this apart is O of log n.
+
+Putting it back together.
+
+Is O of N, and that's where we get the O of n times log n, and it looks like this.
+
+On the graph I'm just going to gray out the three that are over to the right.
+
+Because when it comes to sorting algorithms, O of n squared and O of n times log n are pretty much
+
+your two options.
+
+There are exceptions to this with sorting algorithms that sort only numbers because there are some efficiencies
+
+with just numbers.
+
+But if you have an algorithm that is going to sort all different types of data O of n times, log n
+
+is as good as it gets.
+
+Now it doesn't look like there's a huge difference between these, because on the axis on the left it
+
+only goes up to 75 here.
+
+But if you start having it go to 1000 or 1 million, there's a huge difference between these two lines,
+
+which makes this much better for most situations than bubble sort and insertion sort and selection sort.
+
+The original ones that we did that were O of n squared.
+
+And that is merge sort.
+
+Big O.
+

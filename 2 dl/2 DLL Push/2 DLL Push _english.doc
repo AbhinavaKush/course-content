@@ -1,0 +1,121 @@
+Okay.
+
+So now let's look at our push method.
+
+I'm going to compare this to a singly linked list.
+
+Remember with this we just created a node pointed the last node to the new node.
+
+Move tail over to the new node.
+
+And that added that into the list.
+
+It's going to be almost the same for a doubly linked list.
+
+The only difference is going to be that green arrow there.
+
+So we're still going to point the last node to the new node.
+
+But the difference here is that we need to take new node previous and point it to that last node.
+
+We still move tail over and that adds that into the list.
+
+And just like with a singly linked list, you can have an empty list, in which case you're going to
+
+set head and tail equal to the new node.
+
+If you want to code this, go ahead and pause it here.
+
+Otherwise we'll get into the code.
+
+So we're going to say push.
+
+Pass it a value and then create a new node.
+
+So far this is all the same.
+
+So then we'll start with an empty linked list.
+
+So I'm going to say if this dot head is null.
+
+We'll have this head equal new node like this for a singly linked list, and like this for a doubly
+
+linked list.
+
+But the code here is going to be the same.
+
+And this dot tail equals new node.
+
+Which will do that.
+
+So let's add this if statement in with the rest of our code.
+
+Like this.
+
+This is what we have so far.
+
+So this if statement is if we have an empty list, otherwise else we have one or more items.
+
+So let's build this else statement out.
+
+So we'll say this dot tail dot next equals new node.
+
+So that's tail dot next.
+
+Equals new node that connects that arrow.
+
+We'll say new node dot previous equals this dot tail which is going to connect that over there.
+
+Then this dot tail equals new node.
+
+Which moves that over and adds that into the list.
+
+So let's take this else statement and put it in with the rest of our code.
+
+Like this.
+
+The only things left to do are to increase the length by one.
+
+And then return the linked list.
+
+So the only line of code that is different between a doubly linked list and a singly linked list is
+
+this one line of code right here?
+
+To connect that arrow from the new node back to what had been the last node in the linked list.
+
+So we'll look at this code in a moment in Chrome DevTools.
+
+And when we do, we're going to build a linked list with numbers one and two.
+
+And then we're going to push a three onto the end.
+
+Okay, let's flip over to Chrome DevTools.
+
+Okay.
+
+There is our push method.
+
+And this is where we're building a linked list with the numbers one and two.
+
+Let's zoom out and run this.
+
+So I'm going to expand this.
+
+And we have a linked list with head pointing to one and tail pointing to two.
+
+So I'm just going to clear this.
+
+And we'll run my doubly linked list dot push with a value of three.
+
+And press enter.
+
+And now the length has been increased to three.
+
+And our length list.
+
+And we open this and tail now points to three.
+
+And it looks like we have a working method.
+
+For push.

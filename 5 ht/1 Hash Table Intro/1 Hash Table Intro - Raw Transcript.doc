@@ -1,0 +1,168 @@
+Welcome to Hash Tables.
+
+So there's actually a built in hash table in JavaScript.
+
+And that is objects.
+
+But what we're going to do here is we're going to build our own.
+
+So imagine that this is an address space.
+
+And this is actually just going to be an array that we build.
+
+And then we're going to put items into this array but do so using a hash.
+
+And what I'm going to do is I'm going to build an inventory for a hardware store.
+
+Okay.
+
+And the first item we're going to have in our hardware store is going to be nails.
+
+We have a thousand of them.
+
+And this is what's called a key value pair.
+
+Nails is the key 1000 is the value.
+
+And we're going to run this through a hash.
+
+It is only the key nails that gets run through the hash.
+
+So all letters have an Ascii numerical value.
+
+And it's just going to run those letters through a math equation and create a number.
+
+So we're going to put this into the hash generator and we will get our object back.
+
+But it's going to do a calculation on that key nails and give us an address.
+
+Let's say the address is two.
+
+That is where we'll put that object.
+
+So that hash function is going to determine where we put that.
+
+But also when we go back to look this up we'll say where is nails in memory.
+
+We'll run it through the same hash function.
+
+And we can go straight to the address in memory where that is being stored.
+
+So it's very fast.
+
+So let's talk a little bit more about hashes.
+
+There are two characteristics that you need to know about hashes.
+
+First they are one way.
+
+So if you take nails and you run it through the hash and it gives you the value of two, what you cannot
+
+do.
+
+Is take the number two and have it produce.
+
+The string nails.
+
+It is one way only.
+
+The other thing about hashes is that they are deterministic.
+
+What that means is if you run nails through this equation and it produces the number two, the next
+
+time you run nails, it will produce the number two.
+
+It will always produce the same number.
+
+So these are the two important characteristics of a hash.
+
+So let's bring back our hash table.
+
+And when we build a method like set this is going to put something into the hash table.
+
+We'll have a key and a value.
+
+Let's say the key and the value is nails and a thousand.
+
+We're going to run this through the hash and it's going to give us.
+
+This array that we're going to put into the array.
+
+That is our hash table over there that's labeled zero through seven.
+
+But it's also going to give us an address based on a calculation it does on that string nails.
+
+And it produces two.
+
+So that array is going to go right here.
+
+And let's just add a couple more here.
+
+Let's just say we have some screws in our hardware store.
+
+There's 800 of them.
+
+And this is going to map to the address space of six like that.
+
+And we'll just do one more here.
+
+Run it through our hash.
+
+And this gives us an address space of two.
+
+So that's going to go right there.
+
+But there's already something in that address space.
+
+And we don't want to just overwrite the last thing in that address space.
+
+What we want to do is to be able to have both of them in here.
+
+This is what's called a collision.
+
+And there are multiple ways of dealing with this.
+
+And in the next video we will talk in detail about how we deal with collisions.
+
+Okay.
+
+So let's just do one more.
+
+We're going to put bolts in here.
+
+It's going to be at an address of four.
+
+And we're going to put that here.
+
+Now we're going to do a different method.
+
+This one is going to be.
+
+Get.
+
+We're going to pass that string bolts into our hash function.
+
+It's going to produce the value of four.
+
+And we go directly to this address space.
+
+And what we'd want to do here is when we are looking for bolts we want to know the quantity.
+
+And just have it return that value.
+
+And we'll put that back.
+
+But if we say something like get nails and we run this through the hash function, that's going to produce
+
+the address of two.
+
+When we go to here, we're going to have to go through the different arrays that are stored at that
+
+address space and find the one that is nails, and then return that value.
+
+And we'll talk about that in some more detail in the Get method.
+
+But for now that is our introduction.
+
+The hash tables.
+

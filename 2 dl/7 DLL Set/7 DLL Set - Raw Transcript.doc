@@ -1,0 +1,110 @@
+Okay.
+
+So now let's do our set method.
+
+And what we're going to do with this is we're just going to go to a particular index and set the value
+
+of the node at that index equal to the value that we pass to the set method.
+
+So if you're going to code this go ahead and pause it here.
+
+Otherwise I'll start coding this out.
+
+Okay.
+
+So just like we did with our singly linked list, we're going to say let temp equal this dot get.
+
+And then pass get the index that we pass to set.
+
+And let's say we're going to have that index B2 that's going to point temp to the index of two.
+
+And we're going to let the get method do all the work for us there.
+
+So there's a couple of options here.
+
+Temp can either be pointing to a node when we do this.
+
+Or it could be that we pass at an index say like the index of four.
+
+That's not a valid index.
+
+And in that case get is going to return undefined.
+
+So we have to determine did the get method return undefined.
+
+Or is it equal to a node.
+
+So we're going to use this if statement here if temp which means if it is pointing to a node.
+
+We're going to say temp dot value equals value the value that we pass to the set method.
+
+And let's say that value was 99.
+
+That's going to change the value of this node to 99.
+
+And then we'll just return.
+
+True that we were able to change that value.
+
+Otherwise we're going to return false.
+
+Now, this is exactly the same code that we used in a singly linked list.
+
+Exactly.
+
+But the difference here is the git method that we're calling is written in a different way and doubly
+
+linked lists than it is with singly linked lists.
+
+When we call this get method, if the item we're looking for is in the second half of the list, it's
+
+going to start at the tail and work backwards, which is going to be more efficient.
+
+So even though the code is the same here, this is going to run in a more efficient manner than it would
+
+if it's a singly linked list.
+
+But the actual code that we're writing looks exactly the same.
+
+We will look at this code in a moment in DevTools.
+
+We will create a doubly linked list that looks like this.
+
+Then we will change the value at the index of 2 to 99.
+
+Okay, so let's flip over to DevTools and take a look at this code.
+
+Okay.
+
+So there is our set method there.
+
+And this is where we create our linked list with the values of zero, one and two.
+
+And I'm just going to run this.
+
+So I'm just going to open this.
+
+And you can see head is equal to zero, tail is equal to two with a length of three.
+
+I'm going to clear this.
+
+So I'm going to run set at the index of two with a value of 99.
+
+We get true.
+
+Now let's take a look at our linked list.
+
+And tail is now equal to 99.
+
+I'm going to run this one more time.
+
+Except instead of having the index of two, I'm going to do an index of ten, because that's not a valid
+
+index.
+
+And it returns false.
+
+So that is our method.
+
+For set.
+

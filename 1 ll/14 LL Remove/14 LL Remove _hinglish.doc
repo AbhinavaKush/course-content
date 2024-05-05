@@ -1,0 +1,53 @@
+Here's the Hinglish version of your script for the video tutorial on the `remove` method in linked lists:
+
+---
+
+**Intro:**
+Hello everyone! Is tutorial mein, hum linked list se kisi node ko remove karne ka tarika dekhenge using the `remove` method. Ye method flexible hai aur list ke kisi bhi position se removal handle kar sakta hai, chahe wo shuruaat ho, beech mein ya ant. Chaliye dekhte hain ise kaise implement karte hain.
+
+**Body:**
+`Remove` method nodes ko unke position ke hisaab se adjust karta hai. Yahan hum different scenarios ko kaise manage karte hain:
+
+1. **Shuruaat se Remove Karein:**
+   - Agar index zero hai, to hum simply `shift` method ka use karte hain, jo pehle node ko efficiently remove karta hai:
+     ```javascript
+     if (index === 0) return this.shift();
+     ```
+
+2. **Ant se Remove Karein:**
+   - Last node ko remove karne ke liye `pop` method ka use hota hai:
+     ```javascript
+     if (index === this.length - 1) return this.pop();
+     ```
+
+3. **Invalid Indexes ko Handle Karein:**
+   - Hume ye sunischit karna hai ki index valid hai. Agar ye negative hai ya list ki length se zyada hai, to hum `undefined` return karenge:
+     ```javascript
+     if (index < 0 || index >= this.length) return undefined;
+     ```
+
+4. **Beech se Remove Karein:**
+   - Beech ka node remove karne ke liye, hum `get` method se target node se pehle ka node locate karte hain:
+     ```javascript
+     let before = this.get(index - 1);
+     ```
+   - Fir hum pointers adjust karte hain taaki target node ko exclude kiya ja sake:
+     ```javascript
+     let temp = before.next;
+     before.next = temp.next;
+     ```
+   - Target node ko list se detach karne ke liye uski `next` property ko `null` set karte hain, jo garbage collection mein madad karta hai:
+     ```javascript
+     temp.next = null;
+     ```
+
+5. **List Properties ko Adjust Karein:**
+   - List ki length ko ek se ghata dein taaki removal reflect ho sake.
+   - Removed node ko return karein operation ki success confirm karne ke liye.
+
+**Outro:**
+Ye tha hamara `remove` method. Humne dekha kaise kisi bhi position se removals handle kiye jaate hain, ensuring ki hamari linked list consistent rahe. Next, hum is method ko Chrome DevTools mein test karenge apne implementation ko verify karne ke liye. Bane rahiye aur happy coding!
+
+---
+
+Ye script original content ko simplify karta hai, method ke logic ko structured format mein outline karte hue, jo tutorial setting mein follow karne walon ke liye asaan bana deta hai. Isme clear, concise explanations hain aur visual learners ke liye code snippets bhi shamil hain.

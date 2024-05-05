@@ -1,0 +1,185 @@
+So now we're going to look at a very common interview question.
+
+And it may not be exactly like this, but it'll be some variation of what I'm about to show here.
+
+So I'm going to bring up two arrays.
+
+And our objective is to write a formula that returns true or false as to whether these two arrays have
+
+any items in common.
+
+And you can see that last item, number five, they have that in common.
+
+And we're just going to assume these arrays are the same length.
+
+And let's just walk through how we would do this if we were just using for loops.
+
+So we'd have a for loop for that first array that starts with the first number.
+
+And that a nested for loop that goes through the second array.
+
+That checks to see does that match?
+
+Does that match.
+
+Does that match?
+
+And if none of these match, we go to the next number in the top array like that and do the same thing
+
+on the bottom array.
+
+And then we move again on the top array and move through the array on the bottom.
+
+And then in this case we find this matching number and we return true.
+
+But because this has nested for loops this is going to be O of n squared.
+
+That is very inefficient.
+
+And so let's just quickly walk through the code of doing it this way.
+
+This should be pretty simple by now.
+
+We'll have a function, we'll call it item in common, and we will pass it each of these arrays.
+
+And we'll have a for loop that goes through the first array, a nested for loop that goes through the
+
+second array.
+
+And if at any time.
+
+These match will return true.
+
+Otherwise, if we go through these for loops and don't find any matches, we'll return false.
+
+So let's just flip over to Chrome Dev Tools and take a look at this.
+
+So there is the function we just wrote.
+
+These are the two arrays.
+
+And we will run the function here.
+
+So when I run this we'll either get true or false.
+
+And we'd expect true because we have those two fives that are items in common.
+
+So I'll run this.
+
+And sure enough that is true.
+
+And then on array two I'm going to change that five.
+
+To a six.
+
+And then I'll run this again.
+
+And we get false.
+
+So this works.
+
+It's just not super efficient okay.
+
+So now let's flip back.
+
+So this is where we left off here.
+
+But there's a more efficient way to do that.
+
+And that is with.
+
+An object.
+
+So this is what we're going to do.
+
+We're going to loop through that first for loop.
+
+And each of these numbers one.
+
+We will add this to the object.
+
+That's the key with a value of true.
+
+And we'll do that for the next item in the array.
+
+Set that to true and the next item in the array.
+
+And we'll set that to true.
+
+So now what we can do is just loop through the second array and say is two.
+
+In this object as a key, and that is an O of one operation.
+
+And then we can check the number four and then check the number five.
+
+And it's finally going to come back.
+
+True.
+
+But the difference here is that the number of operations is far less.
+
+We went through each array one time only.
+
+So you could say that that's O of two n.
+
+But of course we drop constants which makes this O of n.
+
+Which is much more efficient.
+
+Then O of n squared.
+
+So the interview question is not so much about can you write code to make this work.
+
+It's really about can you write code that is more efficient?
+
+So now let's look at coding this using an object.
+
+So we'll create an object like this.
+
+Just an empty object.
+
+Then our first for loop is going to loop through the first array, just like we did last time.
+
+But instead of the nested for loop, we're just going to move all those values from the array into that
+
+object.
+
+Then we'll have a second for loop.
+
+Now the four loops are one after the other instead of one inside of the other.
+
+And that we just check to see if any item in that second array matches an item in that object.
+
+And if it does, we'll return true.
+
+And then if it doesn't.
+
+We return false.
+
+Okay, so now let's flip over to DevTools.
+
+And there is our new function that uses the object.
+
+It has the same name.
+
+You're passing it the same arguments.
+
+We will use the same arrays here.
+
+And we will call the function here.
+
+So when I run this we should get true.
+
+So that works all the same way.
+
+That if I come up and change this second array to be two, four, six.
+
+Now when we run the code.
+
+It returns false.
+
+So these functions are going to do exactly the same thing.
+
+But can you make it efficient?
+
+Is the real interview question.

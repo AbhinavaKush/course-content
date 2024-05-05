@@ -1,0 +1,34 @@
+### Introduction
+
+Aaj hum dekhenge ki stack ke constructor ko kaise banate hain, linked list ke node structure ke saath comparison karke.
+
+### A1: Node Creation
+
+Sabse pehle, hum node creation se start karte hain. Hamara stack ka node structure linked list ke jaisa hi hai. Kyunki hamara node class jo linked list mein use hua tha, usme koi modification ki zarurat nahi hai, isliye hum ise yahaan bhi use kar sakte hain.
+
+### A2: Class Name Modify Karna
+
+Aage badhte huye, jab hum `class LinkedList` se shuru karte hain, hum ise rename karenge `class Stack` mein, taaki ye hamare code ke purpose ko better reflect kare.
+
+### A3: Constructor Adaptation
+
+Constructor ko linked list se adapt karte waqt, shuru ke steps unchanged rehte hain—humein abhi bhi ek node create karna hai. Lekin, 'head' aur 'tail' ki jagah, hum 'top' introduce karenge aur 'bottom' ko hata denge, kyunki stack operations ke liye ye zaroori nahi hai. Yahaan dekhiye kaisa dikhta hai:
+
+```python
+class Stack:
+    def __init__(self):
+        self.top = Node()  # Node creation
+        self.length = 1    # Initializing length to one
+```
+
+### A4: Final Adjustments
+
+Aakhir mein, ek chhota lekin crucial adjustment hai, apne diagram mein icon ko right-pointing se downward change karna, jo show karta hai ki hamara stack kaise operate karta hai.
+
+### Outro
+
+In steps ko follow karke, humne successfully ek stack constructor build kiya hai, jisme humne linked list setup se kafi kuch reuse kiya hai. Chalo ise apne development environment mein test karte hain aur dekhte hain hamara stack kaise kaam karta hai!
+
+---
+
+Is revised script mein content ko clear, manageable segments mein organize kiya gaya hai jo video ke instructional flow ko match karta hai, jisse recording aur animation dono ke liye asani hoti hai.

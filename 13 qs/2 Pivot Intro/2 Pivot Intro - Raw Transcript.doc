@@ -1,0 +1,95 @@
+So now we're going to do our pivot intro.
+
+Pivot is going to be a helper function much like the merge function was a helper function for merge
+
+sort.
+
+Pivot is going to be a helper function for quicksort.
+
+So I'm going to bring up an array here and do it like this.
+
+And what the pivot function is going to do is this.
+
+We're going to have our pivot item.
+
+And we're going to highlight that for there.
+
+It's going to sort all of these and do this swap like that.
+
+That's all it's going to do.
+
+So let's put this back like this and go through the steps that we need to go through to make that happen.
+
+So I'm going to go into a little bit more detail in this intro video than I normally do in an intro
+
+video, because it's going to be difficult to explain without bringing in the variables.
+
+So we have our pivot point here.
+
+And then we're going to loop through this from the next item over.
+
+That's going to be I.
+
+In our loop we're going to have a variable called pivot that points to this item.
+
+And another one called swap that's going to start out being set to pivot.
+
+But this one will move.
+
+So we start out by looking at that first item that I is pointing to there the six.
+
+It is greater than.
+
+And we'll move I to the next item.
+
+Any time you have something that is less than the pivot variable, we will move the swap up to here.
+
+And then we will use that to swap these two items.
+
+And then I will move forward.
+
+That one's greater than and this one's less than.
+
+So we move swap up first.
+
+And then we swap these two values.
+
+Same thing here.
+
+Swap moves up.
+
+We swap these two values.
+
+Then we move I to the last item.
+
+It's greater than.
+
+And we are now done with that loop.
+
+So I will remove that arrow.
+
+And the last thing we need to do is swap these two items.
+
+And we're done with the pivot variable.
+
+And normally when we're working with an array at the end of the method or the function or whatever we're
+
+doing, we return the array.
+
+But that is not what we're going to do here.
+
+We need to return that swap variable.
+
+Now this is everything the pivot function is going to do.
+
+But I'm going to show you why we need to have that swap variable.
+
+Because when we run quicksort on this side, we are going to be running this on the index of zero through
+
+swap minus one.
+
+When we run it on this side we're going to run it on swap plus one to the end of the array.
+
+So that's why we have to know what that index is.
+
+And that is our overview of pivot.

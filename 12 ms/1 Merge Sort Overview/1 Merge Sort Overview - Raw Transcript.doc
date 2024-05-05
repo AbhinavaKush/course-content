@@ -1,0 +1,39 @@
+So Merge Sort is going to be our first sorting algorithm that uses recursion.
+
+And it leverages the idea that if you have two sorted arrays like this, these are two sorted arrays.
+
+Combining two sorted arrays is fairly easy.
+
+So what merge sort does is this.
+
+Lets mix this up like this and move this to the top of the screen so we have more room.
+
+It will take this array and it will cut it in half.
+
+And then it will cut it in half again, and then it'll keep doing this until we have single item arrays.
+
+Because a single item array is by definition sorted.
+
+Then what we can do is take two of these.
+
+And combine them into one larger sorted array.
+
+And then we continue doing this all the way across like this.
+
+Then we'll take these two arrays.
+
+And combine them, and then we'll combine those two.
+
+Now we can take these two sorted arrays and make one big sorted array out of these.
+
+When you first look at this, you think, wow, that looks really inefficient to break all of this down
+
+into single item arrays.
+
+But it is actually an incredibly efficient sorting algorithm.
+
+It's as efficient as you can make a sorting algorithm, actually.
+
+So that is our quick overview.
+
+Of merge sort.

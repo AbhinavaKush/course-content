@@ -1,0 +1,28 @@
+Here's the Hinglish version of your binary search tree (BST) tutorial script:
+
+---
+
+**Intro**
+Aaj hum binary search trees ke baare mein jaanenge! Pichhle session mein humne basic binary trees dekha tha. Aaj hum ek special type ke binary tree—binary search tree, ya BST ke baare mein samjhenge. Chaliye dekhte hain ki ye trees kaise bante hain aur inki khaas properties kya hain.
+
+**A1**
+Socho ek simple tree ke baare mein jisme sirf ek node hai, jo top pe "47" ke label ke saath baitha hai. Ab, is tree ko expand karte hain ek naya node add karke. Hum "76" ko apne tree mein add kar rahe hain. BST mein, is naye node ko kahan place kiya jaayega ye uski value pe depend karta hai jo pehle se nodes hain.
+
+**A2**
+Yahaan rule hai: agar naya node ka value current node se zyada hai, toh right pe jaayega; kam hai, toh left pe. Choonki 76, 47 se zyada hai, isliye ye 47 ke right pe jayega.
+
+**A3**
+Next, "52" ko add karte hain. Phir se top se shuru karte hain, 52, 47 se zyada hai, toh right pe move karenge. But interesting part yeh hai—since 52, 76 se kam hai, isko 76 ke left side pe place kiya jaayega. Ye step-by-step positioning BST properties maintain karne ke liye crucial hai.
+
+**A4**
+Ab kuch aur nodes ko fast add karte hain. "21" ko add karna start karte hain top se, 47 se chhota hai, toh left pe move hota hai, aur wahaan uski jagah ban jaati hai kyunki aur koi nodes compare karne ke liye nahi hai. "82" ke liye, 47 aur 76 dono se zyada hai, isliye do baar right traverse karke 76 ke right pe place hota hai.
+
+**A5**
+"18" aur "27" ko add karna aur layers introduce karta hai. 18, 47 se left pe jaata hai aur phir 21 se left pe. Meanwhile, 27, 47 se shuru hota hai, left jaata hai but 21 se zyada hai, toh 21 ke right pe chala jaata hai, perfectly slotting next to 21.
+
+**Outro**
+Ab tak aapko ek pattern notice hoga. Har parent node ke right wala node usse bada hota hai, aur left wala chhota. Ye har level pe true hota hai, jisse searches efficient bante hain. Ye hai binary search trees ki beauty aur efficiency!
+
+---
+
+Ye Hinglish script clarity aur teaching effectiveness ke liye optimize ki gayi hai, aur yeh original transcript ke structure aur content ko maintain karte hue animations ke saath synchronization ke liye zaroori integrity ko bhi maintain karta hai. Agar aapko aur refinements ya additional sections ki zarurat hai, toh zaroor batayein!

@@ -1,0 +1,100 @@
+So now that we have added an edge, let's look at how to remove an edge.
+
+So that's going to look like this.
+
+And the diagram will just remove that line in the object above.
+
+That's the equivalent of doing this.
+
+So I'm going to bring these back for now, and we'll write the code to actually remove those.
+
+So we'll say remove edge and it's going to be between vertex one and vertex two.
+
+So I'm going to do something we haven't done in this course to this point.
+
+Okay.
+
+So I'm going to say adjacency list vertex one equals adjacency vertex one dot filter.
+
+And you can wrap these onto separate lines like this.
+
+Or you could have it be on all one big line.
+
+So filter is a method that is built into JavaScript for working with arrays.
+
+And you pass this as an argument, a function.
+
+This is called a callback function.
+
+So what we're doing here is saying return everything in the array that is not equal to vertex two.
+
+So in this case that's just going to remove this item.
+
+But if we had 100 items in here it would return the 99 that are not equal to two.
+
+And then we're going to do the same thing for the second vertex like this.
+
+And we'll say dot filter.
+
+And we want to return everything that is not equal to vertex one, which removes the one from that array.
+
+So just like we had in the add edge method, we couldn't add an edge between two vertices that didn't
+
+exist.
+
+We can also not remove an edge between two vertices that don't exist.
+
+So we're going to wrap this in an if statement that says only do this if vertex one and vertex two both
+
+exist, and if they do, we'll remove those items and then we will return true.
+
+If vertex one and vertex two don't both exist, we will return false.
+
+So we will look at this code in a moment.
+
+And devtools we will build this graph and we will look at it.
+
+Then we will remove the edge between A and B like this.
+
+And then we will look at that to make sure that that worked.
+
+Okay, so let's flip over to DevTools.
+
+And there is our remove edge method.
+
+And then down here is where we're creating that new graph a, b and c.
+
+And we have edges between all of those vertices.
+
+So we'll zoom out here and I'll run this.
+
+And we'll open this.
+
+And there is a, B and C, and then you can see that they are all connected to each other.
+
+So I'm going to clear this.
+
+And I will say my graph dot remove edge.
+
+I'll pass it a and b.
+
+It returns true.
+
+I'm also going to try this with a and D.
+
+Since D does not exist in this graph.
+
+And it returns false.
+
+I'll clear this.
+
+And we'll say my graph.
+
+And I'll press enter.
+
+And now when we open this.
+
+You can see that A and B are no longer connected to each other.
+
+Which means we have been able to remove the edge.
+

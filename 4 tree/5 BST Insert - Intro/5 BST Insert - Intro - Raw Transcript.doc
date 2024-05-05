@@ -1,0 +1,179 @@
+So I'm going to break insert up into two videos.
+
+This is a fairly complex method.
+
+So in this one we're just going to walk through the steps that you would need to do to insert an item.
+
+And then in the next video we'll actually write the code.
+
+So I'm going to bring a tree up here.
+
+And what we're going to do is we're going to insert a node with the value of 27.
+
+And that open spot to the right of the 21 there.
+
+And I'm going to try to replicate the process of walking through the logic that you would have to do
+
+to be able to code this.
+
+So normally you would sit down with a piece of paper and you would write out all the steps to kind of
+
+get an idea of what you need to do to code this, and then you start coding.
+
+And that's what we're going to do here.
+
+So the first thing we did here is we created a node.
+
+So I'm going to add that on the upper left hand corner here I'm just going to say create new node.
+
+And so we have more room for these notes.
+
+I'm just going to move everything over to the right like this.
+
+And the next thing we're going to have to do is take that 27 and compare it.
+
+To this item here.
+
+And when we compare it, if it's less than we're going to go to the left.
+
+If it's greater than we're going to go to the right.
+
+So we'll add that to our notes.
+
+And I'll just say, if it's less than we're going to go left, else it's greater than and we're going
+
+to go right now.
+
+Once we've made the decision in this case to go left because it is less than, there are a couple of
+
+possibilities.
+
+Either we can insert this because that spot is open or.
+
+That spot isn't open because there's already a node there.
+
+In which case we need to compare the new node.
+
+To this node.
+
+So I'll make another note here.
+
+We'll say if this is null we're going to insert the new node there.
+
+Else we have to move to the next node.
+
+Now we're going to compare the new node to this node.
+
+We're going to say.
+
+If it is less than we go left.
+
+It's greater than we go right.
+
+In this case, it is to the right.
+
+Then we're going to say if it's null, insert the new node, which is what we have going on here, and
+
+we insert this.
+
+So the thing that should jump out at you here is that these two if statements were used at the very
+
+top, and then when we move to the next node, that's an indication that these must be inside of a loop.
+
+And we don't know how many times we're going to loop through this.
+
+So it makes sense for this to be a while loop.
+
+So the other thing that you might notice is that we had an arrow pointing to this node here that started
+
+up here, and we're going to need to have a variable attached to that pointer.
+
+And we'll just call this temp, since that's what we've been using in all of the other data structures.
+
+And then as you move through the tree.
+
+Temp is just going to point to the next item that we're comparing the new node to.
+
+So I'll bring this back up to the top.
+
+And when we initialize this, we're going to have to set it equal to root.
+
+And that's going to have to happen before the while loop.
+
+So we'll put that in right there.
+
+Say let temp equal this dot root.
+
+One of our other possibilities is that 27 node, instead of being plugged into a tree that already has
+
+nodes in it, we could have a situation like this where the root is equal to null.
+
+In other words, an empty tree.
+
+In this situation we just set root equal to the new node.
+
+And this is something that we would do before we would declare a variable or do that while loop.
+
+So that even goes above the variable like this.
+
+And we do have one other edge case.
+
+So I'm going to bring this down here and I'm going to replace this 27 node.
+
+With a 76 and you'll see why here in a second.
+
+I'm going to bring back the tree like this.
+
+If you have a 76, we're going to start at the 47.
+
+And we're going to go right.
+
+And now.
+
+Well, now we have a node that is equal to a node that's already in the tree.
+
+And you can see that everything that we've done so far is either been greater than or less than.
+
+We cannot have a value that is equal to a value that is already in the tree.
+
+Now there is a way to get around this.
+
+If you're in an interview and they say, hey, what if we do want to have duplicates in there, how
+
+might you do that?
+
+So I'm just going to take a little tangent here and talk about that.
+
+I'm going to focus in on this node.
+
+And remember the node is like this.
+
+So what you can do is add.
+
+Something like count.
+
+And the count is one when you insert the first one, and if you insert another one, you could say the
+
+count for the number of 76 nodes that you have is set to two.
+
+We're not going to do that here.
+
+So I'm going to take this back out.
+
+And because we don't have something like that we cannot have a duplicate.
+
+So let's put this back in to our tree like that.
+
+And you're having to compare the new node to each node that you're looking at to see if it's equal.
+
+So this is going to have to go inside the while loop like this.
+
+We're going to see if the new node is equal to temp return undefined.
+
+All right.
+
+That is all the steps that we're going to have to do to code this out.
+
+So in the next video we are going to pick up right here.
+
+And then we're going to code insert.

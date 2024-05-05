@@ -1,0 +1,82 @@
+So there are a couple of ways we can store a graph.
+
+One is an adjacency matrix and the other is an adjacency list.
+
+So let's look at the adjacency matrix.
+
+First.
+
+Let's say we have this graph here.
+
+The adjacency matrix for this would look like this.
+
+So let's build this out.
+
+Let's start with A and A points to E and B.
+
+So in the adjacency matrix A points to b and e, we would put ones in those spots.
+
+And then A can't possibly point to a.
+
+So we'll put a zero there.
+
+And it also doesn't point to C and D.
+
+So that's how you represent A in the adjacency matrix.
+
+Then we have b it points to a and c and that would be b pointing to a and c.
+
+And everything else is zero.
+
+And then I'll just build out the rest of these.
+
+Like this.
+
+That is what our adjacency matrix would look like for that graph.
+
+So on this axis here, that is the vertex and this is what it points to or not.
+
+And like I mentioned before, I can't point to A, and also B can't point to B and so on.
+
+You're going to have this 45 degree line where they're always zeros in an adjacency matrix.
+
+If the graph has all bidirectional connections, the matrix is going to be symmetrical across that 45
+
+degree line.
+
+It's going to be a mirror image.
+
+But let's see what happens when we make one of these connections directional.
+
+Instead, we'll just take the one that is between A and B and focus in on that.
+
+So first let's look at what it means for this to be bidirectional in this matrix.
+
+If we say A connects to B that's that one there we have a one there.
+
+And then if we have a connection going back from B to A, that is the other connection in the matrix
+
+there.
+
+B is connecting to A.
+
+But if we just say that A connects to B, then in the matrix we have to do the one from B to A and change
+
+that to a zero.
+
+So as soon as we have any of these connections that are directional, the matrix is no longer symmetrical.
+
+So I'm going to change this back to being bidirectional in our graph.
+
+And then I'm going to change the matrix to reflect that as well.
+
+So now everything is symmetrical again.
+
+Also, if we wanted to make this graph weighted like this, instead of having the matrix be all ones,
+
+we can change it to where we store the weights in the matrix.
+
+So I'm going to change these all back to ones and remove those weights from the graph.
+
+And that is our quick overview of an adjacency matrix.
+

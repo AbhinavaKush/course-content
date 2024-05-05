@@ -1,0 +1,61 @@
+**Contains Method Script Refinement**
+
+---
+
+**Introduction**
+In this segment, we'll explore how to determine if a binary search tree contains a specific value. We'll use the number 27 as an example to illustrate the steps involved.
+
+**A1: Initial Check**
+The first step in our `contains` method is to check if the tree is empty. If the root is null, indicating an empty tree, we return false immediately since the value cannot be present in an empty tree.
+
+**Code Implementation:**
+```javascript
+if (this.root === null) return false;
+```
+
+**A2: Searching the Tree**
+Next, we initialize a temporary variable, `temp`, to the root of the tree to start our search from the top.
+
+**Code Implementation:**
+```javascript
+let temp = this.root;
+```
+
+**A3: Traversing the Tree**
+We then enter a while loop that continues as long as `temp` is not null. Inside this loop, we check if the current node's value is less than, greater than, or equal to the target value:
+
+- If the value is less than `temp.value`, we move `temp` to the left child.
+- If the value is greater than `temp.value`, we move `temp` to the right child.
+- If the value is equal to `temp.value`, we found our value and return true.
+
+**Code Implementation:**
+```javascript
+while (temp !== null) {
+    if (value < temp.value) {
+        temp = temp.left;
+    } else if (value > temp.value) {
+        temp = temp.right;
+    } else {
+        return true; // Value found
+    }
+}
+```
+
+**A4: Value Not Found**
+If we exit the while loop because `temp` becomes null, this indicates that we have traversed the tree without finding the value, leading us to return false.
+
+**Code Implementation:**
+```javascript
+return false;
+```
+
+**Outro**
+To validate this implementation, we'll use Chrome DevTools to test the `contains` method by checking for the presence of the numbers 27 and 17 in a constructed binary search tree. The results will demonstrate the effectiveness of our method in both finding an existing value and correctly identifying a non-existent value.
+
+---
+
+**Next Steps:**
+1. Append this refined script to our project documentation.
+2. Implement this method in the codebase and test with additional values for comprehensive validation.
+
+This script maintains the essence and detail of the original explanation while ensuring clarity and ease of understanding for both reading and animation purposes.

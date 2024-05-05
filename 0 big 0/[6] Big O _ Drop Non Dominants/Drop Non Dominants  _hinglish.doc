@@ -1,0 +1,25 @@
+Here's the Hinglish version of your transcript on the 'Drop Non-dominants' technique in big O notation:
+
+---
+
+**Intro:**
+"Aaj ke discussion mein simplifying big O notation par, hum ek technique explore karenge jise 'Drop Non-dominants' kehte hain. Ye method hamein algorithm complexity ko affect karne wale most significant terms par focus karne mein madad karta hai."
+
+**A1:**
+"Apne pehle ke example par wapas jaate huye, humare paas ek nested for loop structure hai. Main isme ek aur additional for loop add karunga jo nested loops ke baad execute hoga. Ye naya loop nested loops se independently chalega."
+
+**A2:**
+"DevTools mein, hum is code ko ten ke input ke saath execute karte hain. Initially, nested loops zero zero se lekar nine nine tak ke pairs generate karte hain, jo O(n²) operations represent karte hain. Inke baad, additional for loop zero se nine tak chalta hai, jo clearly ek O(n) operation ko demonstrate karta hai."
+
+**A3:**
+"Jab ye do loops ko hamari analysis mein combine kiya jata hai, to total operation count dikhta hai as O(n² + n). Is perspective mein rakhne ke liye, agar n 100 ho, to n² se 10,000 operations hote hain, jabki added n sirf 100 aur operations contribute karta hai, jo ek relatively minor increase hai."
+
+**A4:**
+"Ye discrepancy highlight karta hai ki n term, jabki total mein add karta hai, overall complexity ko significantly impact nahi karta compared to n². Big O notation mein, since n² dominant term hai aur n non-dominant, hum expression ko simplify karke non-dominant n ko drop kar dete hain, aur total complexity ko sirf O(n²) ke roop mein refer karte hain."
+
+**Outro:**
+"Ye practice of dropping non-dominant terms ek key strategy hai big O notation mein to keep our complexity descriptions both accurate and manageable. Samajhna ki kaun se terms ko consider karna hai aur kaun se omit karna hai, hamein better evaluate aur communicate karne mein madad karta hai hamare algorithms ki efficiency ko."
+
+---
+
+Is tarah se, aapne big O notation ke 'Drop Non-dominants' technique par Hinglish mein ek clear aur samajhne mein aasan explanation diya hai, jo viewers ko is advanced concept ko achhe se grasp karne mein help karega.

@@ -1,0 +1,128 @@
+When we do dynamic programming, it can either be top down or bottom up.
+
+When we did this recursively, it was top down.
+
+So the first thing that we looked at was the highest number.
+
+And then we worked our way down to fib of zero.
+
+But when we do this iteratively, we start with the lowest numbers and we work our way up.
+
+So let's put these in an array and bring back our diagram of our recursive function calls.
+
+When we did this top down, we looked at this index first.
+
+We went from right to left.
+
+But when we do this iteratively, we're going to go from left to right.
+
+So now let's start building our iterative bottom up function.
+
+We're going to start out by creating an array that we're going to call fib array that's going to look
+
+like this.
+
+And we're going to initialize the first two indexes with zero and one.
+
+And then we're going to create a for loop.
+
+Now notice that we start the index out at two.
+
+And the reason for that is the first open index in the array is the index of two.
+
+And then this needs to be set to less than or equal to.
+
+And the reason for that is we're going to go up to and including the index of n.
+
+And in this case we're going to go to the index of seven.
+
+So inside of the for loop we're going to set fib array at that index of two to be equal to the values
+
+at index minus one and index minus two.
+
+And when we add those together we get one.
+
+Then the for loop goes to the index of three.
+
+And once again we're going to add the values at index minus one and index minus two.
+
+And in this case it is two.
+
+And then we just keep looping through the for loop until we get to the index of seven.
+
+And then once we do that, we want to return the value at that index.
+
+So doing our dynamic programming this way is O of N minus one.
+
+So in this case n was seven and we had to add six numbers to the array.
+
+But of course we're going to drop the non-dominant and this becomes O of n.
+
+So now we're going to do what we did in the last two videos and add a counter.
+
+But this time we're going to increment the counter inside of the for loop.
+
+So now let's flip over and take a look at this.
+
+So there's the code that we just wrote and I'm going to scroll up.
+
+And just like we did in the last two videos, we're going to set N to be equal to seven and then print
+
+out fib of seven and then show the counter.
+
+And I'll run this.
+
+And you can see fib of seven is 13 and the counter is six.
+
+But also like we did in the last two videos.
+
+I'm going to change this seven.
+
+To a 40.
+
+And I'll run this and you can see that the counter is 39.
+
+So this is actually more efficient than even recursive dynamic programming with memoization.
+
+So now I'm going to flip back.
+
+And I want to talk about one more thing.
+
+This iterative fib function does not use memoization.
+
+That is to say, if you run this, we're going to fill the array like this.
+
+Get to the desired index and then return the value.
+
+And as we discussed that is o of n.
+
+But if you run fib of seven again because of these three lines.
+
+What we're going to do is create a new fib array that looks like this.
+
+And then we'll have to go through the for loop and populate all of these values again.
+
+So the second time that you run this is also going to be O of N.
+
+But if you memorize this the second time you run, this would be O of one, because you could just pull
+
+that out of the array by index.
+
+But there are a couple of downsides to memoization.
+
+First, it would make our code more complicated.
+
+But the other thing is this that memo array is staying in memory and taking up memory space.
+
+And the improvement in time complexity isn't nearly what it was for recursive dynamic programming.
+
+So it's not as much of a time complexity performance increase.
+
+So that's why when you see dynamic programming done iteratively, usually we'll not do it with memoization.
+
+And each time you call it, it will be O of N.
+
+And that's why we're not going to use memoization here.
+
+And that is our iterative solution that is bottom up.
+

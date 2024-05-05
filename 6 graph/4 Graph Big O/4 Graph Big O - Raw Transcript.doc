@@ -1,0 +1,191 @@
+Okay.
+
+So now let's look at the big O of graphs.
+
+So we're going to represent this graph as an adjacency matrix and an adjacency list.
+
+And then we're going to look at the difference in big O for doing various things with an adjacency matrix
+
+versus an adjacency list.
+
+So the first thing we're going to look at is space complexity.
+
+So with an adjacency list we're going to store the vertex and the edges.
+
+Now I'm going to highlight these two edges b and e in the adjacency matrix.
+
+Over here in green we are going to store those.
+
+But with an adjacency matrix we are also storing everything that A is not connected to.
+
+You have to store both.
+
+So that makes the adjacency matrix very inefficient when it comes to space complexity.
+
+So let's look at what the space complexity is on each one.
+
+So for the adjacency matrix on the left it is the number of vertices squared.
+
+So we have five vertices.
+
+We have 25 entries here.
+
+Whereas with the adjacency list you can see we are storing all of the vertices and then all of the edges.
+
+So it's the vertices plus the edges.
+
+And that's the space complexity of the adjacency list.
+
+Now let's bring back our graph.
+
+If we're going to add a vertex, let's look at how we do this in each one of these.
+
+We'll start with the adjacency list.
+
+If we're going to add a vertex we're just going to slide it in like that.
+
+So it's very easy to do with an adjacency list.
+
+Now let's look at the adjacency matrix.
+
+We have to change the matrix to look like this.
+
+You would be the equivalent of having to create a new matrix.
+
+So when we look at the time complexity it is the number of vertices squared for the matrix.
+
+But it's O of one for an adjacency list.
+
+Okay.
+
+So let's bring our diagram back here.
+
+And if we want to create an edge between b and f like that.
+
+Let's look at each of these, starting with the list.
+
+Remember this is between B and F.
+
+We just push something onto this array, the eff onto that array, and we push a B into this array.
+
+Okay.
+
+So now let's look at the matrix.
+
+With the matrix we're going to change this value here.
+
+We're going to change this value here.
+
+It's also very simple with the matrix.
+
+So the big O on each of these.
+
+Is o of one.
+
+Just bring back our diagram here.
+
+And let's say we want to remove the edge.
+
+We'll look at these starting with the list first.
+
+Remember that edge was between B and F.
+
+So we're going to start at B.
+
+And we're going to have to go completely through that array and look for an f.
+
+And that array can be pretty large.
+
+A particular vertex can be connected to a lot of items.
+
+And we're going to have to iterate through that array to find the value that we're looking for and remove
+
+it.
+
+Then we're going to have to do the same thing for F, and we only have one value here.
+
+But once again, there could be a lot of values.
+
+We have to find B and remove that with an adjacency matrix.
+
+We're just going to go here.
+
+Change that to zero.
+
+Go here change that to zero.
+
+So the advantage on this one actually goes to the adjacency matrix.
+
+It's O of one versus O of the number of edges that we would have to iterate through on the adjacency
+
+list.
+
+Let's bring back our diagram again.
+
+The next thing that we can look at is removing a vertex.
+
+Let's bring these both back up.
+
+We'll start with this one.
+
+So it's very easy to remove this vertex like this.
+
+The problem is, is you have to go into each vertex like this and say, hey, in the list of edges that
+
+I have, do I have any F's?
+
+Then you go into this one and then you say in this list of vertices, do I have any F's in here?
+
+And you're going to have to touch every vertex, every edge to be able to remove all of those F's.
+
+Now if you have bidirectional.
+
+There is a shortcut that you can use to make this a little bit more efficient, but still, you're going
+
+to have to go and look at a lot of different vertices and iterate through the arrays with the edges.
+
+With a matrix.
+
+When you remove this, it is going to be also very inefficient.
+
+It's going to be O of v squared.
+
+With the adjacency list is O of v plus e.
+
+So you're going to have to touch every one of these, which is going to be better than the adjacency
+
+matrix.
+
+Now let's do another comparison on these.
+
+So I want to talk a little bit more about this adjacency matrix.
+
+As we discussed before, not only are you storing all of the ones, you're also storing all of the zeros.
+
+And the larger this gets, the bigger the problem becomes having to store all of this.
+
+So imagine this your Facebook.
+
+And let's say you have a billion users just to use a nice round number.
+
+And you're going to have a matrix that is a billion across the top and a billion down the side.
+
+Even if each person in Facebook had a thousand friends, the number of zeros in this matrix would outnumber
+
+the ones 1 million to 1.
+
+And that's a lot of zeros to store.
+
+So it's very inefficient when this becomes very large.
+
+And that is why we are going to use an adjacency list in this course.
+
+It's a lot more efficient.
+
+It's a lot simpler to code.
+
+All right.
+
+That is our overview of graphs.
+
+Big O.

@@ -1,0 +1,152 @@
+Okay, so now let's code depth first search in order, just like we did before.
+
+I'm going to bring up our tree and our call stack.
+
+And we'll start coding this DFS in order.
+
+And we're going to have a results array like that.
+
+Now I'm going to bring in the function that we use for pre-order.
+
+This is what it looked like for post order.
+
+This is what it looks like for in order.
+
+So it's all the same code, just written in a different order.
+
+That I'll call this function with the root like this, which puts that on the call stack.
+
+First thing we do is go left, which means we're going to visit that 21 node and it gets pushed onto
+
+the stack.
+
+And then the 21 is going to go left.
+
+And 18 gets pushed onto the call stack.
+
+It's going to try to go left.
+
+There's nothing to the left of the 18.
+
+So we move to this line here.
+
+And we add that 18 to the array.
+
+The 18 tries to go right.
+
+There's nothing there.
+
+So we pop it from the stack.
+
+So now the 21 is at the top of the stack.
+
+We already went left.
+
+Now we're going to do the next line which is to push that value into the array.
+
+And then we're going to go right.
+
+So that's going to push that 27 onto the stack.
+
+It's going to try to go left.
+
+We're going to write that value like this into the array.
+
+And it will try to go.
+
+Right now that 27 is done, we can pop that from the stack.
+
+The 21 is at the top of the call stack now.
+
+It's already gone.
+
+Left.
+
+It's written its value.
+
+It's gone.
+
+Right.
+
+And now we can pop that from the stack.
+
+The 47 is now the top item on the call stack.
+
+It has already gone left.
+
+Now we can push its value into the array like that.
+
+And then it's going to go right.
+
+So we're going to visit that 76 node.
+
+It gets pushed onto the stack like that.
+
+It's going to go left first, which is the 52 that gets pushed onto the stack.
+
+So now 52 is going to try to go left.
+
+There's nothing there.
+
+We'll push the value of the 52 into the array and then try to go right.
+
+And now that one is done we can remove that from the stack.
+
+76 has already gone left.
+
+Now we can push the value 76 into the array like this.
+
+And then it will go right to the 82.
+
+That gets pushed onto the stack.
+
+The 82 is going to try to go left.
+
+We don't have anything to the left.
+
+We push its value into the array like that.
+
+And then we go, right, there's nothing there so we can pop that from the stack.
+
+The 76 has already gone left and written its value and gone right.
+
+So we can pop that.
+
+The same is true for the 47, and we pop that from the stack.
+
+And the 47 was the original function call, which was the root.
+
+The only thing left to do now is to return that results array.
+
+So there is our final code.
+
+And when we go over to Chrome DevTools, we're going to build this same tree that we've been using all
+
+along.
+
+And we will expect to see this array here.
+
+So let's flip over to DevTools.
+
+So there is our DFS in order method there.
+
+And I'll scroll up here.
+
+And this is going to create the same tree we've been using for the last few videos.
+
+And this is the array we would expect this to return.
+
+So I'll zoom out here and I'll come over here and run this.
+
+And that creates our tree.
+
+And now I'm going to run.
+
+DFS and order.
+
+Okay.
+
+That gives us our array of those items in order and it matches this array up here.
+
+And that is our method for depth first search in order.
+

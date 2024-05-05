@@ -1,0 +1,34 @@
+Here's the refined script for your video tutorial on constructors in data structures, specifically focusing on linked lists and doubly linked lists. The script is organized into sections, maintaining minimal alterations for clarity and alignment with animation requirements.
+
+---
+
+**Intro:**
+"Welcome back! Today, we're diving into constructors for linked lists and doubly linked lists. Understanding these will help you see the subtle differences and applications of each in programming."
+
+**A1: Constructor Overview:**
+"Let's begin with our standard linked list. The constructor initializes the list. In a doubly linked list, the only difference lies within the node structure—each node points both forwards and backwards, allowing traversal in either direction."
+
+**A2: Building the Constructor:**
+"Our constructor will look like this. The key difference in a doubly linked list constructor is that each node will now also include a 'previous' pointer, apart from the 'next' one."
+
+**A3: Code Explanation:**
+"Here’s the line of code that changes between a singly and a doubly linked list. For the doubly linked list, we add:
+```
+newNode.previous = null;
+```
+This ensures that the new node is correctly set up to potentially link to a previous node, which is crucial for operations that traverse the list backwards."
+
+**A4: Visualization with Code:**
+"We'll demonstrate this in the Chrome Dev Tools shortly. Here’s what the actual code snippet looks like for initializing a doubly linked list with a starting node containing the value seven:
+```
+let doublyLinkedList = new DoublyLinkedList();
+doublyLinkedList.add(7);
+```
+And that’s it! Our doubly linked list now starts with a single node."
+
+**Outro:**
+"And there you have it! You've seen how constructors vary between singly and doubly linked lists and how each node in a doubly linked list accommodates backward traversal. Stay tuned for more insights in our next video where we'll delve deeper into list operations. Happy coding!"
+
+---
+
+This script is tailored for a smooth and clear presentation that aligns well with the planned animations, highlighting the specific differences between singly and doubly linked lists through both discussion and code examples.

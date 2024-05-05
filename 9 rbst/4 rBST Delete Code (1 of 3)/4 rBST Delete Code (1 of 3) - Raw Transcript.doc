@@ -1,0 +1,159 @@
+This will be a private recursive method.
+
+Now I want you to notice that I did something different here than I did with recursive contains or recursive
+
+insert.
+
+In those methods, I set current node to be equal to root by default, but I'm going to do that same
+
+thing a little bit different way here.
+
+When we kick this off with the public method, we'll pass the value down to here and then have this
+
+method pass value and route up here.
+
+So this method that we have on the bottom, we have to add something to this to handle a couple of edge
+
+cases that involve deleting the root node.
+
+And we'll see why we need this in the next video.
+
+So I'm going to start this off by trying to delete a value that we do not have in the tree.
+
+We're going to try to delete the value of 18.
+
+So we'll kick this off on the root.
+
+And then we'll say if the value that we're looking for is less than current node value and the current
+
+node value is 47, then we're going to set current node left to be equal to delete node.
+
+This is where it is recursive.
+
+And for this new instance that we're calling we're going to pass it the value.
+
+That's the value of 18.
+
+And we're going to call it on current node left which is on the 21 node.
+
+Now the instance that we called on the 21 node is the active instance on the call stack.
+
+And we're looking for the value of 18 which is less than current node dot value.
+
+It's less than 21.
+
+So that brings us down to this line.
+
+And we're going to call another instance of delete node on current node dot left.
+
+But in this case current node dot left is null.
+
+So we're calling an instance on null.
+
+And this is our base case.
+
+So we'll say if current node equals null we're going to return null.
+
+And that gets returned to the calling method.
+
+And when it returns that this gets popped from the call stack.
+
+So now the instance that we called on the 21 node is the active instance on the call stack.
+
+And that instance left off right here.
+
+And this part here where it called an instance of delete node.
+
+That's the one we just popped from the call stack.
+
+So when that instance returned null it was returning it to here.
+
+So we're setting current node dot left to be equal to null which is exactly the way it was before.
+
+And now we'll return current node.
+
+And the current node in this case is this 21 node.
+
+And it returns it to the calling method.
+
+And when it does that this gets popped from the call stack.
+
+So now that instance that we called on the 47 node is the active instance.
+
+And it left off right here.
+
+So that 21 node is being returned to here we're setting current node left to be equal to 21 which is
+
+exactly where this was already pointing.
+
+And this is exactly what we want.
+
+We don't want there to be any changes in our tree because we were looking for a value that's not even
+
+there.
+
+We don't want it to change anything.
+
+And then we come down to here and we're going to return current node, and that's going to be returned
+
+to the calling method.
+
+So it's being returned to here.
+
+We're setting this dot root to be equal to current node.
+
+And because the root is already pointing at the 47 node, that doesn't change anything.
+
+But because that was a return statement, this gets popped from the call stack.
+
+So for this example, up to this point we have only traversed to the left.
+
+And obviously we need to be able to traverse to the right as well.
+
+So I'll bring in this code.
+
+And now let's look at deleting a node that is in the tree.
+
+We'll delete the 21 node.
+
+So we'll kick this off with the root.
+
+And 21 is less than 47.
+
+So we'll call an instance on current node dot left.
+
+And that calls an instance on the 21 node.
+
+And now we have traversed to the node that we want to delete.
+
+So the first thing this instance that we called on the 21.
+
+Node is going to do is check to see if current node is equal to null and it is not.
+
+The current node is the 21 node, but because that number is the number that we're looking for, it
+
+is not less than and it is not greater than it is equal.
+
+So we'll say else.
+
+Now inside of this else statement we have to code for four different situations.
+
+The first situation is if the node that we're trying to delete is a leaf node.
+
+And the second situation is if the node we're trying to delete is open on the left, but has a node
+
+on the right, the third situation is the opposite.
+
+It has a node on the left and it is open on the right.
+
+And then the fourth situation is when it has a child node on each side.
+
+So these three are relatively easy to write code for.
+
+This is the one that becomes more difficult.
+
+And we'll have two separate videos to be able to do this, one of those being a helper method.
+
+But we'll write code for all three of these situations in the next video.
+
+And that concludes part one of Delete Node.
