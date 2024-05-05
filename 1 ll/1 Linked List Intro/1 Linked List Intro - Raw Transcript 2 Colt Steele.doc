@@ -1,33 +1,292 @@
-Let's refine the transcript you've provided about linked lists to create a clear and concise script for your video tutorial. Here’s the refined script:
+Hello.
 
----
+Welcome back.
 
-**Intro:**
+So this is the first of many sections on data structures.
 
-Welcome to linked lists! Today, we embark on our exciting journey into data structures by building our first one: the linked list. We'll compare it to a more familiar structure—the array—to better understand its unique advantages.
+The first one we're going to talk about is called the Singly Linked List.
 
-**A1:**
-Linked lists and arrays often serve similar functions but in fundamentally different ways. To illustrate, let’s transform an array into a linked list:
+We also have a length list.
 
-- First, remove the indexes. Unlike arrays, linked lists do not have indexed access.
-- Next, understand that arrays occupy contiguous memory slots, but linked lists do not. Their elements can be scattered anywhere in memory, providing flexibility.
+We'll see that later.
 
-**A2:**
-To visualize the transition:
-- We'll represent array elements as green squares and switch to purple circles for linked list elements.
-- Introduce two special variables: `head`, pointing to the first element, and `tail`, pointing to the last. Each element—or node—then points to the next node in the sequence.
+We're starting here.
 
-**A3:**
-This sequence continues until the last node, which points to `null`, creating what is known as a null-terminated list. This concept is crucial as it marks the end of the linked list.
+So a quick preface, a warning, a note, if you're unfamiliar with the is 2015 class keyword JavaScript,
 
-**A4:**
-Recap the memory allocation:
-- Arrays are stored contiguously, making them quick at indexed access.
-- Linked lists, scattered throughout memory, excel at dynamic insertion and deletion as they don’t require reorganization of the entire structure.
+approximation or syntactic sugar to sort of look like traditional object oriented programming.
 
-**Outro:**
-That’s a brief overview of linked lists compared to arrays! Understanding these differences helps in choosing the right data structure based on your needs for memory management and performance.
+If you've never seen that before or you want to refresh your memory on it, take a look at the previous
 
----
+section.
 
-This script organizes the information into logical segments that are easy to follow and animate, aligning with your objectives of minimal changes and clarity for better animation and recording. If you need any more adjustments or additions, let me know!
+I think a lot of students may have jumped to this section.
+
+If you did, I would check that out.
+
+If you're not familiar with how it works, it's a quick little section.
+
+And the reason is that we're going to use that class keyword in pretty much every data structure we
+
+make or every data structure we create will define our own JavaScript class.
+
+We're going to make a single link list class in this section and do the same thing for graphs and every
+
+other structure we see.
+
+Okay, so quickly, our objectives, we want to explain what the heck is singly linked list is.
+
+We're also going to compare it to the list structure.
+
+We already know the built in array.
+
+We use it all the time so that stores the list of data.
+
+What's the difference?
+
+And then the bulk of the section will be devoted to actually defining our link to this class and adding
+
+in a bunch of methods, a lot of functionality to push things into it, or to pop things, or to search
+
+and traverse or to delete things to all sorts of things.
+
+So that's what we're going to do in this section.
+
+So let's start with a definition.
+
+What is the link linked list?
+
+So it's a data structure.
+
+It stores whatever sort of data you want, strings, numbers, it doesn't matter.
+
+And it's ordered.
+
+It's a list of data, just like an array.
+
+But there's a really big distinction in an array.
+
+Each item is mapped, it's indexed with a number so I can get the fifth item, the sixth item, and
+
+any time we add something in, it gets an index that is mapped to its position.
+
+A linked list, on the other hand, just consists of a bunch of elements with no indices who are just
+
+pointing to the next element.
+
+It's sort of like a bunch of train cars connected where one car connects to the next one and that one
+
+connects to the next one.
+
+But there is no index that we use to access things we can't say.
+
+Give me the fifth thing.
+
+We have to start at the first one and then move to the second one, move to the third one, move to
+
+the fourth and then move to the fifth.
+
+So just some terminology here.
+
+I'm going to show you a diagram in just a second.
+
+But we say that each element is a node.
+
+So a length list consists of a bunch of nodes, a node stores, a piece of data, like a string or a
+
+number, but it also references the next node.
+
+Or if it's at the very end, there is no next node.
+
+It references null and then three properties we keep track of.
+
+The head is the beginning of the length list.
+
+The tail is the end, so we don't keep track of every single item in the middle.
+
+We just keep track of the head and from the head we can figure out the next one and from there we can
+
+figure out the next one all the way until the end.
+
+And then also we keep track of the length to make things easier.
+
+So here's sort of a diagram of what a length list looks like.
+
+Notice there is no index.
+
+So we don't say this is the zero with the first, the second or the third.
+
+If we want to access something from this list, we start at the beginning.
+
+If we want the second to last item, we have to start here and ask for the next item which gives us
+
+six and we have to ask for the next item, which finally gives us the second to last item.
+
+So a length list is just a bunch of nodes pointing to other nodes.
+
+So one node points, the next one points the next one, sort of like a chain of elephants.
+
+Back before they banned elephants at the circus in the US, they would grab each other's tails with
+
+their noses and walk in a line.
+
+I kind of like to think of it as a skyscraper that has no elevators.
+
+So in an array there's elevators.
+
+You could say, Take me to the fifth floor and it takes you right there.
+
+If you're in a length list, there's only stairs and each set of each floor is connected to the next
+
+one by a set of stairs.
+
+So to get to the fifth floor, we have to start at the first one, take the stairs to the second, then
+
+go up to the third, then to the fourth, and then we get to the fifth.
+
+I don't know if that's a great analogy or not, by the way, the terminology singly linked list comes
+
+from the fact that each node is only connected one directionally to the next node, a doubly linked
+
+list which we'll get to so don't worry about it right now also has a connection pointing back to the
+
+previous node, and we'll talk about the pros and cons of that later on.
+
+So here's a visualization on visual algo.
+
+Visual go.
+
+I never know how to say this.
+
+It's a great website, though, and it's going to be very useful here.
+
+So this is a length list where each node just contains a number.
+
+Remember, it could be whatever we want.
+
+We could have, I don't know, strings, we could have other we can have an array in each one.
+
+It doesn't matter.
+
+And they all just point to the next item except for the last one.
+
+There's nothing after it.
+
+And let's say that we're going to, I don't know, insert something.
+
+Actually, let's start with searching for something.
+
+So if we want to search for, let's say, 43 in this linked list, we have to start at the beginning
+
+and check the next, then the next, then the next, then the next.
+
+And then we find 43.
+
+If we wanted to insert something into here, if we want to insert something in the middle.
+
+This one, let's say at position four, we want to insert the number 90.
+
+We have to start at the beginning, then move down to the next to the next.
+
+Keep going until we get to the correct spot and then we insert it in.
+
+Now the actual process of inserting will come back to we're going to write our own insert functions.
+
+It's pretty easy, though, especially if we're inserting, I mean, to the beginning or the end.
+
+All we have to do, let's say, to insert at the very beginning.
+
+It's just make this the new head and have it point to the old head.
+
+And all of a sudden we're in business.
+
+Unlike in Ouray, where we would have to.
+
+Well, we don't do this, but in an array, every single item would have to be re indexed to get a new
+
+position number.
+
+Okay.
+
+So we're going to come back to this and spend a lot of time sort of walking through this as we build
+
+our own methods.
+
+But let's wrap up with a comparison with arrays.
+
+So linked lists don't have indices or indexes.
+
+I guess I wrote I think it's indices.
+
+They have no number that corresponds to each item.
+
+Instead, we just have the head pointer, which is just a variable that says this is the beginning of
+
+the list and we have a tail.
+
+You actually don't have to have a tail.
+
+It just makes it easier if you're trying to add to the end.
+
+But we have to have that head.
+
+That's the beginning.
+
+And then we can just move to the next and to the next and to the next until we find what we're looking
+
+for or we insert something unlike an array, there's no positional, there's no indices.
+
+So each node is connected with a next pointer.
+
+What this means is random access is not allowed.
+
+So random access means I can't just ask for the 10th item and get it immediately.
+
+We have to traverse from the beginning all the way to the 10th item, just like the analogy I explained
+
+with the skyscraper.
+
+If you have an array, you get an elevator straight to the 10th floor.
+
+If you have a length list, you walk all the way up to the 10th floor.
+
+However, one of the things that length lists are good at is insertion and deletion.
+
+So because arrays are indexed, if we insert something at the beginning or in the middle, we've already
+
+talked about this.
+
+It has this cascade ripple effect.
+
+Everything has to be re indexed in a length list.
+
+That's not the case.
+
+And we'll get into this further.
+
+We'll talk about big O of certain operations throughout the section, but just know that that's one
+
+of the reasons.
+
+Really the main reason you would want to use a length list is if you really care about insertion and
+
+deletion, especially if you're working with really, really long pieces of data are not pieces of data
+
+with a long data set lots of information and you don't need random access.
+
+You just need to store it in a list.
+
+Well, you might want to use a linked list, but we'll again, we'll come back to this.
+
+Remember, a lot of this right now is just going to be very sort of theoretical and conceptual.
+
+Don't get too caught up on why would I use this if we already have an array?
+
+Because at the end of the day, you could use an array for all of this, but there are advantages to
+
+length lists and we'll expand on that anyway.
+
+In the next video we're going to define our length list class and add our first method in.
+
+So that's coming up next.
+
