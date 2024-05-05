@@ -1,0 +1,183 @@
+In this video.
+
+We are going to move on to our next big data structure, which is a linked list.
+
+If you were going to make a collection of all the different topics frequently seen in engineering interviews,
+
+honestly, I would expect to see linked lists at the top of that collection.
+
+It's a subject that is seen very frequently in engineering interviews.
+
+So with that in mind, we're spending a pretty good amount of time in this course to understand length
+
+lists and exactly how they work.
+
+We're going to first start off with a practical definition of what they are.
+
+Then we will put together our own custom implementation, and then we'll finally tackle a handful of
+
+common interview questions that involve length lists.
+
+So without further ado, let's take a look at a handful of diagrams that will help us understand exactly
+
+what link lists are.
+
+So a link list is an ordered collection of data.
+
+The collection contains a number of different nodes.
+
+And so on the screen right here, you can see four separate nodes.
+
+Each node contains some amount of data, along with a reference to the next node.
+
+When we put a handful of these nodes together, we refer to it as a linked list because it quite literally
+
+is a list of linked nodes.
+
+We'll also very frequently refer to this as a chain or a chain of nodes that are strung together.
+
+The list of nodes that form this chain has an order that is always maintained.
+
+So in other words, the order of nodes in a linked list won't suddenly or randomly change unless we
+
+specifically want to change it.
+
+Of course, in every link lists there are always two special nodes.
+
+Now I'm going to move the diagram forward and we're going to look at some terminology that is commonly
+
+involved with the link list.
+
+So the two special nodes that you'll always see are the head node, which is always the very first node
+
+of a link list, and the tail node, which is always the very last node.
+
+The tail node can always be identified by the fact that it does not have a reference to any other node.
+
+Also notice that every single node that we're showing here has two discrete parts of it.
+
+It has this kind of data bucket assigned to it.
+
+The data that can be contained in the node can be absolutely anything we want.
+
+So it can be a string, as is shown here.
+
+It can be a number, an array, an object.
+
+Any type of valid JavaScript value can be contained within one of these nodes.
+
+The other part of a node is a reference to the next node along the chain.
+
+And so with all this discussion of references, you might be wondering exactly what I mean by a reference
+
+in the JavaScript world.
+
+So without going any further, let's flip over to a code notepad very quickly and we're going to put
+
+together a quick implementation of a very small linked list, and that will give us a better idea of
+
+how these things work.
+
+So over in my code editor and this is very quick, you don't have to write this code out because we're
+
+going to write a few lines of code.
+
+We're going to create two separate nodes of a linked list and then join them together.
+
+So I'm going to create a new variable called Node one and assign it an object with a property data that
+
+has value.
+
+One, two, three.
+
+I'll then create a second node that I'll refer to as Node two.
+
+This thing will also have a property called data that will have a value.
+
+Four, five, six.
+
+So I have now created two separate nodes here.
+
+Node one and node two.
+
+They are not linked together in any type of linked list at all to to link them together.
+
+I have to explicitly form a reference between the two of them and so I can do that by writing something
+
+like Node one dot next equals Node two.
+
+So now if I wanted to figure out what the first node of the chain was, it would definitely be Node
+
+one, because Node one contains a reference to Node two.
+
+And so if we look at the diagram over here, let's flip over to right here.
+
+We kind of have a structure like this where Node one is on the left hand side and it has a reference
+
+to Node two on the right hand side.
+
+Notice that Node two does not have a reference to any other node, so it must be the tail node of our
+
+linked list.
+
+I want you to also notice the fact that I assigned the data for both of our nodes to a property called
+
+quite literally, simply data.
+
+Now, there's nothing special about the data property, right?
+
+There's nothing special about the fact that I called it data in both the nodes right here.
+
+I could have just as easily called it information or record or banana, whatever you want to call it.
+
+But by convention we usually call it data.
+
+The reference to the next node was stored under the property next.
+
+And so just like data, the next property here, the name of it is completely arbitrary.
+
+We could have called it next node or chain, next or change ref or next ref, whatever you want to call
+
+it.
+
+But again, by convention we usually call it next.
+
+So by convention we usually make sure that every node has exactly two properties, the data property
+
+and the next property.
+
+When we put together our own custom implementation of a linked list, we're going to make sure that
+
+our nodes have both.
+
+Exactly properties named Data and next.
+
+Okay.
+
+Now, the last thing I want to mention here about this very quick linked list example is that this is
+
+a very straightforward and simple implementation of a linked list.
+
+This really is a linked list right here.
+
+Notice how there's no arcane or special code that I had to write to form a linked list?
+
+No.
+
+As long as you have some separate pieces of data and then you form some type of connection between them,
+
+you can refer to that as being a linked list.
+
+This meets all the rules of a linked list.
+
+All right.
+
+I think that's enough on link list for now.
+
+So in the next video, we're going to jump immediately into working on our own JavaScript implementation
+
+of a linked list that might seem like we're getting into it very quickly.
+
+But trust me, the easiest way to understand the link list is to attempt to implement one on your own.
+
+So with that in mind, let's continue in the next video.
